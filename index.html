@@ -185,10 +185,7 @@ footer{background:var(--ink);padding:48px 36px 20px;}
 .ci-link:hover{color:var(--g2)!important;}
 .fbot{border-top:1px solid rgba(255,255,255,.05);padding-top:16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:9px;max-width:1280px;margin:0 auto;font-size:10px;color:rgba(255,255,255,.25);}
 .fbot a{color:rgba(255,255,255,.22);text-decoration:none;margin-left:12px;}
-@media(max-width:1024px){.wgrid{grid-template-columns:1fr 1fr;}.fgrid{grid-template-columns:1fr 1fr;gap:22px;}}
-@media(max-width:768px){nav{padding:10px 15px;}nav ul{display:none;}.ham{display:flex;}.hero,.section{padding:52px 16px;}.track{padding:44px 16px;}footer{padding:40px 16px 18px;}.fr2{grid-template-columns:1fr;}.sgrid,.pgrid{grid-template-columns:1fr 1fr;}.howgrid{grid-template-columns:1fr 1fr;gap:18px;}.wgrid{grid-template-columns:1fr;}.fgrid{grid-template-columns:1fr;}.hstats{gap:18px;}.legend{padding:12px 16px;}}
-@media(max-width:440px){.sgrid,.pgrid{grid-template-columns:1fr;}}
-  .npibox{background:linear-gradient(135deg,var(--pu3),#ede9fe);border:2px solid rgba(124,58,237,.2);border-radius:10px;padding:12px 14px;margin-bottom:14px;}
+.npibox{background:linear-gradient(135deg,var(--pu3),#ede9fe);border:2px solid rgba(124,58,237,.2);border-radius:10px;padding:12px 14px;margin-bottom:14px;}
 .npititle{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--pu);margin-bottom:7px;display:flex;align-items:center;gap:5px;}
 .npi-note{font-size:11px;color:#5b21b6;line-height:1.5;margin-bottom:8px;}
 .npitabs{display:flex;gap:5px;margin-bottom:8px;}
@@ -319,12 +316,12 @@ footer{background:var(--ink);padding:48px 36px 20px;}
 .tsub{font-size:10px;color:var(--mu);margin-top:1px;}
 .spinner{display:inline-block;width:16px;height:16px;border:2px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:spin .6s linear infinite;}
 @keyframes spin{to{transform:rotate(360deg);}}
-</style>
+@media(max-width:1024px){.wgrid{grid-template-columns:1fr 1fr;}.fgrid{grid-template-columns:1fr 1fr;gap:22px;}}
+@media(max-width:768px){nav{padding:10px 15px;}nav ul{display:none;}.ham{display:flex;}.hero,.section{padding:52px 16px;}.track{padding:44px 16px;}footer{padding:40px 16px 18px;}.fr2{grid-template-columns:1fr;}.sgrid,.pgrid{grid-template-columns:1fr 1fr;}.howgrid{grid-template-columns:1fr 1fr;gap:18px;}.wgrid{grid-template-columns:1fr;}.fgrid{grid-template-columns:1fr;}.hstats{gap:18px;}.legend{padding:12px 16px;}}
+@media(max-width:440px){.sgrid,.pgrid{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
-
-<!-- TOPBAR -->
 <div class="topbar">
   <a href="https://wa.me/2290199878742" target="_blank">💬 +229 01 99 87 87 42</a>
   <span class="sep">|</span>
@@ -334,8 +331,6 @@ footer{background:var(--ink);padding:48px 36px 20px;}
   <span class="sep">|</span>
   <span style="color:rgba(255,255,255,.4)">🇧🇯 7j/7 — 8h–20h</span>
 </div>
-
-<!-- NAV -->
 <nav id="main-nav">
   <a class="logo" href="#">
     <div class="lm"><div></div><div></div><div></div></div>
@@ -346,13 +341,11 @@ footer{background:var(--ink);padding:48px 36px 20px;}
     <li><a href="#catalog">Services</a></li>
     <li><a href="#suivi">Suivi</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#" onclick="openDash()" style="color:var(--g);font-weight:700;">📁 Mon espace</a></li>
+    <li><a href="#" onclick="openDash()">📁 Mon espace</a></li>
     <li><a href="#catalog" class="nbtn">Faire une demande →</a></li>
   </ul>
   <button class="ham" onclick="toggleNav()"><span></span><span></span><span></span></button>
 </nav>
-
-<!-- HERO -->
 <section class="hero">
   <div class="flag-h"><div></div><div></div><div></div></div>
   <div class="htag">🇧🇯 F2K MULTISERVICE — Bénin</div>
@@ -369,8 +362,6 @@ footer{background:var(--ink);padding:48px 36px 20px;}
     <div><div class="hsn">24<sup>h</sup></div><div class="hsl">Email auto</div></div>
   </div>
 </section>
-
-<!-- LEGEND -->
 <div class="legend">
   <div class="legend-inner">
     <strong style="font-size:12px;color:var(--ink);">Légende :</strong>
@@ -379,8 +370,6 @@ footer{background:var(--ink);padding:48px 36px 20px;}
     <div class="legend-item"><div class="leg-dot ld-choice"></div>🔄 Au choix : en ligne ou rendez-vous</div>
   </div>
 </div>
-
-<!-- TARIFS -->
 <section class="section" id="pricing" style="background:#fff;border-bottom:1px solid var(--bd);">
   <div style="max-width:1280px;margin:0 auto;">
     <div class="ph">
@@ -390,7 +379,6 @@ footer{background:var(--ink);padding:48px 36px 20px;}
         <p class="sec-sub">Prix tout inclus — frais F2K compris.</p>
       </div>
     </div>
-
     <div class="pct">📄 État civil</div>
     <div class="pgrid">
       <div class="pc ce"><div class="pc-ico">👶</div><div class="pc-name">Acte de naissance</div><div class="pc-delay" style="color:var(--g);">⚡ Immédiat</div><div class="pc-pr">2 000 <span>FCFA</span></div><span class="pc-badge b-instant">⚡ En ligne</span></div>
@@ -399,75 +387,64 @@ footer{background:var(--ink);padding:48px 36px 20px;}
       <div class="pc ce"><div class="pc-ico">🤝</div><div class="pc-name">Cert. coutume & célibat</div><div class="pc-delay" style="color:var(--g);">⚡ Immédiat</div><div class="pc-pr">2 000 <span>FCFA</span></div><span class="pc-badge b-instant">⚡ En ligne</span></div>
       <div class="pc ce"><div class="pc-ico">📑</div><div class="pc-name">Jugement supplétif</div><div class="pc-delay" style="color:var(--y);">🔄 Au choix</div><div class="pc-pr">51 000 <span>FCFA</span></div><span class="pc-badge b-choice">🔄 Au choix</span></div>
     </div>
-
     <div class="pct">🪪 Identité nationale</div>
     <div class="pgrid">
-      <div class="pc ci"><div class="pc-ico">🪪</div><div class="pc-name">CNIB</div><div class="pc-delay" style="color:var(--r);">📅 21 jours — RDV obligatoire</div><div class="pc-pr">7 000 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV agence</span></div>
+      <div class="pc ci"><div class="pc-ico">🪪</div><div class="pc-name">CNIB</div><div class="pc-delay" style="color:var(--r);">📅 21 jours — RDV</div><div class="pc-pr">7 000 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV agence</span></div>
       <div class="pc ci"><div class="pc-ico">📋</div><div class="pc-name">CIP</div><div class="pc-delay" style="color:var(--g);">⚡ Immédiat</div><div class="pc-pr">2 000 <span>FCFA</span></div><span class="pc-badge b-instant">⚡ En ligne</span></div>
       <div class="pc ci"><div class="pc-ico">🏛️</div><div class="pc-name">Certificat NPI/FID</div><div class="pc-delay" style="color:var(--g);">⚡ Immédiat</div><div class="pc-pr">1 000 <span>FCFA</span></div><span class="pc-badge b-instant">⚡ En ligne</span></div>
       <div class="pc ci"><div class="pc-ico">🏠</div><div class="pc-name">Certificat de résidence</div><div class="pc-delay" style="color:var(--g);">⚡ Immédiat</div><div class="pc-pr">3 000 <span>FCFA</span></div><span class="pc-badge b-instant">⚡ En ligne</span></div>
     </div>
-
     <div class="pct">🏛️ Services ANIP</div>
     <div class="pgrid">
       <div class="pc ca"><div class="pc-ico">📱</div><div class="pc-name">MAJ téléphone ANIP</div><div class="pc-delay" style="color:var(--g);">⚡ 24–48h</div><div class="pc-pr">1 000 <span>FCFA</span></div><span class="pc-badge b-instant">⚡ En ligne</span></div>
       <div class="pc ca"><div class="pc-ico">✏️</div><div class="pc-name">MAJ informations ANIP</div><div class="pc-delay" style="color:var(--y);">🔄 2–5 jours</div><div class="pc-pr">1 000 <span>FCFA</span></div><span class="pc-badge b-choice">🔄 Au choix</span></div>
     </div>
-
     <div class="pct">⚖️ Justice & moralité</div>
     <div class="pgrid">
       <div class="pc cj"><div class="pc-ico">⚖️</div><div class="pc-name">Casier judiciaire</div><div class="pc-delay" style="color:var(--g);">⚡ Immédiat</div><div class="pc-pr">2 900 <span>FCFA</span></div><span class="pc-badge b-instant">⚡ En ligne</span></div>
       <div class="pc cj"><div class="pc-ico">🖊️</div><div class="pc-name">Légalisation de signature</div><div class="pc-delay" style="color:var(--r);">📅 RDV obligatoire</div><div class="pc-pr">1 500 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV agence</span></div>
       <div class="pc cj"><div class="pc-ico">📋</div><div class="pc-name">Copie conforme</div><div class="pc-delay" style="color:var(--g);">⚡ Immédiat</div><div class="pc-pr">1 500 <span>FCFA</span></div><span class="pc-badge b-instant">⚡ En ligne</span></div>
     </div>
-
     <div class="pct">🛂 Voyage & mobilité</div>
     <div class="pgrid">
-      <div class="pc cv2"><div class="pc-ico">🛂</div><div class="pc-name">Passeport ordinaire</div><div class="pc-delay" style="color:var(--r);">📅 15–21 jours — RDV biométrie</div><div class="pc-pr">35 000 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV agence</span></div>
-      <div class="pc cv2"><div class="pc-ico">🛂</div><div class="pc-name">Passeport VIP (48h)</div><div class="pc-delay" style="color:var(--r);">📅 48h — RDV biométrie</div><div class="pc-pr">135 000 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV agence</span></div>
+      <div class="pc cv2"><div class="pc-ico">🛂</div><div class="pc-name">Passeport ordinaire</div><div class="pc-delay" style="color:var(--r);">📅 15–21 jours — RDV</div><div class="pc-pr">35 000 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV agence</span></div>
+      <div class="pc cv2"><div class="pc-ico">🛂</div><div class="pc-name">Passeport VIP (48h)</div><div class="pc-delay" style="color:var(--r);">📅 48h — RDV</div><div class="pc-pr">135 000 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV agence</span></div>
       <div class="pc cv2"><div class="pc-ico">✈️</div><div class="pc-name">Laissez-passer</div><div class="pc-delay" style="color:var(--y);">🔄 3–5 jours</div><div class="pc-pr">1 000 <span>FCFA</span></div><span class="pc-badge b-choice">🔄 Au choix</span></div>
     </div>
-
     <div class="pct">🚗 Permis & transport</div>
     <div class="pgrid">
-      <div class="pc cp"><div class="pc-ico">🚗</div><div class="pc-name">Permis de conduire</div><div class="pc-delay" style="color:var(--r);">📅 10–15 jours — RDV retrait</div><div class="pc-pr">28 200 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV agence</span></div>
-      <div class="pc cp"><div class="pc-ico">🚘</div><div class="pc-name">Immatriculation véhicule</div><div class="pc-delay" style="color:var(--r);">📅 7–10 jours</div><div class="pc-pr">5 000 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV agence</span></div>
+      <div class="pc cp"><div class="pc-ico">🚗</div><div class="pc-name">Permis de conduire</div><div class="pc-delay" style="color:var(--r);">📅 10–15 jours — RDV</div><div class="pc-pr">28 200 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV agence</span></div>
+      <div class="pc cp"><div class="pc-ico">🚘</div><div class="pc-name">Immatriculation véhicule</div><div class="pc-delay" style="color:var(--r);">📅 7–10 jours — RDV</div><div class="pc-pr">5 000 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV agence</span></div>
       <div class="pc cp"><div class="pc-ico">🔧</div><div class="pc-name">Visite tech — Léger</div><div class="pc-delay" style="color:var(--r);">📅 Véhicule présent</div><div class="pc-pr">17 000 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV agence</span></div>
       <div class="pc cp"><div class="pc-ico">🚕</div><div class="pc-name">Visite tech — Taxi</div><div class="pc-delay" style="color:var(--r);">📅 Véhicule présent</div><div class="pc-pr">11 000 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV agence</span></div>
       <div class="pc cp"><div class="pc-ico">🚛</div><div class="pc-name">Visite tech — Poids lourd</div><div class="pc-delay" style="color:var(--r);">📅 Véhicule présent</div><div class="pc-pr">23 000 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV agence</span></div>
     </div>
-
     <div class="pct">🏗️ Foncier</div>
     <div class="pgrid">
       <div class="pc cf"><div class="pc-ico">🗺️</div><div class="pc-name">Extrait cadastral</div><div class="pc-delay" style="color:var(--y);">🔄 5–7 jours</div><div class="pc-pr">6 000 <span>FCFA</span></div><span class="pc-badge b-choice">🔄 Au choix</span></div>
       <div class="pc cf"><div class="pc-ico">📂</div><div class="pc-name">Titre foncier</div><div class="pc-delay" style="color:var(--r);">📅 30–60 jours</div><div class="pc-pr">105 000 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV agence</span></div>
     </div>
-
     <div class="pct">💼 Fiscal</div>
     <div class="pgrid">
       <div class="pc cfi"><div class="pc-ico">🧾</div><div class="pc-name">IFU</div><div class="pc-delay" style="color:var(--g);">⚡ Immédiat</div><div class="pc-pr">1 000 <span>FCFA</span></div><span class="pc-badge b-instant">⚡ En ligne</span></div>
     </div>
-
     <div class="pct">📸 Photo & CV</div>
     <div class="pgrid">
-      <div class="pc cph"><div class="pc-ico">📱</div><div class="pc-name">Photo d'identité numérique</div><div class="pc-delay" style="color:var(--g);">⚡ Sous 24h</div><div class="pc-pr">1 000 <span>FCFA</span></div><span class="pc-badge b-instant">⚡ En ligne</span></div>
+      <div class="pc cph"><div class="pc-ico">📱</div><div class="pc-name">Photo identité numérique</div><div class="pc-delay" style="color:var(--g);">⚡ Sous 24h</div><div class="pc-pr">1 000 <span>FCFA</span></div><span class="pc-badge b-instant">⚡ En ligne</span></div>
       <div class="pc cph"><div class="pc-ico">🖨️</div><div class="pc-name">Photo identité (8 exemplaires)</div><div class="pc-delay" style="color:var(--r);">📅 Retrait en agence</div><div class="pc-pr">1 500 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV agence</span></div>
       <div class="pc cph"><div class="pc-ico">💎</div><div class="pc-name">Photo bijoux & produits</div><div class="pc-delay" style="color:var(--r);">📅 Dépôt en agence</div><div class="pc-pr">1 000 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV agence</span></div>
       <div class="pc cph"><div class="pc-ico">📝</div><div class="pc-name">Rédaction de CV</div><div class="pc-delay" style="color:var(--g);">⚡ 24–48h</div><div class="pc-pr">500 <span>FCFA</span></div><span class="pc-badge b-instant">⚡ En ligne</span></div>
     </div>
-
-    <div class="pnote" style="margin-top:18px;background:var(--bg);border:1px solid var(--bd);border-radius:9px;padding:12px 16px;font-size:11px;color:var(--mu);line-height:1.7;"><strong>ℹ️</strong> Prix tout inclus — frais F2K MULTISERVICE compris. Documents ANIP délivrés <strong>immédiatement</strong> après validation. <strong>💙 Moov Money · 💛 MTN Mobile Money · ❤️ Celtiis Cash</strong> — code USSD généré automatiquement. <strong>🎁 Réduction 10%</strong> à partir de 3 services.</div>
+    <div style="margin-top:18px;background:var(--bg);border:1px solid var(--bd);border-radius:9px;padding:12px 16px;font-size:11px;color:var(--mu);line-height:1.7;"><strong>ℹ️</strong> Prix tout inclus — frais F2K MULTISERVICE compris. Documents ANIP délivrés <strong>immédiatement</strong> après validation. <strong>💙 Moov Money · 💛 MTN Mobile Money · ❤️ Celtiis Cash</strong> — code USSD généré automatiquement. <strong>🎁 Réduction 10%</strong> à partir de 3 services.</div>
   </div>
-  </section>
-  <!-- CATALOGUE -->
-<section class="section" id="catalog" style="background:var(--bg);">
+                                                                </section>
+                                                                <section class="section" id="catalog" style="background:var(--bg);">
   <div style="max-width:1280px;margin:0 auto;">
     <div style="margin-bottom:24px;">
       <span class="sec-label">Catalogue complet</span>
       <h2 class="sec-h">Choisissez votre service</h2>
       <p class="sec-sub">Cliquez sur un service pour accéder au formulaire et au paiement.</p>
     </div>
-
     <div class="catsec ce2"><div class="cattitle"><div class="catbdg" style="background:var(--g3);">📄</div><span class="catlbl">État civil</span><span class="catcnt">5</span><div class="div"></div></div>
     <div class="sgrid">
       <a class="sc" href="#" onclick="openForm('naissance',event)"><div class="sc-ico">👶</div><div class="sc-name">Acte de naissance</div><p class="sc-desc">Extrait sécurisé via ANIP.</p><div class="sc-foot"><span class="sc-pr">2 000 FCFA</span><span class="sc-badge sb-instant">⚡ Immédiat</span><span class="sc-arr">→</span></div></a>
@@ -476,7 +453,6 @@ footer{background:var(--ink);padding:48px 36px 20px;}
       <a class="sc" href="#" onclick="openForm('celibat',event)"><div class="sc-ico">🤝</div><div class="sc-name">Cert. coutume & célibat</div><p class="sc-desc">Attestation matrimoniale.</p><div class="sc-foot"><span class="sc-pr">2 000 FCFA</span><span class="sc-badge sb-instant">⚡ Immédiat</span><span class="sc-arr">→</span></div></a>
       <a class="sc" href="#" onclick="openForm('jugement',event)"><div class="sc-ico">📑</div><div class="sc-name">Jugement supplétif</div><p class="sc-desc">Reconstitution acte de naissance.</p><div class="sc-foot"><span class="sc-pr">51 000 FCFA</span><span class="sc-badge sb-choice">🔄 Au choix</span><span class="sc-arr">→</span></div></a>
     </div></div>
-
     <div class="catsec ci2" style="margin-top:24px;"><div class="cattitle"><div class="catbdg" style="background:var(--b3);">🪪</div><span class="catlbl">Identité nationale</span><span class="catcnt">4</span><div class="div"></div></div>
     <div class="sgrid">
       <a class="sc" href="#" onclick="openForm('cni',event)"><div class="sc-ico">🪪</div><div class="sc-name">CNIB</div><p class="sc-desc">Biométrie — présence obligatoire.</p><div class="sc-foot"><span class="sc-pr">7 000 FCFA</span><span class="sc-badge sb-rdv">📅 RDV</span><span class="sc-arr">→</span></div></a>
@@ -484,27 +460,23 @@ footer{background:var(--ink);padding:48px 36px 20px;}
       <a class="sc" href="#" onclick="openForm('npi',event)"><div class="sc-ico">🏛️</div><div class="sc-name">Certificat NPI/FID</div><p class="sc-desc">Preuve d'inscription ANIP.</p><div class="sc-foot"><span class="sc-pr">1 000 FCFA</span><span class="sc-badge sb-instant">⚡ Immédiat</span><span class="sc-arr">→</span></div></a>
       <a class="sc" href="#" onclick="openForm('residence',event)"><div class="sc-ico">🏠</div><div class="sc-name">Certificat de résidence</div><p class="sc-desc">Justificatif de domicile.</p><div class="sc-foot"><span class="sc-pr">3 000 FCFA</span><span class="sc-badge sb-instant">⚡ Immédiat</span><span class="sc-arr">→</span></div></a>
     </div></div>
-
     <div class="catsec ca2" style="margin-top:24px;"><div class="cattitle"><div class="catbdg" style="background:var(--pu3);">🏛️</div><span class="catlbl">Services ANIP</span><span class="catcnt">2</span><div class="div"></div></div>
     <div class="sgrid">
       <a class="sc" href="#" onclick="openForm('anip_tel',event)"><div class="sc-ico">📱</div><div class="sc-name">MAJ numéro de téléphone</div><p class="sc-desc">Modification dans la base ANIP.</p><div class="sc-foot"><span class="sc-pr">1 000 FCFA</span><span class="sc-badge sb-instant">⚡ 24–48h</span><span class="sc-arr">→</span></div></a>
       <a class="sc" href="#" onclick="openForm('anip_info',event)"><div class="sc-ico">✏️</div><div class="sc-name">MAJ des informations</div><p class="sc-desc">Correction de vos données ANIP.</p><div class="sc-foot"><span class="sc-pr">1 000 FCFA</span><span class="sc-badge sb-choice">🔄 Au choix</span><span class="sc-arr">→</span></div></a>
     </div></div>
-
     <div class="catsec cj2" style="margin-top:24px;"><div class="cattitle"><div class="catbdg" style="background:var(--y3);">⚖️</div><span class="catlbl">Justice & moralité</span><span class="catcnt">3</span><div class="div"></div></div>
     <div class="sgrid">
       <a class="sc" href="#" onclick="openForm('casier',event)"><div class="sc-ico">⚖️</div><div class="sc-name">Casier judiciaire (B3)</div><p class="sc-desc">Bulletin N°3 pour emplois/concours.</p><div class="sc-foot"><span class="sc-pr">2 900 FCFA</span><span class="sc-badge sb-instant">⚡ Immédiat</span><span class="sc-arr">→</span></div></a>
       <a class="sc" href="#" onclick="openForm('legalisation',event)"><div class="sc-ico">🖊️</div><div class="sc-name">Légalisation de signature</div><p class="sc-desc">Présence physique requise.</p><div class="sc-foot"><span class="sc-pr">1 500 FCFA</span><span class="sc-badge sb-rdv">📅 RDV</span><span class="sc-arr">→</span></div></a>
       <a class="sc" href="#" onclick="openForm('copie_conf',event)"><div class="sc-ico">📋</div><div class="sc-name">Copie conforme</div><p class="sc-desc">Certification de documents.</p><div class="sc-foot"><span class="sc-pr">1 500 FCFA</span><span class="sc-badge sb-instant">⚡ Immédiat</span><span class="sc-arr">→</span></div></a>
     </div></div>
-
     <div class="catsec cv3" style="margin-top:24px;"><div class="cattitle"><div class="catbdg" style="background:var(--r3);">🛂</div><span class="catlbl">Voyage & mobilité</span><span class="catcnt">3</span><div class="div"></div></div>
     <div class="sgrid">
       <a class="sc" href="#" onclick="openForm('passeport',event)"><div class="sc-ico">🛂</div><div class="sc-name">Passeport ordinaire</div><p class="sc-desc">Biométrie obligatoire en agence.</p><div class="sc-foot"><span class="sc-pr">35 000 FCFA</span><span class="sc-badge sb-rdv">📅 RDV</span><span class="sc-arr">→</span></div></a>
       <a class="sc" href="#" onclick="openForm('passeport_vip',event)"><div class="sc-ico">🛂</div><div class="sc-name">Passeport VIP (48h)</div><p class="sc-desc">Express — biométrie obligatoire.</p><div class="sc-foot"><span class="sc-pr">135 000 FCFA</span><span class="sc-badge sb-rdv">📅 RDV</span><span class="sc-arr">→</span></div></a>
       <a class="sc" href="#" onclick="openForm('laissez',event)"><div class="sc-ico">✈️</div><div class="sc-name">Laissez-passer</div><p class="sc-desc">Document de voyage d'urgence.</p><div class="sc-foot"><span class="sc-pr">1 000 FCFA</span><span class="sc-badge sb-choice">🔄 Au choix</span><span class="sc-arr">→</span></div></a>
     </div></div>
-
     <div class="catsec cp2" style="margin-top:24px;"><div class="cattitle"><div class="catbdg" style="background:var(--or3);">🚗</div><span class="catlbl">Permis & transport</span><span class="catcnt">5</span><div class="div"></div></div>
     <div class="sgrid">
       <a class="sc" href="#" onclick="openForm('permis',event)"><div class="sc-ico">🚗</div><div class="sc-name">Permis de conduire</div><p class="sc-desc">Retrait physique obligatoire.</p><div class="sc-foot"><span class="sc-pr">28 200 FCFA</span><span class="sc-badge sb-rdv">📅 RDV</span><span class="sc-arr">→</span></div></a>
@@ -513,72 +485,61 @@ footer{background:var(--ink);padding:48px 36px 20px;}
       <a class="sc" href="#" onclick="openForm('visite_taxi',event)"><div class="sc-ico">🚕</div><div class="sc-name">Visite technique — Taxi</div><p class="sc-desc">Véhicule présent en agence.</p><div class="sc-foot"><span class="sc-pr">11 000 FCFA</span><span class="sc-badge sb-rdv">📅 RDV</span><span class="sc-arr">→</span></div></a>
       <a class="sc" href="#" onclick="openForm('visite_lourd',event)"><div class="sc-ico">🚛</div><div class="sc-name">Visite technique — Poids lourd</div><p class="sc-desc">Véhicule présent en agence.</p><div class="sc-foot"><span class="sc-pr">23 000 FCFA</span><span class="sc-badge sb-rdv">📅 RDV</span><span class="sc-arr">→</span></div></a>
     </div></div>
-
     <div class="catsec cf2" style="margin-top:24px;"><div class="cattitle"><div class="catbdg" style="background:var(--tl3);">🏗️</div><span class="catlbl">Foncier</span><span class="catcnt">2</span><div class="div"></div></div>
     <div class="sgrid">
       <a class="sc" href="#" onclick="openForm('cadastre',event)"><div class="sc-ico">🗺️</div><div class="sc-name">Extrait cadastral</div><p class="sc-desc">En ligne ou déplacement.</p><div class="sc-foot"><span class="sc-pr">6 000 FCFA</span><span class="sc-badge sb-choice">🔄 Au choix</span><span class="sc-arr">→</span></div></a>
       <a class="sc" href="#" onclick="openForm('titre_fonc',event)"><div class="sc-ico">📂</div><div class="sc-name">Titre foncier</div><p class="sc-desc">Procédure longue avec RDV.</p><div class="sc-foot"><span class="sc-pr">105 000 FCFA</span><span class="sc-badge sb-rdv">📅 RDV</span><span class="sc-arr">→</span></div></a>
     </div></div>
-
     <div class="catsec cfi2" style="margin-top:24px;"><div class="cattitle"><div class="catbdg" style="background:var(--g3);">💼</div><span class="catlbl">Fiscal</span><span class="catcnt">1</span><div class="div"></div></div>
     <div class="sgrid">
       <a class="sc" href="#" onclick="openForm('ifu',event)"><div class="sc-ico">🧾</div><div class="sc-name">IFU</div><p class="sc-desc">Identifiant Fiscal Unique.</p><div class="sc-foot"><span class="sc-pr">1 000 FCFA</span><span class="sc-badge sb-instant">⚡ Immédiat</span><span class="sc-arr">→</span></div></a>
     </div></div>
-
     <div class="catsec cph2" style="margin-top:24px;"><div class="cattitle"><div class="catbdg" style="background:var(--pk3);">📸</div><span class="catlbl">Photo & CV</span><span class="catcnt">4</span><div class="div"></div></div>
     <div class="sgrid">
-      <a class="sc" href="#" onclick="openForm('photo_num',event)"><div class="sc-ico">📱</div><div class="sc-name">Photo d'identité numérique</div><p class="sc-desc">Retouche pro, livraison email/WhatsApp.</p><div class="sc-foot"><span class="sc-pr">1 000 FCFA</span><span class="sc-badge sb-instant">⚡ 24h</span><span class="sc-arr">→</span></div></a>
+      <a class="sc" href="#" onclick="openForm('photo_num',event)"><div class="sc-ico">📱</div><div class="sc-name">Photo identité numérique</div><p class="sc-desc">Retouche pro, livraison email/WhatsApp.</p><div class="sc-foot"><span class="sc-pr">1 000 FCFA</span><span class="sc-badge sb-instant">⚡ 24h</span><span class="sc-arr">→</span></div></a>
       <a class="sc" href="#" onclick="openForm('photo_print',event)"><div class="sc-ico">🖨️</div><div class="sc-name">Photo identité (8 exemplaires)</div><p class="sc-desc">Impression — retrait en agence.</p><div class="sc-foot"><span class="sc-pr">1 500 FCFA</span><span class="sc-badge sb-rdv">📅 RDV</span><span class="sc-arr">→</span></div></a>
       <a class="sc" href="#" onclick="openForm('photo_bijoux',event)"><div class="sc-ico">💎</div><div class="sc-name">Photo bijoux & produits</div><p class="sc-desc">Dépôt articles — retrait en agence.</p><div class="sc-foot"><span class="sc-pr">1 000 FCFA</span><span class="sc-badge sb-rdv">📅 RDV</span><span class="sc-arr">→</span></div></a>
       <a class="sc" href="#" onclick="openForm('cv',event)"><div class="sc-ico">📝</div><div class="sc-name">Rédaction de CV</div><p class="sc-desc">CV pro livré par email sous 48h.</p><div class="sc-foot"><span class="sc-pr">500 FCFA</span><span class="sc-badge sb-instant">⚡ 48h</span><span class="sc-arr">→</span></div></a>
     </div></div>
   </div>
 </section>
-
-<!-- COMMENT ÇA MARCHE -->
 <section class="section" id="comment" style="background:#fff;border-top:1px solid var(--bd);">
   <div style="max-width:1280px;margin:0 auto;">
     <div style="text-align:center;margin-bottom:28px;">
       <span class="sec-label">Processus</span>
-      <h2 class="sec-h">Comment ça fonctionne</h2>
+      <h2 class="sec-h">Comment ca fonctionne</h2>
     </div>
     <div class="howgrid">
       <div class="hstep"><div class="hn hn1">1</div><div class="ht">Choisissez le service</div><p class="hp">Sélectionnez dans le catalogue.</p></div>
-      <div class="hstep"><div class="hn hn2">2</div><div class="ht">Remplissez & payez</div><p class="hp">Formulaire + paiement via Moov, MTN ou Celtiis.</p></div>
+      <div class="hstep"><div class="hn hn2">2</div><div class="ht">Remplissez et payez</div><p class="hp">Formulaire + paiement via Moov, MTN ou Celtiis.</p></div>
       <div class="hstep"><div class="hn hn3">3</div><div class="ht">Email automatique</div><p class="hp">Recevez votre code de référence.</p></div>
       <div class="hstep"><div class="hn hn4">4</div><div class="ht">Recevez votre document</div><p class="hp">En ligne ou RDV selon le service.</p></div>
     </div>
   </div>
 </section>
-
-<!-- SUIVI -->
 <div class="track" id="suivi">
   <div class="tinner">
     <h2>Suivez votre dossier</h2>
     <p>Entrez votre numéro de référence reçu par email ou SMS.</p>
     <div class="trow">
       <input type="text" placeholder="Ex : F2K-2025-08421" id="track-in">
-      <button class="tbtn" onclick="trackIt()">Suivre →</button>
+      <button class="tbtn" onclick="trackIt()">Suivre</button>
     </div>
   </div>
 </div>
-
-<!-- POURQUOI NOUS -->
 <section class="section" style="background:var(--bg);border-top:1px solid var(--bd);">
   <div style="max-width:1280px;margin:0 auto;">
     <div style="text-align:center;margin-bottom:8px;"><span class="sec-label">Pourquoi nous</span><h2 class="sec-h">F2K MULTISERVICE</h2></div>
     <div class="wgrid">
-      <div class="wc"><div class="wi">🔒</div><div class="wt">Sécurisé & confidentiel</div><p class="wp">Vos données protégées — traitement confidentiel garanti.</p></div>
+      <div class="wc"><div class="wi">🔒</div><div class="wt">Sécurisé et confidentiel</div><p class="wp">Vos données protégées — traitement confidentiel garanti.</p></div>
       <div class="wc"><div class="wi">⚡</div><div class="wt">Documents ANIP immédiats</div><p class="wp">Actes d'état civil, CIP, NPI, casier judiciaire — délivrance instantanée.</p></div>
       <div class="wc"><div class="wi">🇧🇯</div><div class="wt">100% Béninois</div><p class="wp">Conçu par et pour les Béninois.</p></div>
       <div class="wc"><div class="wi">📧</div><div class="wt">Email automatique</div><p class="wp">Code de référence envoyé immédiatement après paiement.</p></div>
       <div class="wc"><div class="wi">💳</div><div class="wt">3 opérateurs acceptés</div><p class="wp">Moov Money, MTN Mobile Money et Celtiis Cash — paiement USSD immédiat.</p></div>
-      <div class="wc"><div class="wi">🎁</div><div class="wt">Réduction 10%</div><p class="wp">À partir de 3 services commandés en même temps.</p></div>
+      <div class="wc"><div class="wi">🎁</div><div class="wt">Réduction 10%</div><p class="wp">A partir de 3 services commandés en même temps.</p></div>
     </div>
   </div>
 </section>
-
-<!-- FOOTER -->
 <footer id="contact">
   <div class="fgrid">
     <div>
@@ -590,13 +551,17 @@ footer{background:var(--ink);padding:48px 36px 20px;}
       <div class="frow"><div class="fst2 fs-g"></div><div class="fst2 fs-y"></div><div class="fst2 fs-r"></div><span class="ftxt">Fièrement béninois 🇧🇯</span></div>
     </div>
     <div class="fc"><h4>Services</h4><ul>
-      <li><a href="#">État civil</a></li><li><a href="#">Identité nationale</a></li>
-      <li><a href="#">Services ANIP</a></li><li><a href="#">Voyage</a></li>
-      <li><a href="#">Photo & CV</a></li>
+      <li><a href="#">État civil</a></li>
+      <li><a href="#">Identité nationale</a></li>
+      <li><a href="#">Services ANIP</a></li>
+      <li><a href="#">Voyage</a></li>
+      <li><a href="#">Photo et CV</a></li>
     </ul></div>
     <div class="fc"><h4>Plateforme</h4><ul>
-      <li><a href="#pricing">Tarifs</a></li><li><a href="#catalog">Catalogue</a></li>
-      <li><a href="#suivi">Suivi dossier</a></li><li><a href="#" onclick="openDash()">Mon espace</a></li>
+      <li><a href="#pricing">Tarifs</a></li>
+      <li><a href="#catalog">Catalogue</a></li>
+      <li><a href="#suivi">Suivi dossier</a></li>
+      <li><a href="#" onclick="openDash()">Mon espace</a></li>
     </ul></div>
     <div class="fc"><h4>Contact</h4>
       <a class="ci-link" href="https://wa.me/2290199878742" target="_blank">💬 +229 01 99 87 87 42</a>
@@ -611,25 +576,21 @@ footer{background:var(--ink);padding:48px 36px 20px;}
     <div><a href="#">Confidentialité</a><a href="#">CGU</a><a href="#">Mentions légales</a></div>
   </div>
 </footer>
-
-<!-- MODAL FORMULAIRE -->
 <div class="ov" id="form-ov">
   <div class="modal" id="form-modal">
     <div class="mhead">
-      <button class="mcl" onclick="closeForm()">✕</button>
+      <button class="mcl" onclick="closeForm()">X</button>
       <div id="fm-title" class="mtitle"></div>
       <div id="fm-price" class="mprice"></div>
     </div>
     <div class="mbody" id="fm-body"></div>
   </div>
 </div>
-
-<!-- MODAL EMAIL -->
 <div class="ov" id="email-ov">
   <div class="emodal">
     <div class="ehead">
-      <div class="efrom">De : F2K MULTISERVICE → <span id="em-to"></span></div>
-      <div class="esubj">✅ Confirmation de demande — F2K ON LINE</div>
+      <div class="efrom">De : F2K MULTISERVICE a <span id="em-to"></span></div>
+      <div class="esubj">Confirmation de demande — F2K ON LINE</div>
     </div>
     <div class="ebody">
       <div style="display:flex;align-items:center;gap:7px;margin-bottom:14px;">
@@ -639,20 +600,18 @@ footer{background:var(--ink);padding:48px 36px 20px;}
       <div style="font-size:13px;font-weight:600;margin-bottom:9px;" id="em-greet"></div>
       <div class="erefbox"><p>Votre numéro de référence</p><div class="eref" id="em-ref"></div></div>
       <div class="edet" id="em-det"></div>
-      <button class="ecta" onclick="closeEmailDash()">📁 Accéder à mon espace client →</button>
+      <button class="ecta" onclick="closeEmailDash()">📁 Accéder a mon espace client</button>
       <div class="efooter">F2K MULTISERVICE • Cotonou, Bénin 🇧🇯<br>📞 +229 01 58 07 07 08 • 💬 +229 01 99 87 87 42<br>✉️ f2kmultiservice@gmail.com<br>© 2025 F2K MULTISERVICE</div>
     </div>
   </div>
 </div>
-
-<!-- DASHBOARD CLIENT -->
 <div id="dashboard">
   <div class="dnav">
     <div style="display:flex;align-items:center;gap:9px;">
       <div class="lm"><div></div><div></div><div></div></div>
       <div class="ln" style="font-family:'Fraunces',serif;font-size:16px;font-weight:900;">F2K <em style="color:var(--g)">ON LINE</em></div>
     </div>
-    <button class="dcl" onclick="closeDash()">✕ Fermer</button>
+    <button class="dcl" onclick="closeDash()">X Fermer</button>
   </div>
   <div class="dbody">
     <div class="dwelcome">
@@ -662,14 +621,11 @@ footer{background:var(--ink);padding:48px 36px 20px;}
     <div id="orders-list"></div>
   </div>
 </div>
-
-<!-- TOAST -->
 <div class="toast" id="toast">
   <span id="t-ico" style="font-size:18px;">✅</span>
   <div><div class="tmsg" id="t-msg"></div><div class="tsub" id="t-sub"></div></div>
   </div>
   <script>
-/* ════ FIREBASE CONFIG ════ */
 const firebaseConfig = {
   apiKey: "AIzaSyBtngyLs-sbAnfMQD0MhOi2yqB114vi4Jg",
   authDomain: "f2k-on-line.firebaseapp.com",
@@ -684,23 +640,19 @@ const db = firebase.firestore();
 const storage = firebase.storage();
 const auth = firebase.auth();
 
-/* ════ EMAILJS CONFIG ════ */
 emailjs.init("XAb5zE12AGNaYhsoc");
 const EMAILJS_SERVICE = "F2K_MULTISERVICE";
 const EMAILJS_TEMPLATE = "template_77x2hcp";
 
-/* ════ CLOUDINARY CONFIG ════ */
 const CLOUDINARY_URL = "https://api.cloudinary.com/v1_1/di4byrrfv/upload";
 const CLOUDINARY_PRESET = "f2k_stream";
 
-/* ════ PAIEMENT — 3 OPÉRATEURS ════ */
 const OPERATORS = {
-  moov: { name:'Moov Money',      code:(amt)=>`*855*4*1*317105*${amt}*1#`,                    badge:'MOOV',    cls:'moov' },
-  mtn:  { name:'MTN Mobile Money',code:(amt)=>`*880*1*1*0166499525*0166499525*${amt}*1#`,     badge:'MTN',     cls:'mtn'  },
-  cel:  { name:'Celtiis Cash',    code:(amt)=>`*889*4*1*0158070708*${amt}*1*2#`,              badge:'CELTIIS', cls:'cel'  }
+  moov:{name:"Moov Money",code:function(a){return "*855*4*1*317105*"+a+"*1#"},badge:"MOOV",cls:"moov"},
+  mtn:{name:"MTN Mobile Money",code:function(a){return "*880*1*1*0166499525*0166499525*"+a+"*1#"},badge:"MTN",cls:"mtn"},
+  cel:{name:"Celtiis Cash",code:function(a){return "*889*4*1*0158070708*"+a+"*1*2#"},badge:"CELTIIS",cls:"cel"}
 };
 
-/* ════ PRIX F2K (tout inclus) ════ */
 const PRICES = {
   naissance:2000,mariage:2000,deces:2000,celibat:2000,jugement:51000,
   cni:7000,cip:2000,npi:1000,residence:3000,
@@ -713,528 +665,627 @@ const PRICES = {
 };
 
 const NAMES = {
-  naissance:'Acte de naissance',mariage:'Acte de mariage',deces:'Acte de décès',
-  celibat:'Cert. de coutume & célibat',jugement:'Jugement supplétif',
-  cni:'CNIB',cip:'CIP',npi:'Certificat NPI/FID',residence:'Certificat de résidence',
-  anip_tel:'MAJ téléphone ANIP',anip_info:'MAJ informations ANIP',
-  casier:'Casier judiciaire (B3)',legalisation:'Légalisation de signature',copie_conf:'Copie conforme',
-  passeport:'Passeport biométrique ordinaire',passeport_vip:'Passeport VIP (48h)',laissez:'Laissez-passer',
-  permis:'Permis de conduire',immat:'Immatriculation véhicule',
-  visite_leger:'Visite technique — Léger',visite_taxi:'Visite technique — Taxi',visite_lourd:'Visite technique — Poids lourd',
-  cadastre:'Extrait cadastral',titre_fonc:'Titre foncier',ifu:'IFU',
-  photo_num:'Photo d\'identité numérique',photo_print:'Photo identité (8 exemplaires)',
-  photo_bijoux:'Photo bijoux & produits',cv:'Rédaction de CV'
+  naissance:"Acte de naissance",mariage:"Acte de mariage",deces:"Acte de deces",
+  celibat:"Cert. de coutume et celibat",jugement:"Jugement suppletif",
+  cni:"CNIB",cip:"CIP",npi:"Certificat NPI/FID",residence:"Certificat de residence",
+  anip_tel:"MAJ telephone ANIP",anip_info:"MAJ informations ANIP",
+  casier:"Casier judiciaire (B3)",legalisation:"Legalisation de signature",copie_conf:"Copie conforme",
+  passeport:"Passeport biometrique ordinaire",passeport_vip:"Passeport VIP (48h)",laissez:"Laissez-passer",
+  permis:"Permis de conduire",immat:"Immatriculation vehicule",
+  visite_leger:"Visite technique Leger",visite_taxi:"Visite technique Taxi",visite_lourd:"Visite technique Poids lourd",
+  cadastre:"Extrait cadastral",titre_fonc:"Titre foncier",ifu:"IFU",
+  photo_num:"Photo identite numerique",photo_print:"Photo identite 8 exemplaires",
+  photo_bijoux:"Photo bijoux et produits",cv:"Redaction de CV"
 };
 
 const ICONS = {
-  naissance:'👶',mariage:'💍',deces:'📜',celibat:'🤝',jugement:'📑',
-  cni:'🪪',cip:'📋',npi:'🏛️',residence:'🏠',anip_tel:'📱',anip_info:'✏️',
-  casier:'⚖️',legalisation:'🖊️',copie_conf:'📋',passeport:'🛂',passeport_vip:'🛂',
-  laissez:'✈️',permis:'🚗',immat:'🚘',visite_leger:'🔧',visite_taxi:'🚕',visite_lourd:'🚛',
-  cadastre:'🗺️',titre_fonc:'📂',ifu:'🧾',photo_num:'📱',photo_print:'🖨️',photo_bijoux:'💎',cv:'📝'
+  naissance:"👶",mariage:"💍",deces:"📜",celibat:"🤝",jugement:"📑",
+  cni:"🪪",cip:"📋",npi:"🏛️",residence:"🏠",anip_tel:"📱",anip_info:"✏️",
+  casier:"⚖️",legalisation:"🖊️",copie_conf:"📋",passeport:"🛂",passeport_vip:"🛂",
+  laissez:"✈️",permis:"🚗",immat:"🚘",visite_leger:"🔧",visite_taxi:"🚕",visite_lourd:"🚛",
+  cadastre:"🗺️",titre_fonc:"📂",ifu:"🧾",photo_num:"📱",photo_print:"🖨️",photo_bijoux:"💎",cv:"📝"
 };
 
 const DELAIS = {
-  naissance:'Immédiat',mariage:'Immédiat',deces:'Immédiat',celibat:'Immédiat',jugement:'10–15 jours',
-  cni:'21 jours (RDV)',cip:'Immédiat',npi:'Immédiat',residence:'Immédiat',
-  anip_tel:'24–48h',anip_info:'2–5 jours',
-  casier:'Immédiat',legalisation:'RDV agence',copie_conf:'Immédiat',
-  passeport:'15–21 jours (RDV)',passeport_vip:'48h (RDV)',laissez:'3–5 jours',
-  permis:'10–15 jours (RDV)',immat:'7–10 jours (RDV)',
-  visite_leger:'RDV agence',visite_taxi:'RDV agence',visite_lourd:'RDV agence',
-  cadastre:'5–7 jours',titre_fonc:'30–60 jours',ifu:'Immédiat',
-  photo_num:'Sous 24h',photo_print:'RDV agence',photo_bijoux:'RDV agence',cv:'24–48h'
+  naissance:"Immediat",mariage:"Immediat",deces:"Immediat",celibat:"Immediat",jugement:"10-15 jours",
+  cni:"21 jours (RDV)",cip:"Immediat",npi:"Immediat",residence:"Immediat",
+  anip_tel:"24-48h",anip_info:"2-5 jours",
+  casier:"Immediat",legalisation:"RDV agence",copie_conf:"Immediat",
+  passeport:"15-21 jours (RDV)",passeport_vip:"48h (RDV)",laissez:"3-5 jours",
+  permis:"10-15 jours (RDV)",immat:"7-10 jours (RDV)",
+  visite_leger:"RDV agence",visite_taxi:"RDV agence",visite_lourd:"RDV agence",
+  cadastre:"5-7 jours",titre_fonc:"30-60 jours",ifu:"Immediat",
+  photo_num:"Sous 24h",photo_print:"RDV agence",photo_bijoux:"RDV agence",cv:"24-48h"
 };
 
-/* ════ PANIER MULTI-SERVICES (réduction 10%) ════ */
-let cart = [];
+var cart = [];
 
 function addToCart(key){
-  if(!cart.includes(key)) cart.push(key);
+  if(cart.indexOf(key)===-1) cart.push(key);
   updateCartBadge();
 }
 
 function updateCartBadge(){
-  const count = cart.length;
-  const total = cart.reduce((s,k)=>s+PRICES[k],0);
-  const discount = count >= 3 ? Math.round(total * 0.10) : 0;
-  const final = total - discount;
-  let badge = document.getElementById('cart-badge');
+  var count = cart.length;
+  var total = 0;
+  for(var i=0;i<cart.length;i++) total += PRICES[cart[i]]||0;
+  var discount = count >= 3 ? Math.round(total * 0.10) : 0;
+  var final = total - discount;
+  var badge = document.getElementById("cart-badge");
   if(!badge){
-    badge = document.createElement('div');
-    badge.id = 'cart-badge';
-    badge.style.cssText='position:fixed;bottom:20px;left:20px;z-index:1500;background:var(--ink2);color:#fff;border-radius:14px;padding:12px 18px;font-size:12px;font-weight:700;box-shadow:0 8px 24px rgba(0,0,0,.22);display:none;cursor:pointer;border:2px solid var(--g);';
-    badge.onclick = ()=>openDash();
+    badge = document.createElement("div");
+    badge.id = "cart-badge";
+    badge.style.cssText = "position:fixed;bottom:20px;left:20px;z-index:1500;background:var(--ink2);color:#fff;border-radius:14px;padding:12px 18px;font-size:12px;font-weight:700;box-shadow:0 8px 24px rgba(0,0,0,.22);display:none;cursor:pointer;border:2px solid var(--g);";
+    badge.onclick = function(){ openDash(); };
     document.body.appendChild(badge);
   }
   if(count > 0){
-    badge.style.display='block';
-    badge.innerHTML = `🛒 ${count} service(s) — ${final.toLocaleString('fr-FR')} FCFA${discount>0?' <span style="color:var(--g2);">(-10%)</span>':''}`;
+    badge.style.display = "block";
+    badge.innerHTML = "🛒 " + count + " service(s) — " + final.toLocaleString("fr-FR") + " FCFA" + (discount > 0 ? " <span style='color:var(--g2);'>(-10%)</span>" : "");
   } else {
-    badge.style.display='none';
+    badge.style.display = "none";
   }
 }
 
-/* ════ HELPERS HTML ════ */
-const COMMUNES=['Cotonou','Porto-Novo','Parakou','Abomey-Calavi','Djougou','Bohicon','Kandi','Lokossa','Ouidah','Natitingou','Abomey','Dogbo','Pobè','Sakété','Nikki','Malanville','Autre'];
-const RECEPTIONS=['Réception par email (numérique)','Livraison à domicile','Retrait au bureau F2K','Envoi par courrier'];
-const selC=(id)=>`<select id="${id}"><option value="">— Commune —</option>${COMMUNES.map(c=>`<option>${c}</option>`).join('')}</select>`;
-const selR=(id)=>`<select id="${id}"><option value="">— Mode —</option>${RECEPTIONS.map(r=>`<option>${r}</option>`).join('')}</select>`;
-const nameF=()=>`<div class="fr2"><div class="fg"><label>Nom <span class="req">*</span></label><input type="text" id="f-nom" placeholder="GBAGUIDI"></div><div class="fg"><label>Prénom(s) <span class="req">*</span></label><input type="text" id="f-prenom" placeholder="Kouassi"></div></div>`;
-const contactF=()=>`<div class="fg"><label>Email <span class="req">*</span></label><input type="email" id="f-email" placeholder="votre@email.com"></div><div class="fr2"><div class="fg"><label>Téléphone <span class="req">*</span></label><input type="tel" id="f-tel" placeholder="+229 97 00 00 00"></div><div class="fg"><label>Commune <span class="req">*</span></label>${selC('f-commune')}</div></div><div class="fg"><label>Mode de réception <span class="req">*</span></label>${selR('f-reception')}</div>`;
-const fileF=(lbl)=>`<div class="fg"><label>${lbl}</label><div class="file-drop" id="fdrop"><input type="file" multiple accept="image/*,.pdf" onchange="handleFiles(this.files)"><p>📎 Glissez ou <span>parcourez</span> — JPG, PNG, PDF (5Mo max)</p></div><div class="filelist" id="flist"></div></div>`;
-const npiF=()=>`<div class="npibox"><div class="npititle">🔢 Identification nationale <span style="color:var(--r);font-size:11px;">* obligatoire</span></div><p class="npi-note">Renseignez votre NPI ou le numéro de formulaire de votre récépissé RAVIP.</p><div class="npitabs"><div class="ntab on" onclick="switchNpi('npi',this)">J'ai mon NPI</div><div class="ntab" onclick="switchNpi('ravip',this)">J'ai seulement le récépissé RAVIP</div></div><div id="npi-npi"><div class="fg"><label>NPI <span class="req">*</span></label><input type="text" id="f-npi" placeholder="Ex : 00123456789" maxlength="20"></div></div><div id="npi-ravip" style="display:none;"><div class="fg"><label>N° récépissé RAVIP <span class="req">*</span></label><input type="text" id="f-ravip" placeholder="Numéro figurant sur votre récépissé RAVIP"></div><div class="ibox ib-warn">⚠️ Sans NPI, renseignez le numéro de formulaire RAVIP. F2K s'occupe du reste.</div></div></div>`;
+var COMMUNES = ["Cotonou","Porto-Novo","Parakou","Abomey-Calavi","Djougou","Bohicon","Kandi","Lokossa","Ouidah","Natitingou","Abomey","Dogbo","Pobe","Sakete","Nikki","Malanville","Autre"];
+var RECEPTIONS = ["Reception par email (numerique)","Livraison a domicile","Retrait au bureau F2K","Envoi par courrier"];
+
+function selC(id){
+  var h = "<select id='"+id+"'><option value=''>-- Commune --</option>";
+  for(var i=0;i<COMMUNES.length;i++) h += "<option>"+COMMUNES[i]+"</option>";
+  return h + "</select>";
+}
+function selR(id){
+  var h = "<select id='"+id+"'><option value=''>-- Mode --</option>";
+  for(var i=0;i<RECEPTIONS.length;i++) h += "<option>"+RECEPTIONS[i]+"</option>";
+  return h + "</select>";
+}
+function nameF(){
+  return "<div class='fr2'><div class='fg'><label>Nom <span class='req'>*</span></label><input type='text' id='f-nom' placeholder='GBAGUIDI'></div><div class='fg'><label>Prenom(s) <span class='req'>*</span></label><input type='text' id='f-prenom' placeholder='Kouassi'></div></div>";
+}
+function contactF(){
+  return "<div class='fg'><label>Email <span class='req'>*</span></label><input type='email' id='f-email' placeholder='votre@email.com'></div><div class='fr2'><div class='fg'><label>Telephone <span class='req'>*</span></label><input type='tel' id='f-tel' placeholder='+229 97 00 00 00'></div><div class='fg'><label>Commune <span class='req'>*</span></label>"+selC("f-commune")+"</div></div><div class='fg'><label>Mode de reception <span class='req'>*</span></label>"+selR("f-reception")+"</div>";
+}
+function fileF(lbl){
+  return "<div class='fg'><label>"+lbl+"</label><div class='file-drop' id='fdrop'><input type='file' multiple accept='image/*,.pdf' onchange='handleFiles(this.files)'><p>📎 Glissez ou <span>parcourez</span> — JPG, PNG, PDF (5Mo max)</p></div><div class='filelist' id='flist'></div></div>";
+}
+function npiF(){
+  return "<div class='npibox'><div class='npititle'>🔢 Identification nationale <span style='color:var(--r);font-size:11px;'>* obligatoire</span></div><p class='npi-note'>Renseignez votre NPI ou le numero de formulaire de votre recepisse RAVIP.</p><div class='npitabs'><div class='ntab on' onclick='switchNpi(\"npi\",this)'>J ai mon NPI</div><div class='ntab' onclick='switchNpi(\"ravip\",this)'>J ai seulement le recepisse RAVIP</div></div><div id='npi-npi'><div class='fg'><label>NPI <span class='req'>*</span></label><input type='text' id='f-npi' placeholder='Ex : 00123456789' maxlength='20'></div></div><div id='npi-ravip' style='display:none;'><div class='fg'><label>N recepisse RAVIP <span class='req'>*</span></label><input type='text' id='f-ravip' placeholder='Numero figurant sur votre recepisse RAVIP'></div><div class='ibox ib-warn'>Sans NPI, renseignez le numero de formulaire RAVIP. F2K s occupe du reste.</div></div></div>";
+}
 
 function switchNpi(t,el){
-  document.querySelectorAll('.ntab').forEach(x=>x.classList.remove('on'));
-  el.classList.add('on');
-  document.getElementById('npi-npi').style.display=t==='npi'?'':'none';
-  document.getElementById('npi-ravip').style.display=t==='ravip'?'':'none';
+  var tabs = document.querySelectorAll(".ntab");
+  for(var i=0;i<tabs.length;i++) tabs[i].classList.remove("on");
+  el.classList.add("on");
+  document.getElementById("npi-npi").style.display = t==="npi" ? "" : "none";
+  document.getElementById("npi-ravip").style.display = t==="ravip" ? "" : "none";
 }
 
-/* ════ BOÎTE DE PAIEMENT ════ */
 function payBox(key){
-  const baseAmt = PRICES[key]||0;
-  const cartKeys = cart.length >= 3 ? cart : [key];
-  const totalBase = cartKeys.reduce((s,k)=>s+(PRICES[k]||0),0);
-  const discount = cart.length >= 3 ? Math.round(totalBase*0.10) : 0;
-  const amt = cart.length >= 3 ? Math.round(baseAmt * 0.90) : baseAmt;
-  const amtFmt = amt.toLocaleString('fr-FR');
-
-  const opRow=(opKey)=>{
-    const op=OPERATORS[opKey];
-    const ussd=op.code(amt);
-    const labels={
-      moov:{icon:'💙',step:'Entrez votre code secret Moov Money'},
-      mtn: {icon:'💛',step:'Entrez votre code secret MTN Mobile Money'},
-      cel: {icon:'❤️',step:'Entrez votre code secret Celtiis Cash'}
-    }[opKey];
-    return `<div class="pay-op pay-op-${opKey}">
-      <div class="pay-op-head">
-        <span class="op-badge op-${opKey}">${labels.icon} ${op.badge}</span>
-        <span class="op-ussd op-ussd-${opKey}">${ussd}</span>
-      </div>
-      <div class="pay-steps"><strong>Comment payer :</strong><br>
-        1. Cliquez sur le bouton ci-dessous<br>
-        2. Votre téléphone ouvre le code USSD<br>
-        3. ${labels.step} et confirmez<br>
-        4. SMS de confirmation reçu ✅
-      </div>
-      <a class="pay-btn pay-btn-${opKey}" href="tel:${ussd}" onclick="onPayClick('${opKey}')">
-        ${labels.icon} Payer ${amtFmt} FCFA via ${op.name}
-      </a>
-    </div>`;
-  };
-
-  return `<div class="paybox">
-    <div class="pay-header">
-      <div class="pay-header-title">💳 Choisissez votre opérateur</div>
-      <div class="pay-amount">${amtFmt} <span>FCFA${discount>0?' — 🎁 Réduction 10% appliquée !':''}</span></div>
-    </div>
-    <div class="pay-ops">${opRow('moov')}${opRow('mtn')}${opRow('cel')}</div>
-    <div id="pay-confirm-box" class="pay-confirm">✅ Paiement effectué — vous pouvez soumettre votre demande.</div>
-    <div class="pay-check">
-      <label><input type="checkbox" id="f-paid" onchange="togglePaid(this)">
-        J'ai effectué le paiement et reçu la confirmation SMS de mon opérateur</label>
-    </div>
-  </div>`;
+  var baseAmt = PRICES[key]||0;
+  var discount = cart.length >= 3 ? Math.round(baseAmt * 0.10) : 0;
+  var amt = baseAmt - discount;
+  var amtFmt = amt.toLocaleString("fr-FR");
+  var html = "<div class='paybox'>";
+  html += "<div class='pay-header'><div class='pay-header-title'>💳 Choisissez votre operateur</div>";
+  html += "<div class='pay-amount'>"+amtFmt+" <span>FCFA"+(discount>0?" — 🎁 Reduction 10% appliquee !":"")+"</span></div></div>";
+  html += "<div class='pay-ops'>";
+  var ops = ["moov","mtn","cel"];
+  var icons = {moov:"💙",mtn:"💛",cel:"❤️"};
+  var steps = {moov:"Entrez votre code secret Moov Money",mtn:"Entrez votre code secret MTN Mobile Money",cel:"Entrez votre code secret Celtiis Cash"};
+  for(var i=0;i<ops.length;i++){
+    var opKey = ops[i];
+    var op = OPERATORS[opKey];
+    var ussd = op.code(amt);
+    html += "<div class='pay-op pay-op-"+opKey+"'>";
+    html += "<div class='pay-op-head'><span class='op-badge op-"+opKey+"'>"+icons[opKey]+" "+op.badge+"</span><span class='op-ussd op-ussd-"+opKey+"'>"+ussd+"</span></div>";
+    html += "<div class='pay-steps'><strong>Comment payer :</strong><br>1. Cliquez sur le bouton ci-dessous<br>2. Votre telephone ouvre le code USSD<br>3. "+steps[opKey]+" et confirmez<br>4. SMS de confirmation recu</div>";
+    html += "<a class='pay-btn pay-btn-"+opKey+"' href='tel:"+ussd+"' onclick='onPayClick()'>"+icons[opKey]+" Payer "+amtFmt+" FCFA via "+op.name+"</a>";
+    html += "</div>";
+  }
+  html += "</div>";
+  html += "<div id='pay-confirm-box' class='pay-confirm'>Paiement effectue — vous pouvez soumettre votre demande.</div>";
+  html += "<div class='pay-check'><label><input type='checkbox' id='f-paid' onchange='togglePaid(this)'> J ai effectue le paiement et recu la confirmation SMS de mon operateur</label></div>";
+  html += "</div>";
+  return html;
 }
 
-function onPayClick(opKey){ setTimeout(()=>{ const b=document.getElementById('pay-confirm-box'); if(b) b.style.display='block'; },4000); }
-function togglePaid(cb){ const b=document.getElementById('pay-confirm-box'); if(b) b.style.display=cb.checked?'block':'none'; }
+function onPayClick(){
+  setTimeout(function(){
+    var b = document.getElementById("pay-confirm-box");
+    if(b) b.style.display = "block";
+  }, 4000);
+}
+function togglePaid(cb){
+  var b = document.getElementById("pay-confirm-box");
+  if(b) b.style.display = cb.checked ? "block" : "none";
+}
+    function buildForm(key){
+  var n = npiF();
+  var p = payBox(key);
+  var base = n + nameF() + "<div class='fr2'><div class='fg'><label>Date de naissance <span class='req'>*</span></label><input type='date' id='f-ddn'></div><div class='fg'><label>Lieu de naissance <span class='req'>*</span></label><input type='text' id='f-lieu' placeholder='Commune/ville'></div></div>";
 
-/* ════ CONSTRUCTEUR DE FORMULAIRES ════ */
-function buildForm(key){
-  const n=npiF(), p=payBox(key);
-  const base=()=>`${n}${nameF()}<div class="fr2"><div class="fg"><label>Date de naissance <span class="req">*</span></label><input type="date" id="f-ddn"></div><div class="fg"><label>Lieu de naissance <span class="req">*</span></label><input type="text" id="f-lieu" placeholder="Commune/ville"></div></div>`;
-
-  const F={
-    naissance:()=>`<div class="ibox ib-ok">⚡ Document délivré immédiatement après validation ANIP.</div>${base()}<div class="fg"><label>Nom du père</label><input type="text" id="f-pere"></div><div class="fg"><label>Nom de la mère</label><input type="text" id="f-mere"></div><div class="fg"><label>Votre lien avec la personne</label><select id="f-lien"><option value="">—</option><option>Moi-même</option><option>Mon enfant</option><option>Mon parent</option><option>Autre</option></select></div><div class="fst">Vos coordonnées</div>${contactF()}${fileF('CNI ou Passeport du demandeur')}${p}`,
-    mariage:()=>`<div class="ibox ib-ok">⚡ Document délivré immédiatement après validation.</div>${base()}<div class="fg"><label>Nom du(de la) conjoint(e) <span class="req">*</span></label><input type="text" id="f-conjoint"></div><div class="fr2"><div class="fg"><label>Date du mariage <span class="req">*</span></label><input type="date" id="f-dm"></div><div class="fg"><label>Mairie du mariage <span class="req">*</span></label><input type="text" id="f-mairie"></div></div><div class="fst">Vos coordonnées</div>${contactF()}${fileF('CNI des deux époux')}${p}`,
-    deces:()=>`<div class="ibox ib-ok">⚡ Document délivré immédiatement après validation.</div>${n}<div class="fst">Informations sur le défunt</div><div class="fr2"><div class="fg"><label>Nom <span class="req">*</span></label><input type="text" id="f-dnom"></div><div class="fg"><label>Prénom(s) <span class="req">*</span></label><input type="text" id="f-dprenom"></div></div><div class="fr2"><div class="fg"><label>Date du décès <span class="req">*</span></label><input type="date" id="f-ddeces"></div><div class="fg"><label>Lieu du décès <span class="req">*</span></label><input type="text" id="f-ldeces"></div></div><div class="fg"><label>Votre lien avec le défunt <span class="req">*</span></label><select id="f-lien"><option value="">—</option><option>Conjoint(e)</option><option>Enfant</option><option>Parent</option><option>Autre</option></select></div><div class="fst">Vos coordonnées</div>${nameF()}${contactF()}${fileF('CNI du déclarant + document prouvant le décès')}${p}`,
-    celibat:()=>`<div class="ibox ib-ok">⚡ Document délivré immédiatement.</div>${base()}<div class="fg"><label>Motif</label><select id="f-motif"><option value="">—</option><option>Mariage</option><option>Visa</option><option>Emploi</option><option>Autre</option></select></div><div class="fst">Vos coordonnées</div>${contactF()}${fileF('CNI ou Passeport valide')}${p}`,
-    jugement:()=>`<div class="ibox ib-warn">⚠️ Nécessite des témoins — notre équipe vous contactera.</div>${base()}<div class="fg"><label>Nom du père</label><input type="text" id="f-pere"></div><div class="fg"><label>Nom de la mère</label><input type="text" id="f-mere"></div><div class="fg"><label>Raison de non-déclaration <span class="req">*</span></label><textarea id="f-raison" placeholder="Expliquez brièvement..."></textarea></div><div class="fst">Vos coordonnées</div>${contactF()}${fileF('Tout document prouvant l\'identité')}${p}`,
-    cni:()=>`<div class="ibox ib-rdv">📅 RDV obligatoire pour biométrie. Délai : 21 jours.</div>${base()}<div class="fr2"><div class="fg"><label>Sexe <span class="req">*</span></label><select id="f-sexe"><option value="">—</option><option>Masculin</option><option>Féminin</option></select></div><div class="fg"><label>Profession</label><input type="text" id="f-prof"></div></div><div class="fg"><label>Type de demande <span class="req">*</span></label><select id="f-type"><option value="">—</option><option>Première demande</option><option>Renouvellement</option><option>Remplacement (perte/vol)</option></select></div><div class="fst">Vos coordonnées</div>${contactF()}${fileF('Acte de naissance + CIP + ancienne CNIB si renouvellement')}${p}`,
-    cip:()=>`<div class="ibox ib-ok">⚡ Document délivré immédiatement. Validité 2 ans.</div>${base()}<div class="fr2"><div class="fg"><label>Sexe <span class="req">*</span></label><select id="f-sexe"><option value="">—</option><option>Masculin</option><option>Féminin</option></select></div><div class="fg"><label>Profession</label><input type="text" id="f-prof"></div></div><div class="fst">Vos coordonnées</div>${contactF()}${fileF('Récépissé RAVIP')}${p}`,
-    npi:()=>`<div class="ibox ib-ok">⚡ Certificat délivré immédiatement.</div>${n}${nameF()}<div class="fst">Vos coordonnées</div>${contactF()}${fileF('Récépissé RAVIP')}${p}`,
-    residence:()=>`<div class="ibox ib-ok">⚡ Document délivré immédiatement.</div>${n}${nameF()}<div class="fr2"><div class="fg"><label>Date de naissance <span class="req">*</span></label><input type="date" id="f-ddn"></div><div class="fg"><label>Profession</label><input type="text" id="f-prof"></div></div><div class="fg"><label>Adresse complète <span class="req">*</span></label><input type="text" id="f-adr" placeholder="Quartier, rue, numéro..."></div><div class="fr2"><div class="fg"><label>Commune <span class="req">*</span></label>${selC('f-cres')}</div><div class="fg"><label>Statut <span class="req">*</span></label><select id="f-statut"><option value="">—</option><option>Propriétaire</option><option>Locataire</option><option>Hébergé</option></select></div></div><div class="fst">Coordonnées</div><div class="fg"><label>Email <span class="req">*</span></label><input type="email" id="f-email"></div><div class="fg"><label>Téléphone <span class="req">*</span></label><input type="tel" id="f-tel"></div><div class="fg"><label>Mode de réception <span class="req">*</span></label>${selR('f-reception')}</div>${fileF('CNI + facture eau/électricité')}${p}`,
-    anip_tel:()=>`<div class="ibox ib-pu">🏛️ Modification de votre numéro dans la base ANIP.</div>${n}${nameF()}<div class="fg"><label>Date de naissance <span class="req">*</span></label><input type="date" id="f-ddn"></div><div class="fr2"><div class="fg"><label>Ancien numéro <span class="req">*</span></label><input type="tel" id="f-otel" placeholder="+229..."></div><div class="fg"><label>Nouveau numéro <span class="req">*</span></label><input type="tel" id="f-ntel" placeholder="+229..."></div></div><div class="fst">Coordonnées</div><div class="fg"><label>Email <span class="req">*</span></label><input type="email" id="f-email"></div><div class="fg"><label>Téléphone contact <span class="req">*</span></label><input type="tel" id="f-tel"></div><div class="fg"><label>Mode réception <span class="req">*</span></label>${selR('f-reception')}</div>${fileF('CNI + preuve du nouveau numéro')}${p}`,
-    anip_info:()=>`<div class="ibox ib-pu">🏛️ Correction de vos données dans la base ANIP.</div>${n}${nameF()}<div class="fg"><label>Date de naissance <span class="req">*</span></label><input type="date" id="f-ddn"></div><div class="fg"><label>Information(s) à modifier <span class="req">*</span></label><select id="f-champ"><option value="">—</option><option>Nom / Prénom</option><option>Date de naissance</option><option>Adresse</option><option>État civil</option><option>Numéro de téléphone</option></select></div><div class="fg"><label>Description des modifications <span class="req">*</span></label><textarea id="f-desc" placeholder="Expliquez ce qui doit être corrigé..."></textarea></div><div class="fst">Coordonnées</div><div class="fg"><label>Email <span class="req">*</span></label><input type="email" id="f-email"></div><div class="fg"><label>Téléphone <span class="req">*</span></label><input type="tel" id="f-tel"></div><div class="fg"><label>Mode réception <span class="req">*</span></label>${selR('f-reception')}</div>${fileF('CNI + documents justifiant la modification')}${p}`,
-    casier:()=>`<div class="ibox ib-ok">⚡ Bulletin N°3 délivré immédiatement.</div>${base()}<div class="fg"><label>Motif <span class="req">*</span></label><select id="f-motif"><option value="">—</option><option>Emploi public</option><option>Emploi privé</option><option>Concours</option><option>Visa</option><option>Autre</option></select></div><div class="fst">Vos coordonnées</div>${contactF()}${fileF('CNI ou Passeport + Acte de naissance')}${p}`,
-    legalisation:()=>`<div class="ibox ib-rdv">📅 RDV obligatoire — présence physique requise.</div>${n}${nameF()}<div class="fg"><label>Type de document <span class="req">*</span></label><select id="f-dtype"><option value="">—</option><option>Contrat</option><option>Procuration</option><option>Déclaration</option><option>Attestation</option><option>Autre</option></select></div><div class="fg"><label>Usage prévu <span class="req">*</span></label><input type="text" id="f-usage" placeholder="Ex: vente immobilière..."></div><div class="fst">Vos coordonnées</div>${contactF()}${fileF('CNI + document original à légaliser')}${p}`,
-    copie_conf:()=>`<div class="ibox ib-ok">⚡ Document certifié délivré immédiatement.</div>${n}${nameF()}<div class="fr2"><div class="fg"><label>Type de document <span class="req">*</span></label><select id="f-dtype"><option value="">—</option><option>Diplôme</option><option>Acte d'état civil</option><option>Contrat</option><option>Relevé de notes</option><option>Autre</option></select></div><div class="fg"><label>Nombre de copies <span class="req">*</span></label><input type="number" min="1" max="20" value="1" id="f-nb"></div></div><div class="fst">Vos coordonnées</div>${contactF()}${fileF('Scan du document original')}${p}`,
-    passeport:()=>`<div class="ibox ib-rdv">📅 RDV obligatoire pour biométrie.passeport:()=>`<div class="ibox ib-rdv">📅 RDV obligatoire pour biométrie. Délai 15–21 jours.</div>${base()}<div class="fr2"><div class="fg"><label>Sexe <span class="req">*</span></label><select id="f-sexe"><option value="">—</option><option>Masculin</option><option>Féminin</option></select></div><div class="fg"><label>Type de demande <span class="req">*</span></label><select id="f-type"><option value="">—</option><option>Première demande</option><option>Renouvellement</option><option>Remplacement</option></select></div></div><div class="fg"><label>N° ancien passeport (si renouvellement)</label><input type="text" id="f-oldpass"></div><div class="fst">Vos coordonnées</div>${contactF()}${fileF('CNI + Acte de naissance + CIP + Casier judiciaire + 2 photos')}${p}`,
-    passeport_vip:()=>`<div class="ibox ib-rdv">📅 RDV obligatoire. Délai 48h après RDV.</div>${base()}<div class="fr2"><div class="fg"><label>Sexe <span class="req">*</span></label><select id="f-sexe"><option value="">—</option><option>Masculin</option><option>Féminin</option></select></div><div class="fg"><label>Date de voyage souhaitée <span class="req">*</span></label><input type="date" id="f-voyage"></div></div><div class="fst">Vos coordonnées</div>${contactF()}${fileF('CNI + Acte de naissance + CIP + Casier judiciaire + 2 photos')}${p}`,
-    laissez:()=>`<div class="ibox ib-warn">⚠️ Urgence uniquement — justifiez la raison.</div>${base()}<div class="fr2"><div class="fg"><label>Raison <span class="req">*</span></label><select id="f-raison"><option value="">—</option><option>Perte de passeport</option><option>Vol de passeport</option><option>Expiration urgente</option><option>Autre</option></select></div><div class="fg"><label>Date de voyage <span class="req">*</span></label><input type="date" id="f-voyage"></div></div><div class="fg"><label>Destination <span class="req">*</span></label><input type="text" id="f-dest"></div><div class="fst">Vos coordonnées</div>${contactF()}${fileF('CNI + Déclaration perte/vol + billet d\'avion')}${p}`,
-    permis:()=>`<div class="ibox ib-rdv">📅 RDV obligatoire pour retrait. Délai 10–15 jours.</div>${base()}<div class="fr2"><div class="fg"><label>Catégorie <span class="req">*</span></label><select id="f-cat"><option value="">—</option><option>A (moto)</option><option>B (voiture)</option><option>C (camion)</option><option>D (bus)</option></select></div><div class="fg"><label>Type de demande <span class="req">*</span></label><select id="f-type"><option value="">—</option><option>Première demande</option><option>Renouvellement</option><option>Remplacement</option></select></div></div><div class="fst">Vos coordonnées</div>${contactF()}${fileF('CNI + Certificat médical + Attestation auto-école + 2 photos')}${p}`,
-    immat:()=>`<div class="ibox ib-rdv">📅 RDV obligatoire — inspection physique du véhicule.</div>${n}${nameF()}<div class="fr2"><div class="fg"><label>Marque <span class="req">*</span></label><input type="text" id="f-marque"></div><div class="fg"><label>Modèle <span class="req">*</span></label><input type="text" id="f-modele"></div></div><div class="fr2"><div class="fg"><label>Année <span class="req">*</span></label><input type="number" id="f-annee" placeholder="2020"></div><div class="fg"><label>N° châssis <span class="req">*</span></label><input type="text" id="f-chassis"></div></div><div class="fg"><label>Type de demande <span class="req">*</span></label><select id="f-type"><option value="">—</option><option>Nouvelle immatriculation</option><option>Re-immatriculation</option><option>Mutation</option></select></div><div class="fst">Vos coordonnées</div>${contactF()}${fileF('CNI + Titre de propriété + Ancienne carte grise + Quitus fiscal')}${p}`,
-    visite_leger:()=>`<div class="ibox ib-rdv">📅 RDV obligatoire — véhicule présent en agence.</div>${n}${nameF()}<div class="fr2"><div class="fg"><label>Immatriculation <span class="req">*</span></label><input type="text" id="f-immat" placeholder="BJ 1234 AB"></div><div class="fg"><label>Marque / Modèle <span class="req">*</span></label><input type="text" id="f-veh"></div></div><div class="fg"><label>Date souhaitée</label><input type="date" id="f-date"></div><div class="fst">Vos coordonnées</div>${contactF()}${fileF('Carte grise + Assurance en cours de validité')}${p}`,
-    visite_taxi:()=>`<div class="ibox ib-rdv">📅 RDV obligatoire — véhicule taxi présent.</div>${n}${nameF()}<div class="fr2"><div class="fg"><label>Immatriculation <span class="req">*</span></label><input type="text" id="f-immat" placeholder="BJ 1234 AB"></div><div class="fg"><label>Marque / Modèle <span class="req">*</span></label><input type="text" id="f-veh"></div></div><div class="fg"><label>Date souhaitée</label><input type="date" id="f-date"></div><div class="fst">Vos coordonnées</div>${contactF()}${fileF('Carte grise + Assurance + Autorisation taxi')}${p}`,
-    visite_lourd:()=>`<div class="ibox ib-rdv">📅 RDV obligatoire — poids lourd présent.</div>${n}${nameF()}<div class="fr2"><div class="fg"><label>Immatriculation <span class="req">*</span></label><input type="text" id="f-immat"></div><div class="fg"><label>Type de véhicule <span class="req">*</span></label><select id="f-tveh"><option value="">—</option><option>Camion</option><option>Semi-remorque</option><option>Bus/Car</option><option>Autre</option></select></div></div><div class="fg"><label>Date souhaitée</label><input type="date" id="f-date"></div><div class="fst">Vos coordonnées</div>${contactF()}${fileF('Carte grise + Assurance')}${p}`,
-    cadastre:()=>`<div class="ibox ib-warn">🔄 Au choix : en ligne ou déplacement.</div>${n}${nameF()}<div class="fg"><label>Référence cadastrale (si connue)</label><input type="text" id="f-ref"></div><div class="fg"><label>Localisation précise <span class="req">*</span></label><input type="text" id="f-loc" placeholder="Quartier, commune..."></div><div class="fr2"><div class="fg"><label>Superficie approx.</label><input type="text" id="f-sup" placeholder="Ex: 400 m²"></div><div class="fg"><label>Motif <span class="req">*</span></label><select id="f-motif"><option value="">—</option><option>Transaction immobilière</option><option>Prêt bancaire</option><option>Succession</option><option>Autre</option></select></div></div><div class="fst">Vos coordonnées</div>${contactF()}${fileF('CNI + titre de propriété si disponible')}${p}`,
-    titre_fonc:()=>`<div class="ibox ib-rdv">📅 RDV obligatoire — procédure 30–60 jours.</div>${n}${nameF()}<div class="fg"><label>Type de demande <span class="req">*</span></label><select id="f-type"><option value="">—</option><option>Nouveau titre foncier</option><option>Mise à jour titre existant</option><option>Mutation</option></select></div><div class="fg"><label>Localisation <span class="req">*</span></label><input type="text" id="f-loc"></div><div class="fg"><label>Superficie (m²) <span class="req">*</span></label><input type="text" id="f-sup"></div><div class="fg"><label>Informations complémentaires</label><textarea id="f-info" placeholder="Origine du bien..."></textarea></div><div class="fst">Vos coordonnées</div>${contactF()}${fileF('CNI + Acte de vente + Plan de bornage + Quitus fiscal')}${p}`,
-    ifu:()=>`<div class="ibox ib-ok">⚡ IFU délivré immédiatement.</div>${n}${nameF()}<div class="fr2"><div class="fg"><label>Date de naissance <span class="req">*</span></label><input type="date" id="f-ddn"></div><div class="fg"><label>Type d'activité <span class="req">*</span></label><select id="f-act"><option value="">—</option><option>Commerce</option><option>Prestation de services</option><option>Agriculture/Élevage</option><option>BTP</option><option>Professionnel libéral</option><option>Autre</option></select></div></div><div class="fg"><label>Adresse de l'activité <span class="req">*</span></label><input type="text" id="f-adract"></div><div class="fst">Vos coordonnées</div>${contactF()}${fileF('CNI + Acte de naissance + Justificatif de domicile')}${p}`,
-    photo_num:()=>`<div class="ibox ib-ok">📸 Envoyez votre selfie — F2K retouche tout. Livraison sous 24h.</div>${n}${nameF()}<div class="fg"><label>Usage de la photo <span class="req">*</span></label><select id="f-usage"><option value="">—</option><option>CNI biométrique</option><option>Passeport biométrique</option><option>Visa ambassade</option><option>Concours / emploi</option><option>Carte professionnelle</option><option>Autre</option></select></div><div class="fg"><label>📸 Votre photo de face <span class="req">*</span></label><div class="pzone" id="pzone"><img id="pprev" class="pprev" alt=""><div class="pbtns"><label class="pbtn" style="cursor:pointer;">📁 Galerie<input type="file" accept="image/*" style="display:none" onchange="loadPhoto(this)"></label><button type="button" class="pbtn" onclick="startCam()">📷 Caméra</button><button type="button" id="snap-btn" class="pbtn" onclick="snapCam()" style="display:none;">✅ Capturer</button><button type="button" id="stop-btn" class="pbtn" onclick="stopCam()" style="display:none;">✕</button></div><video id="cam-video" autoplay playsinline></video><canvas id="cam-canvas"></canvas><p class="phint">Photo simple de face — F2K s'occupe de la retouche pro !</p></div></div><div class="fst">Coordonnées de livraison</div><div class="fg"><label>Email <span class="req">*</span></label><input type="email" id="f-email"></div><div class="fg"><label>Téléphone WhatsApp <span class="req">*</span></label><input type="tel" id="f-tel"></div><div class="fg"><label>Mode de réception <span class="req">*</span></label>${selR('f-reception')}</div>${p}`,
-    photo_print:()=>`<div class="ibox ib-rdv">📅 RDV obligatoire pour retrait des 8 exemplaires.</div>${n}${nameF()}<div class="fg"><label>Usage des photos <span class="req">*</span></label><select id="f-usage"><option value="">—</option><option>CNI biométrique</option><option>Passeport biométrique</option><option>Concours / emploi</option><option>Autre</option></select></div><div class="fg"><label>📸 Votre photo <span class="req">*</span></label><div class="pzone" id="pzone"><img id="pprev" class="pprev" alt=""><div class="pbtns"><label class="pbtn" style="cursor:pointer;">📁 Galerie<input type="file" accept="image/*" style="display:none" onchange="loadPhoto(this)"></label><button type="button" class="pbtn" onclick="startCam()">📷 Caméra</button><button type="button" id="snap-btn" class="pbtn" onclick="snapCam()" style="display:none;">✅ Capturer</button><button type="button" id="stop-btn" class="pbtn" onclick="stopCam()" style="display:none;">✕</button></div><video id="cam-video" autoplay playsinline></video><canvas id="cam-canvas"></canvas><p class="phint">F2K s'occupe de la retouche pro.</p></div></div><div class="fst">Vos coordonnées</div>${contactF()}${p}`,
-    photo_bijoux:()=>`<div class="ibox ib-rdv">📅 Déposez vos articles à notre bureau. RDV pour retrait.</div>${n}${nameF()}<div class="fr2"><div class="fg"><label>Type d'articles <span class="req">*</span></label><select id="f-tart"><option value="">—</option><option>Bijoux</option><option>Montres</option><option>Maroquinerie</option><option>Vêtements</option><option>Cosmétiques</option><option>Autre</option></select></div><div class="fg"><label>Nombre d'articles <span class="req">*</span></label><input type="number" min="1" id="f-nb" placeholder="Ex: 5"></div></div><div class="fst">Coordonnées</div><div class="fg"><label>Email <span class="req">*</span></label><input type="email" id="f-email"></div><div class="fg"><label>Téléphone <span class="req">*</span></label><input type="tel" id="f-tel"></div><div class="fg"><label>Mode livraison photos <span class="req">*</span></label>${selR('f-reception')}</div>${fileF('Photos de référence du style souhaité (optionnel)')}${p}`,
-    cv:()=>`<div class="ibox ib-ok">📝 Envoyez vos infos — nos experts rédigent votre CV pour 500 FCFA.</div>${n}${nameF()}<div class="fr2"><div class="fg"><label>Poste(s) recherché(s) <span class="req">*</span></label><input type="text" id="f-poste" placeholder="Ex: Comptable..."></div><div class="fg"><label>Niveau d'études <span class="req">*</span></label><select id="f-niv"><option value="">—</option><option>BEPC/CEP</option><option>BAC</option><option>BTS/DUT</option><option>Licence</option><option>Master/MBA</option><option>Doctorat</option></select></div></div><div class="fg"><label>Formations & diplômes <span class="req">*</span></label><textarea id="f-form" placeholder="Diplômes, établissements, années..."></textarea></div><div class="fg"><label>Expériences professionnelles <span class="req">*</span></label><textarea id="f-exp" placeholder="Postes, entreprises, durées..."></textarea></div><div class="fg"><label>Compétences & langues</label><textarea id="f-comp" placeholder="Compétences, logiciels, langues..."></textarea></div><div class="fg"><label>Style de CV <span class="req">*</span></label><select id="f-style"><option value="">—</option><option>Classique & sobre</option><option>Moderne & coloré</option><option>Créatif</option><option>International/ATS</option></select></div><div class="fst">Coordonnées de livraison</div><div class="fg"><label>Email <span class="req">*</span></label><input type="email" id="f-email"></div><div class="fg"><label>Téléphone <span class="req">*</span></label><input type="tel" id="f-tel"></div><div class="fg"><label>Mode de livraison <span class="req">*</span></label>${selR('f-reception')}</div>${fileF('Ancien CV si disponible')}${p}`
+  var forms = {
+    naissance: function(){ return "<div class='ibox ib-ok'>Document delivre immediatement apres validation ANIP.</div>"+base+"<div class='fg'><label>Nom du pere</label><input type='text' id='f-pere'></div><div class='fg'><label>Nom de la mere</label><input type='text' id='f-mere'></div><div class='fg'><label>Votre lien avec la personne</label><select id='f-lien'><option value=''>--</option><option>Moi-meme</option><option>Mon enfant</option><option>Mon parent</option><option>Autre</option></select></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI ou Passeport du demandeur")+p; },
+    mariage: function(){ return "<div class='ibox ib-ok'>Document delivre immediatement apres validation.</div>"+base+"<div class='fg'><label>Nom du conjoint(e) <span class='req'>*</span></label><input type='text' id='f-conjoint'></div><div class='fr2'><div class='fg'><label>Date du mariage <span class='req'>*</span></label><input type='date' id='f-dm'></div><div class='fg'><label>Mairie du mariage <span class='req'>*</span></label><input type='text' id='f-mairie'></div></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI des deux epoux")+p; },
+    deces: function(){ return "<div class='ibox ib-ok'>Document delivre immediatement apres validation.</div>"+n+"<div class='fst'>Informations sur le defunt</div><div class='fr2'><div class='fg'><label>Nom <span class='req'>*</span></label><input type='text' id='f-dnom'></div><div class='fg'><label>Prenom(s) <span class='req'>*</span></label><input type='text' id='f-dprenom'></div></div><div class='fr2'><div class='fg'><label>Date du deces <span class='req'>*</span></label><input type='date' id='f-ddeces'></div><div class='fg'><label>Lieu du deces <span class='req'>*</span></label><input type='text' id='f-ldeces'></div></div><div class='fg'><label>Votre lien avec le defunt <span class='req'>*</span></label><select id='f-lien'><option value=''>--</option><option>Conjoint(e)</option><option>Enfant</option><option>Parent</option><option>Autre</option></select></div><div class='fst'>Vos coordonnees</div>"+nameF()+contactF()+fileF("CNI du declarant + document prouvant le deces")+p; },
+    celibat: function(){ return "<div class='ibox ib-ok'>Document delivre immediatement.</div>"+base+"<div class='fg'><label>Motif</label><select id='f-motif'><option value=''>--</option><option>Mariage</option><option>Visa</option><option>Emploi</option><option>Autre</option></select></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI ou Passeport valide")+p; },
+    jugement: function(){ return "<div class='ibox ib-warn'>Necessite des temoins — notre equipe vous contactera.</div>"+base+"<div class='fg'><label>Nom du pere</label><input type='text' id='f-pere'></div><div class='fg'><label>Nom de la mere</label><input type='text' id='f-mere'></div><div class='fg'><label>Raison de non-declaration <span class='req'>*</span></label><textarea id='f-raison' placeholder='Expliquez brievement...'></textarea></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("Tout document prouvant l identite")+p; },
+    cni: function(){ return "<div class='ibox ib-rdv'>RDV obligatoire pour biometrie. Delai : 21 jours.</div>"+base+"<div class='fr2'><div class='fg'><label>Sexe <span class='req'>*</span></label><select id='f-sexe'><option value=''>--</option><option>Masculin</option><option>Feminin</option></select></div><div class='fg'><label>Profession</label><input type='text' id='f-prof'></div></div><div class='fg'><label>Type de demande <span class='req'>*</span></label><select id='f-type'><option value=''>--</option><option>Premiere demande</option><option>Renouvellement</option><option>Remplacement (perte/vol)</option></select></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("Acte de naissance + CIP + ancienne CNIB si renouvellement")+p; },
+    cip: function(){ return "<div class='ibox ib-ok'>Document delivre immediatement. Validite 2 ans.</div>"+base+"<div class='fr2'><div class='fg'><label>Sexe <span class='req'>*</span></label><select id='f-sexe'><option value=''>--</option><option>Masculin</option><option>Feminin</option></select></div><div class='fg'><label>Profession</label><input type='text' id='f-prof'></div></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("Recepisse RAVIP")+p; },
+    npi: function(){ return "<div class='ibox ib-ok'>Certificat delivre immediatement.</div>"+n+nameF()+"<div class='fst'>Vos coordonnees</div>"+contactF()+fileF("Recepisse RAVIP")+p; },
+    residence: function(){ return "<div class='ibox ib-ok'>Document delivre immediatement.</div>"+n+nameF()+"<div class='fr2'><div class='fg'><label>Date de naissance <span class='req'>*</span></label><input type='date' id='f-ddn'></div><div class='fg'><label>Profession</label><input type='text' id='f-prof'></div></div><div class='fg'><label>Adresse complete <span class='req'>*</span></label><input type='text' id='f-adr' placeholder='Quartier, rue, numero...'></div><div class='fr2'><div class='fg'><label>Commune <span class='req'>*</span></label>"+selC("f-cres")+"</div><div class='fg'><label>Statut <span class='req'>*</span></label><select id='f-statut'><option value=''>--</option><option>Proprietaire</option><option>Locataire</option><option>Heberge</option></select></div></div><div class='fst'>Coordonnees</div><div class='fg'><label>Email <span class='req'>*</span></label><input type='email' id='f-email'></div><div class='fg'><label>Telephone <span class='req'>*</span></label><input type='tel' id='f-tel'></div><div class='fg'><label>Mode de reception <span class='req'>*</span></label>"+selR("f-reception")+"</div>"+fileF("CNI + facture eau/electricite")+p; },
+    anip_tel: function(){ return "<div class='ibox ib-pu'>Modification de votre numero dans la base ANIP.</div>"+n+nameF()+"<div class='fg'><label>Date de naissance <span class='req'>*</span></label><input type='date' id='f-ddn'></div><div class='fr2'><div class='fg'><label>Ancien numero <span class='req'>*</span></label><input type='tel' id='f-otel' placeholder='+229...'></div><div class='fg'><label>Nouveau numero <span class='req'>*</span></label><input type='tel' id='f-ntel' placeholder='+229...'></div></div><div class='fst'>Coordonnees</div><div class='fg'><label>Email <span class='req'>*</span></label><input type='email' id='f-email'></div><div class='fg'><label>Telephone contact <span class='req'>*</span></label><input type='tel' id='f-tel'></div><div class='fg'><label>Mode reception <span class='req'>*</span></label>"+selR("f-reception")+"</div>"+fileF("CNI + preuve du nouveau numero")+p; },
+    anip_info: function(){ return "<div class='ibox ib-pu'>Correction de vos donnees dans la base ANIP.</div>"+n+nameF()+"<div class='fg'><label>Date de naissance <span class='req'>*</span></label><input type='date' id='f-ddn'></div><div class='fg'><label>Information a modifier <span class='req'>*</span></label><select id='f-champ'><option value=''>--</option><option>Nom / Prenom</option><option>Date de naissance</option><option>Adresse</option><option>Etat civil</option><option>Numero de telephone</option></select></div><div class='fg'><label>Description des modifications <span class='req'>*</span></label><textarea id='f-desc' placeholder='Expliquez ce qui doit etre corrige...'></textarea></div><div class='fst'>Coordonnees</div><div class='fg'><label>Email <span class='req'>*</span></label><input type='email' id='f-email'></div><div class='fg'><label>Telephone <span class='req'>*</span></label><input type='tel' id='f-tel'></div><div class='fg'><label>Mode reception <span class='req'>*</span></label>"+selR("f-reception")+"</div>"+fileF("CNI + documents justifiant la modification")+p; },
+    casier: function(){ return "<div class='ibox ib-ok'>Bulletin N3 delivre immediatement.</div>"+base+"<div class='fg'><label>Motif <span class='req'>*</span></label><select id='f-motif'><option value=''>--</option><option>Emploi public</option><option>Emploi prive</option><option>Concours</option><option>Visa</option><option>Autre</option></select></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI ou Passeport + Acte de naissance")+p; },
+    legalisation: function(){ return "<div class='ibox ib-rdv'>RDV obligatoire — presence physique requise.</div>"+n+nameF()+"<div class='fg'><label>Type de document <span class='req'>*</span></label><select id='f-dtype'><option value=''>--</option><option>Contrat</option><option>Procuration</option><option>Declaration</option><option>Attestation</option><option>Autre</option></select></div><div class='fg'><label>Usage prevu <span class='req'>*</span></label><input type='text' id='f-usage' placeholder='Ex: vente immobiliere...'></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI + document original a legaliser")+p; },
+    copie_conf: function(){ return "<div class='ibox ib-ok'>Document certifie delivre immediatement.</div>"+n+nameF()+"<div class='fr2'><div class='fg'><label>Type de document <span class='req'>*</span></label><select id='f-dtype'><option value=''>--</option><option>Diplome</option><option>Acte etat civil</option><option>Contrat</option><option>Releve de notes</option><option>Autre</option></select></div><div class='fg'><label>Nombre de copies <span class='req'>*</span></label><input type='number' min='1' max='20' value='1' id='f-nb'></div></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("Scan du document original")+p; },
+    passeport: function(){ return "<div class='ibox ib-rdv'>RDV obligatoire pour biometrie. Delai 15-21 jours.</div>"+base+"<div class='fr2'><div class='fg'><label>Sexe <span class='req'>*</span></label><select id='f-sexe'><option value=''>--</option><option>Masculin</option><option>Feminin</option></select></div><div class='fg'><label>Type de demande <span class='req'>*</span></label><select id='f-type'><option value=''>--</option><option>Premiere demande</option><option>Renouvellement</option><option>Remplacement</option></select></div></div><div class='fg'><label>N ancien passeport (si renouvellement)</label><input type='text' id='f-oldpass'></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI + Acte de naissance + CIP + Casier judiciaire + 2 photos")+p; },
+    passeport_vip: function(){ return "<div class='ibox ib-rdv'>RDV obligatoire. Delai 48h apres RDV.</div>"+base+"<div class='fr2'><div class='fg'><label>Sexe <span class='req'>*</span></label><select id='f-sexe'><option value=''>--</option><option>Masculin</option><option>Feminin</option></select></div><div class='fg'><label>Date de voyage souhaitee <span class='req'>*</span></label><input type='date' id='f-voyage'></div></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI + Acte de naissance + CIP + Casier judiciaire + 2 photos")+p; },
+    laissez: function(){ return "<div class='ibox ib-warn'>Urgence uniquement — justifiez la raison.</div>"+base+"<div class='fr2'><div class='fg'><label>Raison <span class='req'>*</span></label><select id='f-raison'><option value=''>--</option><option>Perte de passeport</option><option>Vol de passeport</option><option>Expiration urgente</option><option>Autre</option></select></div><div class='fg'><label>Date de voyage <span class='req'>*</span></label><input type='date' id='f-voyage'></div></div><div class='fg'><label>Destination <span class='req'>*</span></label><input type='text' id='f-dest'></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI + Declaration perte/vol + billet avion")+p; },
+    permis: function(){ return "<div class='ibox ib-rdv'>RDV obligatoire pour retrait. Delai 10-15 jours.</div>"+base+"<div class='fr2'><div class='fg'><label>Categorie <span class='req'>*</span></label><select id='f-cat'><option value=''>--</option><option>A (moto)</option><option>B (voiture)</option><option>C (camion)</option><option>D (bus)</option></select></div><div class='fg'><label>Type de demande <span class='req'>*</span></label><select id='f-type'><option value=''>--</option><option>Premiere demande</option><option>Renouvellement</option><option>Remplacement</option></select></div></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI + Certificat medical + Attestation auto-ecole + 2 photos")+p; },
+    immat: function(){ return "<div class='ibox ib-rdv'>RDV obligatoire — inspection physique du vehicule.</div>"+n+nameF()+"<div class='fr2'><div class='fg'><label>Marque <span class='req'>*</span></label><input type='text' id='f-marque'></div><div class='fg'><label>Modele <span class='req'>*</span></label><input type='text' id='f-modele'></div></div><div class='fr2'><div class='fg'><label>Annee <span class='req'>*</span></label><input type='number' id='f-annee' placeholder='2020'></div><div class='fg'><label>N chassis <span class='req'>*</span></label><input type='text' id='f-chassis'></div></div><div class='fg'><label>Type de demande <span class='req'>*</span></label><select id='f-type'><option value=''>--</option><option>Nouvelle immatriculation</option><option>Re-immatriculation</option><option>Mutation</option></select></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI + Titre de propriete + Ancienne carte grise + Quitus fiscal")+p; },
+    visite_leger: function(){ return "<div class='ibox ib-rdv'>RDV obligatoire — vehicule present en agence.</div>"+n+nameF()+"<div class='fr2'><div class='fg'><label>Immatriculation <span class='req'>*</span></label><input type='text' id='f-immat' placeholder='BJ 1234 AB'></div><div class='fg'><label>Marque / Modele <span class='req'>*</span></label><input type='text' id='f-veh'></div></div><div class='fg'><label>Date souhaitee</label><input type='date' id='f-date'></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("Carte grise + Assurance en cours de validite")+p; },
+    visite_taxi: function(){ return "<div class='ibox ib-rdv'>RDV obligatoire — vehicule taxi present.</div>"+n+nameF()+"<div class='fr2'><div class='fg'><label>Immatriculation <span class='req'>*</span></label><input type='text' id='f-immat' placeholder='BJ 1234 AB'></div><div class='fg'><label>Marque / Modele <span class='req'>*</span></label><input type='text' id='f-veh'></div></div><div class='fg'><label>Date souhaitee</label><input type='date' id='f-date'></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("Carte grise + Assurance + Autorisation taxi")+p; },
+    visite_lourd: function(){ return "<div class='ibox ib-rdv'>RDV obligatoire — poids lourd present.</div>"+n+nameF()+"<div class='fr2'><div class='fg'><label>Immatriculation <span class='req'>*</span></label><input type='text' id='f-immat'></div><div class='fg'><label>Type de vehicule <span class='req'>*</span></label><select id='f-tveh'><option value=''>--</option><option>Camion</option><option>Semi-remorque</option><option>Bus/Car</option><option>Autre</option></select></div></div><div class='fg'><label>Date souhaitee</label><input type='date' id='f-date'></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("Carte grise + Assurance")+p; },
+    cadastre: function(){ return "<div class='ibox ib-warn'>Au choix : en ligne ou deplacement.</div>"+n+nameF()+"<div class='fg'><label>Reference cadastrale (si connue)</label><input type='text' id='f-ref'></div><div class='fg'><label>Localisation precise <span class='req'>*</span></label><input type='text' id='f-loc' placeholder='Quartier, commune...'></div><div class='fr2'><div class='fg'><label>Superficie approx.</label><input type='text' id='f-sup' placeholder='Ex: 400 m2'></div><div class='fg'><label>Motif <span class='req'>*</span></label><select id='f-motif'><option value=''>--</option><option>Transaction immobiliere</option><option>Pret bancaire</option><option>Succession</option><option>Autre</option></select></div></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI + titre de propriete si disponible")+p; },
+    titre_fonc: function(){ return "<div class='ibox ib-rdv'>RDV obligatoire — procedure 30-60 jours.</div>"+n+nameF()+"<div class='fg'><label>Type de demande <span class='req'>*</span></label><select id='f-type'><option value=''>--</option><option>Nouveau titre foncier</option><option>Mise a jour titre existant</option><option>Mutation</option></select></div><div class='fg'><label>Localisation <span class='req'>*</span></label><input type='text' id='f-loc'></div><div class='fg'><label>Superficie (m2) <span class='req'>*</span></label><input type='text' id='f-sup'></div><div class='fg'><label>Informations complementaires</label><textarea id='f-info' placeholder='Origine du bien...'></textarea></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI + Acte de vente + Plan de bornage + Quitus fiscal")+p; },
+    ifu: function(){ return "<div class='ibox ib-ok'>IFU delivre immediatement.</div>"+n+nameF()+"<div class='fr2'><div class='fg'><label>Date de naissance <span class='req'>*</span></label><input type='date' id='f-ddn'></div><div class='fg'><label>Type activite <span class='req'>*</span></label><select id='f-act'><option value=''>--</option><option>Commerce</option><option>Prestation de services</option><option>Agriculture/Elevage</option><option>BTP</option><option>Professionnel liberal</option><option>Autre</option></select></div></div><div class='fg'><label>Adresse de l activite <span class='req'>*</span></label><input type='text' id='f-adract'></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI + Acte de naissance + Justificatif de domicile")+p; },
+    photo_num: function(){ return "<div class='ibox ib-ok'>Envoyez votre selfie — F2K retouche tout. Livraison sous 24h.</div>"+n+nameF()+"<div class='fg'><label>Usage de la photo <span class='req'>*</span></label><select id='f-usage'><option value=''>--</option><option>CNI biometrique</option><option>Passeport biometrique</option><option>Visa ambassade</option><option>Concours / emploi</option><option>Carte professionnelle</option><option>Autre</option></select></div><div class='fg'><label>Votre photo de face <span class='req'>*</span></label><div class='pzone' id='pzone'><img id='pprev' class='pprev' alt=''><div class='pbtns'><label class='pbtn' style='cursor:pointer;'>📁 Galerie<input type='file' accept='image/*' style='display:none' onchange='loadPhoto(this)'></label><button type='button' class='pbtn' onclick='startCam()'>📷 Camera</button><button type='button' id='snap-btn' class='pbtn' onclick='snapCam()' style='display:none;'>Capturer</button><button type='button' id='stop-btn' class='pbtn' onclick='stopCam()' style='display:none;'>Stop</button></div><video id='cam-video' autoplay playsinline></video><canvas id='cam-canvas'></canvas><p class='phint'>Photo simple de face — F2K s occupe de la retouche pro !</p></div></div><div class='fst'>Coordonnees de livraison</div><div class='fg'><label>Email <span class='req'>*</span></label><input type='email' id='f-email'></div><div class='fg'><label>Telephone WhatsApp <span class='req'>*</span></label><input type='tel' id='f-tel'></div><div class='fg'><label>Mode de reception <span class='req'>*</span></label>"+selR("f-reception")+"</div>"+p; },
+    photo_print: function(){ return "<div class='ibox ib-rdv'>RDV obligatoire pour retrait des 8 exemplaires.</div>"+n+nameF()+"<div class='fg'><label>Usage des photos <span class='req'>*</span></label><select id='f-usage'><option value=''>--</option><option>CNI biometrique</option><option>Passeport biometrique</option><option>Concours / emploi</option><option>Autre</option></select></div><div class='fg'><label>Votre photo <span class='req'>*</span></label><div class='pzone' id='pzone'><img id='pprev' class='pprev' alt=''><div class='pbtns'><label class='pbtn' style='cursor:pointer;'>📁 Galerie<input type='file' accept='image/*' style='display:none' onchange='loadPhoto(this)'></label><button type='button' class='pbtn' onclick='startCam()'>📷 Camera</button><button type='button' id='snap-btn' class='pbtn' onclick='snapCam()' style='display:none;'>Capturer</button><button type='button' id='stop-btn' class='pbtn' onclick='stopCam()' style='display:none;'>Stop</button></div><video id='cam-video' autoplay playsinline></video><canvas id='cam-canvas'></canvas><p class='phint'>F2K s occupe de la retouche pro.</p></div></div><div class='fst'>Vos coordonnees</div>"+contactF()+p; },
+    photo_bijoux: function(){ return "<div class='ibox ib-rdv'>Deposez vos articles a notre bureau. RDV pour retrait.</div>"+n+nameF()+"<div class='fr2'><div class='fg'><label>Type articles <span class='req'>*</span></label><select id='f-tart'><option value=''>--</option><option>Bijoux</option><option>Montres</option><option>Maroquinerie</option><option>Vetements</option><option>Cosmetiques</option><option>Autre</option></select></div><div class='fg'><label>Nombre articles <span class='req'>*</span></label><input type='number' min='1' id='f-nb' placeholder='Ex: 5'></div></div><div class='fst'>Coordonnees</div><div class='fg'><label>Email <span class='req'>*</span></label><input type='email' id='f-email'></div><div class='fg'><label>Telephone <span class='req'>*</span></label><input type='tel' id='f-tel'></div><div class='fg'><label>Mode livraison photos <span class='req'>*</span></label>"+selR("f-reception")+"</div>"+fileF("Photos de reference du style souhaite (optionnel)")+p; },
+    cv: function(){ return "<div class='ibox ib-ok'>Envoyez vos infos — nos experts redigent votre CV pour 500 FCFA.</div>"+n+nameF()+"<div class='fr2'><div class='fg'><label>Poste(s) recherche(s) <span class='req'>*</span></label><input type='text' id='f-poste' placeholder='Ex: Comptable...'></div><div class='fg'><label>Niveau etudes <span class='req'>*</span></label><select id='f-niv'><option value=''>--</option><option>BEPC/CEP</option><option>BAC</option><option>BTS/DUT</option><option>Licence</option><option>Master/MBA</option><option>Doctorat</option></select></div></div><div class='fg'><label>Formations et diplomes <span class='req'>*</span></label><textarea id='f-form' placeholder='Diplomes, etablissements, annees...'></textarea></div><div class='fg'><label>Experiences professionnelles <span class='req'>*</span></label><textarea id='f-exp' placeholder='Postes, entreprises, durees...'></textarea></div><div class='fg'><label>Competences et langues</label><textarea id='f-comp' placeholder='Competences, logiciels, langues...'></textarea></div><div class='fg'><label>Style de CV <span class='req'>*</span></label><select id='f-style'><option value=''>--</option><option>Classique et sobre</option><option>Moderne et colore</option><option>Creatif</option><option>International/ATS</option></select></div><div class='fst'>Coordonnees de livraison</div><div class='fg'><label>Email <span class='req'>*</span></label><input type='email' id='f-email'></div><div class='fg'><label>Telephone <span class='req'>*</span></label><input type='tel' id='f-tel'></div><div class='fg'><label>Mode de livraison <span class='req'>*</span></label>"+selR("f-reception")+"</div>"+fileF("Ancien CV si disponible")+p; }
   };
-  return F[key]?F[key]():`<p style="padding:20px;color:var(--mu);">Formulaire en cours de préparation.</p>`;
+  return forms[key] ? forms[key]() : "<p style='padding:20px;color:var(--mu);'>Formulaire en cours de preparation.</p>";
 }
 
-/* ════ MODAL FORMULAIRE ════ */
-let curKey='', uploadedFiles=[], capturedPhoto=null, camStream=null;
+var curKey = "";
+var uploadedFiles = [];
+var capturedPhoto = null;
+var camStream = null;
 
-function openForm(key,e){
-  e&&e.preventDefault();
-  curKey=key; uploadedFiles=[]; capturedPhoto=null;
+function openForm(key, e){
+  if(e) e.preventDefault();
+  curKey = key;
+  uploadedFiles = [];
+  capturedPhoto = null;
   addToCart(key);
-  const baseAmt=PRICES[key]||0;
-  const discount=cart.length>=3?Math.round(baseAmt*0.10):0;
-  const finalAmt=baseAmt-discount;
-  document.getElementById('fm-title').textContent=(ICONS[key]||'📋')+' '+NAMES[key];
-  document.getElementById('fm-price').innerHTML=finalAmt.toLocaleString('fr-FR')+' <span>FCFA</span>'+(discount>0?' <span style="font-size:12px;color:var(--g2);">🎁 -10%</span>':'');
-  document.getElementById('fm-body').innerHTML=buildForm(key)+`
-    <button class="msubmit" id="submit-btn" onclick="submitRequest('${key}')">📤 Envoyer ma demande →</button>
-    <p class="mnote">🔒 Données sécurisées • Email automatique • © F2K MULTISERVICE</p>`;
-  setTimeout(()=>{
-    const fd=document.getElementById('fdrop');
+  var baseAmt = PRICES[key]||0;
+  var discount = cart.length >= 3 ? Math.round(baseAmt * 0.10) : 0;
+  var finalAmt = baseAmt - discount;
+  document.getElementById("fm-title").textContent = (ICONS[key]||"") + " " + NAMES[key];
+  document.getElementById("fm-price").innerHTML = finalAmt.toLocaleString("fr-FR") + " <span>FCFA</span>" + (discount > 0 ? " <span style='font-size:12px;color:var(--g2);'>🎁 -10%</span>" : "");
+  document.getElementById("fm-body").innerHTML = buildForm(key) + "<button class='msubmit' id='submit-btn' onclick='submitRequest(\""+key+"\")'>📤 Envoyer ma demande</button><p class='mnote'>🔒 Donnees securisees • Email automatique • F2K MULTISERVICE</p>";
+  setTimeout(function(){
+    var fd = document.getElementById("fdrop");
     if(fd){
-      fd.addEventListener('dragover',ev=>{ev.preventDefault();fd.classList.add('drag');});
-      fd.addEventListener('dragleave',()=>fd.classList.remove('drag'));
-      fd.addEventListener('drop',ev=>{ev.preventDefault();fd.classList.remove('drag');handleFiles(ev.dataTransfer.files);});
+      fd.addEventListener("dragover", function(ev){ ev.preventDefault(); fd.classList.add("drag"); });
+      fd.addEventListener("dragleave", function(){ fd.classList.remove("drag"); });
+      fd.addEventListener("drop", function(ev){ ev.preventDefault(); fd.classList.remove("drag"); handleFiles(ev.dataTransfer.files); });
     }
-  },100);
-  document.getElementById('form-ov').classList.add('on');
+  }, 100);
+  document.getElementById("form-ov").classList.add("on");
 }
-function closeForm(){ document.getElementById('form-ov').classList.remove('on'); stopCam(); }
 
-/* ════ GESTION FICHIERS ════ */
-function handleFiles(files){ Array.from(files).forEach(f=>{ if(f.size>5*1024*1024){showToast('⚠️','Fichier trop lourd',f.name,'var(--y)');return;} uploadedFiles.push(f); }); renderFiles(); }
-function renderFiles(){ const fl=document.getElementById('flist'); if(!fl)return; fl.innerHTML=uploadedFiles.map((f,i)=>`<div class="fitem">📄 ${f.name.substring(0,14)}<button onclick="removeFile(${i})">×</button></div>`).join(''); }
-function removeFile(i){ uploadedFiles.splice(i,1); renderFiles(); }
-
-/* ════ CAMÉRA ════ */
-async function startCam(){
-  try{
-    const s=await navigator.mediaDevices.getUserMedia({video:{facingMode:'user'}});
-    camStream=s;
-    const v=document.getElementById('cam-video');
-    v.srcObject=s; v.style.display='block';
-    document.getElementById('snap-btn').style.display='';
-    document.getElementById('stop-btn').style.display='';
-  }catch(e){ showToast('⚠️','Caméra indisponible','Chargez une photo depuis la galerie.','var(--y)'); }
-}
-function snapCam(){
-  const v=document.getElementById('cam-video'),c=document.getElementById('cam-canvas');
-  c.width=v.videoWidth;c.height=v.videoHeight;
-  c.getContext('2d').drawImage(v,0,0);
-  capturedPhoto=c.toDataURL('image/jpeg',.9);
-  const p=document.getElementById('pprev');
-  p.src=capturedPhoto;p.classList.add('show');
-  document.getElementById('pzone').classList.add('has-p');
+function closeForm(){
+  document.getElementById("form-ov").classList.remove("on");
   stopCam();
-  showToast('📸','Photo capturée !','');
 }
+
+function handleFiles(files){
+  for(var i=0;i<files.length;i++){
+    if(files[i].size > 5*1024*1024){ showToast("Fichier trop lourd", files[i].name, "var(--y)"); continue; }
+    uploadedFiles.push(files[i]);
+  }
+  renderFiles();
+}
+
+function renderFiles(){
+  var fl = document.getElementById("flist");
+  if(!fl) return;
+  var html = "";
+  for(var i=0;i<uploadedFiles.length;i++){
+    html += "<div class='fitem'>📄 " + uploadedFiles[i].name.substring(0,14) + "<button onclick='removeFile("+i+")'>x</button></div>";
+  }
+  fl.innerHTML = html;
+}
+
+function removeFile(i){
+  uploadedFiles.splice(i,1);
+  renderFiles();
+}
+
+function startCam(){
+  navigator.mediaDevices.getUserMedia({video:{facingMode:"user"}}).then(function(s){
+    camStream = s;
+    var v = document.getElementById("cam-video");
+    v.srcObject = s;
+    v.style.display = "block";
+    var sb = document.getElementById("snap-btn");
+    var stb = document.getElementById("stop-btn");
+    if(sb) sb.style.display = "";
+    if(stb) stb.style.display = "";
+  }).catch(function(){
+    showToast("Camera indisponible","Chargez une photo depuis la galerie.","var(--y)");
+  });
+}
+
+function snapCam(){
+  var v = document.getElementById("cam-video");
+  var c = document.getElementById("cam-canvas");
+  c.width = v.videoWidth;
+  c.height = v.videoHeight;
+  c.getContext("2d").drawImage(v,0,0);
+  capturedPhoto = c.toDataURL("image/jpeg",0.9);
+  var p = document.getElementById("pprev");
+  p.src = capturedPhoto;
+  p.classList.add("show");
+  document.getElementById("pzone").classList.add("has-p");
+  stopCam();
+  showToast("📸","Photo capturee !","");
+}
+
 function stopCam(){
-  if(camStream){camStream.getTracks().forEach(t=>t.stop());camStream=null;}
-  const v=document.getElementById('cam-video');
-  if(v){v.style.display='none';v.srcObject=null;}
-  const sb=document.getElementById('snap-btn');if(sb)sb.style.display='none';
-  const stb=document.getElementById('stop-btn');if(stb)stb.style.display='none';
+  if(camStream){
+    var tracks = camStream.getTracks();
+    for(var i=0;i<tracks.length;i++) tracks[i].stop();
+    camStream = null;
+  }
+  var v = document.getElementById("cam-video");
+  if(v){ v.style.display = "none"; v.srcObject = null; }
+  var sb = document.getElementById("snap-btn");
+  var stb = document.getElementById("stop-btn");
+  if(sb) sb.style.display = "none";
+  if(stb) stb.style.display = "none";
 }
+
 function loadPhoto(input){
-  const f=input.files[0];if(!f)return;
-  const r=new FileReader();
-  r.onload=e=>{
-    capturedPhoto=e.target.result;
-    const p=document.getElementById('pprev');
-    p.src=capturedPhoto;p.classList.add('show');
-    document.getElementById('pzone').classList.add('has-p');
-    showToast('📸','Photo chargée !','');
+  var f = input.files[0];
+  if(!f) return;
+  var r = new FileReader();
+  r.onload = function(e){
+    capturedPhoto = e.target.result;
+    var p = document.getElementById("pprev");
+    p.src = capturedPhoto;
+    p.classList.add("show");
+    document.getElementById("pzone").classList.add("has-p");
+    showToast("📸","Photo chargee !","");
   };
   r.readAsDataURL(f);
   }
-    /* ════ UPLOAD CLOUDINARY ════ */
-async function uploadToCloudinary(file){
-  const fd=new FormData();
-  fd.append('file',file);
-  fd.append('upload_preset',CLOUDINARY_PRESET);
-  try{
-    const res=await fetch(CLOUDINARY_URL,{method:'POST',body:fd});
-    const data=await res.json();
-    return data.secure_url||null;
-  }catch(e){ return null; }
-}
-
-/* ════ ENVOI EMAIL EMAILJS ════ */
-async function sendConfirmationEmail(params){
-  try{
-    await emailjs.send(EMAILJS_SERVICE,EMAILJS_TEMPLATE,{
-      to_email:params.email,
-      to_name:params.prenom+' '+params.nom,
-      ref_code:params.ref,
-      service_name:params.serviceName,
-      amount:params.amount,
-      delai:params.delai,
-      date:params.date,
-      tel:params.tel,
-      reply_to:'f2kmultiservice@gmail.com'
-    });
-    return true;
-  }catch(e){
-    console.error('EmailJS error:',e);
-    return false;
-  }
-}
-
-/* ════ SOUMISSION DEMANDE ════ */
-async function submitRequest(key){
-  const email=(document.getElementById('f-email')||{}).value?.trim();
-  const tel=(document.getElementById('f-tel')||{}).value?.trim();
-  const nom=(document.getElementById('f-nom')||{}).value?.trim();
-  const prenom=(document.getElementById('f-prenom')||{}).value?.trim();
-  const npi=(document.getElementById('f-npi')||{}).value?.trim();
-  const ravip=(document.getElementById('f-ravip')||{}).value?.trim();
-  const paid=(document.getElementById('f-paid')||{}).checked;
-
-  if(!email||!tel){showToast('⚠️','Champs requis','Email et téléphone sont obligatoires.','var(--y)');return;}
-  if(!npi&&!ravip){showToast('⚠️','NPI / RAVIP requis','Renseignez votre NPI ou numéro de récépissé RAVIP.','var(--y)');return;}
-  if(!paid){showToast('⚠️','Paiement requis','Cliquez sur un bouton opérateur, payez, puis cochez la confirmation.','var(--y)');return;}
-  if((key==='photo_num'||key==='photo_print')&&!capturedPhoto&&uploadedFiles.length===0){showToast('⚠️','Photo manquante','Prenez ou chargez votre photo.','var(--y)');return;}
-
-  const btn=document.getElementById('submit-btn');
-  btn.innerHTML='<span class="spinner"></span> Envoi en cours...';
-  btn.disabled=true;
-
-  const ref='F2K-'+new Date().getFullYear()+'-'+String(Math.floor(10000+Math.random()*90000));
-  const now=new Date();
-  const dateStr=now.toLocaleDateString('fr-FR',{day:'2-digit',month:'long',year:'numeric'});
-  const timeStr=now.toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'});
-
-  const baseAmt=PRICES[key]||0;
-  const finalAmt=cart.length>=3?Math.round(baseAmt*0.90):baseAmt;
-  const discountApplied=cart.length>=3;
-
-  const fileUrls=[];
-  for(const f of uploadedFiles){
-    const url=await uploadToCloudinary(f);
-    if(url) fileUrls.push(url);
-  }
-  if(capturedPhoto){
-    try{
-      const res=await fetch(capturedPhoto);
-      const blob=await res.blob();
-      const file=new File([blob],'photo_identite.jpg',{type:'image/jpeg'});
-      const url=await uploadToCloudinary(file);
-      if(url) fileUrls.push(url);
-    }catch(e){}
-  }
-
-  const orderData={
-    ref,key,serviceName:NAMES[key],icon:ICONS[key],
-    price:finalAmt,priceOriginal:baseAmt,discountApplied,
-    delai:DELAIS[key],
-    nom:nom||'',prenom:prenom||'',email,tel,
-    npi:npi||ravip||'',
-    date:dateStr,time:timeStr,
-    timestamp:firebase.firestore.FieldValue.serverTimestamp(),
-    status:'pending',progress:25,
-    fileUrls,hasDoc:false,docUrl:null
-  };
-
-  try{
-    await db.collection('orders').doc(ref).set(orderData);
-  }catch(e){ console.error('Firestore error:',e); }
-
-  let orders=JSON.parse(localStorage.getItem('f2k_orders')||'[]');
-  orders.unshift(orderData);
-  localStorage.setItem('f2k_orders',JSON.stringify(orders));
-
-  const emailSent=await sendConfirmationEmail({
-    email,nom:nom||'Client',prenom:prenom||'',ref,
-    serviceName:NAMES[key],
-    amount:finalAmt.toLocaleString('fr-FR')+' FCFA'+(discountApplied?' (réduction 10% appliquée)':''),
-    delai:DELAIS[key],date:dateStr+' à '+timeStr,tel
+    function uploadToCloudinary(file){
+  return new Promise(function(resolve){
+    var fd = new FormData();
+    fd.append("file", file);
+    fd.append("upload_preset", CLOUDINARY_PRESET);
+    fetch(CLOUDINARY_URL, {method:"POST", body:fd})
+      .then(function(r){ return r.json(); })
+      .then(function(data){ resolve(data.secure_url||null); })
+      .catch(function(){ resolve(null); });
   });
-
-  closeForm();
-  cart=cart.filter(k=>k!==key);
-  updateCartBadge();
-
-  document.getElementById('em-to').textContent=email;
-  document.getElementById('em-greet').textContent=`Bonjour ${prenom||nom||'cher(e) client(e)'},`;
-  document.getElementById('em-ref').textContent=ref;
-  document.getElementById('em-det').innerHTML=
-    `Votre demande pour <strong>${NAMES[key]}</strong> a été reçue le <strong>${dateStr} à ${timeStr}</strong>.<br><br>`+
-    `💰 Montant payé : <strong>${finalAmt.toLocaleString('fr-FR')} FCFA</strong>${discountApplied?' <span style="color:var(--g);">🎁 Réduction 10% appliquée !</span>':''}<br>`+
-    `⏱ Délai estimé : <strong>${DELAIS[key]}</strong><br>`+
-    `📞 Notre équipe vous contactera au <strong>${tel}</strong>.<br><br>`+
-    (emailSent?`✅ Un email de confirmation a été envoyé à <strong>${email}</strong>.`:`📱 Conservez votre numéro de référence pour le suivi.`);
-  document.getElementById('email-ov').classList.add('on');
-
-  showToast('✅','Demande enregistrée !','Réf : '+ref);
 }
 
-function closeEmailDash(){ document.getElementById('email-ov').classList.remove('on'); openDash(); }
+function sendConfirmationEmail(params){
+  return emailjs.send(EMAILJS_SERVICE, EMAILJS_TEMPLATE, {
+    to_email: params.email,
+    to_name: params.prenom + " " + params.nom,
+    ref_code: params.ref,
+    service_name: params.serviceName,
+    amount: params.amount,
+    delai: params.delai,
+    date: params.date,
+    tel: params.tel,
+    reply_to: "f2kmultiservice@gmail.com"
+  }).then(function(){ return true; }).catch(function(e){ console.error("EmailJS:",e); return false; });
+}
 
-/* ════ DASHBOARD CLIENT ════ */
-function openDash(){ renderOrders(); document.getElementById('dashboard').style.display='block'; document.body.style.overflow='hidden'; }
-function closeDash(){ document.getElementById('dashboard').style.display='none'; document.body.style.overflow=''; }
+function submitRequest(key){
+  var emailEl = document.getElementById("f-email");
+  var telEl = document.getElementById("f-tel");
+  var nomEl = document.getElementById("f-nom");
+  var prenomEl = document.getElementById("f-prenom");
+  var npiEl = document.getElementById("f-npi");
+  var ravipEl = document.getElementById("f-ravip");
+  var paidEl = document.getElementById("f-paid");
 
-function renderOrders(){
-  const list=document.getElementById('orders-list');
-  const localOrders=JSON.parse(localStorage.getItem('f2k_orders')||'[]');
-  if(!localOrders.length){
-    list.innerHTML=`<div class="empty-d"><div style="font-size:44px;opacity:.3;">📭</div><p style="font-size:14px;font-weight:700;color:var(--ink);margin:10px 0 5px;">Aucune demande</p><p style="font-size:12px;">Parcourez le catalogue et faites votre première demande.</p><a href="#" onclick="closeDash();setTimeout(()=>document.getElementById('catalog').scrollIntoView({behavior:'smooth'}),200)" style="display:inline-block;margin-top:12px;background:var(--g);color:#fff;padding:8px 18px;border-radius:7px;text-decoration:none;font-weight:700;font-size:12px;">Voir le catalogue →</a></div>`;
+  var email = emailEl ? emailEl.value.trim() : "";
+  var tel = telEl ? telEl.value.trim() : "";
+  var nom = nomEl ? nomEl.value.trim() : "";
+  var prenom = prenomEl ? prenomEl.value.trim() : "";
+  var npi = npiEl ? npiEl.value.trim() : "";
+  var ravip = ravipEl ? ravipEl.value.trim() : "";
+  var paid = paidEl ? paidEl.checked : false;
+
+  if(!email || !tel){
+    showToast("Champs requis","Email et telephone sont obligatoires.","var(--y)");
     return;
   }
-  const stMap={
-    pending:{l:'⏳ En attente',c:'st-p'},
-    processing:{l:'🔄 En traitement',c:'st-pr'},
-    ready:{l:'✅ Prêt',c:'st-r'},
-    rejected:{l:'❌ Rejeté',c:'st-p'},
-    revision:{l:'✏️ Modifications requises',c:'st-pr'}
+  if(!npi && !ravip){
+    showToast("NPI requis","Renseignez votre NPI ou numero de recepisse RAVIP.","var(--y)");
+    return;
+  }
+  if(!paid){
+    showToast("Paiement requis","Cliquez sur un bouton operateur, payez, puis cochez la confirmation.","var(--y)");
+    return;
+  }
+  if((key==="photo_num"||key==="photo_print") && !capturedPhoto && uploadedFiles.length===0){
+    showToast("Photo manquante","Prenez ou chargez votre photo.","var(--y)");
+    return;
+  }
+
+  var btn = document.getElementById("submit-btn");
+  btn.innerHTML = "Envoi en cours...";
+  btn.disabled = true;
+
+  var ref = "F2K-" + new Date().getFullYear() + "-" + String(Math.floor(10000 + Math.random()*90000));
+  var now = new Date();
+  var dateStr = now.toLocaleDateString("fr-FR",{day:"2-digit",month:"long",year:"numeric"});
+  var timeStr = now.toLocaleTimeString("fr-FR",{hour:"2-digit",minute:"2-digit"});
+  var baseAmt = PRICES[key]||0;
+  var discount = cart.length >= 3 ? Math.round(baseAmt * 0.10) : 0;
+  var finalAmt = baseAmt - discount;
+
+  var fileUrls = [];
+  var uploadPromises = [];
+
+  for(var i=0;i<uploadedFiles.length;i++){
+    uploadPromises.push(uploadToCloudinary(uploadedFiles[i]));
+  }
+
+  if(capturedPhoto){
+    var photoPromise = fetch(capturedPhoto)
+      .then(function(r){ return r.blob(); })
+      .then(function(blob){
+        var file = new File([blob],"photo_identite.jpg",{type:"image/jpeg"});
+        return uploadToCloudinary(file);
+      }).catch(function(){ return null; });
+    uploadPromises.push(photoPromise);
+  }
+
+  Promise.all(uploadPromises).then(function(urls){
+    for(var i=0;i<urls.length;i++){
+      if(urls[i]) fileUrls.push(urls[i]);
+    }
+
+    var orderData = {
+      ref: ref,
+      key: key,
+      serviceName: NAMES[key],
+      icon: ICONS[key],
+      price: finalAmt,
+      priceOriginal: baseAmt,
+      discountApplied: cart.length >= 3,
+      delai: DELAIS[key],
+      nom: nom,
+      prenom: prenom,
+      email: email,
+      tel: tel,
+      npi: npi||ravip,
+      date: dateStr,
+      time: timeStr,
+      status: "pending",
+      progress: 25,
+      fileUrls: fileUrls,
+      hasDoc: false,
+      docUrl: null
+    };
+
+    db.collection("orders").doc(ref).set(orderData).catch(function(e){ console.error("Firestore:",e); });
+
+    var orders = JSON.parse(localStorage.getItem("f2k_orders")||"[]");
+    orders.unshift(orderData);
+    localStorage.setItem("f2k_orders", JSON.stringify(orders));
+
+    return sendConfirmationEmail({
+      email: email,
+      nom: nom||"Client",
+      prenom: prenom||"",
+      ref: ref,
+      serviceName: NAMES[key],
+      amount: finalAmt.toLocaleString("fr-FR") + " FCFA" + (discount>0?" (reduction 10% appliquee)":""),
+      delai: DELAIS[key],
+      date: dateStr + " a " + timeStr,
+      tel: tel
+    });
+  }).then(function(emailSent){
+    closeForm();
+    cart = cart.filter(function(k){ return k !== key; });
+    updateCartBadge();
+
+    document.getElementById("em-to").textContent = email;
+    document.getElementById("em-greet").textContent = "Bonjour " + (prenom||nom||"cher(e) client(e)") + ",";
+    document.getElementById("em-ref").textContent = ref;
+    document.getElementById("em-det").innerHTML =
+      "Votre demande pour <strong>" + NAMES[key] + "</strong> a ete recue le <strong>" + dateStr + " a " + timeStr + "</strong>.<br><br>" +
+      "Montant paye : <strong>" + finalAmt.toLocaleString("fr-FR") + " FCFA</strong>" + (discount>0?" <span style='color:var(--g);'>🎁 Reduction 10% appliquee !</span>":"") + "<br>" +
+      "Delai estime : <strong>" + DELAIS[key] + "</strong><br>" +
+      "Notre equipe vous contactera au <strong>" + tel + "</strong>.<br><br>" +
+      (emailSent ? "Un email de confirmation a ete envoye a <strong>" + email + "</strong>." : "Conservez votre numero de reference pour le suivi.");
+
+    document.getElementById("email-ov").classList.add("on");
+    showToast("Demande enregistree !","Ref : " + ref, "var(--g)");
+  }).catch(function(e){
+    console.error(e);
+    btn.innerHTML = "📤 Envoyer ma demande";
+    btn.disabled = false;
+    showToast("Erreur","Reessayez ou contactez-nous sur WhatsApp.","var(--r)");
+  });
+}
+
+function closeEmailDash(){
+  document.getElementById("email-ov").classList.remove("on");
+  openDash();
+}
+
+function openDash(){
+  renderOrders();
+  document.getElementById("dashboard").style.display = "block";
+  document.body.style.overflow = "hidden";
+}
+
+function closeDash(){
+  document.getElementById("dashboard").style.display = "none";
+  document.body.style.overflow = "";
+}
+
+function renderOrders(){
+  var list = document.getElementById("orders-list");
+  var localOrders = JSON.parse(localStorage.getItem("f2k_orders")||"[]");
+  if(!localOrders.length){
+    list.innerHTML = "<div class='empty-d'><div style='font-size:44px;opacity:.3;'>📭</div><p style='font-size:14px;font-weight:700;color:var(--ink);margin:10px 0 5px;'>Aucune demande</p><p style='font-size:12px;'>Parcourez le catalogue et faites votre premiere demande.</p><a href='#' onclick='closeDash()' style='display:inline-block;margin-top:12px;background:var(--g);color:#fff;padding:8px 18px;border-radius:7px;text-decoration:none;font-weight:700;font-size:12px;'>Voir le catalogue</a></div>";
+    return;
+  }
+  var stMap = {
+    pending:{l:"En attente",c:"st-p"},
+    processing:{l:"En traitement",c:"st-pr"},
+    ready:{l:"Pret",c:"st-r"},
+    rejected:{l:"Rejete",c:"st-p"},
+    revision:{l:"Modifications requises",c:"st-pr"}
   };
-  const steps=['Reçu','Vérifié','Traitement','Finalisé'];
-  list.innerHTML=localOrders.map(o=>{
-    const st=stMap[o.status]||stMap['pending'];
-    const step=Math.round((o.progress||25)/25);
-    return `<div class="ocard">
-      <div class="otop">
-        <div class="oref">${o.icon||'📋'} ${o.ref}</div>
-        <span class="ost ${st.c}">${st.l}</span>
-      </div>
-      <div class="oinfo">
-        <div><div class="oil">Service</div><div class="oiv">${o.serviceName}</div></div>
-        <div><div class="oil">Date</div><div class="oiv">${o.date} ${o.time||''}</div></div>
-        <div><div class="oil">Tarif</div><div class="oiv">${(o.price||0).toLocaleString('fr-FR')} FCFA${o.discountApplied?' 🎁':''}</div></div>
-        <div><div class="oil">Délai</div><div class="oiv">${o.delai||'—'}</div></div>
-      </div>
-      ${o.adminNote?`<div class="ibox ib-warn" style="margin-bottom:10px;">📋 <strong>Message F2K :</strong> ${o.adminNote}</div>`:''}
-      <div class="oprog">
-        <div style="display:flex;justify-content:space-between;margin-bottom:3px;">
-          <span style="font-size:9px;font-weight:700;color:var(--mu);">Progression</span>
-          <span style="font-size:9px;font-weight:700;color:var(--g);">${o.progress||25}%</span>
-        </div>
-        <div class="pb"><div class="pf" style="width:${o.progress||25}%"></div></div>
-        <div class="psteps">${steps.map((s,i)=>`<span class="${i<step?'done':''}">${s}</span>`).join('')}</div>
-      </div>
-      <div class="oacts">
-        <button class="oabtn" onclick="reShowEmail('${o.ref}')">📧 Email</button>
-        <button class="oabtn" onclick="contactWhatsApp('${o.ref}')">💬 WhatsApp</button>
-        ${o.hasDoc&&o.docUrl
-          ?`<button class="oabtn dl" onclick="dlDoc('${o.ref}')">📥 Télécharger</button>`
-          :`<button class="oabtn" style="opacity:.4;cursor:default;" disabled>📥 En attente</button>`}
-        <button class="oabtn" style="color:var(--r);border-color:rgba(217,43,43,.2);" onclick="delOrder('${o.ref}')">🗑️</button>
-      </div>
-    </div>`;
-  }).join('');
+  var steps = ["Recu","Verifie","Traitement","Finalise"];
+  var html = "";
+  for(var i=0;i<localOrders.length;i++){
+    var o = localOrders[i];
+    var st = stMap[o.status]||stMap["pending"];
+    var step = Math.round((o.progress||25)/25);
+    var stepsHtml = "";
+    for(var j=0;j<steps.length;j++){
+      stepsHtml += "<span class='"+(j<step?"done":"")+"'>"+steps[j]+"</span>";
+    }
+    html += "<div class='ocard'>";
+    html += "<div class='otop'><div class='oref'>"+(o.icon||"📋")+" "+o.ref+"</div><span class='ost "+st.c+"'>"+st.l+"</span></div>";
+    html += "<div class='oinfo'>";
+    html += "<div><div class='oil'>Service</div><div class='oiv'>"+o.serviceName+"</div></div>";
+    html += "<div><div class='oil'>Date</div><div class='oiv'>"+o.date+" "+(o.time||"")+"</div></div>";
+    html += "<div><div class='oil'>Tarif</div><div class='oiv'>"+((o.price||0).toLocaleString("fr-FR"))+" FCFA"+(o.discountApplied?" 🎁":"")+"</div></div>";
+    html += "<div><div class='oil'>Delai</div><div class='oiv'>"+(o.delai||"--")+"</div></div>";
+    html += "</div>";
+    if(o.adminNote){ html += "<div class='ibox ib-warn' style='margin-bottom:10px;'>Message F2K : "+o.adminNote+"</div>"; }
+    html += "<div class='oprog'>";
+    html += "<div style='display:flex;justify-content:space-between;margin-bottom:3px;'><span style='font-size:9px;font-weight:700;color:var(--mu);'>Progression</span><span style='font-size:9px;font-weight:700;color:var(--g);'>"+(o.progress||25)+"%</span></div>";
+    html += "<div class='pb'><div class='pf' style='width:"+(o.progress||25)+"%'></div></div>";
+    html += "<div class='psteps'>"+stepsHtml+"</div>";
+    html += "</div>";
+    html += "<div class='oacts'>";
+    html += "<button class='oabtn' onclick='reShowEmail(\""+o.ref+"\")'>Email</button>";
+    html += "<button class='oabtn' onclick='contactWhatsApp(\""+o.ref+"\")'>WhatsApp</button>";
+    if(o.hasDoc && o.docUrl){
+      html += "<button class='oabtn dl' onclick='dlDoc(\""+o.ref+"\")'>Telecharger</button>";
+    } else {
+      html += "<button class='oabtn' style='opacity:.4;cursor:default;' disabled>En attente</button>";
+    }
+    html += "<button class='oabtn' style='color:var(--r);border-color:rgba(217,43,43,.2);' onclick='delOrder(\""+o.ref+"\")'>Supprimer</button>";
+    html += "</div></div>";
+  }
+  list.innerHTML = html;
 }
 
 function delOrder(ref){
-  let o=JSON.parse(localStorage.getItem('f2k_orders')||'[]');
-  o=o.filter(x=>x.ref!==ref);
-  localStorage.setItem('f2k_orders',JSON.stringify(o));
+  var o = JSON.parse(localStorage.getItem("f2k_orders")||"[]");
+  o = o.filter(function(x){ return x.ref !== ref; });
+  localStorage.setItem("f2k_orders", JSON.stringify(o));
   renderOrders();
-  showToast('🗑️','Supprimé','');
+  showToast("Supprime","","var(--g)");
 }
 
 function reShowEmail(ref){
-  const orders=JSON.parse(localStorage.getItem('f2k_orders')||'[]');
-  const o=orders.find(x=>x.ref===ref);if(!o)return;
-  document.getElementById('em-to').textContent=o.email;
-  document.getElementById('em-greet').textContent=`Bonjour ${o.prenom||o.nom||'cher(e) client(e)'},`;
-  document.getElementById('em-ref').textContent=o.ref;
-  document.getElementById('em-det').innerHTML=`Rappel — Demande <strong>${o.serviceName}</strong> du <strong>${o.date}</strong>.<br><br>💰 Montant : <strong>${(o.price||0).toLocaleString('fr-FR')} FCFA</strong>${o.discountApplied?' 🎁':''}<br>📞 Contact : <strong>${o.tel}</strong>`;
-  document.getElementById('email-ov').classList.add('on');
+  var orders = JSON.parse(localStorage.getItem("f2k_orders")||"[]");
+  var o = null;
+  for(var i=0;i<orders.length;i++){ if(orders[i].ref===ref){ o=orders[i]; break; } }
+  if(!o) return;
+  document.getElementById("em-to").textContent = o.email;
+  document.getElementById("em-greet").textContent = "Bonjour "+(o.prenom||o.nom||"cher(e) client(e)")+",";
+  document.getElementById("em-ref").textContent = o.ref;
+  document.getElementById("em-det").innerHTML = "Rappel — Demande <strong>"+o.serviceName+"</strong> du <strong>"+o.date+"</strong>.<br><br>Montant : <strong>"+((o.price||0).toLocaleString("fr-FR"))+" FCFA</strong>"+(o.discountApplied?" 🎁":"")+"<br>Contact : <strong>"+o.tel+"</strong>";
+  document.getElementById("email-ov").classList.add("on");
 }
 
 function contactWhatsApp(ref){
-  const orders=JSON.parse(localStorage.getItem('f2k_orders')||'[]');
-  const o=orders.find(x=>x.ref===ref);if(!o)return;
-  const msg=encodeURIComponent(`Bonjour F2K MULTISERVICE,\nJe vous contacte concernant ma demande :\nRéférence : ${o.ref}\nService : ${o.serviceName}\nDate : ${o.date}`);
-  window.open(`https://wa.me/2290199878742?text=${msg}`,'_blank');
+  var orders = JSON.parse(localStorage.getItem("f2k_orders")||"[]");
+  var o = null;
+  for(var i=0;i<orders.length;i++){ if(orders[i].ref===ref){ o=orders[i]; break; } }
+  if(!o) return;
+  var msg = encodeURIComponent("Bonjour F2K MULTISERVICE,\nJe vous contacte concernant ma demande :\nReference : "+o.ref+"\nService : "+o.serviceName+"\nDate : "+o.date);
+  window.open("https://wa.me/2290199878742?text="+msg,"_blank");
 }
 
 function dlDoc(ref){
-  const orders=JSON.parse(localStorage.getItem('f2k_orders')||'[]');
-  const o=orders.find(x=>x.ref===ref);
-  if(!o||!o.docUrl){showToast('⏳','Document non disponible','En cours de préparation.','var(--y)');return;}
-  const a=document.createElement('a');
-  a.href=o.docUrl;
-  a.download=o.ref+'_document.pdf';
+  var orders = JSON.parse(localStorage.getItem("f2k_orders")||"[]");
+  var o = null;
+  for(var i=0;i<orders.length;i++){ if(orders[i].ref===ref){ o=orders[i]; break; } }
+  if(!o||!o.docUrl){ showToast("Document non disponible","En cours de preparation.","var(--y)"); return; }
+  var a = document.createElement("a");
+  a.href = o.docUrl;
+  a.download = o.ref + "_document.pdf";
   a.click();
-  showToast('📥','Téléchargement lancé','');
+  showToast("Telechargement lance","","var(--g)");
 }
 
-/* ════ SUIVI DOSSIER ════ */
 function trackIt(){
-  const v=document.getElementById('track-in').value.trim();
-  if(!v){showToast('⚠️','Numéro requis','Entrez votre référence.','var(--y)');return;}
-  const orders=JSON.parse(localStorage.getItem('f2k_orders')||'[]');
-  const o=orders.find(x=>x.ref===v);
+  var v = document.getElementById("track-in").value.trim();
+  if(!v){ showToast("Numero requis","Entrez votre reference.","var(--y)"); return; }
+  var orders = JSON.parse(localStorage.getItem("f2k_orders")||"[]");
+  var o = null;
+  for(var i=0;i<orders.length;i++){ if(orders[i].ref===v){ o=orders[i]; break; } }
   if(o){
-    showToast('📋',o.serviceName,'Progression : '+(o.progress||25)+'% — '+DELAIS[o.key]);
-  }else{
-    db.collection('orders').doc(v).get()
-      .then(doc=>{
-        if(doc.exists) showToast('📋',doc.data().serviceName,'Progression : '+(doc.data().progress||25)+'%');
-        else showToast('🔍','Référence non trouvée','Vérifiez ou contactez-nous.','var(--y)');
+    showToast(o.serviceName,"Progression : "+(o.progress||25)+"%","var(--g)");
+  } else {
+    db.collection("orders").doc(v).get()
+      .then(function(doc){
+        if(doc.exists){ showToast(doc.data().serviceName,"Progression : "+(doc.data().progress||25)+"%","var(--g)"); }
+        else { showToast("Reference non trouvee","Verifiez ou contactez-nous.","var(--y)"); }
       })
-      .catch(()=>showToast('🔍','Référence non trouvée','Vérifiez ou contactez-nous.','var(--y)'));
+      .catch(function(){ showToast("Reference non trouvee","Verifiez ou contactez-nous.","var(--y)"); });
   }
 }
 
-/* ════ TOAST ════ */
-function showToast(ico,msg,sub,col='var(--g)'){
-  const t=document.getElementById('toast');
-  document.getElementById('t-ico').textContent=ico;
-  document.getElementById('t-msg').textContent=msg;
-  document.getElementById('t-sub').textContent=sub;
-  t.style.borderLeftColor=col;
-  t.classList.add('on');
-  setTimeout(()=>t.classList.remove('on'),5000);
+function showToast(msg, sub, col){
+  col = col||"var(--g)";
+  var t = document.getElementById("toast");
+  document.getElementById("t-ico").textContent = "✅";
+  document.getElementById("t-msg").textContent = msg;
+  document.getElementById("t-sub").textContent = sub||"";
+  t.style.borderLeftColor = col;
+  t.classList.add("on");
+  setTimeout(function(){ t.classList.remove("on"); }, 5000);
 }
 
-/* ════ NAVIGATION MOBILE ════ */
 function toggleNav(){
-  const ul=document.getElementById('nav-ul');
-  if(ul.style.display==='flex'){ul.style.display='';return;}
-  ul.style.cssText='display:flex;flex-direction:column;position:fixed;top:62px;left:0;right:0;background:rgba(255,255,255,.98);backdrop-filter:blur(16px);padding:14px;gap:11px;border-bottom:1px solid var(--bd);z-index:299;box-shadow:0 8px 20px rgba(0,0,0,.09);';
-  ul.querySelectorAll('a').forEach(a=>{
-    a.style.fontSize='14px';
-    a.addEventListener('click',()=>{ul.style.display='';},{once:true});
-  });
+  var ul = document.getElementById("nav-ul");
+  if(ul.style.display === "flex"){ ul.style.display = ""; return; }
+  ul.style.cssText = "display:flex;flex-direction:column;position:fixed;top:62px;left:0;right:0;background:rgba(255,255,255,.98);backdrop-filter:blur(16px);padding:14px;gap:11px;border-bottom:1px solid var(--bd);z-index:299;box-shadow:0 8px 20px rgba(0,0,0,.09);";
+  var links = ul.querySelectorAll("a");
+  for(var i=0;i<links.length;i++){
+    links[i].style.fontSize = "14px";
+    links[i].addEventListener("click", function(){ ul.style.display = ""; }, {once:true});
+  }
 }
 
-/* ════ FERMETURE MODALS ════ */
-document.getElementById('form-ov').addEventListener('click',e=>{
-  if(e.target===document.getElementById('form-ov')) closeForm();
+document.getElementById("form-ov").addEventListener("click", function(e){
+  if(e.target === document.getElementById("form-ov")) closeForm();
 });
-document.getElementById('email-ov').addEventListener('click',e=>{
-  if(e.target===document.getElementById('email-ov')) document.getElementById('email-ov').classList.remove('on');
+document.getElementById("email-ov").addEventListener("click", function(e){
+  if(e.target === document.getElementById("email-ov")) document.getElementById("email-ov").classList.remove("on");
 });
 
-/* ════ SCROLL REVEAL ════ */
-const io=new IntersectionObserver(entries=>{
-  entries.forEach(en=>{
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(en){
     if(en.isIntersecting){
-      en.target.style.transition='opacity .4s ease,transform .4s ease';
-      en.target.style.opacity='1';
-      en.target.style.transform='translateY(0)';
+      en.target.style.transition = "opacity .4s ease,transform .4s ease";
+      en.target.style.opacity = "1";
+      en.target.style.transform = "translateY(0)";
       io.unobserve(en.target);
     }
   });
 },{threshold:.08});
 
-document.querySelectorAll('.sc,.pc,.wc,.hstep').forEach((el,i)=>{
-  el.style.opacity='0';
-  el.style.transform='translateY(16px)';
-  el.style.transitionDelay=`${(i%6)*45}ms`;
-  io.observe(el);
-});
-
+var els = document.querySelectorAll(".sc,.pc,.wc,.hstep");
+for(var i=0;i<els.length;i++){
+  els[i].style.opacity = "0";
+  els[i].style.transform = "translateY(16px)";
+  els[i].style.transitionDelay = (i%6)*45 + "ms";
+  io.observe(els[i]);
+}
 </script>
 </body>
 </html>
