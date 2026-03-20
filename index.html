@@ -1324,17 +1324,72 @@ function contactWA(ref){
 function dlDoc(ref){
   var local=JSON.parse(localStorage.getItem("f2k_orders")||"[]");
   var o=local.filter(function(x){return x.ref===ref;})[0];
-  if(o&&o.docUrl){var a=document.createElement("a");a.href=o.docUrl;a.download=ref+"_document.pdf";a.target="_blank";a.click();showToast("Telechargement lance","","var(--g)");return;}
-  db.collection("orders").doc(ref).get().then(function(doc){
-    if(doc.exists&&doc.data().docUrl){
-      var a=document.createElement("a");a.href=doc.data().docUrl;a.download=ref+"_document.pdf";a.target="_blank";a.click();
-      showToast("Telechargement lance","","var(--g)");
-      var local2=JSON.parse(localStorage.getItem("f2k_orders")||"[]");
-      for(var i=0;i<local2.length;i++){if(local2[i].ref===ref){local2[i].docUrl=doc.data().docUrl;local2[i].hasDoc=true;break;}}
-      localStorage.setItem("f2k_orders",JSON.stringify(local2));
-    } else showToast("Document non disponible","En cours de preparation.","var(--y)");
-  }).catch(function(){showToast("Erreur","Verifiez votre connexion.","var(--r)");});
-}
+
+  function doDownload(url,name){
+    // Telecharger avec nom original sans quitter le site
+    showToast("⏳ Preparation","Telechargement en cours...","var(--b)");
+    fetch(url)
+      .then(function(r){
+        if(!r.ok) throw new Error("Erreur reseau");
+        return r.blob();
+      })
+      .then(function(blob){
+        var blobUrl=URL.createObjectURL(blob);
+        var a=document.createElement("a");
+        a.href=blobUrl;
+        a.download=name||ref+"_document.pdf";
+        a.style.display="none";
+        document.body.appendChild(a);
+        a.click();
+        setTimeout(function(){
+          document.body.removeChild(a);
+          URL.revokeObjectURL(blobUrl);
+        },2000);
+        showToast("✅ Telechargement lance",name||ref+"_document.pdf","var(--g)");
+      })
+      .catch(function(){
+        // Fallback si CORS bloque : ouvrir dans un iframe cache
+        var iframe=document.createElement("iframe");
+        iframe.style.display="none";
+        iframe.src=url;
+        document.body.appendChild(iframe);
+        setTimeout(function(){document.body.removeChild(iframe);},5000);
+        showToast("📥 Document ouvert","Verifiez votre dossier telechargements","var(--g)");
+      });
+  }
+
+  if(o&&o.docUrl){
+    doDownload(o.docUrl, o.docName||ref+"_document.pdf");
+    return;
+  }
+
+  showToast("🔄 Recherche","Recuperation du document...","var(--b)");
+  db.collection("orders").doc(ref).get()
+    .then(function(doc){
+      if(doc.exists&&doc.data().docUrl){
+        var url=doc.data().docUrl;
+        var name=doc.data().docName||ref+"_document.pdf";
+        var local2=JSON.parse(localStorage.getItem("f2k_orders")||"[]");
+        for(var i=0;i<local2.length;i++){
+          if(local2[i].ref===ref){
+            local2[i].docUrl=url;
+            local2[i].docName=name;
+            local2[i].hasDoc=true;
+            local2[i].status="ready";
+            break;
+          }
+        }
+        localStorage.setItem("f2k_orders",JSON.stringify(local2));
+        renderOrders();
+        doDownload(url,name);
+      } else {
+        showToast("⏳ Document pas encore pret","L'admin finalise votre dossier.","var(--y)");
+      }
+    })
+    .catch(function(){
+      showToast("❌ Erreur","Verifiez votre connexion internet.","var(--r)");
+    });
+    }
 function delOrder(ref){
   var o=JSON.parse(localStorage.getItem("f2k_orders")||"[]");
   o=o.filter(function(x){return x.ref!==ref;});
@@ -1634,6 +1689,7 @@ function submitDocument(){
     showToast("📎 Fichier requis","Selectionnez un document PDF ou image.","var(--y)");
     return;
   }
+  var originalName=file.name;
   var btn=document.getElementById("upload-submit-btn");
   btn.textContent="⏳ Envoi en cours...";
   btn.disabled=true;
@@ -1641,55 +1697,43 @@ function submitDocument(){
   var fd=new FormData();
   fd.append("file",file);
   fd.append("upload_preset",CLOUDINARY_PRESET);
+  fd.append("folder","f2k_documents");
+  fd.append("access_mode","public");
+  fd.append("public_id","f2k_doc_"+uploadRef+"_"+Date.now());
 
   fetch(CLOUDINARY_URL,{method:"POST",body:fd})
     .then(function(r){return r.json();})
     .then(function(data){
       if(!data.secure_url){
-        throw new Error("Upload Cloudinary echoue — verifiez le preset.");
+        throw new Error("Upload echoue. Verifiez que le preset f2k_stream est en mode Unsigned.");
       }
       var docUrl=data.secure_url;
-      var finalMsg=msg||"Votre document est pret ! Telechargez-le depuis votre espace client ou en recherchant avec votre code de reference.";
+      var finalMsg=msg||"Votre document est pret ! Telechargez-le depuis votre espace client.";
 
-      // Mettre a jour Firebase
       db.collection("orders").doc(uploadRef).update({
-        status:"ready",
-        progress:100,
-        hasDoc:true,
-        docUrl:docUrl,
-        adminNote:finalMsg
+        status:"ready",progress:100,hasDoc:true,
+        docUrl:docUrl,docName:originalName,adminNote:finalMsg
       }).then(function(){
         showToast("✅ Document envoye !",uploadRef+" — Client peut telecharger.","var(--g)");
-      }).catch(function(e){
-        console.error("Firebase doc update error:",e);
-      });
+      }).catch(function(e){console.error(e);});
 
-      // Mettre a jour allOrders en memoire SANS supprimer
       var foundInAll=false;
       for(var i=0;i<allOrders.length;i++){
         if(allOrders[i].ref===uploadRef){
-          allOrders[i].status="ready";
-          allOrders[i].progress=100;
-          allOrders[i].hasDoc=true;
-          allOrders[i].docUrl=docUrl;
-          allOrders[i].adminNote=finalMsg;
-          foundInAll=true;
-          break;
+          allOrders[i].status="ready";allOrders[i].progress=100;
+          allOrders[i].hasDoc=true;allOrders[i].docUrl=docUrl;
+          allOrders[i].docName=originalName;allOrders[i].adminNote=finalMsg;
+          foundInAll=true;break;
         }
       }
-
-      // Mettre a jour localStorage SANS supprimer
       var local=JSON.parse(localStorage.getItem("f2k_orders")||"[]");
       var foundInLocal=false;
       for(var i=0;i<local.length;i++){
         if(local[i].ref===uploadRef){
-          local[i].status="ready";
-          local[i].progress=100;
-          local[i].hasDoc=true;
-          local[i].docUrl=docUrl;
-          local[i].adminNote=finalMsg;
-          foundInLocal=true;
-          break;
+          local[i].status="ready";local[i].progress=100;
+          local[i].hasDoc=true;local[i].docUrl=docUrl;
+          local[i].docName=originalName;local[i].adminNote=finalMsg;
+          foundInLocal=true;break;
         }
       }
       if(!foundInLocal&&foundInAll){
@@ -1697,11 +1741,7 @@ function submitDocument(){
         if(o) local.unshift(JSON.parse(JSON.stringify(o)));
       }
       localStorage.setItem("f2k_orders",JSON.stringify(local));
-
-      // Envoyer email au client
       sendAdminEmail(uploadRef,"ready",finalMsg);
-
-      // Reafficher sans recharger depuis Firebase
       updateAdminStats();
       renderAllAdminLists();
       closeUpload();
@@ -1709,8 +1749,8 @@ function submitDocument(){
       btn.disabled=false;
     })
     .catch(function(e){
-      console.error("Upload error:",e);
-      showToast("❌ Erreur upload",e.message||"Verifiez votre configuration Cloudinary.","var(--r)");
+      console.error(e);
+      showToast("❌ Erreur upload",e.message,"var(--r)");
       btn.textContent="📤 Envoyer le document au client";
       btn.disabled=false;
     });
