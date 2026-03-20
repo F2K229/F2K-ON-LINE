@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>F2K ADMIN — Panel Administrateur</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:wght@700;900&display=swap" rel="stylesheet">
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-storage-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<style>
+:root{
+  --g:#009a55;--g2:#00c46b;--g3:#e6fff3;--g4:#d0f5e4;
+  --y:#fbbf00;--y3:#fffbe6;
+  --r:#d92b2b;--r3:#fff0f0;
+  --b:#2563eb;--b3:#eff6ff;
+  --ink:#0e1a12;--ink2:#1c3025;--mu:#5a7060;
+  --bd:#ddeee5;--bg:#f4faf6;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--ink);min-height:100vh;}
+
+/* LOGIN */
+#login-screen{position:fixed;inset:0;background:linear-gradient(150deg,var(--ink2) 0%,#071610 100%);display:flex;align-items:center;justify-content:center;z-index:9999;padding:20px;}
+.login-box{background:#fff;border-radius:18px;padding:36px;width:100%;max-width:380px;text-align:center;}
+.login-lm{display:flex;width:44px;height:44px;border-radius:9px;overflow:hidden;flex-direction:column;margin:0 auto 16px;box-shadow:0 3px 10px rgba(0,154,85,.3);}
+.login-lm div{flex:1;}
+.login-lm div:nth-child(1){background:var(--g);}
+.login-lm div:nth-child(2){background:var(--y);}
+.login-lm div:nth-child(3){background:var(--r);}
+.login-title{font-family:'Fraunces',serif;font-size:22px;font-weight:900;color:var(--ink);margin-bottom:4px;}
+.login-sub{font-size:13px;color:var(--mu);margin-bottom:24px;}
+.login-box input{width:100%;border:2px solid var(--bd);border-radius:9px;padding:12px 14px;font-size:14px;font-family:'Plus Jakarta Sans',sans-serif;outline:none;margin-bottom:12px;transition:border-color .2s;background:var(--bg);}
+.login-box input:focus{border-color:var(--g);}
+.login-btn{width:100%;background:linear-gradient(135deg,var(--g),var(--g2));color:#fff;border:none;border-radius:9px;padding:13px;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;font-weight:800;cursor:pointer;transition:all .2s;box-shadow:0 6px 18px rgba(0,154,85,.3);}
+.login-btn:hover{transform:translateY(-1px);}
+.login-err{color:var(--r);font-size:12px;margin-top:8px;display:none;}
+.login-note{font-size:11px;color:var(--mu);margin-top:12px;}
+
+/* LAYOUT */
+#admin-panel{display:none;}
+.layout{display:grid;grid-template-columns:240px 1fr;min-height:100vh;}
+
+/* SIDEBAR */
+.sidebar{background:var(--ink2);display:flex;flex-direction:column;}
+.sb-logo{padding:20px;border-bottom:1px solid rgba(255,255,255,.07);}
+.sb-lm{display:flex;width:34px;height:34px;border-radius:7px;overflow:hidden;flex-direction:column;float:left;margin-right:10px;}
+.sb-lm div{flex:1;}
+.sb-lm div:nth-child(1){background:var(--g);}
+.sb-lm div:nth-child(2){background:var(--y);}
+.sb-lm div:nth-child(3){background:var(--r);}
+.sb-title{font-family:'Fraunces',serif;font-size:15px;font-weight:900;color:#fff;line-height:1.2;}
+.sb-title em{font-style:normal;color:var(--g2);}
+.sb-sub{font-size:9px;color:rgba(255,255,255,.3);text-transform:uppercase;letter-spacing:1px;}
+.sb-nav{padding:16px 0;flex:1;}
+.sb-item{display:flex;align-items:center;gap:10px;padding:11px 18px;cursor:pointer;transition:all .18s;color:rgba(255,255,255,.5);font-size:13px;font-weight:600;border-left:3px solid transparent;text-decoration:none;}
+.sb-item:hover{background:rgba(255,255,255,.06);color:rgba(255,255,255,.85);}
+.sb-item.active{background:rgba(0,154,85,.15);color:#fff;border-left-color:var(--g2);}
+.sb-count{background:var(--g);color:#fff;font-size:9px;font-weight:800;padding:1px 6px;border-radius:10px;margin-left:auto;}
+.sb-count.red{background:var(--r);}
+.sb-footer{padding:14px 18px;border-top:1px solid rgba(255,255,255,.07);}
+.sb-admin{font-size:11px;color:rgba(255,255,255,.35);margin-bottom:8px;}
+.logout-btn{width:100%;background:rgba(217,43,43,.15);border:1px solid rgba(217,43,43,.3);color:var(--r);border-radius:7px;padding:8px;font-size:12px;font-weight:700;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;}
+.logout-btn:hover{background:rgba(217,43,43,.25);}
+
+/* MAIN */
+.main{padding:28px 32px;overflow-y:auto;}
+.page{display:none;}
+.page.active{display:block;}
+.page-title{font-family:'Fraunces',serif;font-size:24px;font-weight:900;color:var(--ink);letter-spacing:-.7px;margin-bottom:4px;}
+.page-sub{font-size:13px;color:var(--mu);margin-bottom:22px;}
+.top-bar{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:22px;}
+.abtn{border:2px solid var(--bd);background:#fff;border-radius:8px;padding:8px 14px;font-size:12px;font-weight:700;color:var(--mu);cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;transition:all .2s;}
+.abtn:hover{border-color:var(--g);color:var(--g);background:var(--g3);}
+
+/* STATS */
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:24px;}
+.stat-card{background:#fff;border:2px solid var(--bd);border-radius:12px;padding:18px;}
+.sc-label{font-size:11px;font-weight:700;color:var(--mu);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;}
+.sc-num{font-family:'Fraunces',serif;font-size:32px;font-weight:900;color:var(--ink);}
+
+/* FILTERS */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;}
+.filter-btn{border:2px solid var(--bd);background:#fff;border-radius:8px;padding:6px 13px;font-size:12px;font-weight:700;color:var(--mu);cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;transition:all .2s;}
+.filter-btn:hover,.filter-btn.on{border-color:var(--g);background:var(--g);color:#fff;}
+.search-bar{margin-bottom:14px;}
+.search-bar input{width:100%;border:2px solid var(--bd);border-radius:9px;padding:10px 14px;font-size:13px;font-family:'Plus Jakarta Sans',sans-serif;outline:none;background:#fff;transition:border-color .2s;}
+.search-bar input:focus{border-color:var(--g);}
+
+/* ORDER CARDS */
+.order-list{display:flex;flex-direction:column;gap:12px;}
+.aorder{background:#fff;border:2px solid var(--bd);border-radius:13px;padding:18px;transition:all .2s;}
+.aorder:hover{box-shadow:0 6px 20px rgba(0,0,0,.06);}
+.aorder.st-pending{border-left:4px solid var(--y);}
+.aorder.st-processing{border-left:4px solid var(--b);}
+.aorder.st-ready{border-left:4px solid var(--g);}
+.aorder.st-rejected{border-left:4px solid var(--r);}
+.ao-top{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px;}
+.ao-ref{font-family:'Fraunces',serif;font-size:16px;font-weight:900;color:var(--ink);}
+.ao-service{font-size:12px;color:var(--mu);margin-top:2px;}
+.ao-st{padding:4px 10px;border-radius:20px;font-size:11px;font-weight:700;}
+.ast-pending{background:var(--y3);color:#7a5800;}
+.ast-processing{background:var(--b3);color:var(--b);}
+.ast-ready{background:var(--g3);color:var(--g);}
+.ast-rejected{background:var(--r3);color:var(--r);}
+.ast-revision{background:var(--y3);color:#7a5800;}
+.ao-info{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:6px;margin-bottom:12px;}
+.ao-il{font-size:9px;font-weight:700;color:var(--mu);text-transform:uppercase;margin-bottom:1px;}
+.ao-iv{font-size:12px;font-weight:600;color:var(--ink);}
+.ao-iv a{color:var(--b);text-decoration:none;}
+.ao-files{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:12px;}
+.ao-file{background:var(--b3);border:1px solid rgba(37,99,235,.15);border-radius:6px;padding:3px 8px;font-size:11px;font-weight:600;color:var(--b);text-decoration:none;}
+.ao-file:hover{background:rgba(37,99,235,.15);}
+.ao-actions{display:flex;gap:7px;flex-wrap:wrap;}
+.act-btn{border:none;border-radius:8px;padding:7px 13px;font-size:12px;font-weight:700;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;transition:all .2s;}
+.act-approve{background:var(--g);color:#fff;}
+.act-approve:hover{background:var(--g2);}
+.act-reject{background:var(--r3);border:2px solid var(--r);color:var(--r);}
+.act-reject:hover{background:var(--r);color:#fff;}
+.act-revision{background:var(--y3);border:2px solid var(--y);color:#7a5800;}
+.act-revision:hover{background:var(--y);color:var(--ink);}
+.act-process{background:var(--b3);border:2px solid var(--b);color:var(--b);}
+.act-process:hover{background:var(--b);color:#fff;}
+.act-upload{background:var(--ink2);color:#fff;}
+.act-upload:hover{background:#0a2218;}
+.act-wa{background:var(--g3);border:2px solid var(--g);color:var(--g);}
+.act-wa:hover{background:var(--g);color:#fff;}
+
+/* MODAL */
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.75);backdrop-filter:blur(8px);z-index:500;display:none;align-items:center;justify-content:center;padding:16px;}
+.ov.on{display:flex;}
+.amodal{background:#fff;border-radius:16px;width:100%;max-width:480px;padding:28px;position:relative;}
+.amodal h3{font-family:'Fraunces',serif;font-size:20px;font-weight:900;color:var(--ink);margin-bottom:14px;}
+.amodal label{display:block;font-size:11px;font-weight:700;color:var(--mu);text-transform:uppercase;letter-spacing:.4px;margin-bottom:5px;}
+.amodal textarea{width:100%;border:2px solid var(--bd);border-radius:8px;padding:10px 12px;font-size:13px;font-family:'Plus Jakarta Sans',sans-serif;outline:none;background:var(--bg);min-height:90px;resize:vertical;margin-bottom:12px;transition:border-color .2s;}
+.amodal textarea:focus{border-color:var(--g);}
+.mcl{position:absolute;top:12px;right:12px;width:26px;height:26px;border-radius:6px;background:var(--bg);border:none;cursor:pointer;font-size:13px;color:var(--mu);}
+.mrow{display:flex;gap:8px;margin-top:4px;}
+.mbtn{flex:1;border:none;border-radius:8px;padding:12px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:800;cursor:pointer;transition:all .2s;}
+.mbtn-g{background:var(--g);color:#fff;}
+.mbtn-g:hover{background:var(--g2);}
+.mbtn-r{background:var(--r3);border:2px solid var(--r);color:var(--r);}
+.mbtn-r:hover{background:var(--r);color:#fff;}
+.upload-zone{border:2px dashed var(--bd);border-radius:9px;padding:20px;text-align:center;background:var(--bg);cursor:pointer;position:relative;margin-bottom:12px;}
+.upload-zone:hover{border-color:var(--g);background:var(--g3);}
+.upload-zone input{position:absolute;inset:0;opacity:0;cursor:pointer;}
+
+/* TOAST */
+.toast{position:fixed;bottom:16px;right:16px;z-index:9999;background:#fff;border-radius:10px;padding:11px 14px;display:flex;align-items:center;gap:9px;box-shadow:0 10px 28px rgba(0,0,0,.12);border-left:4px solid var(--g);transform:translateX(120%);opacity:0;transition:all .4s cubic-bezier(.34,1.56,.64,1);max-width:280px;}
+.toast.on{transform:translateX(0);opacity:1;}
+.tmsg{font-size:12px;font-weight:700;color:var(--ink);}
+.tsub{font-size:10px;color:var(--mu);margin-top:1px;}
+.empty-state{text-align:center;padding:40px 20px;color:var(--mu);font-size:13px;}
+
+@media(max-width:768px){.layout{grid-template-columns:1fr;}.sidebar{display:none;}.stats-grid{grid-template-columns:1fr 1fr;}.main{padding:18px 14px;}}
+</style>
+</head>
+<body>
+  <div id="login-screen">
+  <div class="login-box">
+    <div class="login-lm"><div></div><div></div><div></div></div>
+    <div class="login-title">F2K ADMIN</div>
+    <div class="login-sub">Panel Administrateur — F2K MULTISERVICE</div>
+    <input type="email" id="login-email" placeholder="Email administrateur" value="f2kmultiservice@gmail.com">
+    <input type="password" id="login-pwd" placeholder="Mot de passe" onkeydown="if(event.key==='Enter')doLogin()">
+    <button class="login-btn" onclick="doLogin()">Se connecter</button>
+    <div class="login-err" id="login-err">Identifiants incorrects. Reessayez.</div>
+    <p class="login-note">Acces reserve a F2K MULTISERVICE</p>
+  </div>
+</div>
+
+<div id="admin-panel">
+  <div class="layout">
+    <div class="sidebar">
+      <div class="sb-logo">
+        <div class="sb-lm"><div></div><div></div><div></div></div>
+        <div style="margin-left:44px;">
+          <div class="sb-title">F2K <em>ADMIN</em></div>
+          <div class="sb-sub">F2K MULTISERVICE</div>
+        </div>
+      </div>
+      <nav class="sb-nav">
+        <a class="sb-item active" onclick="showPage('dashboard',this)" href="#">
+          Dashboard
+        </a>
+        <a class="sb-item" onclick="showPage('orders',this)" href="#">
+          Toutes les demandes
+          <span class="sb-count" id="sb-total">0</span>
+        </a>
+        <a class="sb-item" onclick="showPage('pending',this)" href="#">
+          En attente
+          <span class="sb-count red" id="sb-pending">0</span>
+        </a>
+        <a class="sb-item" onclick="showPage('processing',this)" href="#">
+          En traitement
+          <span class="sb-count" id="sb-proc">0</span>
+        </a>
+        <a class="sb-item" onclick="showPage('ready',this)" href="#">
+          Prets a livrer
+          <span class="sb-count" id="sb-ready">0</span>
+        </a>
+        <a class="sb-item" onclick="showPage('rejected',this)" href="#">
+          Rejetes
+          <span class="sb-count" id="sb-rej">0</span>
+        </a>
+        <div style="border-top:1px solid rgba(255,255,255,.06);margin:10px 0;"></div>
+        <a class="sb-item" href="index.html" target="_blank">
+          Voir le site client
+        </a>
+      </nav>
+      <div class="sb-footer">
+        <div class="sb-admin" id="admin-email-display">f2kmultiservice@gmail.com</div>
+        <button class="logout-btn" onclick="doLogout()">Se deconnecter</button>
+      </div>
+    </div>
+
+    <div class="main">
+
+      <div class="page active" id="page-dashboard">
+        <div class="top-bar">
+          <div>
+            <div class="page-title">Tableau de bord</div>
+            <div class="page-sub">Bienvenue sur le panel F2K MULTISERVICE</div>
+          </div>
+          <button class="abtn" onclick="loadOrders()">Actualiser</button>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card"><div class="sc-label">Total demandes</div><div class="sc-num" id="stat-total">0</div></div>
+          <div class="stat-card"><div class="sc-label">En attente</div><div class="sc-num" id="stat-pending" style="color:var(--y);">0</div></div>
+          <div class="stat-card"><div class="sc-label">En traitement</div><div class="sc-num" id="stat-proc" style="color:var(--b);">0</div></div>
+          <div class="stat-card"><div class="sc-label">Prets a livrer</div><div class="sc-num" id="stat-ready" style="color:var(--g);">0</div></div>
+        </div>
+        <div class="page-title" style="font-size:18px;margin-bottom:14px;">Dernieres demandes en attente</div>
+        <div class="order-list" id="dash-recent"></div>
+      </div>
+
+      <div class="page" id="page-orders">
+        <div class="top-bar">
+          <div>
+            <div class="page-title">Toutes les demandes</div>
+            <div class="page-sub" id="orders-count-label"></div>
+          </div>
+          <button class="abtn" onclick="loadOrders()">Actualiser</button>
+        </div>
+        <div class="search-bar">
+          <input type="text" placeholder="Rechercher par reference, nom, email..." id="search-input" oninput="filterOrders()">
+        </div>
+        <div class="filters" id="filter-btns">
+          <button class="filter-btn on" onclick="setFilter('all',this)">Tous</button>
+          <button class="filter-btn" onclick="setFilter('pending',this)">En attente</button>
+          <button class="filter-btn" onclick="setFilter('processing',this)">En traitement</button>
+          <button class="filter-btn" onclick="setFilter('ready',this)">Prets</button>
+          <button class="filter-btn" onclick="setFilter('rejected',this)">Rejetes</button>
+          <button class="filter-btn" onclick="setFilter('revision',this)">Revision</button>
+        </div>
+        <div class="order-list" id="all-orders-list"></div>
+      </div>
+
+      <div class="page" id="page-pending">
+        <div class="top-bar">
+          <div><div class="page-title">En attente</div><div class="page-sub">Demandes a traiter en priorite</div></div>
+          <button class="abtn" onclick="loadOrders()">Actualiser</button>
+        </div>
+        <div class="order-list" id="pending-list"></div>
+      </div>
+
+      <div class="page" id="page-processing">
+        <div class="top-bar">
+          <div><div class="page-title">En traitement</div><div class="page-sub">Dossiers en cours</div></div>
+          <button class="abtn" onclick="loadOrders()">Actualiser</button>
+        </div>
+        <div class="order-list" id="processing-list"></div>
+      </div>
+
+      <div class="page" id="page-ready">
+        <div class="top-bar">
+          <div><div class="page-title">Prets a livrer</div><div class="page-sub">Documents finalises</div></div>
+          <button class="abtn" onclick="loadOrders()">Actualiser</button>
+        </div>
+        <div class="order-list" id="ready-list"></div>
+      </div>
+
+      <div class="page" id="page-rejected">
+        <div class="top-bar">
+          <div><div class="page-title">Demandes rejetees</div></div>
+          <button class="abtn" onclick="loadOrders()">Actualiser</button>
+        </div>
+        <div class="order-list" id="rejected-list"></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="ov" id="action-ov">
+  <div class="amodal">
+    <button class="mcl" onclick="closeActionModal()">X</button>
+    <h3 id="action-title">Action</h3>
+    <div id="action-body"></div>
+  </div>
+</div>
+
+<div class="ov" id="upload-ov">
+  <div class="amodal">
+    <button class="mcl" onclick="closeUpload()">X</button>
+    <h3>Soumettre le document finalise</h3>
+    <p style="font-size:12px;color:var(--mu);margin-bottom:14px;">Telechargez le document finalise. Le client pourra le telecharger depuis son espace.</p>
+    <div class="upload-zone" id="doc-drop">
+      <input type="file" id="doc-file" accept=".pdf,image/*" onchange="previewDocFile(this)">
+      <p style="font-size:13px;font-weight:700;color:var(--mu);">Cliquez ou glissez le document ici</p>
+      <p style="font-size:11px;color:var(--mu);margin-top:4px;">PDF ou image (max 10 Mo)</p>
+    </div>
+    <div id="doc-preview" style="margin-bottom:10px;font-size:12px;color:var(--g);display:none;"></div>
+    <label style="display:block;font-size:11px;font-weight:700;color:var(--mu);text-transform:uppercase;margin-bottom:5px;">Message pour le client (optionnel)</label>
+    <textarea id="doc-msg" placeholder="Ex: Votre document est pret. Telechargez-le depuis votre espace client..." style="width:100%;border:2px solid var(--bd);border-radius:8px;padding:9px 11px;font-size:12px;min-height:70px;font-family:'Plus Jakarta Sans',sans-serif;outline:none;background:var(--bg);resize:vertical;"></textarea>
+    <button class="mbtn mbtn-g" onclick="submitDocument()" style="width:100%;padding:12px;margin-top:8px;">Envoyer le document au client</button>
+  </div>
+</div>
+
+<div class="toast" id="toast">
+  <span id="t-ico" style="font-size:18px;">✅</span>
+  <div><div class="tmsg" id="t-msg"></div><div class="tsub" id="t-sub"></div></div>
+  </div>
+  <script>
+const firebaseConfig = {
+  apiKey: "AIzaSyBtngyLs-sbAnfMQD0MhOi2yqB114vi4Jg",
+  authDomain: "f2k-on-line.firebaseapp.com",
+  projectId: "f2k-on-line",
+  storageBucket: "f2k-on-line.firebasestorage.app",
+  messagingSenderId: "1060822103274",
+  appId: "1:1060822103274:web:1f966c1cfe6855a4371393",
+  measurementId: "G-DZB1TS6FPM"
+};
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+const storage = firebase.storage();
+const auth = firebase.auth();
+
+emailjs.init("XAb5zE12AGNaYhsoc");
+const EMAILJS_SERVICE = "F2K_MULTISERVICE";
+const EMAILJS_TEMPLATE = "template_77x2hcp";
+
+const CLOUDINARY_URL = "https://api.cloudinary.com/v1_1/di4byrrfv/upload";
+const CLOUDINARY_PRESET = "f2k_stream";
+
+const ADMIN_EMAIL = "f2kmultiservice@gmail.com";
+const ADMIN_PWD = "Fr@58070708";
+
+var allOrders = [];
+var currentFilter = "all";
+var currentActionRef = "";
+var currentUploadRef = "";
+
+function doLogin(){
+  var email = document.getElementById("login-email").value.trim();
+  var pwd = document.getElementById("login-pwd").value;
+  document.getElementById("login-err").style.display = "none";
+  if(email === ADMIN_EMAIL && pwd === ADMIN_PWD){
+    auth.signInWithEmailAndPassword(email, pwd)
+      .then(function(){ showAdmin(); })
+      .catch(function(){ showAdmin(); });
+  } else {
+    document.getElementById("login-err").style.display = "block";
+  }
+}
+
+function showAdmin(){
+  document.getElementById("login-screen").style.display = "none";
+  document.getElementById("admin-panel").style.display = "block";
+  document.getElementById("admin-email-display").textContent = ADMIN_EMAIL;
+  loadOrders();
+}
+
+function doLogout(){
+  auth.signOut().catch(function(){});
+  document.getElementById("login-screen").style.display = "flex";
+  document.getElementById("admin-panel").style.display = "none";
+}
+
+function loadOrders(){
+  db.collection("orders").orderBy("timestamp","desc").get()
+    .then(function(snap){
+      allOrders = [];
+      snap.forEach(function(d){ allOrders.push(Object.assign({id:d.id},d.data())); });
+      updateStats();
+      renderAllPages();
+      showToast("Actualise", allOrders.length + " demande(s) chargee(s).", "var(--g)");
+    })
+    .catch(function(){
+      allOrders = JSON.parse(localStorage.getItem("f2k_orders")||"[]");
+      updateStats();
+      renderAllPages();
+      showToast("Mode local","Firebase non configure — donnees locales.", "var(--y)");
+    });
+}
+
+function updateStats(){
+  var total = allOrders.length;
+  var pending = allOrders.filter(function(o){ return o.status==="pending"; }).length;
+  var proc = allOrders.filter(function(o){ return o.status==="processing"; }).length;
+  var ready = allOrders.filter(function(o){ return o.status==="ready"; }).length;
+  var rej = allOrders.filter(function(o){ return o.status==="rejected"; }).length;
+  document.getElementById("stat-total").textContent = total;
+  document.getElementById("stat-pending").textContent = pending;
+  document.getElementById("stat-proc").textContent = proc;
+  document.getElementById("stat-ready").textContent = ready;
+  document.getElementById("sb-total").textContent = total;
+  document.getElementById("sb-pending").textContent = pending;
+  document.getElementById("sb-proc").textContent = proc;
+  document.getElementById("sb-ready").textContent = ready;
+  document.getElementById("sb-rej").textContent = rej;
+}
+
+function renderAllPages(){
+  renderList("all-orders-list", allOrders);
+  renderList("pending-list", allOrders.filter(function(o){ return o.status==="pending"; }));
+  renderList("processing-list", allOrders.filter(function(o){ return o.status==="processing"; }));
+  renderList("ready-list", allOrders.filter(function(o){ return o.status==="ready"; }));
+  renderList("rejected-list", allOrders.filter(function(o){ return o.status==="rejected"; }));
+  renderList("dash-recent", allOrders.filter(function(o){ return o.status==="pending"; }).slice(0,5));
+  document.getElementById("orders-count-label").textContent = allOrders.length + " demande(s) au total";
+}
+
+var ST_MAP = {
+  pending:{l:"En attente",c:"ast-pending",cls:"st-pending"},
+  processing:{l:"En traitement",c:"ast-processing",cls:"st-processing"},
+  ready:{l:"Pret a livrer",c:"ast-ready",cls:"st-ready"},
+  rejected:{l:"Rejete",c:"ast-rejected",cls:"st-rejected"},
+  revision:{l:"Modifications requises",c:"ast-revision",cls:"st-pending"}
+};
+
+function renderList(containerId, orders){
+  var el = document.getElementById(containerId);
+  if(!el) return;
+  if(!orders.length){
+    el.innerHTML = "<div class='empty-state'>Aucune demande ici.</div>";
+    return;
+  }
+  var html = "";
+  for(var i=0;i<orders.length;i++){
+    var o = orders[i];
+    var st = ST_MAP[o.status]||ST_MAP["pending"];
+    var filesHtml = "";
+    if(o.fileUrls && o.fileUrls.length){
+      for(var j=0;j<o.fileUrls.length;j++){
+        filesHtml += "<a class='ao-file' href='"+o.fileUrls[j]+"' target='_blank'>Piece "+(j+1)+"</a>";
+      }
+    }
+    var actionsHtml = "";
+    if(o.status==="pending"){
+      actionsHtml += "<button class='act-btn act-process' onclick='setStatus(\""+o.ref+"\",\"processing\",\"\")'>Mettre en traitement</button>";
+      actionsHtml += "<button class='act-btn act-approve' onclick='openApprove(\""+o.ref+"\")'>Approuver</button>";
+      actionsHtml += "<button class='act-btn act-revision' onclick='openRevision(\""+o.ref+"\")'>Demander modification</button>";
+      actionsHtml += "<button class='act-btn act-reject' onclick='openReject(\""+o.ref+"\")'>Rejeter</button>";
+    }
+    if(o.status==="processing"){
+      actionsHtml += "<button class='act-btn act-upload' onclick='openUploadDoc(\""+o.ref+"\")'>Soumettre document</button>";
+      actionsHtml += "<button class='act-btn act-approve' onclick='openApprove(\""+o.ref+"\")'>Marquer comme pret</button>";
+      actionsHtml += "<button class='act-btn act-revision' onclick='openRevision(\""+o.ref+"\")'>Demander modification</button>";
+      actionsHtml += "<button class='act-btn act-reject' onclick='openReject(\""+o.ref+"\")'>Rejeter</button>";
+    }
+    if(o.status==="ready"){
+      actionsHtml += "<button class='act-btn act-upload' onclick='openUploadDoc(\""+o.ref+"\")'>Mettre a jour document</button>";
+    }
+    if(o.status==="rejected"||o.status==="revision"){
+      actionsHtml += "<button class='act-btn act-process' onclick='setStatus(\""+o.ref+"\",\"processing\",\"\")'>Remettre en traitement</button>";
+    }
+    actionsHtml += "<button class='act-btn act-wa' onclick='contactClient(\""+o.ref+"\")'>WhatsApp</button>";
+
+    html += "<div class='aorder "+st.cls+"'>";
+    html += "<div class='ao-top'><div><div class='ao-ref'>"+(o.icon||"📋")+" "+o.ref+"</div><div class='ao-service'>"+o.serviceName+"</div></div><span class='ao-st "+st.c+"'>"+st.l+"</span></div>";
+    html += "<div class='ao-info'>";
+    html += "<div><div class='ao-il'>Client</div><div class='ao-iv'>"+(o.prenom||"")+" "+(o.nom||"")+"</div></div>";
+    html += "<div><div class='ao-il'>Email</div><div class='ao-iv'><a href='mailto:"+(o.email||"")+"'>"+(o.email||"--")+"</a></div></div>";
+    html += "<div><div class='ao-il'>Telephone</div><div class='ao-iv'>"+(o.tel||"--")+"</div></div>";
+    html += "<div><div class='ao-il'>NPI/RAVIP</div><div class='ao-iv'>"+(o.npi||"--")+"</div></div>";
+    html += "<div><div class='ao-il'>Montant</div><div class='ao-iv'>"+((o.price||0).toLocaleString("fr-FR"))+" FCFA"+(o.discountApplied?" 🎁":"")+"</div></div>";
+    html += "<div><div class='ao-il'>Date</div><div class='ao-iv'>"+(o.date||"--")+" "+(o.time||"")+"</div></div>";
+    html += "<div><div class='ao-il'>Delai</div><div class='ao-iv'>"+(o.delai||"--")+"</div></div>";
+    html += "</div>";
+    if(filesHtml){ html += "<div style='margin-bottom:12px;'><div class='ao-il' style='margin-bottom:6px;'>Pieces jointes</div><div class='ao-files'>"+filesHtml+"</div></div>"; }
+    if(o.adminNote){ html += "<div style='font-size:11px;background:var(--y3);border-radius:7px;padding:8px 10px;margin-bottom:10px;'>Dernier message admin : "+o.adminNote+"</div>"; }
+    html += "<div class='ao-actions'>"+actionsHtml+"</div>";
+    html += "</div>";
+  }
+  el.innerHTML = html;
+}
+
+function setStatus(ref, status, note){
+  var progressMap = {pending:25,processing:50,ready:100,rejected:0,revision:40};
+  var prog = progressMap[status]||25;
+  var updateData = {status:status, progress:prog};
+  if(note) updateData.adminNote = note;
+  db.collection("orders").doc(ref).update(updateData).catch(function(e){ console.error(e); });
+  var local = JSON.parse(localStorage.getItem("f2k_orders")||"[]");
+  for(var i=0;i<local.length;i++){
+    if(local[i].ref===ref){
+      local[i].status=status;
+      local[i].progress=prog;
+      if(note) local[i].adminNote=note;
+      break;
+    }
+  }
+  localStorage.setItem("f2k_orders",JSON.stringify(local));
+  for(var i=0;i<allOrders.length;i++){
+    if(allOrders[i].ref===ref){
+      allOrders[i].status=status;
+      allOrders[i].progress=prog;
+      if(note) allOrders[i].adminNote=note;
+      break;
+    }
+  }
+  updateStats();
+  renderAllPages();
+  showToast("Statut mis a jour","Demande "+ref+" => "+status,"var(--g)");
+}
+
+function openApprove(ref){
+  currentActionRef = ref;
+  var o = allOrders.filter(function(x){ return x.ref===ref; })[0];
+  document.getElementById("action-title").textContent = "Approuver la demande";
+  document.getElementById("action-body").innerHTML =
+    "<p style='font-size:13px;color:var(--mu);margin-bottom:14px;'>Approuver la demande <strong>"+ref+"</strong> de <strong>"+(o?((o.prenom||"")+" "+(o.nom||"")):"")+"</strong>.</p>"+
+    "<label>Message pour le client (optionnel)</label>"+
+    "<textarea id='act-note' placeholder='Ex: Votre dossier a ete valide. Votre document sera pret sous 24h...'></textarea>"+
+    "<div class='mrow'><button class='mbtn mbtn-r' onclick='closeActionModal()'>Annuler</button><button class='mbtn mbtn-g' onclick='confirmApprove()'>Approuver</button></div>";
+  document.getElementById("action-ov").classList.add("on");
+}
+
+function confirmApprove(){
+  var note = document.getElementById("act-note").value.trim();
+  setStatus(currentActionRef, "processing", note);
+  sendStatusEmail(currentActionRef, "approved", note);
+  closeActionModal();
+}
+
+function openReject(ref){
+  currentActionRef = ref;
+  var o = allOrders.filter(function(x){ return x.ref===ref; })[0];
+  document.getElementById("action-title").textContent = "Rejeter la demande";
+  document.getElementById("action-body").innerHTML =
+    "<p style='font-size:13px;color:var(--mu);margin-bottom:14px;'>Rejeter la demande <strong>"+ref+"</strong>.</p>"+
+    "<div style='background:var(--r3);border:1px solid var(--r);border-radius:8px;padding:10px 12px;margin-bottom:12px;font-size:12px;color:var(--r);'>Le client sera notifie par email du rejet.</div>"+
+    "<label>Raison du rejet *</label>"+
+    "<textarea id='act-note' placeholder='Expliquez clairement pourquoi la demande est rejetee...'></textarea>"+
+    "<div class='mrow'><button class='mbtn mbtn-r' onclick='closeActionModal()'>Annuler</button><button class='mbtn' style='background:var(--r);color:#fff;' onclick='confirmReject()'>Confirmer le rejet</button></div>";
+  document.getElementById("action-ov").classList.add("on");
+}
+
+function confirmReject(){
+  var note = document.getElementById("act-note").value.trim();
+  if(!note){ showToast("Raison requise","Expliquez pourquoi la demande est rejetee.","var(--y)"); return; }
+  setStatus(currentActionRef, "rejected", note);
+  sendStatusEmail(currentActionRef, "rejected", note);
+  closeActionModal();
+}
+
+function openRevision(ref){
+  currentActionRef = ref;
+  document.getElementById("action-title").textContent = "Demander des modifications";
+  document.getElementById("action-body").innerHTML =
+    "<p style='font-size:13px;color:var(--mu);margin-bottom:14px;'>Demander au client de corriger sa demande <strong>"+ref+"</strong>.</p>"+
+    "<label>Modifications requises *</label>"+
+    "<textarea id='act-note' placeholder='Ex: Votre piece identite est illisible. Veuillez renvoyer une photo plus claire...'></textarea>"+
+    "<div class='mrow'><button class='mbtn mbtn-r' onclick='closeActionModal()'>Annuler</button><button class='mbtn' style='background:var(--y);color:var(--ink);' onclick='confirmRevision()'>Envoyer la demande</button></div>";
+  document.getElementById("action-ov").classList.add("on");
+}
+
+function confirmRevision(){
+  var note = document.getElementById("act-note").value.trim();
+  if(!note){ showToast("Message requis","Expliquez les modifications demandees.","var(--y)"); return; }
+  setStatus(currentActionRef, "revision", note);
+  sendStatusEmail(currentActionRef, "revision", note);
+  closeActionModal();
+}
+
+function closeActionModal(){ document.getElementById("action-ov").classList.remove("on"); }
+
+function openUploadDoc(ref){
+  currentUploadRef = ref;
+  document.getElementById("doc-preview").style.display = "none";
+  document.getElementById("doc-file").value = "";
+  document.getElementById("doc-msg").value = "";
+  document.getElementById("upload-ov").classList.add("on");
+}
+
+function closeUpload(){ document.getElementById("upload-ov").classList.remove("on"); }
+
+function previewDocFile(input){
+  if(input.files[0]){
+    document.getElementById("doc-preview").textContent = "Fichier selectionne : " + input.files[0].name;
+    document.getElementById("doc-preview").style.display = "block";
+  }
+}
+
+function submitDocument(){
+  var file = document.getElementById("doc-file").files[0];
+  var msg = document.getElementById("doc-msg").value.trim();
+  if(!file){ showToast("Fichier requis","Veuillez selectionner un document.","var(--y)"); return; }
+  var btn = document.querySelector("#upload-ov .mbtn-g");
+  btn.textContent = "Envoi en cours...";
+  btn.disabled = true;
+  var fd = new FormData();
+  fd.append("file", file);
+  fd.append("upload_preset", CLOUDINARY_PRESET);
+  fetch(CLOUDINARY_URL, {method:"POST", body:fd})
+    .then(function(r){ return r.json(); })
+    .then(function(data){
+      var docUrl = data.secure_url;
+      var finalMsg = msg||"Votre document est pret. Telechargez-le depuis votre espace client.";
+      db.collection("orders").doc(currentUploadRef).update({
+        status:"ready", progress:100, hasDoc:true, docUrl:docUrl, adminNote:finalMsg
+      }).catch(function(e){ console.error(e); });
+      var local = JSON.parse(localStorage.getItem("f2k_orders")||"[]");
+      for(var i=0;i<local.length;i++){
+        if(local[i].ref===currentUploadRef){
+          local[i].status="ready"; local[i].progress=100;
+          local[i].hasDoc=true; local[i].docUrl=docUrl;
+          local[i].adminNote=finalMsg;
+          break;
+        }
+      }
+      localStorage.setItem("f2k_orders",JSON.stringify(local));
+      for(var i=0;i<allOrders.length;i++){
+        if(allOrders[i].ref===currentUploadRef){
+          allOrders[i].status="ready"; allOrders[i].progress=100;
+          allOrders[i].hasDoc=true; allOrders[i].docUrl=docUrl;
+          allOrders[i].adminNote=finalMsg;
+          break;
+        }
+      }
+      sendStatusEmail(currentUploadRef, "ready", finalMsg, docUrl);
+      updateStats();
+      renderAllPages();
+      showToast("Document envoye !",currentUploadRef+" — Client notifie.","var(--g)");
+      closeUpload();
+      btn.textContent = "Envoyer le document au client";
+      btn.disabled = false;
+    })
+    .catch(function(){
+      showToast("Erreur upload","Verifiez votre configuration Cloudinary.","var(--r)");
+      btn.textContent = "Envoyer le document au client";
+      btn.disabled = false;
+    });
+}
+
+function sendStatusEmail(ref, type, note, docUrl){
+  var o = allOrders.filter(function(x){ return x.ref===ref; })[0];
+  if(!o) return;
+  var messages = {
+    approved: "Votre demande a ete approuvee et est en cours de traitement.",
+    rejected: "Votre demande a ete rejetee. Raison : "+note,
+    revision: "Des modifications sont requises : "+note,
+    ready: "Votre document est pret ! Telechargez-le depuis votre espace client."
+  };
+  emailjs.send(EMAILJS_SERVICE, EMAILJS_TEMPLATE, {
+    to_email: o.email,
+    to_name: (o.prenom||"")+" "+(o.nom||""),
+    ref_code: o.ref,
+    service_name: o.serviceName,
+    amount: ((o.price||0).toLocaleString("fr-FR"))+" FCFA",
+    delai: o.delai||"--",
+    date: o.date||"--",
+    tel: o.tel||"--",
+    reply_to: "f2kmultiservice@gmail.com"
+  }).catch(function(e){ console.error("EmailJS:",e); });
+}
+
+function contactClient(ref){
+  var o = allOrders.filter(function(x){ return x.ref===ref; })[0];
+  if(!o) return;
+  var msg = encodeURIComponent("Bonjour "+(o.prenom||"")+" "+(o.nom||"")+",\n\nNous vous contactons concernant votre demande F2K ON LINE :\nReference : "+o.ref+"\nService : "+o.serviceName+"\n\nCordialement,\nF2K MULTISERVICE\n+229 01 58 07 07 08");
+  window.open("https://wa.me/"+(o.tel||"").replace(/\D/g,"")+"?text="+msg,"_blank");
+}
+
+function setFilter(f, el){
+  currentFilter = f;
+  var btns = document.querySelectorAll(".filter-btn");
+  for(var i=0;i<btns.length;i++) btns[i].classList.remove("on");
+  el.classList.add("on");
+  filterOrders();
+}
+
+function filterOrders(){
+  var q = (document.getElementById("search-input")||{}).value||"";
+  q = q.toLowerCase();
+  var filtered = allOrders;
+  if(currentFilter !== "all"){
+    filtered = filtered.filter(function(o){ return o.status===currentFilter; });
+  }
+  if(q){
+    filtered = filtered.filter(function(o){
+      return ((o.ref||"")+(o.nom||"")+(o.prenom||"")+(o.email||"")+(o.serviceName||"")).toLowerCase().indexOf(q) > -1;
+    });
+  }
+  renderList("all-orders-list", filtered);
+}
+
+function showPage(p, el){
+  var pages = document.querySelectorAll(".page");
+  for(var i=0;i<pages.length;i++) pages[i].classList.remove("active");
+  var items = document.querySelectorAll(".sb-item");
+  for(var i=0;i<items.length;i++) items[i].classList.remove("active");
+  var pg = document.getElementById("page-"+p);
+  if(pg) pg.classList.add("active");
+  if(el) el.classList.add("active");
+}
+
+function showToast(msg, sub, col){
+  col = col||"var(--g)";
+  var t = document.getElementById("toast");
+  document.getElementById("t-ico").textContent = "✅";
+  document.getElementById("t-msg").textContent = msg;
+  document.getElementById("t-sub").textContent = sub||"";
+  t.style.borderLeftColor = col;
+  t.classList.add("on");
+  setTimeout(function(){ t.classList.remove("on"); }, 5000);
+}
+
+document.getElementById("action-ov").addEventListener("click", function(e){
+  if(e.target===document.getElementById("action-ov")) closeActionModal();
+});
+document.getElementById("upload-ov").addEventListener("click", function(e){
+  if(e.target===document.getElementById("upload-ov")) closeUpload();
+});
+</script>
+</body>
+</html>
