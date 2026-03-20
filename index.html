@@ -1355,16 +1355,28 @@ function loadAdminOrders(){
   db.collection("orders").orderBy("timestamp","desc").get()
     .then(function(snap){
       allOrders=[];
-      snap.forEach(function(d){allOrders.push(Object.assign({id:d.id},d.data()));});
+      snap.forEach(function(d){
+        allOrders.push(Object.assign({id:d.id},d.data()));
+      });
+      // Fusionner avec localStorage pour ne rien perdre
+      var local=JSON.parse(localStorage.getItem("f2k_orders")||"[]");
+      for(var i=0;i<local.length;i++){
+        var exists=false;
+        for(var j=0;j<allOrders.length;j++){
+          if(allOrders[j].ref===local[i].ref){exists=true;break;}
+        }
+        if(!exists) allOrders.push(local[i]);
+      }
       updateAdminStats();
       renderAllAdminLists();
-      showToast("Actualise",allOrders.length+" demande(s) chargee(s).","var(--g)");
+      showToast("🔄 Actualise",allOrders.length+" demande(s) chargee(s).","var(--g)");
     })
     .catch(function(){
+      // Fallback local si Firebase indisponible
       allOrders=JSON.parse(localStorage.getItem("f2k_orders")||"[]");
       updateAdminStats();
       renderAllAdminLists();
-      showToast("Mode local","Firebase non configure.","var(--y)");
+      showToast("⚠️ Mode local","Firebase indisponible — donnees locales.","var(--y)");
     });
   loadAdminClients();
 }
@@ -1433,26 +1445,30 @@ function renderAdminList(containerId,orders){
     var progLabels=["Recu (0%)","Verifie (25%)","En cours (50%)","Presque fini (75%)","Finalise (100%)"];
     for(var j=0;j<progVals.length;j++){progOptions+="<option value='"+progVals[j]+"'"+(o.progress===progVals[j]?" selected":"")+">"+progLabels[j]+"</option>";}
     var acts="";
-    if(o.status==="pending"){
-      acts+="<button class='aact aact-blue' onclick='adminSetStatus(\""+o.ref+"\",\"processing\",\"\")'>🔄 Mettre en traitement</button>";
-      acts+="<button class='aact aact-green' onclick='openAmodal(\"approve\",\""+o.ref+"\")'>✅ Approuver</button>";
-      acts+="<button class='aact aact-yellow' onclick='openAmodal(\"revision\",\""+o.ref+"\")'>✏️ Demander modif.</button>";
-      acts+="<button class='aact aact-red' onclick='openAmodal(\"reject\",\""+o.ref+"\")'>❌ Rejeter</button>";
-    }
-    if(o.status==="processing"){
-      acts+="<button class='aact aact-dark' onclick='openUpload(\""+o.ref+"\")'>📤 Soumettre document</button>";
-      acts+="<button class='aact aact-green' onclick='openAmodal(\"approve\",\""+o.ref+"\")'>✅ Marquer pret</button>";
-      acts+="<button class='aact aact-yellow' onclick='openAmodal(\"revision\",\""+o.ref+"\")'>✏️ Demander modif.</button>";
-      acts+="<button class='aact aact-red' onclick='openAmodal(\"reject\",\""+o.ref+"\")'>❌ Rejeter</button>";
-    }
-    if(o.status==="ready"){
-      acts+="<button class='aact aact-dark' onclick='openUpload(\""+o.ref+"\")'>📤 Mettre a jour document</button>";
-      acts+="<button class='aact aact-blue' style='background:var(--g3);border-color:var(--g);color:var(--g);' onclick='window.open(\""+o.docUrl+"\",\"_blank\")'>👁️ Voir document</button>";
-    }
-    if(o.status==="rejected"||o.status==="revision"){
-      acts+="<button class='aact aact-blue' onclick='adminSetStatus(\""+o.ref+"\",\"processing\",\"\")'>🔄 Remettre en traitement</button>";
-    }
-    acts+="<button class='aact aact-wa' onclick='adminContactWA(\""+o.ref+"\")'>💬 WhatsApp</button>";
+
+// Bouton soumettre document TOUJOURS visible peu importe le statut
+acts+="<button class='aact aact-dark' onclick='openUpload(\""+o.ref+"\")'>📤 Soumettre document</button>";
+
+if(o.status==="pending"){
+  acts+="<button class='aact aact-blue' onclick='adminSetStatus(\""+o.ref+"\",\"processing\",\"\")'>🔄 Mettre en traitement</button>";
+  acts+="<button class='aact aact-green' onclick='openAmodal(\"approve\",\""+o.ref+"\")'>✅ Approuver</button>";
+  acts+="<button class='aact aact-yellow' onclick='openAmodal(\"revision\",\""+o.ref+"\")'>✏️ Demander modif.</button>";
+  acts+="<button class='aact aact-red' onclick='openAmodal(\"reject\",\""+o.ref+"\")'>❌ Rejeter</button>";
+}
+if(o.status==="processing"){
+  acts+="<button class='aact aact-green' onclick='openAmodal(\"approve\",\""+o.ref+"\")'>✅ Marquer pret</button>";
+  acts+="<button class='aact aact-yellow' onclick='openAmodal(\"revision\",\""+o.ref+"\")'>✏️ Demander modif.</button>";
+  acts+="<button class='aact aact-red' onclick='openAmodal(\"reject\",\""+o.ref+"\")'>❌ Rejeter</button>";
+}
+if(o.status==="ready"){
+  if(o.docUrl){
+    acts+="<button class='aact' style='background:var(--g3);border:2px solid var(--g);color:var(--g);' onclick='window.open(\""+o.docUrl+"\",\"_blank\")'>👁️ Voir document</button>";
+  }
+}
+if(o.status==="rejected"||o.status==="revision"){
+  acts+="<button class='aact aact-blue' onclick='adminSetStatus(\""+o.ref+"\",\"processing\",\"\")'>🔄 Remettre en traitement</button>";
+}
+acts+="<button class='aact aact-wa' onclick='adminContactWA(\""+o.ref+"\")'>💬 WhatsApp</button>";
     html+="<div class='aorder "+st.cls+"'>";
     html+="<div class='ao-top'><div><div class='ao-ref'>"+(o.icon||"📋")+" "+o.ref+"</div><div class='ao-svc'>"+o.serviceName+"</div></div><span class='ao-st "+st.c+"'>"+st.l+"</span></div>";
     html+="<div class='ao-info'>";
@@ -1477,44 +1493,87 @@ function renderAdminList(containerId,orders){
   var prog=progressMap[status]||0;
   var update={status:status,progress:prog};
   if(note) update.adminNote=note;
+
+  // Mettre a jour Firebase
   db.collection("orders").doc(ref).update(update)
-    .then(function(){showToast("Statut mis a jour",ref+" => "+status,"var(--g)");})
-    .catch(function(e){console.error(e);showToast("Erreur Firebase","Verifie ta connexion.","var(--r)");});
-  var found=false;
+    .then(function(){
+      showToast("✅ Statut mis a jour",ref+" => "+status,"var(--g)");
+    })
+    .catch(function(e){
+      console.error("Firebase update error:",e);
+      showToast("⚠️ Erreur Firebase","Donnees sauvegardees localement.","var(--y)");
+    });
+
+  // Mettre a jour allOrders en memoire SANS supprimer
+  var foundInAll=false;
   for(var i=0;i<allOrders.length;i++){
     if(allOrders[i].ref===ref){
-      allOrders[i].status=status;allOrders[i].progress=prog;
+      allOrders[i].status=status;
+      allOrders[i].progress=prog;
       if(note) allOrders[i].adminNote=note;
-      found=true;break;
+      foundInAll=true;
+      break;
     }
   }
+
+  // Mettre a jour localStorage SANS supprimer
   var local=JSON.parse(localStorage.getItem("f2k_orders")||"[]");
-  var localFound=false;
+  var foundInLocal=false;
   for(var i=0;i<local.length;i++){
     if(local[i].ref===ref){
-      local[i].status=status;local[i].progress=prog;
+      local[i].status=status;
+      local[i].progress=prog;
       if(note) local[i].adminNote=note;
-      localFound=true;break;
+      foundInLocal=true;
+      break;
     }
   }
-  if(!localFound&&found){
+  // Si pas trouve en local mais existe dans allOrders, ajouter
+  if(!foundInLocal&&foundInAll){
     var o=allOrders.filter(function(x){return x.ref===ref;})[0];
     if(o) local.unshift(JSON.parse(JSON.stringify(o)));
   }
   localStorage.setItem("f2k_orders",JSON.stringify(local));
+
+  // Reafficher sans recharger depuis Firebase
   updateAdminStats();
   renderAllAdminLists();
   if(note) sendAdminEmail(ref,status,note);
-}
+  }
 function adminSetProgress(ref,prog){
   prog=parseInt(prog);
-  db.collection("orders").doc(ref).update({progress:prog}).catch(function(e){console.error(e);});
-  for(var i=0;i<allOrders.length;i++){if(allOrders[i].ref===ref){allOrders[i].progress=prog;break;}}
+
+  // Mettre a jour Firebase
+  db.collection("orders").doc(ref).update({progress:prog})
+    .then(function(){
+      showToast("📊 Progression mise a jour",ref+" — "+prog+"%","var(--g)");
+    })
+    .catch(function(e){
+      console.error("Firebase progress error:",e);
+    });
+
+  // Mettre a jour allOrders en memoire SANS supprimer
+  for(var i=0;i<allOrders.length;i++){
+    if(allOrders[i].ref===ref){
+      allOrders[i].progress=prog;
+      break;
+    }
+  }
+
+  // Mettre a jour localStorage SANS supprimer
   var local=JSON.parse(localStorage.getItem("f2k_orders")||"[]");
-  for(var i=0;i<local.length;i++){if(local[i].ref===ref){local[i].progress=prog;break;}}
+  for(var i=0;i<local.length;i++){
+    if(local[i].ref===ref){
+      local[i].progress=prog;
+      break;
+    }
+  }
   localStorage.setItem("f2k_orders",JSON.stringify(local));
-  showToast("Progression mise a jour",ref+" — "+prog+"%","var(--g)");
-}
+
+  // Reafficher sans recharger depuis Firebase
+  updateAdminStats();
+  renderAllAdminLists();
+    }
 function sendAdminEmail(ref,status,note){
   var o=allOrders.filter(function(x){return x.ref===ref;})[0];
   if(!o||!o.email) return;
@@ -1571,47 +1630,78 @@ function previewDoc(input){
 function submitDocument(){
   var file=document.getElementById("doc-file").files[0];
   var msg=document.getElementById("doc-msg").value.trim();
-  if(!file){showToast("Fichier requis","Selectionnez un document PDF ou image.","var(--y)");return;}
+  if(!file){
+    showToast("📎 Fichier requis","Selectionnez un document PDF ou image.","var(--y)");
+    return;
+  }
   var btn=document.getElementById("upload-submit-btn");
-  btn.textContent="Envoi en cours...";
+  btn.textContent="⏳ Envoi en cours...";
   btn.disabled=true;
+
   var fd=new FormData();
   fd.append("file",file);
   fd.append("upload_preset",CLOUDINARY_PRESET);
+
   fetch(CLOUDINARY_URL,{method:"POST",body:fd})
     .then(function(r){return r.json();})
     .then(function(data){
-      if(!data.secure_url){throw new Error("Upload echoue — verifiez Cloudinary.");}
+      if(!data.secure_url){
+        throw new Error("Upload Cloudinary echoue — verifiez le preset.");
+      }
       var docUrl=data.secure_url;
       var finalMsg=msg||"Votre document est pret ! Telechargez-le depuis votre espace client ou en recherchant avec votre code de reference.";
+
+      // Mettre a jour Firebase
       db.collection("orders").doc(uploadRef).update({
-        status:"ready",progress:100,hasDoc:true,docUrl:docUrl,adminNote:finalMsg
+        status:"ready",
+        progress:100,
+        hasDoc:true,
+        docUrl:docUrl,
+        adminNote:finalMsg
       }).then(function(){
         showToast("✅ Document envoye !",uploadRef+" — Client peut telecharger.","var(--g)");
-      }).catch(function(e){console.error(e);});
-      var found=false;
+      }).catch(function(e){
+        console.error("Firebase doc update error:",e);
+      });
+
+      // Mettre a jour allOrders en memoire SANS supprimer
+      var foundInAll=false;
       for(var i=0;i<allOrders.length;i++){
         if(allOrders[i].ref===uploadRef){
-          allOrders[i].status="ready";allOrders[i].progress=100;
-          allOrders[i].hasDoc=true;allOrders[i].docUrl=docUrl;
-          allOrders[i].adminNote=finalMsg;found=true;break;
+          allOrders[i].status="ready";
+          allOrders[i].progress=100;
+          allOrders[i].hasDoc=true;
+          allOrders[i].docUrl=docUrl;
+          allOrders[i].adminNote=finalMsg;
+          foundInAll=true;
+          break;
         }
       }
+
+      // Mettre a jour localStorage SANS supprimer
       var local=JSON.parse(localStorage.getItem("f2k_orders")||"[]");
-      var localFound=false;
+      var foundInLocal=false;
       for(var i=0;i<local.length;i++){
         if(local[i].ref===uploadRef){
-          local[i].status="ready";local[i].progress=100;
-          local[i].hasDoc=true;local[i].docUrl=docUrl;
-          local[i].adminNote=finalMsg;localFound=true;break;
+          local[i].status="ready";
+          local[i].progress=100;
+          local[i].hasDoc=true;
+          local[i].docUrl=docUrl;
+          local[i].adminNote=finalMsg;
+          foundInLocal=true;
+          break;
         }
       }
-      if(!localFound&&found){
+      if(!foundInLocal&&foundInAll){
         var o=allOrders.filter(function(x){return x.ref===uploadRef;})[0];
         if(o) local.unshift(JSON.parse(JSON.stringify(o)));
       }
       localStorage.setItem("f2k_orders",JSON.stringify(local));
+
+      // Envoyer email au client
       sendAdminEmail(uploadRef,"ready",finalMsg);
+
+      // Reafficher sans recharger depuis Firebase
       updateAdminStats();
       renderAllAdminLists();
       closeUpload();
@@ -1619,12 +1709,12 @@ function submitDocument(){
       btn.disabled=false;
     })
     .catch(function(e){
-      console.error(e);
-      showToast("Erreur upload",e.message||"Verifiez votre configuration Cloudinary.","var(--r)");
+      console.error("Upload error:",e);
+      showToast("❌ Erreur upload",e.message||"Verifiez votre configuration Cloudinary.","var(--r)");
       btn.textContent="📤 Envoyer le document au client";
       btn.disabled=false;
     });
-}
+    }
 function adminContactWA(ref){
   var o=allOrders.filter(function(x){return x.ref===ref;})[0];
   if(!o) return;
