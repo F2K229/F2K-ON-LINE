@@ -8,10 +8,10 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="F2K ON LINE">
-<meta name="description" content="Plateforme de services administratifs en ligne au Bénin — F2K MULTISERVICE">
+<meta name="description" content="Services administratifs en ligne au Benin — F2K MULTISERVICE">
 <link rel="manifest" href="/manifest.json">
 <link rel="apple-touch-icon" href="/icon-192.png">
-<title>F2K ON LINE – Services Administratifs | Bénin</title>
+<title>F2K ON LINE – Services Administratifs | Benin</title>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:wght@700;900&display=swap" rel="stylesheet">
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
@@ -29,7 +29,7 @@
   --tl:#0891b2;--tl3:#ecfeff;
   --pk:#db2777;--pk3:#fdf2f8;
   --ink:#0e1a12;--ink2:#1c3025;--mu:#5a7060;
-  --bd:#ddeee5;--bg:#f4faf6;--wh:#fff;
+  --bd:#ddeee5;--bg:#f4faf6;
   --moov:#0066cc;--mtn:#ffcc00;--celtiis:#e2001a;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -58,8 +58,8 @@ nav ul a:hover{color:var(--g);}
 .ham span{display:block;width:21px;height:2px;background:var(--ink);border-radius:2px;}
 .nav-user{display:flex;align-items:center;gap:8px;background:var(--g3);border:2px solid var(--g4);border-radius:8px;padding:6px 12px;cursor:pointer;transition:all .2s;}
 .nav-user:hover{background:var(--g4);}
-.nav-user-name{font-size:12px;font-weight:700;color:var(--g);}
 .nav-user-ico{width:28px;height:28px;border-radius:50%;background:var(--g);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;}
+.nav-user-name{font-size:12px;font-weight:700;color:var(--g);}
 .hero{background:linear-gradient(150deg,var(--ink2) 0%,#071610 100%);padding:72px 36px 52px;position:relative;overflow:hidden;text-align:center;}
 .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 0%,rgba(0,196,107,.18) 0%,transparent 60%);}
 .flag-h{position:absolute;bottom:0;left:0;right:0;height:4px;display:flex;}
@@ -200,7 +200,7 @@ footer{background:var(--ink);padding:48px 36px 20px;}
 @media(max-width:1024px){.wgrid{grid-template-columns:1fr 1fr;}.fgrid{grid-template-columns:1fr 1fr;gap:22px;}}
 @media(max-width:768px){nav{padding:10px 15px;}nav ul{display:none;}.ham{display:flex;}.hero,.section{padding:52px 16px;}.track{padding:44px 16px;}footer{padding:40px 16px 18px;}.fr2{grid-template-columns:1fr;}.sgrid,.pgrid{grid-template-columns:1fr 1fr;}.howgrid{grid-template-columns:1fr 1fr;gap:18px;}.wgrid{grid-template-columns:1fr;}.fgrid{grid-template-columns:1fr;}.hstats{gap:18px;}.legend{padding:12px 16px;}}
 @media(max-width:440px){.sgrid,.pgrid{grid-template-columns:1fr;}}
-.npibox{background:linear-gradient(135deg,var(--pu3),#ede9fe);border:2px solid rgba(124,58,237,.2);border-radius:10px;padding:12px 14px;margin-bottom:14px;}
+  .npibox{background:linear-gradient(135deg,var(--pu3),#ede9fe);border:2px solid rgba(124,58,237,.2);border-radius:10px;padding:12px 14px;margin-bottom:14px;}
 .npititle{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--pu);margin-bottom:7px;display:flex;align-items:center;gap:5px;}
 .npi-note{font-size:11px;color:#5b21b6;line-height:1.5;margin-bottom:8px;}
 .npitabs{display:flex;gap:5px;margin-bottom:8px;}
@@ -302,8 +302,7 @@ footer{background:var(--ink);padding:48px 36px 20px;}
 .toast.on{transform:translateX(0);opacity:1;}
 .tmsg{font-size:12px;font-weight:700;color:var(--ink);}
 .tsub{font-size:10px;color:var(--mu);margin-top:1px;}
-  /* ═══ AUTH ═══ */
-.auth-ov{position:fixed;inset:0;background:rgba(0,0,0,.82);backdrop-filter:blur(10px);z-index:2000;display:none;align-items:center;justify-content:center;padding:14px;}
+  .auth-ov{position:fixed;inset:0;background:rgba(0,0,0,.82);backdrop-filter:blur(10px);z-index:2000;display:none;align-items:center;justify-content:center;padding:14px;}
 .auth-ov.on{display:flex;}
 .auth-box{background:#fff;border-radius:18px;width:100%;max-width:420px;overflow:hidden;animation:pi .26s ease;}
 .auth-head{background:linear-gradient(135deg,var(--ink2),#071610);padding:24px;text-align:center;position:relative;}
@@ -331,8 +330,6 @@ footer{background:var(--ink);padding:48px 36px 20px;}
 .auth-note{font-size:11px;color:var(--mu);text-align:center;margin-top:12px;}
 .auth-note a{color:var(--g);text-decoration:none;font-weight:700;cursor:pointer;}
 .auth-close{position:absolute;top:10px;right:10px;background:rgba(255,255,255,.1);border:none;color:#fff;width:26px;height:26px;border-radius:6px;cursor:pointer;font-size:13px;}
-
-/* ═══ DASHBOARD CLIENT ═══ */
 #dashboard{display:none;position:fixed;inset:0;background:var(--bg);z-index:2000;overflow-y:auto;}
 .dnav{background:#fff;border-bottom:3px solid transparent;border-image:linear-gradient(90deg,var(--g) 33%,var(--y) 33% 66%,var(--r) 66%) 1;padding:12px 28px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 2px 10px rgba(0,0,0,.06);}
 .dnav-left{display:flex;align-items:center;gap:10px;}
@@ -353,29 +350,27 @@ footer{background:var(--ink);padding:48px 36px 20px;}
 .st-pr{background:var(--b3);color:var(--b);}
 .st-r{background:var(--g3);color:var(--g);}
 .st-rej{background:var(--r3);color:var(--r);}
-.st-rev{background:var(--y3);color:#7a5800;}
+.st-rev{background:var(--or3);color:var(--or);}
 .oinfo{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:6px;margin-bottom:10px;}
 .oil{font-size:9px;font-weight:700;color:var(--mu);text-transform:uppercase;letter-spacing:.4px;margin-bottom:2px;}
 .oiv{font-size:11px;font-weight:600;color:var(--ink);}
 .oprog{margin-bottom:10px;}
 .prog-label{display:flex;justify-content:space-between;margin-bottom:4px;}
 .prog-label span{font-size:10px;font-weight:700;}
-.prog-steps{display:flex;gap:4px;margin-top:6px;}
-.prog-step{flex:1;height:4px;border-radius:2px;background:var(--bd);transition:background .3s;}
+.prog-steps{display:flex;gap:4px;margin-top:4px;}
+.prog-step{flex:1;height:5px;border-radius:3px;background:var(--bd);transition:background .3s;}
 .prog-step.done{background:var(--g);}
 .prog-step.active{background:var(--y);}
-.prog-step-labels{display:flex;justify-content:space-between;margin-top:4px;}
+.prog-step-labels{display:flex;justify-content:space-between;margin-top:5px;}
 .prog-step-labels span{font-size:9px;color:var(--mu);}
 .prog-step-labels span.done{color:var(--g);font-weight:700;}
+.oacts{display:flex;gap:6px;flex-wrap:wrap;}
 .oabtn{border:2px solid var(--bd);background:var(--bg);border-radius:7px;padding:5px 11px;font-size:11px;font-weight:700;cursor:pointer;color:var(--mu);display:flex;align-items:center;gap:3px;transition:all .2s;font-family:'Plus Jakarta Sans',sans-serif;}
 .oabtn:hover{border-color:var(--g);color:var(--g);background:var(--g3);}
 .oabtn.dl{background:var(--g);border-color:var(--g);color:#fff;}
 .oabtn.dl:hover{background:var(--g2);}
-.oacts{display:flex;gap:6px;flex-wrap:wrap;}
 .admin-note-box{background:var(--y3);border:1px solid rgba(251,191,0,.3);border-radius:8px;padding:9px 12px;font-size:11px;color:#7a5800;margin-bottom:10px;line-height:1.5;}
 .empty-d{text-align:center;padding:50px 20px;color:var(--mu);}
-
-/* ═══ ADMIN PANEL ═══ */
 #admin-panel{display:none;position:fixed;inset:0;background:var(--bg);z-index:3000;overflow:hidden;}
 .admin-layout{display:grid;grid-template-columns:240px 1fr;height:100vh;overflow:hidden;}
 .admin-sidebar{background:var(--ink2);display:flex;flex-direction:column;overflow-y:auto;}
@@ -436,7 +431,7 @@ footer{background:var(--ink);padding:48px 36px 20px;}
 .ao-iv a{color:var(--b);text-decoration:none;}
 .ao-files{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:10px;}
 .ao-file{background:var(--b3);border:1px solid rgba(37,99,235,.15);border-radius:5px;padding:3px 8px;font-size:10px;font-weight:600;color:var(--b);text-decoration:none;}
-.ao-actions{display:flex;gap:6px;flex-wrap:wrap;}
+.ao-actions{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px;}
 .aact{border:none;border-radius:7px;padding:6px 12px;font-size:11px;font-weight:700;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;transition:all .2s;}
 .aact-green{background:var(--g);color:#fff;}
 .aact-green:hover{background:var(--g2);}
@@ -450,8 +445,9 @@ footer{background:var(--ink);padding:48px 36px 20px;}
 .aact-dark:hover{background:#0a2218;}
 .aact-wa{background:var(--g3);border:2px solid var(--g);color:var(--g);}
 .aact-wa:hover{background:var(--g);color:#fff;}
-.prog-admin{margin-bottom:10px;}
-.prog-admin select{width:100%;border:2px solid var(--bd);border-radius:7px;padding:7px 10px;font-size:12px;font-family:'Plus Jakarta Sans',sans-serif;outline:none;background:var(--bg);cursor:pointer;}
+.prog-admin{margin:10px 0;}
+.prog-admin label{font-size:10px;font-weight:700;color:var(--mu);text-transform:uppercase;display:block;margin-bottom:4px;}
+.prog-admin select{width:100%;border:2px solid var(--bd);border-radius:7px;padding:7px 10px;font-size:12px;font-family:'Plus Jakarta Sans',sans-serif;outline:none;background:var(--bg);cursor:pointer;transition:border-color .2s;}
 .prog-admin select:focus{border-color:var(--g);}
 .amodal-ov{position:fixed;inset:0;background:rgba(0,0,0,.75);backdrop-filter:blur(8px);z-index:4000;display:none;align-items:center;justify-content:center;padding:16px;}
 .amodal-ov.on{display:flex;}
@@ -459,20 +455,19 @@ footer{background:var(--ink);padding:48px 36px 20px;}
 .amodal h3{font-family:'Fraunces',serif;font-size:19px;font-weight:900;color:var(--ink);margin-bottom:12px;}
 .amodal-cl{position:absolute;top:11px;right:11px;background:var(--bg);border:none;width:26px;height:26px;border-radius:6px;cursor:pointer;font-size:13px;color:var(--mu);}
 .amodal label{display:block;font-size:11px;font-weight:700;color:var(--mu);text-transform:uppercase;margin-bottom:4px;}
-.amodal textarea{width:100%;border:2px solid var(--bd);border-radius:8px;padding:10px;font-size:12px;font-family:'Plus Jakarta Sans',sans-serif;min-height:80px;resize:vertical;outline:none;background:var(--bg);margin-bottom:12px;}
+.amodal textarea{width:100%;border:2px solid var(--bd);border-radius:8px;padding:10px;font-size:12px;font-family:'Plus Jakarta Sans',sans-serif;min-height:80px;resize:vertical;outline:none;background:var(--bg);margin-bottom:12px;transition:border-color .2s;}
 .amodal textarea:focus{border-color:var(--g);}
 .amodal-btns{display:flex;gap:8px;}
-.amodal-btns button{flex:1;border:none;border-radius:8px;padding:11px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:800;cursor:pointer;}
+.amodal-btns button{flex:1;border:none;border-radius:8px;padding:11px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:800;cursor:pointer;transition:all .2s;}
 .upload-zone{border:2px dashed var(--bd);border-radius:9px;padding:20px;text-align:center;background:var(--bg);cursor:pointer;position:relative;margin-bottom:12px;transition:all .2s;}
 .upload-zone:hover{border-color:var(--g);background:var(--g3);}
 .upload-zone input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;}
-.upload-preview{font-size:12px;color:var(--g);margin-bottom:10px;display:none;font-weight:600;}
+.upload-preview{font-size:12px;color:var(--g);margin-bottom:10px;display:none;font-weight:600;padding:8px;background:var(--g3);border-radius:7px;}
 @media(max-width:768px){.admin-layout{grid-template-columns:1fr;}.admin-sidebar{display:none;}.astats{grid-template-columns:1fr 1fr;}.admin-main{padding:16px 12px;}}
-  </style>
+</style>
 </head>
 <body>
-
-<div class="topbar">
+  <div class="topbar">
   <a href="https://wa.me/2290199878742" target="_blank">💬 +229 01 99 87 87 42</a>
   <span class="sep">|</span>
   <a href="tel:+2290158070708">📞 +229 01 58 07 07 08</a>
@@ -481,7 +476,6 @@ footer{background:var(--ink);padding:48px 36px 20px;}
   <span class="sep">|</span>
   <span style="color:rgba(255,255,255,.4)">🇧🇯 7j/7 — 8h–20h</span>
 </div>
-
 <nav id="main-nav">
   <a class="logo" href="#" onclick="logoClick(event)">
     <div class="lm"><div></div><div></div><div></div></div>
@@ -503,7 +497,6 @@ footer{background:var(--ink);padding:48px 36px 20px;}
   </ul>
   <button class="ham" onclick="toggleNav()"><span></span><span></span><span></span></button>
 </nav>
-
 <section class="hero">
   <div class="flag-h"><div></div><div></div><div></div></div>
   <div class="htag">🇧🇯 F2K MULTISERVICE — Bénin</div>
@@ -520,7 +513,6 @@ footer{background:var(--ink);padding:48px 36px 20px;}
     <div><div class="hsn">24<sup>h</sup></div><div class="hsl">Email auto</div></div>
   </div>
 </section>
-
 <div class="legend">
   <div class="legend-inner">
     <strong style="font-size:12px;color:var(--ink);">Légende :</strong>
@@ -529,16 +521,9 @@ footer{background:var(--ink);padding:48px 36px 20px;}
     <div class="legend-item"><div class="leg-dot ld-choice"></div>🔄 Au choix : en ligne ou rendez-vous</div>
   </div>
 </div>
-
 <section class="section" id="pricing" style="background:#fff;border-bottom:1px solid var(--bd);">
   <div style="max-width:1280px;margin:0 auto;">
-    <div class="ph">
-      <div>
-        <span class="sec-label">Tarifs officiels vérifiés</span>
-        <h2 class="sec-h">Nos prix transparents</h2>
-        <p class="sec-sub">Prix tout inclus — frais F2K compris.</p>
-      </div>
-    </div>
+    <div class="ph"><div><span class="sec-label">Tarifs officiels vérifiés</span><h2 class="sec-h">Nos prix transparents</h2><p class="sec-sub">Prix tout inclus — frais F2K compris.</p></div></div>
     <div class="pct">📄 État civil</div>
     <div class="pgrid">
       <div class="pc ce"><div class="pc-ico">👶</div><div class="pc-name">Acte de naissance</div><div class="pc-delay" style="color:var(--g);">⚡ Immédiat</div><div class="pc-pr">2 000 <span>FCFA</span></div><span class="pc-badge b-instant">⚡ En ligne</span></div>
@@ -567,14 +552,14 @@ footer{background:var(--ink);padding:48px 36px 20px;}
     </div>
     <div class="pct">🛂 Voyage & mobilité</div>
     <div class="pgrid">
-      <div class="pc cv2"><div class="pc-ico">🛂</div><div class="pc-name">Passeport ordinaire</div><div class="pc-delay" style="color:var(--r);">📅 15–21 jours — RDV</div><div class="pc-pr">35 000 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV agence</span></div>
+      <div class="pc cv2"><div class="pc-ico">🛂</div><div class="pc-name">Passeport ordinaire</div><div class="pc-delay" style="color:var(--r);">📅 15–21 jours</div><div class="pc-pr">35 000 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV agence</span></div>
       <div class="pc cv2"><div class="pc-ico">🛂</div><div class="pc-name">Passeport VIP (48h)</div><div class="pc-delay" style="color:var(--r);">📅 48h — RDV</div><div class="pc-pr">135 000 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV agence</span></div>
       <div class="pc cv2"><div class="pc-ico">✈️</div><div class="pc-name">Laissez-passer</div><div class="pc-delay" style="color:var(--y);">🔄 3–5 jours</div><div class="pc-pr">1 000 <span>FCFA</span></div><span class="pc-badge b-choice">🔄 Au choix</span></div>
     </div>
     <div class="pct">🚗 Permis & transport</div>
     <div class="pgrid">
-      <div class="pc cp"><div class="pc-ico">🚗</div><div class="pc-name">Permis de conduire</div><div class="pc-delay" style="color:var(--r);">📅 10–15 jours — RDV</div><div class="pc-pr">28 200 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV agence</span></div>
-      <div class="pc cp"><div class="pc-ico">🚘</div><div class="pc-name">Immatriculation véhicule</div><div class="pc-delay" style="color:var(--r);">📅 7–10 jours — RDV</div><div class="pc-pr">5 000 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV agence</span></div>
+      <div class="pc cp"><div class="pc-ico">🚗</div><div class="pc-name">Permis de conduire</div><div class="pc-delay" style="color:var(--r);">📅 10–15 jours</div><div class="pc-pr">28 200 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV agence</span></div>
+      <div class="pc cp"><div class="pc-ico">🚘</div><div class="pc-name">Immatriculation véhicule</div><div class="pc-delay" style="color:var(--r);">📅 7–10 jours</div><div class="pc-pr">5 000 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV agence</span></div>
       <div class="pc cp"><div class="pc-ico">🔧</div><div class="pc-name">Visite tech — Léger</div><div class="pc-delay" style="color:var(--r);">📅 Véhicule présent</div><div class="pc-pr">17 000 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV agence</span></div>
       <div class="pc cp"><div class="pc-ico">🚕</div><div class="pc-name">Visite tech — Taxi</div><div class="pc-delay" style="color:var(--r);">📅 Véhicule présent</div><div class="pc-pr">11 000 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV agence</span></div>
       <div class="pc cp"><div class="pc-ico">🚛</div><div class="pc-name">Visite tech — Poids lourd</div><div class="pc-delay" style="color:var(--r);">📅 Véhicule présent</div><div class="pc-pr">23 000 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV agence</span></div>
@@ -591,20 +576,16 @@ footer{background:var(--ink);padding:48px 36px 20px;}
     <div class="pct">📸 Photo & CV</div>
     <div class="pgrid">
       <div class="pc cph"><div class="pc-ico">📱</div><div class="pc-name">Photo identité numérique</div><div class="pc-delay" style="color:var(--g);">⚡ Sous 24h</div><div class="pc-pr">1 000 <span>FCFA</span></div><span class="pc-badge b-instant">⚡ En ligne</span></div>
-      <div class="pc cph"><div class="pc-ico">🖨️</div><div class="pc-name">Photo identité (8 ex.)</div><div class="pc-delay" style="color:var(--r);">📅 Retrait en agence</div><div class="pc-pr">1 500 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV agence</span></div>
-      <div class="pc cph"><div class="pc-ico">💎</div><div class="pc-name">Photo bijoux & produits</div><div class="pc-delay" style="color:var(--r);">📅 Dépôt en agence</div><div class="pc-pr">1 000 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV agence</span></div>
+      <div class="pc cph"><div class="pc-ico">🖨️</div><div class="pc-name">Photo identité (8 ex.)</div><div class="pc-delay" style="color:var(--r);">📅 Retrait agence</div><div class="pc-pr">1 500 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV agence</span></div>
+      <div class="pc cph"><div class="pc-ico">💎</div><div class="pc-name">Photo bijoux & produits</div><div class="pc-delay" style="color:var(--r);">📅 Dépôt agence</div><div class="pc-pr">1 000 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV agence</span></div>
       <div class="pc cph"><div class="pc-ico">📝</div><div class="pc-name">Rédaction de CV</div><div class="pc-delay" style="color:var(--g);">⚡ 24–48h</div><div class="pc-pr">500 <span>FCFA</span></div><span class="pc-badge b-instant">⚡ En ligne</span></div>
     </div>
-    <div style="margin-top:18px;background:var(--bg);border:1px solid var(--bd);border-radius:9px;padding:12px 16px;font-size:11px;color:var(--mu);line-height:1.7;"><strong>ℹ️</strong> Prix tout inclus — frais F2K MULTISERVICE compris. Documents ANIP délivrés <strong>immédiatement</strong> après validation. <strong>💙 Moov Money · 💛 MTN Mobile Money · ❤️ Celtiis Cash</strong> — code USSD généré automatiquement. <strong>🎁 Réduction 10%</strong> à partir de 3 services.</div>
+    <div style="margin-top:18px;background:var(--bg);border:1px solid var(--bd);border-radius:9px;padding:12px 16px;font-size:11px;color:var(--mu);line-height:1.7;"><strong>ℹ️</strong> Prix tout inclus. <strong>💙 Moov Money · 💛 MTN Mobile Money · ❤️ Celtiis Cash</strong> — USSD automatique. <strong>🎁 Réduction 10%</strong> à partir de 3 services.</div>
   </div>
-</section>
-<section class="section" id="catalog" style="background:var(--bg);">
+                            </section>
+                            <section class="section" id="catalog" style="background:var(--bg);">
   <div style="max-width:1280px;margin:0 auto;">
-    <div style="margin-bottom:24px;">
-      <span class="sec-label">Catalogue complet</span>
-      <h2 class="sec-h">Choisissez votre service</h2>
-      <p class="sec-sub">Cliquez sur un service pour accéder au formulaire et au paiement.</p>
-    </div>
+    <div style="margin-bottom:24px;"><span class="sec-label">Catalogue complet</span><h2 class="sec-h">Choisissez votre service</h2><p class="sec-sub">Cliquez sur un service pour accéder au formulaire et au paiement.</p></div>
     <div class="catsec ce2"><div class="cattitle"><div class="catbdg" style="background:var(--g3);">📄</div><span class="catlbl">État civil</span><span class="catcnt">5</span><div class="div"></div></div>
     <div class="sgrid">
       <a class="sc" href="#" onclick="openForm('naissance',event)"><div class="sc-ico">👶</div><div class="sc-name">Acte de naissance</div><p class="sc-desc">Extrait sécurisé via ANIP.</p><div class="sc-foot"><span class="sc-pr">2 000 FCFA</span><span class="sc-badge sb-instant">⚡ Immédiat</span><span class="sc-arr">→</span></div></a>
@@ -663,13 +644,9 @@ footer{background:var(--ink);padding:48px 36px 20px;}
     </div></div>
   </div>
 </section>
-
 <section class="section" id="comment" style="background:#fff;border-top:1px solid var(--bd);">
   <div style="max-width:1280px;margin:0 auto;">
-    <div style="text-align:center;margin-bottom:28px;">
-      <span class="sec-label">Processus</span>
-      <h2 class="sec-h">Comment ca fonctionne</h2>
-    </div>
+    <div style="text-align:center;margin-bottom:28px;"><span class="sec-label">Processus</span><h2 class="sec-h">Comment ca fonctionne</h2></div>
     <div class="howgrid">
       <div class="hstep"><div class="hn hn1">1</div><div class="ht">Choisissez le service</div><p class="hp">Selectionnez dans le catalogue.</p></div>
       <div class="hstep"><div class="hn hn2">2</div><div class="ht">Remplissez et payez</div><p class="hp">Formulaire + paiement via Moov, MTN ou Celtiis.</p></div>
@@ -678,18 +655,13 @@ footer{background:var(--ink);padding:48px 36px 20px;}
     </div>
   </div>
 </section>
-
 <div class="track" id="suivi">
   <div class="tinner">
     <h2>Suivez votre dossier</h2>
     <p>Entrez votre numero de reference recu par email ou SMS.</p>
-    <div class="trow">
-      <input type="text" placeholder="Ex : F2K-2025-08421" id="track-in">
-      <button class="tbtn" onclick="trackIt()">Suivre</button>
-    </div>
+    <div class="trow"><input type="text" placeholder="Ex : F2K-2025-08421" id="track-in"><button class="tbtn" onclick="trackIt()">Suivre</button></div>
   </div>
 </div>
-
 <section class="section" style="background:var(--bg);border-top:1px solid var(--bd);">
   <div style="max-width:1280px;margin:0 auto;">
     <div style="text-align:center;margin-bottom:8px;"><span class="sec-label">Pourquoi nous</span><h2 class="sec-h">F2K MULTISERVICE</h2></div>
@@ -698,12 +670,11 @@ footer{background:var(--ink);padding:48px 36px 20px;}
       <div class="wc"><div class="wi">⚡</div><div class="wt">Documents ANIP immediats</div><p class="wp">Actes d'etat civil, CIP, NPI, casier judiciaire — delivrance instantanee.</p></div>
       <div class="wc"><div class="wi">🇧🇯</div><div class="wt">100% Beninois</div><p class="wp">Concu par et pour les Beninois.</p></div>
       <div class="wc"><div class="wi">📧</div><div class="wt">Email automatique</div><p class="wp">Code de reference envoye immediatement apres paiement.</p></div>
-      <div class="wc"><div class="wi">💳</div><div class="wt">3 operateurs acceptes</div><p class="wp">Moov Money, MTN Mobile Money et Celtiis Cash — paiement USSD immediat.</p></div>
+      <div class="wc"><div class="wi">💳</div><div class="wt">3 operateurs acceptes</div><p class="wp">Moov Money, MTN Mobile Money et Celtiis Cash.</p></div>
       <div class="wc"><div class="wi">🎁</div><div class="wt">Reduction 10%</div><p class="wp">A partir de 3 services commandes en meme temps.</p></div>
     </div>
   </div>
 </section>
-
 <footer id="contact">
   <div class="fgrid">
     <div>
@@ -714,20 +685,8 @@ footer{background:var(--ink);padding:48px 36px 20px;}
       <p class="fb-d">Plateforme de reference pour vos demarches administratives en ligne au Benin.</p>
       <div class="frow"><div class="fst2 fs-g"></div><div class="fst2 fs-y"></div><div class="fst2 fs-r"></div><span class="ftxt">Fierement beninois 🇧🇯</span></div>
     </div>
-    <div class="fc"><h4>Services</h4><ul>
-      <li><a href="#">Etat civil</a></li>
-      <li><a href="#">Identite nationale</a></li>
-      <li><a href="#">Services ANIP</a></li>
-      <li><a href="#">Voyage</a></li>
-      <li><a href="#">Photo et CV</a></li>
-    </ul></div>
-    <div class="fc"><h4>Plateforme</h4><ul>
-      <li><a href="#pricing">Tarifs</a></li>
-      <li><a href="#catalog">Catalogue</a></li>
-      <li><a href="#suivi">Suivi dossier</a></li>
-      <li><a href="#" onclick="openDash()">Mon espace</a></li>
-      <li><a href="#" onclick="openAuth()">Se connecter</a></li>
-    </ul></div>
+    <div class="fc"><h4>Services</h4><ul><li><a href="#">Etat civil</a></li><li><a href="#">Identite nationale</a></li><li><a href="#">Services ANIP</a></li><li><a href="#">Voyage</a></li><li><a href="#">Photo et CV</a></li></ul></div>
+    <div class="fc"><h4>Plateforme</h4><ul><li><a href="#pricing">Tarifs</a></li><li><a href="#catalog">Catalogue</a></li><li><a href="#suivi">Suivi dossier</a></li><li><a href="#" onclick="openDash()">Mon espace</a></li><li><a href="#" onclick="openAuth()">Se connecter</a></li></ul></div>
     <div class="fc"><h4>Contact</h4>
       <a class="ci-link" href="https://wa.me/2290199878742" target="_blank">💬 +229 01 99 87 87 42</a>
       <a class="ci-link" href="tel:+2290158070708">📞 +229 01 58 07 07 08</a>
@@ -736,13 +695,9 @@ footer{background:var(--ink);padding:48px 36px 20px;}
       <a class="ci-link" href="#">🕐 Lun-Dim 8h-20h</a>
     </div>
   </div>
-  <div class="fbot">
-    <span>2025 F2K MULTISERVICE. Tous droits reserves.</span>
-    <div><a href="#">Confidentialite</a><a href="#">CGU</a><a href="#">Mentions legales</a></div>
-  </div>
-</footer>
-
-<div class="ov" id="form-ov">
+  <div class="fbot"><span>2025 F2K MULTISERVICE. Tous droits reserves.</span><div><a href="#">Confidentialite</a><a href="#">CGU</a><a href="#">Mentions legales</a></div></div>
+  </footer>
+  <div class="ov" id="form-ov">
   <div class="modal" id="form-modal">
     <div class="mhead">
       <button class="mcl" onclick="closeForm()">X</button>
@@ -752,7 +707,6 @@ footer{background:var(--ink);padding:48px 36px 20px;}
     <div class="mbody" id="fm-body"></div>
   </div>
 </div>
-
 <div class="ov" id="email-ov">
   <div class="emodal">
     <div class="ehead">
@@ -772,12 +726,6 @@ footer{background:var(--ink);padding:48px 36px 20px;}
     </div>
   </div>
 </div>
-
-<div class="toast" id="toast">
-  <span id="t-ico" style="font-size:18px;">✅</span>
-  <div><div class="tmsg" id="t-msg"></div><div class="tsub" id="t-sub"></div></div>
-  </div>
-  <!-- MODAL AUTH -->
 <div class="auth-ov" id="auth-ov">
   <div class="auth-box">
     <div class="auth-head">
@@ -792,53 +740,25 @@ footer{background:var(--ink);padding:48px 36px 20px;}
     </div>
     <div class="auth-body">
       <div class="auth-err" id="auth-err"></div>
-
       <div class="auth-form on" id="auth-login">
-        <div class="auth-fg">
-          <label>Email</label>
-          <input type="email" id="login-email" placeholder="votre@email.com">
-        </div>
-        <div class="auth-fg">
-          <label>Mot de passe</label>
-          <input type="password" id="login-pwd" placeholder="Votre mot de passe">
-        </div>
+        <div class="auth-fg"><label>Email</label><input type="email" id="login-email" placeholder="votre@email.com"></div>
+        <div class="auth-fg"><label>Mot de passe</label><input type="password" id="login-pwd" placeholder="Votre mot de passe" onkeydown="if(event.key==='Enter')doLogin()"></div>
         <button class="auth-btn" onclick="doLogin()">Se connecter</button>
         <p class="auth-note">Pas encore de compte ? <a onclick="switchAuthTab('register',null)">S'inscrire</a></p>
       </div>
-
       <div class="auth-form" id="auth-register">
-        <div class="auth-fg">
-          <label>Nom complet</label>
-          <input type="text" id="reg-nom" placeholder="Ex: GBAGUIDI Kouassi">
-        </div>
-        <div class="auth-fg">
-          <label>Email</label>
-          <input type="email" id="reg-email" placeholder="votre@email.com">
-        </div>
-        <div class="auth-fg">
-          <label>Numero de telephone</label>
-          <input type="tel" id="reg-tel" placeholder="+229 97 00 00 00">
-        </div>
-        <div class="auth-fg">
-          <label>NPI</label>
-          <input type="text" id="reg-npi" placeholder="Votre Numero Personnel d'Identification">
-        </div>
-        <div class="auth-fg">
-          <label>Mot de passe</label>
-          <input type="password" id="reg-pwd" placeholder="Minimum 6 caracteres">
-        </div>
-        <div class="auth-fg">
-          <label>Confirmer le mot de passe</label>
-          <input type="password" id="reg-pwd2" placeholder="Repetez votre mot de passe">
-        </div>
+        <div class="auth-fg"><label>Nom complet</label><input type="text" id="reg-nom" placeholder="Ex: GBAGUIDI Kouassi"></div>
+        <div class="auth-fg"><label>Email</label><input type="email" id="reg-email" placeholder="votre@email.com"></div>
+        <div class="auth-fg"><label>Numero de telephone</label><input type="tel" id="reg-tel" placeholder="+229 97 00 00 00"></div>
+        <div class="auth-fg"><label>NPI</label><input type="text" id="reg-npi" placeholder="Votre Numero Personnel d'Identification"></div>
+        <div class="auth-fg"><label>Mot de passe</label><input type="password" id="reg-pwd" placeholder="Minimum 6 caracteres"></div>
+        <div class="auth-fg"><label>Confirmer le mot de passe</label><input type="password" id="reg-pwd2" placeholder="Repetez votre mot de passe"></div>
         <button class="auth-btn" onclick="doRegister()">Creer mon compte</button>
         <p class="auth-note">Deja un compte ? <a onclick="switchAuthTab('login',null)">Se connecter</a></p>
       </div>
     </div>
   </div>
 </div>
-
-<!-- DASHBOARD CLIENT -->
 <div id="dashboard">
   <div class="dnav">
     <div class="dnav-left">
@@ -856,68 +776,39 @@ footer{background:var(--ink);padding:48px 36px 20px;}
       <p>Retrouvez vos demandes et telechargez vos documents finalises.</p>
     </div>
     <div style="background:var(--g3);border:2px solid var(--g4);border-radius:10px;padding:12px 16px;margin-bottom:18px;font-size:12px;color:var(--g);line-height:1.6;">
-      <strong>Vous n'etes pas connecte ?</strong> Entrez votre code de reference ci-dessous pour retrouver votre commande sans compte.
+      <strong>Retrouver une commande sans compte</strong> — Entrez votre code de reference ci-dessous.
       <div style="display:flex;gap:7px;margin-top:8px;">
-        <input type="text" id="dash-ref-input" placeholder="Ex: F2K-2025-08421" style="flex:1;border:2px solid var(--g4);border-radius:7px;padding:8px 11px;font-size:12px;font-family:'Plus Jakarta Sans',sans-serif;outline:none;background:#fff;">
+        <input type="text" id="dash-ref-input" placeholder="Ex: F2K-2025-08421" style="flex:1;border:2px solid var(--g4);border-radius:7px;padding:8px 11px;font-size:12px;font-family:'Plus Jakarta Sans',sans-serif;outline:none;background:#fff;color:var(--ink);">
         <button onclick="searchByRef()" style="background:var(--g);color:#fff;border:none;border-radius:7px;padding:8px 14px;font-weight:700;font-size:12px;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;">Rechercher</button>
       </div>
     </div>
     <div id="orders-list"></div>
   </div>
 </div>
-
-<!-- PANEL ADMIN -->
 <div id="admin-panel">
   <div class="admin-layout">
     <div class="admin-sidebar">
       <div class="asb-logo">
         <div class="asb-lm"><div></div><div></div><div></div></div>
-        <div style="margin-left:41px;">
-          <div class="asb-title">F2K <em>ADMIN</em></div>
-          <div class="asb-sub">F2K MULTISERVICE</div>
-        </div>
+        <div style="margin-left:41px;"><div class="asb-title">F2K <em>ADMIN</em></div><div class="asb-sub">F2K MULTISERVICE</div></div>
       </div>
       <nav class="asb-nav">
-        <a class="asb-item on" onclick="showAdminPage('dashboard',this)" href="#">
-          Dashboard
-        </a>
-        <a class="asb-item" onclick="showAdminPage('orders',this)" href="#">
-          Toutes les demandes
-          <span class="asb-cnt" id="asb-total">0</span>
-        </a>
-        <a class="asb-item" onclick="showAdminPage('pending',this)" href="#">
-          En attente
-          <span class="asb-cnt red" id="asb-pending">0</span>
-        </a>
-        <a class="asb-item" onclick="showAdminPage('processing',this)" href="#">
-          En traitement
-          <span class="asb-cnt" id="asb-proc">0</span>
-        </a>
-        <a class="asb-item" onclick="showAdminPage('ready',this)" href="#">
-          Prets a livrer
-          <span class="asb-cnt" id="asb-ready">0</span>
-        </a>
-        <a class="asb-item" onclick="showAdminPage('rejected',this)" href="#">
-          Rejetes
-          <span class="asb-cnt" id="asb-rej">0</span>
-        </a>
-        <a class="asb-item" onclick="showAdminPage('clients',this)" href="#">
-          Clients inscrits
-          <span class="asb-cnt" id="asb-clients">0</span>
-        </a>
+        <a class="asb-item on" onclick="showAdminPage('dashboard',this)" href="#">Dashboard</a>
+        <a class="asb-item" onclick="showAdminPage('orders',this)" href="#">Toutes les demandes <span class="asb-cnt" id="asb-total">0</span></a>
+        <a class="asb-item" onclick="showAdminPage('pending',this)" href="#">En attente <span class="asb-cnt red" id="asb-pending">0</span></a>
+        <a class="asb-item" onclick="showAdminPage('processing',this)" href="#">En traitement <span class="asb-cnt" id="asb-proc">0</span></a>
+        <a class="asb-item" onclick="showAdminPage('ready',this)" href="#">Prets a livrer <span class="asb-cnt" id="asb-ready">0</span></a>
+        <a class="asb-item" onclick="showAdminPage('rejected',this)" href="#">Rejetes <span class="asb-cnt" id="asb-rej">0</span></a>
+        <a class="asb-item" onclick="showAdminPage('clients',this)" href="#">Clients inscrits <span class="asb-cnt" id="asb-clients">0</span></a>
         <div style="border-top:1px solid rgba(255,255,255,.06);margin:10px 0;"></div>
-        <a class="asb-item" onclick="closeAdmin()" href="#">
-          Retour au site
-        </a>
+        <a class="asb-item" onclick="closeAdmin()" href="#">Retour au site</a>
       </nav>
       <div class="asb-footer">
         <div class="asb-admin">f2kmultiservice@gmail.com</div>
         <button class="admin-logout" onclick="closeAdmin()">Fermer le panel</button>
       </div>
     </div>
-
     <div class="admin-main">
-
       <div class="apage on" id="apage-dashboard">
         <div class="apage-title">Tableau de bord</div>
         <div class="apage-sub">Bienvenue sur le panel F2K MULTISERVICE</div>
@@ -930,7 +821,6 @@ footer{background:var(--ink);padding:48px 36px 20px;}
         <div style="font-family:'Fraunces',serif;font-size:18px;font-weight:900;color:var(--ink);margin-bottom:14px;">Dernieres demandes en attente</div>
         <div class="aorder-list" id="adash-recent"></div>
       </div>
-
       <div class="apage" id="apage-orders">
         <div class="apage-title">Toutes les demandes</div>
         <div class="asearch"><input type="text" placeholder="Rechercher par reference, nom, email..." id="asearch-input" oninput="filterAdminOrders()"></div>
@@ -944,41 +834,14 @@ footer{background:var(--ink);padding:48px 36px 20px;}
         </div>
         <div class="aorder-list" id="aorders-list"></div>
       </div>
-
-      <div class="apage" id="apage-pending">
-        <div class="apage-title">En attente</div>
-        <div class="apage-sub">Demandes a traiter en priorite</div>
-        <div class="aorder-list" id="apending-list"></div>
-      </div>
-
-      <div class="apage" id="apage-processing">
-        <div class="apage-title">En traitement</div>
-        <div class="apage-sub">Dossiers en cours de traitement</div>
-        <div class="aorder-list" id="aproc-list"></div>
-      </div>
-
-      <div class="apage" id="apage-ready">
-        <div class="apage-title">Prets a livrer</div>
-        <div class="apage-sub">Documents finalises — clients peuvent telecharger</div>
-        <div class="aorder-list" id="aready-list"></div>
-      </div>
-
-      <div class="apage" id="apage-rejected">
-        <div class="apage-title">Demandes rejetees</div>
-        <div class="aorder-list" id="arej-list"></div>
-      </div>
-
-      <div class="apage" id="apage-clients">
-        <div class="apage-title">Clients inscrits</div>
-        <div class="apage-sub">Liste de tous les clients ayant un compte F2K ON LINE</div>
-        <div id="aclients-list"></div>
-      </div>
-
+      <div class="apage" id="apage-pending"><div class="apage-title">En attente</div><div class="apage-sub">Demandes a traiter en priorite</div><div class="aorder-list" id="apending-list"></div></div>
+      <div class="apage" id="apage-processing"><div class="apage-title">En traitement</div><div class="apage-sub">Dossiers en cours</div><div class="aorder-list" id="aproc-list"></div></div>
+      <div class="apage" id="apage-ready"><div class="apage-title">Prets a livrer</div><div class="apage-sub">Documents finalises — clients peuvent telecharger</div><div class="aorder-list" id="aready-list"></div></div>
+      <div class="apage" id="apage-rejected"><div class="apage-title">Demandes rejetees</div><div class="aorder-list" id="arej-list"></div></div>
+      <div class="apage" id="apage-clients"><div class="apage-title">Clients inscrits</div><div class="apage-sub">Liste de tous les clients ayant un compte F2K ON LINE</div><div id="aclients-list"></div></div>
     </div>
   </div>
 </div>
-
-<!-- MODAL ACTION ADMIN -->
 <div class="amodal-ov" id="amodal-ov">
   <div class="amodal">
     <button class="amodal-cl" onclick="closeAmodal()">X</button>
@@ -986,315 +849,168 @@ footer{background:var(--ink);padding:48px 36px 20px;}
     <div id="amodal-body"></div>
   </div>
 </div>
-
-<!-- MODAL UPLOAD DOCUMENT ADMIN -->
 <div class="amodal-ov" id="upload-ov">
   <div class="amodal">
     <button class="amodal-cl" onclick="closeUpload()">X</button>
     <h3>Soumettre le document finalise</h3>
-    <p style="font-size:12px;color:var(--mu);margin-bottom:14px;">Le client pourra telecharger ce document depuis son espace.</p>
+    <p style="font-size:12px;color:var(--mu);margin-bottom:14px;">Le client pourra telecharger ce document depuis son espace ou avec son code de reference.</p>
     <div class="upload-zone">
       <input type="file" id="doc-file" accept=".pdf,image/*" onchange="previewDoc(this)">
-      <p style="font-size:13px;font-weight:700;color:var(--mu);">Cliquez ou glissez le document ici</p>
+      <p style="font-size:13px;font-weight:700;color:var(--mu);">📁 Cliquez ou glissez le document ici</p>
       <p style="font-size:11px;color:var(--mu);margin-top:4px;">PDF ou image — max 10 Mo</p>
     </div>
     <div class="upload-preview" id="doc-preview"></div>
     <label style="display:block;font-size:11px;font-weight:700;color:var(--mu);text-transform:uppercase;margin-bottom:5px;">Message pour le client (optionnel)</label>
-    <textarea id="doc-msg" placeholder="Ex: Votre document est pret. Telechargez-le depuis votre espace..." style="width:100%;border:2px solid var(--bd);border-radius:8px;padding:9px 11px;font-size:12px;min-height:70px;font-family:'Plus Jakarta Sans',sans-serif;outline:none;background:var(--bg);resize:vertical;margin-bottom:10px;"></textarea>
-    <button onclick="submitDocument()" style="width:100%;background:var(--g);color:#fff;border:none;border-radius:8px;padding:12px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:800;cursor:pointer;">Envoyer le document au client</button>
+    <textarea id="doc-msg" placeholder="Ex: Votre document est pret. Telechargez-le depuis votre espace..." style="width:100%;border:2px solid var(--bd);border-radius:8px;padding:9px 11px;font-size:12px;min-height:70px;font-family:'Plus Jakarta Sans',sans-serif;outline:none;background:var(--bg);resize:vertical;margin-bottom:10px;transition:border-color .2s;"></textarea>
+    <button id="upload-submit-btn" onclick="submitDocument()" style="width:100%;background:var(--g);color:#fff;border:none;border-radius:8px;padding:12px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:800;cursor:pointer;transition:all .2s;">📤 Envoyer le document au client</button>
   </div>
-                                                                                                           </div>
-                                                                                                           <script>
-const firebaseConfig = {
-  apiKey: "AIzaSyBtngyLs-sbAnfMQD0MhOi2yqB114vi4Jg",
-  authDomain: "f2k-on-line.firebaseapp.com",
-  projectId: "f2k-on-line",
-  storageBucket: "f2k-on-line.firebasestorage.app",
-  messagingSenderId: "1060822103274",
-  appId: "1:1060822103274:web:1f966c1cfe6855a4371393",
-  measurementId: "G-DZB1TS6FPM"
+</div>
+<div class="toast" id="toast">
+  <span id="t-ico" style="font-size:18px;">✅</span>
+  <div><div class="tmsg" id="t-msg"></div><div class="tsub" id="t-sub"></div></div>
+  </div>
+  <script>
+const firebaseConfig={
+  apiKey:"AIzaSyBtngyLs-sbAnfMQD0MhOi2yqB114vi4Jg",
+  authDomain:"f2k-on-line.firebaseapp.com",
+  projectId:"f2k-on-line",
+  storageBucket:"f2k-on-line.firebasestorage.app",
+  messagingSenderId:"1060822103274",
+  appId:"1:1060822103274:web:1f966c1cfe6855a4371393"
 };
 firebase.initializeApp(firebaseConfig);
-var db = firebase.firestore();
-var storage = firebase.storage();
-var auth = firebase.auth();
-
+var db=firebase.firestore();
+var storage=firebase.storage();
+var auth=firebase.auth();
 emailjs.init("XAb5zE12AGNaYhsoc");
-var EMAILJS_SERVICE = "F2K_MULTISERVICE";
-var EMAILJS_TEMPLATE = "template_77x2hcp";
-
-var CLOUDINARY_URL = "https://api.cloudinary.com/v1_1/di4byrrfv/upload";
-var CLOUDINARY_PRESET = "f2k_stream";
-
-var ADMIN_EMAIL = "f2kmultiservice@gmail.com";
-var ADMIN_PWD = "Fr@58070708";
-
-var OPERATORS = {
-  moov:{name:"Moov Money",code:function(a){return "*855*4*1*317105*"+a+"*1%23";},badge:"MOOV",cls:"moov"},
-  mtn:{name:"MTN Mobile Money",code:function(a){return "*880*1*1*0166499525*0166499525*"+a+"*1%23";},badge:"MTN",cls:"mtn"},
-  cel:{name:"Celtiis Cash",code:function(a){return "*889*4*1*0158070708*"+a+"*1*2%23";},badge:"CELTIIS",cls:"cel"}
+var EMAILJS_SERVICE="F2K_MULTISERVICE";
+var EMAILJS_TEMPLATE="template_77x2hcp";
+var CLOUDINARY_URL="https://api.cloudinary.com/v1_1/di4byrrfv/upload";
+var CLOUDINARY_PRESET="f2k_stream";
+var ADMIN_EMAIL="f2kmultiservice@gmail.com";
+var ADMIN_PWD="Fr@58070708";
+var OPERATORS={
+  moov:{name:"Moov Money",code:function(a){return "*855*4*1*317105*"+a+"*1%23";},badge:"MOOV"},
+  mtn:{name:"MTN Mobile Money",code:function(a){return "*880*1*1*0166499525*0166499525*"+a+"*1%23";},badge:"MTN"},
+  cel:{name:"Celtiis Cash",code:function(a){return "*889*4*1*0158070708*"+a+"*1*2%23";},badge:"CELTIIS"}
 };
-
-var PRICES = {
-  naissance:2000,mariage:2000,deces:2000,celibat:2000,jugement:51000,
-  cni:7000,cip:2000,npi:1000,residence:3000,
-  anip_tel:1000,anip_info:1000,
-  casier:2900,legalisation:1500,copie_conf:1500,
-  passeport:35000,passeport_vip:135000,laissez:1000,
-  permis:28200,immat:5000,visite_leger:17000,visite_taxi:11000,visite_lourd:23000,
-  cadastre:6000,titre_fonc:105000,ifu:1000,
-  photo_num:1000,photo_print:1500,photo_bijoux:1000,cv:500
-};
-
-var NAMES = {
-  naissance:"Acte de naissance",mariage:"Acte de mariage",deces:"Acte de deces",
-  celibat:"Cert. de coutume et celibat",jugement:"Jugement suppletif",
-  cni:"CNIB",cip:"CIP",npi:"Certificat NPI/FID",residence:"Certificat de residence",
-  anip_tel:"MAJ telephone ANIP",anip_info:"MAJ informations ANIP",
-  casier:"Casier judiciaire (B3)",legalisation:"Legalisation de signature",copie_conf:"Copie conforme",
-  passeport:"Passeport biometrique ordinaire",passeport_vip:"Passeport VIP (48h)",laissez:"Laissez-passer",
-  permis:"Permis de conduire",immat:"Immatriculation vehicule",
-  visite_leger:"Visite technique Leger",visite_taxi:"Visite technique Taxi",visite_lourd:"Visite technique Poids lourd",
-  cadastre:"Extrait cadastral",titre_fonc:"Titre foncier",ifu:"IFU",
-  photo_num:"Photo identite numerique",photo_print:"Photo identite 8 exemplaires",
-  photo_bijoux:"Photo bijoux et produits",cv:"Redaction de CV"
-};
-
-var ICONS = {
-  naissance:"👶",mariage:"💍",deces:"📜",celibat:"🤝",jugement:"📑",
-  cni:"🪪",cip:"📋",npi:"🏛️",residence:"🏠",anip_tel:"📱",anip_info:"✏️",
-  casier:"⚖️",legalisation:"🖊️",copie_conf:"📋",passeport:"🛂",passeport_vip:"🛂",
-  laissez:"✈️",permis:"🚗",immat:"🚘",visite_leger:"🔧",visite_taxi:"🚕",visite_lourd:"🚛",
-  cadastre:"🗺️",titre_fonc:"📂",ifu:"🧾",photo_num:"📱",photo_print:"🖨️",photo_bijoux:"💎",cv:"📝"
-};
-
-var DELAIS = {
-  naissance:"Immediat",mariage:"Immediat",deces:"Immediat",celibat:"Immediat",jugement:"10-15 jours",
-  cni:"21 jours (RDV)",cip:"Immediat",npi:"Immediat",residence:"Immediat",
-  anip_tel:"24-48h",anip_info:"2-5 jours",
-  casier:"Immediat",legalisation:"RDV agence",copie_conf:"Immediat",
-  passeport:"15-21 jours (RDV)",passeport_vip:"48h (RDV)",laissez:"3-5 jours",
-  permis:"10-15 jours (RDV)",immat:"7-10 jours (RDV)",
-  visite_leger:"RDV agence",visite_taxi:"RDV agence",visite_lourd:"RDV agence",
-  cadastre:"5-7 jours",titre_fonc:"30-60 jours",ifu:"Immediat",
-  photo_num:"Sous 24h",photo_print:"RDV agence",photo_bijoux:"RDV agence",cv:"24-48h"
-};
-
-var cart = [];
-var currentUser = null;
-var allOrders = [];
-var adminFilter = "all";
-var uploadRef = "";
+var PRICES={naissance:2000,mariage:2000,deces:2000,celibat:2000,jugement:51000,cni:7000,cip:2000,npi:1000,residence:3000,anip_tel:1000,anip_info:1000,casier:2900,legalisation:1500,copie_conf:1500,passeport:35000,passeport_vip:135000,laissez:1000,permis:28200,immat:5000,visite_leger:17000,visite_taxi:11000,visite_lourd:23000,cadastre:6000,titre_fonc:105000,ifu:1000,photo_num:1000,photo_print:1500,photo_bijoux:1000,cv:500};
+var NAMES={naissance:"Acte de naissance",mariage:"Acte de mariage",deces:"Acte de deces",celibat:"Cert. de coutume et celibat",jugement:"Jugement suppletif",cni:"CNIB",cip:"CIP",npi:"Certificat NPI/FID",residence:"Certificat de residence",anip_tel:"MAJ telephone ANIP",anip_info:"MAJ informations ANIP",casier:"Casier judiciaire (B3)",legalisation:"Legalisation de signature",copie_conf:"Copie conforme",passeport:"Passeport ordinaire",passeport_vip:"Passeport VIP (48h)",laissez:"Laissez-passer",permis:"Permis de conduire",immat:"Immatriculation vehicule",visite_leger:"Visite technique Leger",visite_taxi:"Visite technique Taxi",visite_lourd:"Visite technique Poids lourd",cadastre:"Extrait cadastral",titre_fonc:"Titre foncier",ifu:"IFU",photo_num:"Photo identite numerique",photo_print:"Photo identite 8 exemplaires",photo_bijoux:"Photo bijoux et produits",cv:"Redaction de CV"};
+var ICONS={naissance:"👶",mariage:"💍",deces:"📜",celibat:"🤝",jugement:"📑",cni:"🪪",cip:"📋",npi:"🏛️",residence:"🏠",anip_tel:"📱",anip_info:"✏️",casier:"⚖️",legalisation:"🖊️",copie_conf:"📋",passeport:"🛂",passeport_vip:"🛂",laissez:"✈️",permis:"🚗",immat:"🚘",visite_leger:"🔧",visite_taxi:"🚕",visite_lourd:"🚛",cadastre:"🗺️",titre_fonc:"📂",ifu:"🧾",photo_num:"📱",photo_print:"🖨️",photo_bijoux:"💎",cv:"📝"};
+var DELAIS={naissance:"Immediat",mariage:"Immediat",deces:"Immediat",celibat:"Immediat",jugement:"10-15 jours",cni:"21 jours (RDV)",cip:"Immediat",npi:"Immediat",residence:"Immediat",anip_tel:"24-48h",anip_info:"2-5 jours",casier:"Immediat",legalisation:"RDV agence",copie_conf:"Immediat",passeport:"15-21 jours (RDV)",passeport_vip:"48h (RDV)",laissez:"3-5 jours",permis:"10-15 jours (RDV)",immat:"7-10 jours (RDV)",visite_leger:"RDV agence",visite_taxi:"RDV agence",visite_lourd:"RDV agence",cadastre:"5-7 jours",titre_fonc:"30-60 jours",ifu:"Immediat",photo_num:"Sous 24h",photo_print:"RDV agence",photo_bijoux:"RDV agence",cv:"24-48h"};
+var cart=[];
+var currentUser=null;
+var allOrders=[];
+var adminFilter="all";
+var uploadRef="";
+var curKey="";
+var uploadedFiles=[];
+var capturedPhoto=null;
+var camStream=null;
 
 function addToCart(key){
   if(cart.indexOf(key)===-1) cart.push(key);
   updateCartBadge();
 }
-
 function updateCartBadge(){
-  var count = cart.length;
-  var total = 0;
-  for(var i=0;i<cart.length;i++) total += PRICES[cart[i]]||0;
-  var discount = count >= 3 ? Math.round(total*0.10) : 0;
-  var final = total - discount;
-  var badge = document.getElementById("cart-badge");
+  var count=cart.length;
+  var total=0;
+  for(var i=0;i<cart.length;i++) total+=PRICES[cart[i]]||0;
+  var discount=count>=3?Math.round(total*0.10):0;
+  var final=total-discount;
+  var badge=document.getElementById("cart-badge");
   if(!badge){
-    badge = document.createElement("div");
-    badge.id = "cart-badge";
-    badge.style.cssText = "position:fixed;bottom:20px;left:20px;z-index:1500;background:var(--ink2);color:#fff;border-radius:14px;padding:12px 18px;font-size:12px;font-weight:700;box-shadow:0 8px 24px rgba(0,0,0,.22);display:none;cursor:pointer;border:2px solid var(--g);font-family:'Plus Jakarta Sans',sans-serif;";
-    badge.onclick = function(){ openDash(); };
+    badge=document.createElement("div");
+    badge.id="cart-badge";
+    badge.style.cssText="position:fixed;bottom:20px;left:20px;z-index:1500;background:var(--ink2);color:#fff;border-radius:14px;padding:12px 18px;font-size:12px;font-weight:700;box-shadow:0 8px 24px rgba(0,0,0,.22);display:none;cursor:pointer;border:2px solid var(--g);font-family:'Plus Jakarta Sans',sans-serif;";
+    badge.onclick=function(){ openDash(); };
     document.body.appendChild(badge);
   }
-  if(count > 0){
-    badge.style.display = "block";
-    badge.innerHTML = "🛒 "+count+" service(s) — "+final.toLocaleString("fr-FR")+" FCFA"+(discount>0?" <span style='color:var(--g2);'>(-10%)</span>":"");
-  } else {
-    badge.style.display = "none";
-  }
+  if(count>0){
+    badge.style.display="block";
+    badge.innerHTML="🛒 "+count+" service(s) — "+final.toLocaleString("fr-FR")+" FCFA"+(discount>0?" <span style='color:var(--g2);'>(-10%)</span>":"");
+  } else { badge.style.display="none"; }
 }
-
-var COMMUNES = ["Cotonou","Porto-Novo","Parakou","Abomey-Calavi","Djougou","Bohicon","Kandi","Lokossa","Ouidah","Natitingou","Abomey","Dogbo","Pobe","Sakete","Nikki","Malanville","Autre"];
-var RECEPTIONS = ["Reception par email (numerique)","Livraison a domicile","Retrait au bureau F2K","Envoi par courrier"];
-
-function selC(id){
-  var h = "<select id='"+id+"'><option value=''>-- Commune --</option>";
-  for(var i=0;i<COMMUNES.length;i++) h += "<option>"+COMMUNES[i]+"</option>";
-  return h+"</select>";
-}
-function selR(id){
-  var h = "<select id='"+id+"'><option value=''>-- Mode --</option>";
-  for(var i=0;i<RECEPTIONS.length;i++) h += "<option>"+RECEPTIONS[i]+"</option>";
-  return h+"</select>";
-}
-function nameF(){
-  return "<div class='fr2'><div class='fg'><label>Nom <span class='req'>*</span></label><input type='text' id='f-nom' placeholder='GBAGUIDI'></div><div class='fg'><label>Prenom(s) <span class='req'>*</span></label><input type='text' id='f-prenom' placeholder='Kouassi'></div></div>";
-}
-function contactF(){
-  return "<div class='fg'><label>Email <span class='req'>*</span></label><input type='email' id='f-email' placeholder='votre@email.com'></div><div class='fr2'><div class='fg'><label>Telephone <span class='req'>*</span></label><input type='tel' id='f-tel' placeholder='+229 97 00 00 00'></div><div class='fg'><label>Commune <span class='req'>*</span></label>"+selC("f-commune")+"</div></div><div class='fg'><label>Mode de reception <span class='req'>*</span></label>"+selR("f-reception")+"</div>";
-}
-function fileF(lbl){
-  return "<div class='fg'><label>"+lbl+"</label><div class='file-drop' id='fdrop'><input type='file' multiple accept='image/*,.pdf' onchange='handleFiles(this.files)'><p>📎 Glissez ou <span>parcourez</span> — JPG, PNG, PDF (5Mo max)</p></div><div class='filelist' id='flist'></div></div>";
-}
-function npiF(){
-  return "<div class='npibox'><div class='npititle'>🔢 Identification nationale <span style='color:var(--r);font-size:11px;'>* obligatoire</span></div><p class='npi-note'>Renseignez votre NPI ou le numero de formulaire de votre recepisse RAVIP.</p><div class='npitabs'><div class='ntab on' onclick='switchNpi(\"npi\",this)'>J ai mon NPI</div><div class='ntab' onclick='switchNpi(\"ravip\",this)'>J ai seulement le recepisse RAVIP</div></div><div id='npi-npi'><div class='fg'><label>NPI <span class='req'>*</span></label><input type='text' id='f-npi' placeholder='Ex : 00123456789' maxlength='20'></div></div><div id='npi-ravip' style='display:none;'><div class='fg'><label>N recepisse RAVIP <span class='req'>*</span></label><input type='text' id='f-ravip' placeholder='Numero figurant sur votre recepisse'></div></div></div>";
-}
-
-function switchNpi(t,el){
-  var tabs = document.querySelectorAll(".ntab");
-  for(var i=0;i<tabs.length;i++) tabs[i].classList.remove("on");
-  el.classList.add("on");
-  document.getElementById("npi-npi").style.display = t==="npi"?"":"none";
-  document.getElementById("npi-ravip").style.display = t==="ravip"?"":"none";
-}
-
+var COMMUNES=["Cotonou","Porto-Novo","Parakou","Abomey-Calavi","Djougou","Bohicon","Kandi","Lokossa","Ouidah","Natitingou","Abomey","Dogbo","Pobe","Sakete","Nikki","Malanville","Autre"];
+var RECEPTIONS=["Reception par email (numerique)","Livraison a domicile","Retrait au bureau F2K","Envoi par courrier"];
+function selC(id){var h="<select id='"+id+"'><option value=''>-- Commune --</option>";for(var i=0;i<COMMUNES.length;i++) h+="<option>"+COMMUNES[i]+"</option>";return h+"</select>";}
+function selR(id){var h="<select id='"+id+"'><option value=''>-- Mode --</option>";for(var i=0;i<RECEPTIONS.length;i++) h+="<option>"+RECEPTIONS[i]+"</option>";return h+"</select>";}
+function nameF(){return "<div class='fr2'><div class='fg'><label>Nom <span class='req'>*</span></label><input type='text' id='f-nom' placeholder='GBAGUIDI'></div><div class='fg'><label>Prenom(s) <span class='req'>*</span></label><input type='text' id='f-prenom' placeholder='Kouassi'></div></div>";}
+function contactF(){return "<div class='fg'><label>Email <span class='req'>*</span></label><input type='email' id='f-email' placeholder='votre@email.com'></div><div class='fr2'><div class='fg'><label>Telephone <span class='req'>*</span></label><input type='tel' id='f-tel' placeholder='+229 97 00 00 00'></div><div class='fg'><label>Commune <span class='req'>*</span></label>"+selC("f-commune")+"</div></div><div class='fg'><label>Mode de reception <span class='req'>*</span></label>"+selR("f-reception")+"</div>";}
+function fileF(lbl){return "<div class='fg'><label>"+lbl+"</label><div class='file-drop' id='fdrop'><input type='file' multiple accept='image/*,.pdf' onchange='handleFiles(this.files)'><p>📎 Glissez ou <span>parcourez</span> — JPG, PNG, PDF (5Mo max)</p></div><div class='filelist' id='flist'></div></div>";}
+function npiF(){return "<div class='npibox'><div class='npititle'>🔢 Identification nationale <span style='color:var(--r);font-size:11px;'>* obligatoire</span></div><p class='npi-note'>Renseignez votre NPI ou le numero de formulaire de votre recepisse RAVIP.</p><div class='npitabs'><div class='ntab on' onclick='switchNpi(\"npi\",this)'>J ai mon NPI</div><div class='ntab' onclick='switchNpi(\"ravip\",this)'>J ai seulement le recepisse RAVIP</div></div><div id='npi-npi'><div class='fg'><label>NPI <span class='req'>*</span></label><input type='text' id='f-npi' placeholder='Ex : 00123456789' maxlength='20'></div></div><div id='npi-ravip' style='display:none;'><div class='fg'><label>N recepisse RAVIP <span class='req'>*</span></label><input type='text' id='f-ravip' placeholder='Numero figurant sur votre recepisse'></div></div></div>";}
+function switchNpi(t,el){var tabs=document.querySelectorAll(".ntab");for(var i=0;i<tabs.length;i++) tabs[i].classList.remove("on");el.classList.add("on");document.getElementById("npi-npi").style.display=t==="npi"?"":"none";document.getElementById("npi-ravip").style.display=t==="ravip"?"":"none";}
+function showToast(msg,sub,col){col=col||"var(--g)";var t=document.getElementById("toast");document.getElementById("t-ico").textContent="✅";document.getElementById("t-msg").textContent=msg;document.getElementById("t-sub").textContent=sub||"";t.style.borderLeftColor=col;t.classList.add("on");setTimeout(function(){t.classList.remove("on");},5000);}
+function toggleNav(){var ul=document.getElementById("nav-ul");if(ul.style.display==="flex"){ul.style.display="";return;}ul.style.cssText="display:flex;flex-direction:column;position:fixed;top:62px;left:0;right:0;background:rgba(255,255,255,.98);backdrop-filter:blur(16px);padding:14px;gap:11px;border-bottom:1px solid var(--bd);z-index:299;box-shadow:0 8px 20px rgba(0,0,0,.09);";var links=ul.querySelectorAll("a");for(var i=0;i<links.length;i++){links[i].style.fontSize="14px";links[i].addEventListener("click",function(){ul.style.display="";},{once:true});}}
+var logoClickCount=0;var logoClickTimer=null;
+function logoClick(e){e.preventDefault();logoClickCount++;if(logoClickTimer) clearTimeout(logoClickTimer);logoClickTimer=setTimeout(function(){logoClickCount=0;},1000);if(logoClickCount>=3){logoClickCount=0;clearTimeout(logoClickTimer);openAdmin();}}
+function uploadToCloudinary(file){return new Promise(function(resolve){var fd=new FormData();fd.append("file",file);fd.append("upload_preset",CLOUDINARY_PRESET);fetch(CLOUDINARY_URL,{method:"POST",body:fd}).then(function(r){return r.json();}).then(function(d){resolve(d.secure_url||null);}).catch(function(){resolve(null);});});}
+function sendConfirmationEmail(params){return emailjs.send(EMAILJS_SERVICE,EMAILJS_TEMPLATE,{to_email:params.email,to_name:params.prenom+" "+params.nom,ref_code:params.ref,service_name:params.serviceName,amount:params.amount,delai:params.delai,date:params.date,tel:params.tel,reply_to:"f2kmultiservice@gmail.com"}).then(function(){return true;}).catch(function(){return false;});}
 function payBox(key){
-  var baseAmt = PRICES[key]||0;
-  var discount = cart.length>=3 ? Math.round(baseAmt*0.10) : 0;
-  var amt = baseAmt - discount;
-  var amtFmt = amt.toLocaleString("fr-FR");
-  var html = "<div class='paybox'>";
-  html += "<div class='pay-header'><div class='pay-header-title'>💳 Choisissez votre operateur</div>";
-  html += "<div class='pay-amount'>"+amtFmt+" <span>FCFA"+(discount>0?" — 🎁 Reduction 10% !":"")+"</span></div></div>";
-  html += "<div class='pay-ops'>";
-  var ops = ["moov","mtn","cel"];
-  var icons = {moov:"💙",mtn:"💛",cel:"❤️"};
-  var steps = {moov:"Entrez votre code secret Moov Money",mtn:"Entrez votre code secret MTN",cel:"Entrez votre code secret Celtiis"};
+  var baseAmt=PRICES[key]||0;
+  var discount=cart.length>=3?Math.round(baseAmt*0.10):0;
+  var amt=baseAmt-discount;
+  var amtFmt=amt.toLocaleString("fr-FR");
+  var html="<div class='paybox'><div class='pay-header'><div class='pay-header-title'>💳 Choisissez votre operateur</div><div class='pay-amount'>"+amtFmt+" <span>FCFA"+(discount>0?" — 🎁 Reduction 10% !":"")+"</span></div></div><div class='pay-ops'>";
+  var ops=["moov","mtn","cel"];
+  var icons={moov:"💙",mtn:"💛",cel:"❤️"};
+  var steps={moov:"Entrez votre code secret Moov Money",mtn:"Entrez votre code secret MTN",cel:"Entrez votre code secret Celtiis"};
   for(var i=0;i<ops.length;i++){
-    var opKey = ops[i];
-    var op = OPERATORS[opKey];
-    var ussd = op.code(amt);
-    var display = ussd.replace("%23","#");
-    html += "<div class='pay-op pay-op-"+opKey+"'>";
-    html += "<div class='pay-op-head'><span class='op-badge op-"+opKey+"'>"+icons[opKey]+" "+op.badge+"</span><span class='op-ussd op-ussd-"+opKey+"'>"+display+"</span></div>";
-    html += "<div class='pay-steps'><strong>Comment payer :</strong><br>1. Cliquez sur le bouton ci-dessous<br>2. Votre telephone ouvre le code USSD<br>3. "+steps[opKey]+" et confirmez<br>4. SMS de confirmation recu</div>";
-    html += "<a class='pay-btn pay-btn-"+opKey+"' href='tel:"+ussd+"' onclick='onPayClick()'>"+icons[opKey]+" Payer "+amtFmt+" FCFA via "+op.name+"</a>";
-    html += "</div>";
+    var opKey=ops[i];
+    var op=OPERATORS[opKey];
+    var ussd=op.code(amt);
+    var display=ussd.replace("%23","#");
+    html+="<div class='pay-op pay-op-"+opKey+"'>";
+    html+="<div class='pay-op-head'><span class='op-badge op-"+opKey+"'>"+icons[opKey]+" "+op.badge+"</span><span class='op-ussd op-ussd-"+opKey+"'>"+display+"</span></div>";
+    html+="<div class='pay-steps'><strong>Comment payer :</strong><br>1. Cliquez sur le bouton<br>2. Votre telephone ouvre le USSD<br>3. "+steps[opKey]+" et confirmez<br>4. Recevez le SMS de confirmation</div>";
+    html+="<a class='pay-btn pay-btn-"+opKey+"' href='tel:"+ussd+"' onclick='onPayClick()'>"+icons[opKey]+" Payer "+amtFmt+" FCFA via "+op.name+"</a>";
+    html+="</div>";
   }
-  html += "</div>";
-  html += "<div id='pay-confirm-box' class='pay-confirm'>Paiement effectue — vous pouvez soumettre votre demande.</div>";
-  html += "<div class='pay-check'><label><input type='checkbox' id='f-paid' onchange='togglePaid(this)'> J ai effectue le paiement et recu la confirmation SMS</label></div>";
-  html += "</div>";
+  html+="</div><div id='pay-confirm-box' class='pay-confirm'>Paiement effectue — vous pouvez soumettre votre demande.</div><div class='pay-check'><label><input type='checkbox' id='f-paid' onchange='togglePaid(this)'> J ai effectue le paiement et recu la confirmation SMS</label></div></div>";
   return html;
 }
-
-function onPayClick(){
-  setTimeout(function(){
-    var b = document.getElementById("pay-confirm-box");
-    if(b) b.style.display = "block";
-  },4000);
-}
-function togglePaid(cb){
-  var b = document.getElementById("pay-confirm-box");
-  if(b) b.style.display = cb.checked?"block":"none";
-}
-
-function showToast(msg,sub,col){
-  col = col||"var(--g)";
-  var t = document.getElementById("toast");
-  document.getElementById("t-ico").textContent = "✅";
-  document.getElementById("t-msg").textContent = msg;
-  document.getElementById("t-sub").textContent = sub||"";
-  t.style.borderLeftColor = col;
-  t.classList.add("on");
-  setTimeout(function(){ t.classList.remove("on"); },5000);
-}
-
-function toggleNav(){
-  var ul = document.getElementById("nav-ul");
-  if(ul.style.display==="flex"){ ul.style.display=""; return; }
-  ul.style.cssText = "display:flex;flex-direction:column;position:fixed;top:62px;left:0;right:0;background:rgba(255,255,255,.98);backdrop-filter:blur(16px);padding:14px;gap:11px;border-bottom:1px solid var(--bd);z-index:299;box-shadow:0 8px 20px rgba(0,0,0,.09);";
-  var links = ul.querySelectorAll("a");
-  for(var i=0;i<links.length;i++){
-    links[i].style.fontSize = "14px";
-    links[i].addEventListener("click",function(){ ul.style.display=""; },{once:true});
-  }
-}
-
-var logoClickCount = 0;
-var logoClickTimer = null;
-function logoClick(e){
-  e.preventDefault();
-  logoClickCount++;
-  if(logoClickTimer) clearTimeout(logoClickTimer);
-  logoClickTimer = setTimeout(function(){ logoClickCount=0; },1000);
-  if(logoClickCount>=3){
-    logoClickCount=0;
-    clearTimeout(logoClickTimer);
-    openAdmin();
-  }
-}
-
-function uploadToCloudinary(file){
-  return new Promise(function(resolve){
-    var fd = new FormData();
-    fd.append("file",file);
-    fd.append("upload_preset",CLOUDINARY_PRESET);
-    fetch(CLOUDINARY_URL,{method:"POST",body:fd})
-      .then(function(r){ return r.json(); })
-      .then(function(d){ resolve(d.secure_url||null); })
-      .catch(function(){ resolve(null); });
-  });
-}
-
-function sendConfirmationEmail(params){
-  return emailjs.send(EMAILJS_SERVICE,EMAILJS_TEMPLATE,{
-    to_email:params.email,
-    to_name:params.prenom+" "+params.nom,
-    ref_code:params.ref,
-    service_name:params.serviceName,
-    amount:params.amount,
-    delai:params.delai,
-    date:params.date,
-    tel:params.tel,
-    reply_to:"f2kmultiservice@gmail.com"
-  }).then(function(){ return true; }).catch(function(){ return false; });
-}
-                                                                                                             var curKey = "";
-var uploadedFiles = [];
-var capturedPhoto = null;
-var camStream = null;
-
-function buildForm(key){
-  var n = npiF();
-  var p = payBox(key);
-  var base = n+nameF()+"<div class='fr2'><div class='fg'><label>Date de naissance <span class='req'>*</span></label><input type='date' id='f-ddn'></div><div class='fg'><label>Lieu de naissance <span class='req'>*</span></label><input type='text' id='f-lieu' placeholder='Commune/ville'></div></div>";
-  var F = {
-    naissance:function(){ return "<div class='ibox ib-ok'>Document delivre immediatement apres validation ANIP.</div>"+base+"<div class='fg'><label>Nom du pere</label><input type='text' id='f-pere'></div><div class='fg'><label>Nom de la mere</label><input type='text' id='f-mere'></div><div class='fg'><label>Votre lien avec la personne</label><select id='f-lien'><option value=''>--</option><option>Moi-meme</option><option>Mon enfant</option><option>Mon parent</option><option>Autre</option></select></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI ou Passeport du demandeur")+p; },
-    mariage:function(){ return "<div class='ibox ib-ok'>Document delivre immediatement.</div>"+base+"<div class='fg'><label>Nom du conjoint(e) <span class='req'>*</span></label><input type='text' id='f-conjoint'></div><div class='fr2'><div class='fg'><label>Date du mariage <span class='req'>*</span></label><input type='date' id='f-dm'></div><div class='fg'><label>Mairie du mariage <span class='req'>*</span></label><input type='text' id='f-mairie'></div></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI des deux epoux")+p; },
-    deces:function(){ return "<div class='ibox ib-ok'>Document delivre immediatement.</div>"+n+"<div class='fst'>Informations sur le defunt</div><div class='fr2'><div class='fg'><label>Nom <span class='req'>*</span></label><input type='text' id='f-dnom'></div><div class='fg'><label>Prenom(s) <span class='req'>*</span></label><input type='text' id='f-dprenom'></div></div><div class='fr2'><div class='fg'><label>Date du deces <span class='req'>*</span></label><input type='date' id='f-ddeces'></div><div class='fg'><label>Lieu du deces <span class='req'>*</span></label><input type='text' id='f-ldeces'></div></div><div class='fg'><label>Votre lien avec le defunt <span class='req'>*</span></label><select id='f-lien'><option value=''>--</option><option>Conjoint(e)</option><option>Enfant</option><option>Parent</option><option>Autre</option></select></div><div class='fst'>Vos coordonnees</div>"+nameF()+contactF()+fileF("CNI du declarant + document prouvant le deces")+p; },
-    celibat:function(){ return "<div class='ibox ib-ok'>Document delivre immediatement.</div>"+base+"<div class='fg'><label>Motif</label><select id='f-motif'><option value=''>--</option><option>Mariage</option><option>Visa</option><option>Emploi</option><option>Autre</option></select></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI ou Passeport valide")+p; },
-    jugement:function(){ return "<div class='ibox ib-warn'>Necessite des temoins — notre equipe vous contactera.</div>"+base+"<div class='fg'><label>Nom du pere</label><input type='text' id='f-pere'></div><div class='fg'><label>Nom de la mere</label><input type='text' id='f-mere'></div><div class='fg'><label>Raison de non-declaration <span class='req'>*</span></label><textarea id='f-raison' placeholder='Expliquez brievement...'></textarea></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("Tout document prouvant l identite")+p; },
-    cni:function(){ return "<div class='ibox ib-rdv'>RDV obligatoire pour biometrie. Delai : 21 jours.</div>"+base+"<div class='fr2'><div class='fg'><label>Sexe <span class='req'>*</span></label><select id='f-sexe'><option value=''>--</option><option>Masculin</option><option>Feminin</option></select></div><div class='fg'><label>Profession</label><input type='text' id='f-prof'></div></div><div class='fg'><label>Type de demande <span class='req'>*</span></label><select id='f-type'><option value=''>--</option><option>Premiere demande</option><option>Renouvellement</option><option>Remplacement (perte/vol)</option></select></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("Acte de naissance + CIP + ancienne CNIB si renouvellement")+p; },
-    cip:function(){ return "<div class='ibox ib-ok'>Document delivre immediatement. Validite 2 ans.</div>"+base+"<div class='fr2'><div class='fg'><label>Sexe <span class='req'>*</span></label><select id='f-sexe'><option value=''>--</option><option>Masculin</option><option>Feminin</option></select></div><div class='fg'><label>Profession</label><input type='text' id='f-prof'></div></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("Recepisse RAVIP")+p; },
-    npi:function(){ return "<div class='ibox ib-ok'>Certificat delivre immediatement.</div>"+n+nameF()+"<div class='fst'>Vos coordonnees</div>"+contactF()+fileF("Recepisse RAVIP")+p; },
-    residence:function(){ return "<div class='ibox ib-ok'>Document delivre immediatement.</div>"+n+nameF()+"<div class='fr2'><div class='fg'><label>Date de naissance <span class='req'>*</span></label><input type='date' id='f-ddn'></div><div class='fg'><label>Profession</label><input type='text' id='f-prof'></div></div><div class='fg'><label>Adresse complete <span class='req'>*</span></label><input type='text' id='f-adr' placeholder='Quartier, rue, numero...'></div><div class='fr2'><div class='fg'><label>Commune <span class='req'>*</span></label>"+selC("f-cres")+"</div><div class='fg'><label>Statut <span class='req'>*</span></label><select id='f-statut'><option value=''>--</option><option>Proprietaire</option><option>Locataire</option><option>Heberge</option></select></div></div><div class='fst'>Coordonnees</div><div class='fg'><label>Email <span class='req'>*</span></label><input type='email' id='f-email'></div><div class='fg'><label>Telephone <span class='req'>*</span></label><input type='tel' id='f-tel'></div><div class='fg'><label>Mode de reception <span class='req'>*</span></label>"+selR("f-reception")+"</div>"+fileF("CNI + facture eau/electricite")+p; },
-    anip_tel:function(){ return "<div class='ibox ib-pu'>Modification de votre numero dans la base ANIP.</div>"+n+nameF()+"<div class='fg'><label>Date de naissance <span class='req'>*</span></label><input type='date' id='f-ddn'></div><div class='fr2'><div class='fg'><label>Ancien numero <span class='req'>*</span></label><input type='tel' id='f-otel' placeholder='+229...'></div><div class='fg'><label>Nouveau numero <span class='req'>*</span></label><input type='tel' id='f-ntel' placeholder='+229...'></div></div><div class='fst'>Coordonnees</div><div class='fg'><label>Email <span class='req'>*</span></label><input type='email' id='f-email'></div><div class='fg'><label>Telephone contact <span class='req'>*</span></label><input type='tel' id='f-tel'></div><div class='fg'><label>Mode reception <span class='req'>*</span></label>"+selR("f-reception")+"</div>"+fileF("CNI + preuve du nouveau numero")+p; },
-    anip_info:function(){ return "<div class='ibox ib-pu'>Correction de vos donnees dans la base ANIP.</div>"+n+nameF()+"<div class='fg'><label>Date de naissance <span class='req'>*</span></label><input type='date' id='f-ddn'></div><div class='fg'><label>Information a modifier <span class='req'>*</span></label><select id='f-champ'><option value=''>--</option><option>Nom / Prenom</option><option>Date de naissance</option><option>Adresse</option><option>Etat civil</option><option>Numero de telephone</option></select></div><div class='fg'><label>Description des modifications <span class='req'>*</span></label><textarea id='f-desc' placeholder='Expliquez ce qui doit etre corrige...'></textarea></div><div class='fst'>Coordonnees</div><div class='fg'><label>Email <span class='req'>*</span></label><input type='email' id='f-email'></div><div class='fg'><label>Telephone <span class='req'>*</span></label><input type='tel' id='f-tel'></div><div class='fg'><label>Mode reception <span class='req'>*</span></label>"+selR("f-reception")+"</div>"+fileF("CNI + documents justifiant la modification")+p; },
-    casier:function(){ return "<div class='ibox ib-ok'>Bulletin N3 delivre immediatement.</div>"+base+"<div class='fg'><label>Motif <span class='req'>*</span></label><select id='f-motif'><option value=''>--</option><option>Emploi public</option><option>Emploi prive</option><option>Concours</option><option>Visa</option><option>Autre</option></select></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI ou Passeport + Acte de naissance")+p; },
-    legalisation:function(){ return "<div class='ibox ib-rdv'>RDV obligatoire — presence physique requise.</div>"+n+nameF()+"<div class='fg'><label>Type de document <span class='req'>*</span></label><select id='f-dtype'><option value=''>--</option><option>Contrat</option><option>Procuration</option><option>Declaration</option><option>Attestation</option><option>Autre</option></select></div><div class='fg'><label>Usage prevu <span class='req'>*</span></label><input type='text' id='f-usage' placeholder='Ex: vente immobiliere...'></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI + document original a legaliser")+p; },
-    copie_conf:function(){ return "<div class='ibox ib-ok'>Document certifie delivre immediatement.</div>"+n+nameF()+"<div class='fr2'><div class='fg'><label>Type de document <span class='req'>*</span></label><select id='f-dtype'><option value=''>--</option><option>Diplome</option><option>Acte etat civil</option><option>Contrat</option><option>Releve de notes</option><option>Autre</option></select></div><div class='fg'><label>Nombre de copies <span class='req'>*</span></label><input type='number' min='1' max='20' value='1' id='f-nb'></div></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("Scan du document original")+p; },
-    passeport:function(){ return "<div class='ibox ib-rdv'>RDV obligatoire pour biometrie. Delai 15-21 jours.</div>"+base+"<div class='fr2'><div class='fg'><label>Sexe <span class='req'>*</span></label><select id='f-sexe'><option value=''>--</option><option>Masculin</option><option>Feminin</option></select></div><div class='fg'><label>Type de demande <span class='req'>*</span></label><select id='f-type'><option value=''>--</option><option>Premiere demande</option><option>Renouvellement</option><option>Remplacement</option></select></div></div><div class='fg'><label>N ancien passeport (si renouvellement)</label><input type='text' id='f-oldpass'></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI + Acte naissance + CIP + Casier judiciaire + 2 photos")+p; },
-    passeport_vip:function(){ return "<div class='ibox ib-rdv'>RDV obligatoire. Delai 48h apres RDV.</div>"+base+"<div class='fr2'><div class='fg'><label>Sexe <span class='req'>*</span></label><select id='f-sexe'><option value=''>--</option><option>Masculin</option><option>Feminin</option></select></div><div class='fg'><label>Date de voyage souhaitee <span class='req'>*</span></label><input type='date' id='f-voyage'></div></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI + Acte naissance + CIP + Casier judiciaire + 2 photos")+p; },
-    laissez:function(){ return "<div class='ibox ib-warn'>Urgence uniquement — justifiez la raison.</div>"+base+"<div class='fr2'><div class='fg'><label>Raison <span class='req'>*</span></label><select id='f-raison'><option value=''>--</option><option>Perte de passeport</option><option>Vol de passeport</option><option>Expiration urgente</option><option>Autre</option></select></div><div class='fg'><label>Date de voyage <span class='req'>*</span></label><input type='date' id='f-voyage'></div></div><div class='fg'><label>Destination <span class='req'>*</span></label><input type='text' id='f-dest'></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI + Declaration perte/vol + billet avion")+p; },
-    permis:function(){ return "<div class='ibox ib-rdv'>RDV obligatoire pour retrait. Delai 10-15 jours.</div>"+base+"<div class='fr2'><div class='fg'><label>Categorie <span class='req'>*</span></label><select id='f-cat'><option value=''>--</option><option>A (moto)</option><option>B (voiture)</option><option>C (camion)</option><option>D (bus)</option></select></div><div class='fg'><label>Type de demande <span class='req'>*</span></label><select id='f-type'><option value=''>--</option><option>Premiere demande</option><option>Renouvellement</option><option>Remplacement</option></select></div></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI + Certificat medical + Attestation auto-ecole + 2 photos")+p; },
-    immat:function(){ return "<div class='ibox ib-rdv'>RDV obligatoire — inspection physique du vehicule.</div>"+n+nameF()+"<div class='fr2'><div class='fg'><label>Marque <span class='req'>*</span></label><input type='text' id='f-marque'></div><div class='fg'><label>Modele <span class='req'>*</span></label><input type='text' id='f-modele'></div></div><div class='fr2'><div class='fg'><label>Annee <span class='req'>*</span></label><input type='number' id='f-annee' placeholder='2020'></div><div class='fg'><label>N chassis <span class='req'>*</span></label><input type='text' id='f-chassis'></div></div><div class='fg'><label>Type de demande <span class='req'>*</span></label><select id='f-type'><option value=''>--</option><option>Nouvelle immatriculation</option><option>Re-immatriculation</option><option>Mutation</option></select></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI + Titre propriete + Ancienne carte grise + Quitus fiscal")+p; },
-    visite_leger:function(){ return "<div class='ibox ib-rdv'>RDV obligatoire — vehicule present en agence.</div>"+n+nameF()+"<div class='fr2'><div class='fg'><label>Immatriculation <span class='req'>*</span></label><input type='text' id='f-immat' placeholder='BJ 1234 AB'></div><div class='fg'><label>Marque / Modele <span class='req'>*</span></label><input type='text' id='f-veh'></div></div><div class='fg'><label>Date souhaitee</label><input type='date' id='f-date'></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("Carte grise + Assurance en cours de validite")+p; },
-    visite_taxi:function(){ return "<div class='ibox ib-rdv'>RDV obligatoire — vehicule taxi present.</div>"+n+nameF()+"<div class='fr2'><div class='fg'><label>Immatriculation <span class='req'>*</span></label><input type='text' id='f-immat' placeholder='BJ 1234 AB'></div><div class='fg'><label>Marque / Modele <span class='req'>*</span></label><input type='text' id='f-veh'></div></div><div class='fg'><label>Date souhaitee</label><input type='date' id='f-date'></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("Carte grise + Assurance + Autorisation taxi")+p; },
-    visite_lourd:function(){ return "<div class='ibox ib-rdv'>RDV obligatoire — poids lourd present.</div>"+n+nameF()+"<div class='fr2'><div class='fg'><label>Immatriculation <span class='req'>*</span></label><input type='text' id='f-immat'></div><div class='fg'><label>Type de vehicule <span class='req'>*</span></label><select id='f-tveh'><option value=''>--</option><option>Camion</option><option>Semi-remorque</option><option>Bus/Car</option><option>Autre</option></select></div></div><div class='fg'><label>Date souhaitee</label><input type='date' id='f-date'></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("Carte grise + Assurance")+p; },
-    cadastre:function(){ return "<div class='ibox ib-warn'>Au choix : en ligne ou deplacement.</div>"+n+nameF()+"<div class='fg'><label>Reference cadastrale (si connue)</label><input type='text' id='f-ref'></div><div class='fg'><label>Localisation precise <span class='req'>*</span></label><input type='text' id='f-loc' placeholder='Quartier, commune...'></div><div class='fr2'><div class='fg'><label>Superficie approx.</label><input type='text' id='f-sup' placeholder='Ex: 400 m2'></div><div class='fg'><label>Motif <span class='req'>*</span></label><select id='f-motif'><option value=''>--</option><option>Transaction immobiliere</option><option>Pret bancaire</option><option>Succession</option><option>Autre</option></select></div></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI + titre de propriete si disponible")+p; },
-    titre_fonc:function(){ return "<div class='ibox ib-rdv'>RDV obligatoire — procedure 30-60 jours.</div>"+n+nameF()+"<div class='fg'><label>Type de demande <span class='req'>*</span></label><select id='f-type'><option value=''>--</option><option>Nouveau titre foncier</option><option>Mise a jour titre existant</option><option>Mutation</option></select></div><div class='fg'><label>Localisation <span class='req'>*</span></label><input type='text' id='f-loc'></div><div class='fg'><label>Superficie (m2) <span class='req'>*</span></label><input type='text' id='f-sup'></div><div class='fg'><label>Informations complementaires</label><textarea id='f-info' placeholder='Origine du bien...'></textarea></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI + Acte vente + Plan bornage + Quitus fiscal")+p; },
-    ifu:function(){ return "<div class='ibox ib-ok'>IFU delivre immediatement.</div>"+n+nameF()+"<div class='fr2'><div class='fg'><label>Date de naissance <span class='req'>*</span></label><input type='date' id='f-ddn'></div><div class='fg'><label>Type activite <span class='req'>*</span></label><select id='f-act'><option value=''>--</option><option>Commerce</option><option>Prestation de services</option><option>Agriculture/Elevage</option><option>BTP</option><option>Professionnel liberal</option><option>Autre</option></select></div></div><div class='fg'><label>Adresse de l activite <span class='req'>*</span></label><input type='text' id='f-adract'></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI + Acte naissance + Justificatif de domicile")+p; },
-    photo_num:function(){ return "<div class='ibox ib-ok'>Envoyez votre selfie — F2K retouche tout. Livraison sous 24h.</div>"+n+nameF()+"<div class='fg'><label>Usage de la photo <span class='req'>*</span></label><select id='f-usage'><option value=''>--</option><option>CNI biometrique</option><option>Passeport biometrique</option><option>Visa ambassade</option><option>Concours / emploi</option><option>Carte professionnelle</option><option>Autre</option></select></div><div class='fg'><label>Votre photo de face <span class='req'>*</span></label><div class='pzone' id='pzone'><img id='pprev' class='pprev' alt=''><div class='pbtns'><label class='pbtn' style='cursor:pointer;'>📁 Galerie<input type='file' accept='image/*' style='display:none' onchange='loadPhoto(this)'></label><button type='button' class='pbtn' onclick='startCam()'>📷 Camera</button><button type='button' id='snap-btn' class='pbtn' onclick='snapCam()' style='display:none;'>Capturer</button><button type='button' id='stop-btn' class='pbtn' onclick='stopCam()' style='display:none;'>Stop</button></div><video id='cam-video' autoplay playsinline></video><canvas id='cam-canvas'></canvas><p class='phint'>Photo simple de face — F2K s occupe de la retouche pro !</p></div></div><div class='fst'>Coordonnees de livraison</div><div class='fg'><label>Email <span class='req'>*</span></label><input type='email' id='f-email'></div><div class='fg'><label>Telephone WhatsApp <span class='req'>*</span></label><input type='tel' id='f-tel'></div><div class='fg'><label>Mode de reception <span class='req'>*</span></label>"+selR("f-reception")+"</div>"+p; },
-    photo_print:function(){ return "<div class='ibox ib-rdv'>RDV obligatoire pour retrait des 8 exemplaires.</div>"+n+nameF()+"<div class='fg'><label>Usage des photos <span class='req'>*</span></label><select id='f-usage'><option value=''>--</option><option>CNI biometrique</option><option>Passeport biometrique</option><option>Concours / emploi</option><option>Autre</option></select></div><div class='fg'><label>Votre photo <span class='req'>*</span></label><div class='pzone' id='pzone'><img id='pprev' class='pprev' alt=''><div class='pbtns'><label class='pbtn' style='cursor:pointer;'>📁 Galerie<input type='file' accept='image/*' style='display:none' onchange='loadPhoto(this)'></label><button type='button' class='pbtn' onclick='startCam()'>📷 Camera</button><button type='button' id='snap-btn' class='pbtn' onclick='snapCam()' style='display:none;'>Capturer</button><button type='button' id='stop-btn' class='pbtn' onclick='stopCam()' style='display:none;'>Stop</button></div><video id='cam-video' autoplay playsinline></video><canvas id='cam-canvas'></canvas><p class='phint'>F2K s occupe de la retouche pro.</p></div></div><div class='fst'>Vos coordonnees</div>"+contactF()+p; },
-    photo_bijoux:function(){ return "<div class='ibox ib-rdv'>Deposez vos articles a notre bureau. RDV pour retrait.</div>"+n+nameF()+"<div class='fr2'><div class='fg'><label>Type articles <span class='req'>*</span></label><select id='f-tart'><option value=''>--</option><option>Bijoux</option><option>Montres</option><option>Maroquinerie</option><option>Vetements</option><option>Cosmetiques</option><option>Autre</option></select></div><div class='fg'><label>Nombre articles <span class='req'>*</span></label><input type='number' min='1' id='f-nb' placeholder='Ex: 5'></div></div><div class='fst'>Coordonnees</div><div class='fg'><label>Email <span class='req'>*</span></label><input type='email' id='f-email'></div><div class='fg'><label>Telephone <span class='req'>*</span></label><input type='tel' id='f-tel'></div><div class='fg'><label>Mode livraison photos <span class='req'>*</span></label>"+selR("f-reception")+"</div>"+fileF("Photos de reference du style souhaite (optionnel)")+p; },
-    cv:function(){ return "<div class='ibox ib-ok'>Envoyez vos infos — nos experts redigent votre CV pour 500 FCFA.</div>"+n+nameF()+"<div class='fr2'><div class='fg'><label>Poste(s) recherche(s) <span class='req'>*</span></label><input type='text' id='f-poste' placeholder='Ex: Comptable...'></div><div class='fg'><label>Niveau etudes <span class='req'>*</span></label><select id='f-niv'><option value=''>--</option><option>BEPC/CEP</option><option>BAC</option><option>BTS/DUT</option><option>Licence</option><option>Master/MBA</option><option>Doctorat</option></select></div></div><div class='fg'><label>Formations et diplomes <span class='req'>*</span></label><textarea id='f-form' placeholder='Diplomes, etablissements, annees...'></textarea></div><div class='fg'><label>Experiences professionnelles <span class='req'>*</span></label><textarea id='f-exp' placeholder='Postes, entreprises, durees...'></textarea></div><div class='fg'><label>Competences et langues</label><textarea id='f-comp' placeholder='Competences, logiciels, langues...'></textarea></div><div class='fg'><label>Style de CV <span class='req'>*</span></label><select id='f-style'><option value=''>--</option><option>Classique et sobre</option><option>Moderne et colore</option><option>Creatif</option><option>International/ATS</option></select></div><div class='fst'>Coordonnees de livraison</div><div class='fg'><label>Email <span class='req'>*</span></label><input type='email' id='f-email'></div><div class='fg'><label>Telephone <span class='req'>*</span></label><input type='tel' id='f-tel'></div><div class='fg'><label>Mode de livraison <span class='req'>*</span></label>"+selR("f-reception")+"</div>"+fileF("Ancien CV si disponible")+p; }
+function onPayClick(){setTimeout(function(){var b=document.getElementById("pay-confirm-box");if(b) b.style.display="block";},4000);}
+function togglePaid(cb){var b=document.getElementById("pay-confirm-box");if(b) b.style.display=cb.checked?"block":"none";}
+    function buildForm(key){
+  var n=npiF();
+  var p=payBox(key);
+  var base=n+nameF()+"<div class='fr2'><div class='fg'><label>Date de naissance <span class='req'>*</span></label><input type='date' id='f-ddn'></div><div class='fg'><label>Lieu de naissance <span class='req'>*</span></label><input type='text' id='f-lieu' placeholder='Commune/ville'></div></div>";
+  var F={
+    naissance:function(){return "<div class='ibox ib-ok'>Document delivre immediatement apres validation ANIP.</div>"+base+"<div class='fg'><label>Nom du pere</label><input type='text' id='f-pere'></div><div class='fg'><label>Nom de la mere</label><input type='text' id='f-mere'></div><div class='fg'><label>Votre lien avec la personne</label><select id='f-lien'><option value=''>--</option><option>Moi-meme</option><option>Mon enfant</option><option>Mon parent</option><option>Autre</option></select></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI ou Passeport du demandeur")+p;},
+    mariage:function(){return "<div class='ibox ib-ok'>Document delivre immediatement.</div>"+base+"<div class='fg'><label>Nom du conjoint(e) <span class='req'>*</span></label><input type='text' id='f-conjoint'></div><div class='fr2'><div class='fg'><label>Date du mariage <span class='req'>*</span></label><input type='date' id='f-dm'></div><div class='fg'><label>Mairie du mariage <span class='req'>*</span></label><input type='text' id='f-mairie'></div></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI des deux epoux")+p;},
+    deces:function(){return "<div class='ibox ib-ok'>Document delivre immediatement.</div>"+n+"<div class='fst'>Informations sur le defunt</div><div class='fr2'><div class='fg'><label>Nom <span class='req'>*</span></label><input type='text' id='f-dnom'></div><div class='fg'><label>Prenom(s) <span class='req'>*</span></label><input type='text' id='f-dprenom'></div></div><div class='fr2'><div class='fg'><label>Date du deces <span class='req'>*</span></label><input type='date' id='f-ddeces'></div><div class='fg'><label>Lieu du deces <span class='req'>*</span></label><input type='text' id='f-ldeces'></div></div><div class='fg'><label>Votre lien avec le defunt <span class='req'>*</span></label><select id='f-lien'><option value=''>--</option><option>Conjoint(e)</option><option>Enfant</option><option>Parent</option><option>Autre</option></select></div><div class='fst'>Vos coordonnees</div>"+nameF()+contactF()+fileF("CNI du declarant + document prouvant le deces")+p;},
+    celibat:function(){return "<div class='ibox ib-ok'>Document delivre immediatement.</div>"+base+"<div class='fg'><label>Motif</label><select id='f-motif'><option value=''>--</option><option>Mariage</option><option>Visa</option><option>Emploi</option><option>Autre</option></select></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI ou Passeport valide")+p;},
+    jugement:function(){return "<div class='ibox ib-warn'>Necessite des temoins — notre equipe vous contactera.</div>"+base+"<div class='fg'><label>Nom du pere</label><input type='text' id='f-pere'></div><div class='fg'><label>Nom de la mere</label><input type='text' id='f-mere'></div><div class='fg'><label>Raison de non-declaration <span class='req'>*</span></label><textarea id='f-raison' placeholder='Expliquez brievement...'></textarea></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("Tout document prouvant l identite")+p;},
+    cni:function(){return "<div class='ibox ib-rdv'>RDV obligatoire pour biometrie. Delai : 21 jours.</div>"+base+"<div class='fr2'><div class='fg'><label>Sexe <span class='req'>*</span></label><select id='f-sexe'><option value=''>--</option><option>Masculin</option><option>Feminin</option></select></div><div class='fg'><label>Profession</label><input type='text' id='f-prof'></div></div><div class='fg'><label>Type de demande <span class='req'>*</span></label><select id='f-type'><option value=''>--</option><option>Premiere demande</option><option>Renouvellement</option><option>Remplacement (perte/vol)</option></select></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("Acte de naissance + CIP + ancienne CNIB si renouvellement")+p;},
+    cip:function(){return "<div class='ibox ib-ok'>Document delivre immediatement. Validite 2 ans.</div>"+base+"<div class='fr2'><div class='fg'><label>Sexe <span class='req'>*</span></label><select id='f-sexe'><option value=''>--</option><option>Masculin</option><option>Feminin</option></select></div><div class='fg'><label>Profession</label><input type='text' id='f-prof'></div></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("Recepisse RAVIP")+p;},
+    npi:function(){return "<div class='ibox ib-ok'>Certificat delivre immediatement.</div>"+n+nameF()+"<div class='fst'>Vos coordonnees</div>"+contactF()+fileF("Recepisse RAVIP")+p;},
+    residence:function(){return "<div class='ibox ib-ok'>Document delivre immediatement.</div>"+n+nameF()+"<div class='fr2'><div class='fg'><label>Date de naissance <span class='req'>*</span></label><input type='date' id='f-ddn'></div><div class='fg'><label>Profession</label><input type='text' id='f-prof'></div></div><div class='fg'><label>Adresse complete <span class='req'>*</span></label><input type='text' id='f-adr' placeholder='Quartier, rue, numero...'></div><div class='fr2'><div class='fg'><label>Commune <span class='req'>*</span></label>"+selC("f-cres")+"</div><div class='fg'><label>Statut <span class='req'>*</span></label><select id='f-statut'><option value=''>--</option><option>Proprietaire</option><option>Locataire</option><option>Heberge</option></select></div></div><div class='fst'>Coordonnees</div><div class='fg'><label>Email <span class='req'>*</span></label><input type='email' id='f-email'></div><div class='fg'><label>Telephone <span class='req'>*</span></label><input type='tel' id='f-tel'></div><div class='fg'><label>Mode de reception <span class='req'>*</span></label>"+selR("f-reception")+"</div>"+fileF("CNI + facture eau/electricite")+p;},
+    anip_tel:function(){return "<div class='ibox ib-pu'>Modification de votre numero dans la base ANIP.</div>"+n+nameF()+"<div class='fg'><label>Date de naissance <span class='req'>*</span></label><input type='date' id='f-ddn'></div><div class='fr2'><div class='fg'><label>Ancien numero <span class='req'>*</span></label><input type='tel' id='f-otel' placeholder='+229...'></div><div class='fg'><label>Nouveau numero <span class='req'>*</span></label><input type='tel' id='f-ntel' placeholder='+229...'></div></div><div class='fst'>Coordonnees</div><div class='fg'><label>Email <span class='req'>*</span></label><input type='email' id='f-email'></div><div class='fg'><label>Telephone contact <span class='req'>*</span></label><input type='tel' id='f-tel'></div><div class='fg'><label>Mode reception <span class='req'>*</span></label>"+selR("f-reception")+"</div>"+fileF("CNI + preuve du nouveau numero")+p;},
+    anip_info:function(){return "<div class='ibox ib-pu'>Correction de vos donnees dans la base ANIP.</div>"+n+nameF()+"<div class='fg'><label>Date de naissance <span class='req'>*</span></label><input type='date' id='f-ddn'></div><div class='fg'><label>Information a modifier <span class='req'>*</span></label><select id='f-champ'><option value=''>--</option><option>Nom / Prenom</option><option>Date de naissance</option><option>Adresse</option><option>Etat civil</option><option>Numero de telephone</option></select></div><div class='fg'><label>Description des modifications <span class='req'>*</span></label><textarea id='f-desc' placeholder='Expliquez ce qui doit etre corrige...'></textarea></div><div class='fst'>Coordonnees</div><div class='fg'><label>Email <span class='req'>*</span></label><input type='email' id='f-email'></div><div class='fg'><label>Telephone <span class='req'>*</span></label><input type='tel' id='f-tel'></div><div class='fg'><label>Mode reception <span class='req'>*</span></label>"+selR("f-reception")+"</div>"+fileF("CNI + documents justifiant la modification")+p;},
+    casier:function(){return "<div class='ibox ib-ok'>Bulletin N3 delivre immediatement.</div>"+base+"<div class='fg'><label>Motif <span class='req'>*</span></label><select id='f-motif'><option value=''>--</option><option>Emploi public</option><option>Emploi prive</option><option>Concours</option><option>Visa</option><option>Autre</option></select></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI ou Passeport + Acte de naissance")+p;},
+    legalisation:function(){return "<div class='ibox ib-rdv'>RDV obligatoire — presence physique requise.</div>"+n+nameF()+"<div class='fg'><label>Type de document <span class='req'>*</span></label><select id='f-dtype'><option value=''>--</option><option>Contrat</option><option>Procuration</option><option>Declaration</option><option>Attestation</option><option>Autre</option></select></div><div class='fg'><label>Usage prevu <span class='req'>*</span></label><input type='text' id='f-usage' placeholder='Ex: vente immobiliere...'></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI + document original a legaliser")+p;},
+    copie_conf:function(){return "<div class='ibox ib-ok'>Document certifie delivre immediatement.</div>"+n+nameF()+"<div class='fr2'><div class='fg'><label>Type de document <span class='req'>*</span></label><select id='f-dtype'><option value=''>--</option><option>Diplome</option><option>Acte etat civil</option><option>Contrat</option><option>Releve de notes</option><option>Autre</option></select></div><div class='fg'><label>Nombre de copies <span class='req'>*</span></label><input type='number' min='1' max='20' value='1' id='f-nb'></div></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("Scan du document original")+p;},
+    passeport:function(){return "<div class='ibox ib-rdv'>RDV obligatoire pour biometrie. Delai 15-21 jours.</div>"+base+"<div class='fr2'><div class='fg'><label>Sexe <span class='req'>*</span></label><select id='f-sexe'><option value=''>--</option><option>Masculin</option><option>Feminin</option></select></div><div class='fg'><label>Type de demande <span class='req'>*</span></label><select id='f-type'><option value=''>--</option><option>Premiere demande</option><option>Renouvellement</option><option>Remplacement</option></select></div></div><div class='fg'><label>N ancien passeport (si renouvellement)</label><input type='text' id='f-oldpass'></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI + Acte naissance + CIP + Casier judiciaire + 2 photos")+p;},
+    passeport_vip:function(){return "<div class='ibox ib-rdv'>RDV obligatoire. Delai 48h apres RDV.</div>"+base+"<div class='fr2'><div class='fg'><label>Sexe <span class='req'>*</span></label><select id='f-sexe'><option value=''>--</option><option>Masculin</option><option>Feminin</option></select></div><div class='fg'><label>Date de voyage souhaitee <span class='req'>*</span></label><input type='date' id='f-voyage'></div></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI + Acte naissance + CIP + Casier judiciaire + 2 photos")+p;},
+    laissez:function(){return "<div class='ibox ib-warn'>Urgence uniquement — justifiez la raison.</div>"+base+"<div class='fr2'><div class='fg'><label>Raison <span class='req'>*</span></label><select id='f-raison'><option value=''>--</option><option>Perte de passeport</option><option>Vol de passeport</option><option>Expiration urgente</option><option>Autre</option></select></div><div class='fg'><label>Date de voyage <span class='req'>*</span></label><input type='date' id='f-voyage'></div></div><div class='fg'><label>Destination <span class='req'>*</span></label><input type='text' id='f-dest'></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI + Declaration perte/vol + billet avion")+p;},
+    permis:function(){return "<div class='ibox ib-rdv'>RDV obligatoire pour retrait. Delai 10-15 jours.</div>"+base+"<div class='fr2'><div class='fg'><label>Categorie <span class='req'>*</span></label><select id='f-cat'><option value=''>--</option><option>A (moto)</option><option>B (voiture)</option><option>C (camion)</option><option>D (bus)</option></select></div><div class='fg'><label>Type de demande <span class='req'>*</span></label><select id='f-type'><option value=''>--</option><option>Premiere demande</option><option>Renouvellement</option><option>Remplacement</option></select></div></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI + Certificat medical + Attestation auto-ecole + 2 photos")+p;},
+    immat:function(){return "<div class='ibox ib-rdv'>RDV obligatoire — inspection physique du vehicule.</div>"+n+nameF()+"<div class='fr2'><div class='fg'><label>Marque <span class='req'>*</span></label><input type='text' id='f-marque'></div><div class='fg'><label>Modele <span class='req'>*</span></label><input type='text' id='f-modele'></div></div><div class='fr2'><div class='fg'><label>Annee <span class='req'>*</span></label><input type='number' id='f-annee' placeholder='2020'></div><div class='fg'><label>N chassis <span class='req'>*</span></label><input type='text' id='f-chassis'></div></div><div class='fg'><label>Type de demande <span class='req'>*</span></label><select id='f-type'><option value=''>--</option><option>Nouvelle immatriculation</option><option>Re-immatriculation</option><option>Mutation</option></select></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI + Titre propriete + Ancienne carte grise + Quitus fiscal")+p;},
+    visite_leger:function(){return "<div class='ibox ib-rdv'>RDV obligatoire — vehicule present en agence.</div>"+n+nameF()+"<div class='fr2'><div class='fg'><label>Immatriculation <span class='req'>*</span></label><input type='text' id='f-immat' placeholder='BJ 1234 AB'></div><div class='fg'><label>Marque / Modele <span class='req'>*</span></label><input type='text' id='f-veh'></div></div><div class='fg'><label>Date souhaitee</label><input type='date' id='f-date'></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("Carte grise + Assurance en cours de validite")+p;},
+    visite_taxi:function(){return "<div class='ibox ib-rdv'>RDV obligatoire — vehicule taxi present.</div>"+n+nameF()+"<div class='fr2'><div class='fg'><label>Immatriculation <span class='req'>*</span></label><input type='text' id='f-immat' placeholder='BJ 1234 AB'></div><div class='fg'><label>Marque / Modele <span class='req'>*</span></label><input type='text' id='f-veh'></div></div><div class='fg'><label>Date souhaitee</label><input type='date' id='f-date'></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("Carte grise + Assurance + Autorisation taxi")+p;},
+    visite_lourd:function(){return "<div class='ibox ib-rdv'>RDV obligatoire — poids lourd present.</div>"+n+nameF()+"<div class='fr2'><div class='fg'><label>Immatriculation <span class='req'>*</span></label><input type='text' id='f-immat'></div><div class='fg'><label>Type de vehicule <span class='req'>*</span></label><select id='f-tveh'><option value=''>--</option><option>Camion</option><option>Semi-remorque</option><option>Bus/Car</option><option>Autre</option></select></div></div><div class='fg'><label>Date souhaitee</label><input type='date' id='f-date'></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("Carte grise + Assurance")+p;},
+    cadastre:function(){return "<div class='ibox ib-warn'>Au choix : en ligne ou deplacement.</div>"+n+nameF()+"<div class='fg'><label>Reference cadastrale (si connue)</label><input type='text' id='f-ref'></div><div class='fg'><label>Localisation precise <span class='req'>*</span></label><input type='text' id='f-loc' placeholder='Quartier, commune...'></div><div class='fr2'><div class='fg'><label>Superficie approx.</label><input type='text' id='f-sup' placeholder='Ex: 400 m2'></div><div class='fg'><label>Motif <span class='req'>*</span></label><select id='f-motif'><option value=''>--</option><option>Transaction immobiliere</option><option>Pret bancaire</option><option>Succession</option><option>Autre</option></select></div></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI + titre de propriete si disponible")+p;},
+    titre_fonc:function(){return "<div class='ibox ib-rdv'>RDV obligatoire — procedure 30-60 jours.</div>"+n+nameF()+"<div class='fg'><label>Type de demande <span class='req'>*</span></label><select id='f-type'><option value=''>--</option><option>Nouveau titre foncier</option><option>Mise a jour titre existant</option><option>Mutation</option></select></div><div class='fg'><label>Localisation <span class='req'>*</span></label><input type='text' id='f-loc'></div><div class='fg'><label>Superficie (m2) <span class='req'>*</span></label><input type='text' id='f-sup'></div><div class='fg'><label>Informations complementaires</label><textarea id='f-info' placeholder='Origine du bien...'></textarea></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI + Acte vente + Plan bornage + Quitus fiscal")+p;},
+    ifu:function(){return "<div class='ibox ib-ok'>IFU delivre immediatement.</div>"+n+nameF()+"<div class='fr2'><div class='fg'><label>Date de naissance <span class='req'>*</span></label><input type='date' id='f-ddn'></div><div class='fg'><label>Type activite <span class='req'>*</span></label><select id='f-act'><option value=''>--</option><option>Commerce</option><option>Prestation de services</option><option>Agriculture/Elevage</option><option>BTP</option><option>Professionnel liberal</option><option>Autre</option></select></div></div><div class='fg'><label>Adresse de l activite <span class='req'>*</span></label><input type='text' id='f-adract'></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI + Acte naissance + Justificatif de domicile")+p;},
+    photo_num:function(){return "<div class='ibox ib-ok'>Envoyez votre selfie — F2K retouche tout. Livraison sous 24h.</div>"+n+nameF()+"<div class='fg'><label>Usage de la photo <span class='req'>*</span></label><select id='f-usage'><option value=''>--</option><option>CNI biometrique</option><option>Passeport biometrique</option><option>Visa ambassade</option><option>Concours / emploi</option><option>Carte professionnelle</option><option>Autre</option></select></div><div class='fg'><label>Votre photo de face <span class='req'>*</span></label><div class='pzone' id='pzone'><img id='pprev' class='pprev' alt=''><div class='pbtns'><label class='pbtn' style='cursor:pointer;'>📁 Galerie<input type='file' accept='image/*' style='display:none' onchange='loadPhoto(this)'></label><button type='button' class='pbtn' onclick='startCam()'>📷 Camera</button><button type='button' id='snap-btn' class='pbtn' onclick='snapCam()' style='display:none;'>Capturer</button><button type='button' id='stop-btn' class='pbtn' onclick='stopCam()' style='display:none;'>Stop</button></div><video id='cam-video' autoplay playsinline></video><canvas id='cam-canvas'></canvas><p class='phint'>Photo simple de face — F2K s occupe de la retouche pro !</p></div></div><div class='fst'>Coordonnees de livraison</div><div class='fg'><label>Email <span class='req'>*</span></label><input type='email' id='f-email'></div><div class='fg'><label>Telephone WhatsApp <span class='req'>*</span></label><input type='tel' id='f-tel'></div><div class='fg'><label>Mode de reception <span class='req'>*</span></label>"+selR("f-reception")+"</div>"+p;},
+    photo_print:function(){return "<div class='ibox ib-rdv'>RDV obligatoire pour retrait des 8 exemplaires.</div>"+n+nameF()+"<div class='fg'><label>Usage des photos <span class='req'>*</span></label><select id='f-usage'><option value=''>--</option><option>CNI biometrique</option><option>Passeport biometrique</option><option>Concours / emploi</option><option>Autre</option></select></div><div class='fg'><label>Votre photo <span class='req'>*</span></label><div class='pzone' id='pzone'><img id='pprev' class='pprev' alt=''><div class='pbtns'><label class='pbtn' style='cursor:pointer;'>📁 Galerie<input type='file' accept='image/*' style='display:none' onchange='loadPhoto(this)'></label><button type='button' class='pbtn' onclick='startCam()'>📷 Camera</button><button type='button' id='snap-btn' class='pbtn' onclick='snapCam()' style='display:none;'>Capturer</button><button type='button' id='stop-btn' class='pbtn' onclick='stopCam()' style='display:none;'>Stop</button></div><video id='cam-video' autoplay playsinline></video><canvas id='cam-canvas'></canvas><p class='phint'>F2K s occupe de la retouche pro.</p></div></div><div class='fst'>Vos coordonnees</div>"+contactF()+p;},
+    photo_bijoux:function(){return "<div class='ibox ib-rdv'>Deposez vos articles a notre bureau. RDV pour retrait.</div>"+n+nameF()+"<div class='fr2'><div class='fg'><label>Type articles <span class='req'>*</span></label><select id='f-tart'><option value=''>--</option><option>Bijoux</option><option>Montres</option><option>Maroquinerie</option><option>Vetements</option><option>Cosmetiques</option><option>Autre</option></select></div><div class='fg'><label>Nombre articles <span class='req'>*</span></label><input type='number' min='1' id='f-nb' placeholder='Ex: 5'></div></div><div class='fst'>Coordonnees</div><div class='fg'><label>Email <span class='req'>*</span></label><input type='email' id='f-email'></div><div class='fg'><label>Telephone <span class='req'>*</span></label><input type='tel' id='f-tel'></div><div class='fg'><label>Mode livraison photos <span class='req'>*</span></label>"+selR("f-reception")+"</div>"+fileF("Photos de reference du style souhaite (optionnel)")+p;},
+    cv:function(){return "<div class='ibox ib-ok'>Envoyez vos infos — nos experts redigent votre CV pour 500 FCFA.</div>"+n+nameF()+"<div class='fr2'><div class='fg'><label>Poste(s) recherche(s) <span class='req'>*</span></label><input type='text' id='f-poste' placeholder='Ex: Comptable...'></div><div class='fg'><label>Niveau etudes <span class='req'>*</span></label><select id='f-niv'><option value=''>--</option><option>BEPC/CEP</option><option>BAC</option><option>BTS/DUT</option><option>Licence</option><option>Master/MBA</option><option>Doctorat</option></select></div></div><div class='fg'><label>Formations et diplomes <span class='req'>*</span></label><textarea id='f-form' placeholder='Diplomes, etablissements, annees...'></textarea></div><div class='fg'><label>Experiences professionnelles <span class='req'>*</span></label><textarea id='f-exp' placeholder='Postes, entreprises, durees...'></textarea></div><div class='fg'><label>Competences et langues</label><textarea id='f-comp' placeholder='Competences, logiciels, langues...'></textarea></div><div class='fg'><label>Style de CV <span class='req'>*</span></label><select id='f-style'><option value=''>--</option><option>Classique et sobre</option><option>Moderne et colore</option><option>Creatif</option><option>International/ATS</option></select></div><div class='fst'>Coordonnees de livraison</div><div class='fg'><label>Email <span class='req'>*</span></label><input type='email' id='f-email'></div><div class='fg'><label>Telephone <span class='req'>*</span></label><input type='tel' id='f-tel'></div><div class='fg'><label>Mode de livraison <span class='req'>*</span></label>"+selR("f-reception")+"</div>"+fileF("Ancien CV si disponible")+p;}
   };
-  return F[key] ? F[key]() : "<p style='padding:20px;color:var(--mu);'>Formulaire en cours de preparation.</p>";
+  return F[key]?F[key]():"<p style='padding:20px;color:var(--mu);'>Formulaire en cours de preparation.</p>";
 }
-
 function openForm(key,e){
   if(e) e.preventDefault();
-  curKey=key; uploadedFiles=[]; capturedPhoto=null;
+  curKey=key;uploadedFiles=[];capturedPhoto=null;
   addToCart(key);
   var baseAmt=PRICES[key]||0;
   var discount=cart.length>=3?Math.round(baseAmt*0.10):0;
@@ -1302,79 +1018,18 @@ function openForm(key,e){
   document.getElementById("fm-title").textContent=(ICONS[key]||"")+" "+NAMES[key];
   document.getElementById("fm-price").innerHTML=finalAmt.toLocaleString("fr-FR")+" <span>FCFA</span>"+(discount>0?" <span style='font-size:12px;color:var(--g2);'>🎁 -10%</span>":"");
   document.getElementById("fm-body").innerHTML=buildForm(key)+"<button class='msubmit' id='submit-btn' onclick='submitRequest(\""+key+"\")'>📤 Envoyer ma demande</button><p class='mnote'>🔒 Donnees securisees • Email automatique • F2K MULTISERVICE</p>";
-  setTimeout(function(){
-    var fd=document.getElementById("fdrop");
-    if(fd){
-      fd.addEventListener("dragover",function(ev){ev.preventDefault();fd.classList.add("drag");});
-      fd.addEventListener("dragleave",function(){fd.classList.remove("drag");});
-      fd.addEventListener("drop",function(ev){ev.preventDefault();fd.classList.remove("drag");handleFiles(ev.dataTransfer.files);});
-    }
-  },100);
+  setTimeout(function(){var fd=document.getElementById("fdrop");if(fd){fd.addEventListener("dragover",function(ev){ev.preventDefault();fd.classList.add("drag");});fd.addEventListener("dragleave",function(){fd.classList.remove("drag");});fd.addEventListener("drop",function(ev){ev.preventDefault();fd.classList.remove("drag");handleFiles(ev.dataTransfer.files);});}},100);
   document.getElementById("form-ov").classList.add("on");
 }
-function closeForm(){ document.getElementById("form-ov").classList.remove("on"); stopCam(); }
-
-function handleFiles(files){
-  for(var i=0;i<files.length;i++){
-    if(files[i].size>5*1024*1024){ showToast("Fichier trop lourd",files[i].name,"var(--y)"); continue; }
-    uploadedFiles.push(files[i]);
-  }
-  renderFiles();
-}
-function renderFiles(){
-  var fl=document.getElementById("flist");
-  if(!fl) return;
-  var html="";
-  for(var i=0;i<uploadedFiles.length;i++){
-    html+="<div class='fitem'>📄 "+uploadedFiles[i].name.substring(0,14)+"<button onclick='removeFile("+i+")'>x</button></div>";
-  }
-  fl.innerHTML=html;
-}
-function removeFile(i){ uploadedFiles.splice(i,1); renderFiles(); }
-
-function startCam(){
-  navigator.mediaDevices.getUserMedia({video:{facingMode:"user"}}).then(function(s){
-    camStream=s;
-    var v=document.getElementById("cam-video");
-    v.srcObject=s; v.style.display="block";
-    var sb=document.getElementById("snap-btn");
-    var stb=document.getElementById("stop-btn");
-    if(sb) sb.style.display="";
-    if(stb) stb.style.display="";
-  }).catch(function(){ showToast("Camera indisponible","Chargez une photo depuis la galerie.","var(--y)"); });
-}
-function snapCam(){
-  var v=document.getElementById("cam-video");
-  var c=document.getElementById("cam-canvas");
-  c.width=v.videoWidth; c.height=v.videoHeight;
-  c.getContext("2d").drawImage(v,0,0);
-  capturedPhoto=c.toDataURL("image/jpeg",0.9);
-  var p=document.getElementById("pprev");
-  p.src=capturedPhoto; p.classList.add("show");
-  document.getElementById("pzone").classList.add("has-p");
-  stopCam();
-  showToast("📸","Photo capturee !","");
-}
-function stopCam(){
-  if(camStream){ var tracks=camStream.getTracks(); for(var i=0;i<tracks.length;i++) tracks[i].stop(); camStream=null; }
-  var v=document.getElementById("cam-video");
-  if(v){ v.style.display="none"; v.srcObject=null; }
-  var sb=document.getElementById("snap-btn"); if(sb) sb.style.display="none";
-  var stb=document.getElementById("stop-btn"); if(stb) stb.style.display="none";
-}
-function loadPhoto(input){
-  var f=input.files[0]; if(!f) return;
-  var r=new FileReader();
-  r.onload=function(e){
-    capturedPhoto=e.target.result;
-    var p=document.getElementById("pprev");
-    p.src=capturedPhoto; p.classList.add("show");
-    document.getElementById("pzone").classList.add("has-p");
-    showToast("📸","Photo chargee !","");
-  };
-  r.readAsDataURL(f);
-                                                                                                             }
-                                                                                                             function submitRequest(key){
+function closeForm(){document.getElementById("form-ov").classList.remove("on");stopCam();}
+function handleFiles(files){for(var i=0;i<files.length;i++){if(files[i].size>5*1024*1024){showToast("Fichier trop lourd",files[i].name,"var(--y)");continue;}uploadedFiles.push(files[i]);}renderFiles();}
+function renderFiles(){var fl=document.getElementById("flist");if(!fl) return;var html="";for(var i=0;i<uploadedFiles.length;i++){html+="<div class='fitem'>📄 "+uploadedFiles[i].name.substring(0,14)+"<button onclick='removeFile("+i+")'>x</button></div>";}fl.innerHTML=html;}
+function removeFile(i){uploadedFiles.splice(i,1);renderFiles();}
+function startCam(){navigator.mediaDevices.getUserMedia({video:{facingMode:"user"}}).then(function(s){camStream=s;var v=document.getElementById("cam-video");v.srcObject=s;v.style.display="block";var sb=document.getElementById("snap-btn");var stb=document.getElementById("stop-btn");if(sb) sb.style.display="";if(stb) stb.style.display="";}).catch(function(){showToast("Camera indisponible","Chargez une photo depuis la galerie.","var(--y)");});}
+function snapCam(){var v=document.getElementById("cam-video");var c=document.getElementById("cam-canvas");c.width=v.videoWidth;c.height=v.videoHeight;c.getContext("2d").drawImage(v,0,0);capturedPhoto=c.toDataURL("image/jpeg",0.9);var p=document.getElementById("pprev");p.src=capturedPhoto;p.classList.add("show");document.getElementById("pzone").classList.add("has-p");stopCam();showToast("📸","Photo capturee !","");}
+function stopCam(){if(camStream){var tracks=camStream.getTracks();for(var i=0;i<tracks.length;i++) tracks[i].stop();camStream=null;}var v=document.getElementById("cam-video");if(v){v.style.display="none";v.srcObject=null;}var sb=document.getElementById("snap-btn");if(sb) sb.style.display="none";var stb=document.getElementById("stop-btn");if(stb) stb.style.display="none";}
+function loadPhoto(input){var f=input.files[0];if(!f) return;var r=new FileReader();r.onload=function(e){capturedPhoto=e.target.result;var p=document.getElementById("pprev");p.src=capturedPhoto;p.classList.add("show");document.getElementById("pzone").classList.add("has-p");showToast("📸","Photo chargee !","");};r.readAsDataURL(f);}
+   function submitRequest(key){
   var emailEl=document.getElementById("f-email");
   var telEl=document.getElementById("f-tel");
   var nomEl=document.getElementById("f-nom");
@@ -1389,12 +1044,12 @@ function loadPhoto(input){
   var npi=npiEl?npiEl.value.trim():"";
   var ravip=ravipEl?ravipEl.value.trim():"";
   var paid=paidEl?paidEl.checked:false;
-  if(!email||!tel){ showToast("Champs requis","Email et telephone sont obligatoires.","var(--y)"); return; }
-  if(!npi&&!ravip){ showToast("NPI requis","Renseignez votre NPI ou numero de recepisse RAVIP.","var(--y)"); return; }
-  if(!paid){ showToast("Paiement requis","Cliquez sur un bouton operateur, payez, puis cochez la confirmation.","var(--y)"); return; }
-  if((key==="photo_num"||key==="photo_print")&&!capturedPhoto&&uploadedFiles.length===0){ showToast("Photo manquante","Prenez ou chargez votre photo.","var(--y)"); return; }
+  if(!email||!tel){showToast("Champs requis","Email et telephone sont obligatoires.","var(--y)");return;}
+  if(!npi&&!ravip){showToast("NPI requis","Renseignez votre NPI ou numero de recepisse RAVIP.","var(--y)");return;}
+  if(!paid){showToast("Paiement requis","Cliquez sur un bouton operateur, payez, puis cochez la confirmation.","var(--y)");return;}
+  if((key==="photo_num"||key==="photo_print")&&!capturedPhoto&&uploadedFiles.length===0){showToast("Photo manquante","Prenez ou chargez votre photo.","var(--y)");return;}
   var btn=document.getElementById("submit-btn");
-  btn.innerHTML="Envoi en cours...";
+  btn.innerHTML="<span class='spinner'></span> Envoi en cours...";
   btn.disabled=true;
   var ref="F2K-"+new Date().getFullYear()+"-"+String(Math.floor(10000+Math.random()*90000));
   var now=new Date();
@@ -1407,14 +1062,14 @@ function loadPhoto(input){
   for(var i=0;i<uploadedFiles.length;i++) uploadPromises.push(uploadToCloudinary(uploadedFiles[i]));
   if(capturedPhoto){
     uploadPromises.push(
-      fetch(capturedPhoto).then(function(r){ return r.blob(); })
-        .then(function(blob){ return uploadToCloudinary(new File([blob],"photo.jpg",{type:"image/jpeg"})); })
-        .catch(function(){ return null; })
+      fetch(capturedPhoto).then(function(r){return r.blob();})
+        .then(function(blob){return uploadToCloudinary(new File([blob],"photo.jpg",{type:"image/jpeg"}));})
+        .catch(function(){return null;})
     );
   }
   Promise.all(uploadPromises).then(function(urls){
     var fileUrls=[];
-    for(var i=0;i<urls.length;i++){ if(urls[i]) fileUrls.push(urls[i]); }
+    for(var i=0;i<urls.length;i++){if(urls[i]) fileUrls.push(urls[i]);}
     var orderData={
       ref:ref,key:key,serviceName:NAMES[key],icon:ICONS[key],
       price:finalAmt,priceOriginal:baseAmt,discountApplied:cart.length>=3,
@@ -1425,7 +1080,7 @@ function loadPhoto(input){
       fileUrls:fileUrls,hasDoc:false,docUrl:null,
       userId:currentUser?currentUser.uid:null
     };
-    db.collection("orders").doc(ref).set(orderData).catch(function(e){ console.error(e); });
+    db.collection("orders").doc(ref).set(orderData).catch(function(e){console.error(e);});
     var local=JSON.parse(localStorage.getItem("f2k_orders")||"[]");
     local.unshift(orderData);
     localStorage.setItem("f2k_orders",JSON.stringify(local));
@@ -1437,17 +1092,12 @@ function loadPhoto(input){
     });
   }).then(function(emailSent){
     closeForm();
-    cart=cart.filter(function(k){ return k!==key; });
+    cart=cart.filter(function(k){return k!==key;});
     updateCartBadge();
     document.getElementById("em-to").textContent=email;
     document.getElementById("em-greet").textContent="Bonjour "+(prenom||nom||"cher(e) client(e)")+",";
     document.getElementById("em-ref").textContent=ref;
-    document.getElementById("em-det").innerHTML=
-      "Votre demande pour <strong>"+NAMES[key]+"</strong> a ete recue le <strong>"+dateStr+" a "+timeStr+"</strong>.<br><br>"+
-      "Montant paye : <strong>"+finalAmt.toLocaleString("fr-FR")+" FCFA</strong>"+(discount>0?" <span style='color:var(--g);'>🎁 -10%</span>":"")+"<br>"+
-      "Delai estime : <strong>"+DELAIS[key]+"</strong><br>"+
-      "Notre equipe vous contactera au <strong>"+tel+"</strong>.<br><br>"+
-      (emailSent?"Email de confirmation envoye a <strong>"+email+"</strong>.":"Conservez votre numero de reference pour le suivi.");
+    document.getElementById("em-det").innerHTML="Votre demande pour <strong>"+NAMES[key]+"</strong> a ete recue le <strong>"+dateStr+" a "+timeStr+"</strong>.<br><br>Montant paye : <strong>"+finalAmt.toLocaleString("fr-FR")+" FCFA</strong>"+(discount>0?" <span style='color:var(--g);'>🎁 -10%</span>":"")+"<br>Delai estime : <strong>"+DELAIS[key]+"</strong><br>Notre equipe vous contactera au <strong>"+tel+"</strong>.<br><br>"+(emailSent?"Email de confirmation envoye a <strong>"+email+"</strong>.":"Conservez votre numero de reference pour le suivi.");
     document.getElementById("email-ov").classList.add("on");
     showToast("Demande enregistree !","Ref : "+ref,"var(--g)");
   }).catch(function(e){
@@ -1457,32 +1107,19 @@ function loadPhoto(input){
     showToast("Erreur","Reessayez ou contactez-nous sur WhatsApp.","var(--r)");
   });
 }
-
-function closeEmailDash(){ document.getElementById("email-ov").classList.remove("on"); openDash(); }
-
-/* ════ AUTH ════ */
-function openAuth(){
-  document.getElementById("auth-err").style.display="none";
-  document.getElementById("auth-ov").classList.add("on");
-}
-function closeAuth(){ document.getElementById("auth-ov").classList.remove("on"); }
-
+function closeEmailDash(){document.getElementById("email-ov").classList.remove("on");openDash();}
+function openAuth(){document.getElementById("auth-err").style.display="none";document.getElementById("auth-ov").classList.add("on");}
+function closeAuth(){document.getElementById("auth-ov").classList.remove("on");}
 function switchAuthTab(tab,el){
   document.getElementById("auth-login").classList.remove("on");
   document.getElementById("auth-register").classList.remove("on");
   document.getElementById("auth-"+tab).classList.add("on");
   var tabs=document.querySelectorAll(".auth-tab");
   for(var i=0;i<tabs.length;i++) tabs[i].classList.remove("on");
-  if(el) el.classList.add("on");
-  else{
-    var allTabs=document.querySelectorAll(".auth-tab");
-    for(var i=0;i<allTabs.length;i++){
-      if((tab==="login"&&i===0)||(tab==="register"&&i===1)) allTabs[i].classList.add("on");
-    }
-  }
+  if(el){el.classList.add("on");}
+  else{var allTabs=document.querySelectorAll(".auth-tab");for(var i=0;i<allTabs.length;i++){if((tab==="login"&&i===0)||(tab==="register"&&i===1)) allTabs[i].classList.add("on");}}
   document.getElementById("auth-err").style.display="none";
 }
-
 function doRegister(){
   var nom=document.getElementById("reg-nom").value.trim();
   var email=document.getElementById("reg-email").value.trim();
@@ -1491,79 +1128,54 @@ function doRegister(){
   var pwd=document.getElementById("reg-pwd").value;
   var pwd2=document.getElementById("reg-pwd2").value;
   var errEl=document.getElementById("auth-err");
-  if(!nom||!email||!tel||!npi||!pwd||!pwd2){ errEl.textContent="Tous les champs sont obligatoires."; errEl.style.display="block"; return; }
-  if(pwd.length<6){ errEl.textContent="Le mot de passe doit contenir au moins 6 caracteres."; errEl.style.display="block"; return; }
-  if(pwd!==pwd2){ errEl.textContent="Les mots de passe ne correspondent pas."; errEl.style.display="block"; return; }
+  if(!nom||!email||!tel||!npi||!pwd||!pwd2){errEl.textContent="Tous les champs sont obligatoires.";errEl.style.display="block";return;}
+  if(pwd.length<6){errEl.textContent="Le mot de passe doit contenir au moins 6 caracteres.";errEl.style.display="block";return;}
+  if(pwd!==pwd2){errEl.textContent="Les mots de passe ne correspondent pas.";errEl.style.display="block";return;}
   auth.createUserWithEmailAndPassword(email,pwd)
     .then(function(cred){
       var uid=cred.user.uid;
-      return db.collection("users").doc(uid).set({
-        nom:nom,email:email,tel:tel,npi:npi,
-        createdAt:firebase.firestore.FieldValue.serverTimestamp()
-      }).then(function(){ return cred.user.updateProfile({displayName:nom}); });
+      return db.collection("users").doc(uid).set({nom:nom,email:email,tel:tel,npi:npi,createdAt:firebase.firestore.FieldValue.serverTimestamp()})
+        .then(function(){return cred.user.updateProfile({displayName:nom});});
     })
-    .then(function(){
-      closeAuth();
-      showToast("Compte cree !","Bienvenue "+nom,"var(--g)");
-    })
+    .then(function(){closeAuth();showToast("Compte cree !","Bienvenue "+nom,"var(--g)");})
     .catch(function(e){
       var msg="Erreur lors de la creation du compte.";
       if(e.code==="auth/email-already-in-use") msg="Cet email est deja utilise.";
       if(e.code==="auth/invalid-email") msg="Email invalide.";
-      errEl.textContent=msg; errEl.style.display="block";
+      errEl.textContent=msg;errEl.style.display="block";
     });
 }
-
 function doLogin(){
   var email=document.getElementById("login-email").value.trim();
   var pwd=document.getElementById("login-pwd").value;
   var errEl=document.getElementById("auth-err");
-  if(!email||!pwd){ errEl.textContent="Email et mot de passe requis."; errEl.style.display="block"; return; }
-  if(email===ADMIN_EMAIL&&pwd===ADMIN_PWD){
-    closeAuth();
-    openAdmin();
-    return;
-  }
+  if(!email||!pwd){errEl.textContent="Email et mot de passe requis.";errEl.style.display="block";return;}
+  if(email===ADMIN_EMAIL&&pwd===ADMIN_PWD){closeAuth();openAdmin();return;}
   auth.signInWithEmailAndPassword(email,pwd)
-    .then(function(){ closeAuth(); showToast("Connecte !","Bienvenue sur F2K ON LINE","var(--g)"); })
+    .then(function(){closeAuth();showToast("Connecte !","Bienvenue sur F2K ON LINE","var(--g)");})
     .catch(function(e){
       var msg="Identifiants incorrects.";
       if(e.code==="auth/user-not-found") msg="Aucun compte avec cet email.";
       if(e.code==="auth/wrong-password") msg="Mot de passe incorrect.";
-      errEl.textContent=msg; errEl.style.display="block";
+      errEl.textContent=msg;errEl.style.display="block";
     });
 }
-
-function doLogout(){
-  auth.signOut().then(function(){
-    currentUser=null;
-    updateNavUser(null);
-    closeDash();
-    showToast("Deconnecte","A bientot sur F2K ON LINE","var(--g)");
-  });
-}
-
+function doLogout(){auth.signOut().then(function(){currentUser=null;updateNavUser(null);closeDash();showToast("Deconnecte","A bientot sur F2K ON LINE","var(--g)");});}
 auth.onAuthStateChanged(function(user){
   currentUser=user;
   updateNavUser(user);
   if(user){
     db.collection("users").doc(user.uid).get().then(function(doc){
-      if(doc.exists){
-        var data=doc.data();
-        currentUser.displayName=data.nom||user.displayName||user.email;
-        updateNavUser(currentUser);
-      }
+      if(doc.exists){var data=doc.data();if(data.nom){currentUser.displayName=data.nom;updateNavUser(currentUser);}}
     }).catch(function(){});
   }
 });
-
 function updateNavUser(user){
   var authBtn=document.getElementById("nav-auth-btn");
   var userBtn=document.getElementById("nav-user-btn");
   if(user){
     var name=user.displayName||user.email||"Client";
-    var initials=name.charAt(0).toUpperCase();
-    document.getElementById("nav-user-ico").textContent=initials;
+    document.getElementById("nav-user-ico").textContent=name.charAt(0).toUpperCase();
     document.getElementById("nav-user-name").textContent=name.split(" ")[0];
     if(authBtn) authBtn.style.display="none";
     if(userBtn) userBtn.style.display="";
@@ -1572,8 +1184,6 @@ function updateNavUser(user){
     if(userBtn) userBtn.style.display="none";
   }
 }
-
-/* ════ DASHBOARD CLIENT ════ */
 function openDash(){
   var nameEl=document.getElementById("dash-user-name");
   var welcomeEl=document.getElementById("dash-welcome-name");
@@ -1589,34 +1199,27 @@ function openDash(){
   document.getElementById("dashboard").style.display="block";
   document.body.style.overflow="hidden";
 }
-function closeDash(){
-  document.getElementById("dashboard").style.display="none";
-  document.body.style.overflow="";
-}
-
+function closeDash(){document.getElementById("dashboard").style.display="none";document.body.style.overflow="";}
 function renderOrders(){
-  var list=document.getElementById("orders-list");
-  var localOrders=JSON.parse(localStorage.getItem("f2k_orders")||"[]");
   if(currentUser){
     db.collection("orders").where("userId","==",currentUser.uid).orderBy("timestamp","desc").get()
       .then(function(snap){
         var orders=[];
-        snap.forEach(function(d){ orders.push(Object.assign({id:d.id},d.data())); });
+        snap.forEach(function(d){orders.push(Object.assign({id:d.id},d.data()));});
         if(orders.length) renderOrdersList(orders);
-        else renderOrdersList(localOrders);
-      }).catch(function(){ renderOrdersList(localOrders); });
+        else renderOrdersList(JSON.parse(localStorage.getItem("f2k_orders")||"[]"));
+      }).catch(function(){renderOrdersList(JSON.parse(localStorage.getItem("f2k_orders")||"[]"));});
   } else {
-    renderOrdersList(localOrders);
+    renderOrdersList(JSON.parse(localStorage.getItem("f2k_orders")||"[]"));
   }
 }
-
 function renderOrdersList(orders){
   var list=document.getElementById("orders-list");
   if(!orders.length){
-    list.innerHTML="<div class='empty-d' style='text-align:center;padding:40px 20px;color:var(--mu);'><div style='font-size:44px;opacity:.3;'>📭</div><p style='font-size:14px;font-weight:700;color:var(--ink);margin:10px 0 5px;'>Aucune demande</p><p style='font-size:12px;'>Parcourez le catalogue et faites votre premiere demande.</p><a href='#' onclick='closeDash()' style='display:inline-block;margin-top:12px;background:var(--g);color:#fff;padding:8px 18px;border-radius:7px;text-decoration:none;font-weight:700;font-size:12px;'>Voir le catalogue</a></div>";
+    list.innerHTML="<div class='empty-d'><div style='font-size:44px;opacity:.3;'>📭</div><p style='font-size:14px;font-weight:700;color:var(--ink);margin:10px 0 5px;'>Aucune demande</p><p style='font-size:12px;'>Parcourez le catalogue et faites votre premiere demande.</p><a href='#' onclick='closeDash()' style='display:inline-block;margin-top:12px;background:var(--g);color:#fff;padding:8px 18px;border-radius:7px;text-decoration:none;font-weight:700;font-size:12px;'>Voir le catalogue</a></div>";
     return;
   }
-  var stLabels={pending:"En attente",processing:"En traitement",ready:"Pret",rejected:"Rejete",revision:"Modifications requises"};
+  var stLabels={pending:"En attente",processing:"En traitement",ready:"Pret — Telechargeable",rejected:"Rejete",revision:"Modifications requises"};
   var stClasses={pending:"st-p",processing:"st-pr",ready:"st-r",rejected:"st-rej",revision:"st-rev"};
   var stepLabels=["Recu","Verifie","En cours","Finalise"];
   var html="";
@@ -1627,80 +1230,83 @@ function renderOrdersList(orders){
     var prog=o.progress||0;
     var stepsDone=Math.round(prog/25);
     var stepsHtml="";
-    for(var j=0;j<4;j++){
-      stepsHtml+="<div class='prog-step"+(j<stepsDone?" done":j===stepsDone&&prog>0?" active":"")+"'></div>";
-    }
+    for(var j=0;j<4;j++){stepsHtml+="<div class='prog-step"+(j<stepsDone?" done":j===stepsDone&&prog>0?" active":"")+"'></div>";}
     var stepNamesHtml="";
-    for(var j=0;j<stepLabels.length;j++){
-      stepNamesHtml+="<span class='"+(j<stepsDone?"done":"")+"'>"+stepLabels[j]+"</span>";
-    }
+    for(var j=0;j<stepLabels.length;j++){stepNamesHtml+="<span class='"+(j<stepsDone?"done":"")+"'>"+stepLabels[j]+"</span>";}
     html+="<div class='ocard'>";
     html+="<div class='otop'><div class='oref'>"+(o.icon||"📋")+" "+o.ref+"</div><span class='ost "+stc+"'>"+st+"</span></div>";
-    html+="<div class='oinfo'>";
-    html+="<div><div class='oil'>Service</div><div class='oiv'>"+o.serviceName+"</div></div>";
-    html+="<div><div class='oil'>Date</div><div class='oiv'>"+o.date+" "+(o.time||"")+"</div></div>";
-    html+="<div><div class='oil'>Tarif</div><div class='oiv'>"+((o.price||0).toLocaleString("fr-FR"))+" FCFA"+(o.discountApplied?" 🎁":"")+"</div></div>";
-    html+="<div><div class='oil'>Delai</div><div class='oiv'>"+(o.delai||"--")+"</div></div>";
-    html+="</div>";
-    if(o.adminNote) html+="<div class='admin-note-box'>Message F2K : "+o.adminNote+"</div>";
-    html+="<div class='oprog'>";
-    html+="<div class='prog-label'><span style='color:var(--mu);'>Progression</span><span style='color:var(--g);'>"+prog+"%</span></div>";
-    html+="<div class='prog-steps'>"+stepsHtml+"</div>";
-    html+="<div class='prog-step-labels'>"+stepNamesHtml+"</div>";
-    html+="</div>";
+    html+="<div class='oinfo'><div><div class='oil'>Service</div><div class='oiv'>"+o.serviceName+"</div></div><div><div class='oil'>Date</div><div class='oiv'>"+o.date+" "+(o.time||"")+"</div></div><div><div class='oil'>Tarif</div><div class='oiv'>"+((o.price||0).toLocaleString("fr-FR"))+" FCFA"+(o.discountApplied?" 🎁":"")+"</div></div><div><div class='oil'>Delai</div><div class='oiv'>"+(o.delai||"--")+"</div></div></div>";
+    if(o.adminNote) html+="<div class='admin-note-box'>💬 Message F2K : "+o.adminNote+"</div>";
+    html+="<div class='oprog'><div class='prog-label'><span style='color:var(--mu);font-weight:700;'>Progression</span><span style='color:var(--g);font-weight:800;'>"+prog+"%</span></div><div class='prog-steps'>"+stepsHtml+"</div><div class='prog-step-labels'>"+stepNamesHtml+"</div></div>";
     html+="<div class='oacts'>";
-    html+="<button class='oabtn' onclick='reShowEmail(\""+o.ref+"\")'>Email</button>";
-    html+="<button class='oabtn' onclick='contactWA(\""+o.ref+"\")'>WhatsApp</button>";
+    html+="<button class='oabtn' onclick='reShowEmail(\""+o.ref+"\")'>📧 Email</button>";
+    html+="<button class='oabtn' onclick='contactWA(\""+o.ref+"\")'>💬 WhatsApp</button>";
     if(o.hasDoc&&o.docUrl){
-      html+="<button class='oabtn dl' onclick='dlDoc(\""+o.ref+"\")'>📥 Telecharger</button>";
+      html+="<button class='oabtn dl' onclick='dlDoc(\""+o.ref+"\")'>📥 Telecharger le document</button>";
+    } else if(o.status==="ready"){
+      html+="<button class='oabtn' onclick='checkDocFirebase(\""+o.ref+"\")'>🔄 Verifier document</button>";
     } else {
-      html+="<button class='oabtn' style='opacity:.4;cursor:default;' disabled>📥 En attente</button>";
+      html+="<button class='oabtn' style='opacity:.4;cursor:default;' disabled>📥 Document en preparation</button>";
     }
     html+="<button class='oabtn' style='color:var(--r);border-color:rgba(217,43,43,.2);' onclick='delOrder(\""+o.ref+"\")'>Supprimer</button>";
     html+="</div></div>";
   }
   list.innerHTML=html;
 }
-
+function checkDocFirebase(ref){
+  db.collection("orders").doc(ref).get().then(function(doc){
+    if(doc.exists&&doc.data().docUrl){
+      var local=JSON.parse(localStorage.getItem("f2k_orders")||"[]");
+      for(var i=0;i<local.length;i++){if(local[i].ref===ref){local[i].docUrl=doc.data().docUrl;local[i].hasDoc=true;local[i].status="ready";break;}}
+      localStorage.setItem("f2k_orders",JSON.stringify(local));
+      renderOrders();
+      showToast("Document disponible !","Cliquez sur Telecharger","var(--g)");
+    } else {showToast("Document pas encore pret","F2K traite votre demande.","var(--y)");}
+  }).catch(function(){showToast("Erreur de connexion","Verifiez votre connexion.","var(--r)");});
+}
 function searchByRef(){
   var ref=document.getElementById("dash-ref-input").value.trim();
-  if(!ref){ showToast("Reference requise","Entrez votre code de reference.","var(--y)"); return; }
+  if(!ref){showToast("Reference requise","Entrez votre code de reference.","var(--y)");return;}
   db.collection("orders").doc(ref).get().then(function(doc){
-    if(doc.exists){ renderOrdersList([Object.assign({id:doc.id},doc.data())]); }
-    else {
+    if(doc.exists){
+      var o=Object.assign({id:doc.id},doc.data());
       var local=JSON.parse(localStorage.getItem("f2k_orders")||"[]");
-      var o=local.filter(function(x){ return x.ref===ref; });
-      if(o.length) renderOrdersList(o);
+      var exists=false;
+      for(var i=0;i<local.length;i++){if(local[i].ref===ref){local[i]=o;exists=true;break;}}
+      if(!exists) local.unshift(o);
+      localStorage.setItem("f2k_orders",JSON.stringify(local));
+      renderOrdersList([o]);
+      showToast("Commande trouvee !","Ref : "+ref,"var(--g)");
+    } else {
+      var local2=JSON.parse(localStorage.getItem("f2k_orders")||"[]");
+      var found=local2.filter(function(x){return x.ref===ref;});
+      if(found.length) renderOrdersList(found);
       else showToast("Reference non trouvee","Verifiez votre code.","var(--y)");
     }
   }).catch(function(){
     var local=JSON.parse(localStorage.getItem("f2k_orders")||"[]");
-    var o=local.filter(function(x){ return x.ref===ref; });
-    if(o.length) renderOrdersList(o);
+    var found=local.filter(function(x){return x.ref===ref;});
+    if(found.length) renderOrdersList(found);
     else showToast("Reference non trouvee","Verifiez votre code.","var(--y)");
   });
 }
-
 function trackIt(){
   var v=document.getElementById("track-in").value.trim();
-  if(!v){ showToast("Numero requis","Entrez votre reference.","var(--y)"); return; }
+  if(!v){showToast("Numero requis","Entrez votre reference.","var(--y)");return;}
   db.collection("orders").doc(v).get()
     .then(function(doc){
-      if(doc.exists){
-        var o=doc.data();
-        showToast(o.serviceName||"Demande trouvee","Progression : "+(o.progress||0)+"%","var(--g)");
-      } else showToast("Reference non trouvee","Verifiez votre code.","var(--y)");
+      if(doc.exists){var o=doc.data();showToast(o.serviceName||"Demande trouvee","Progression : "+(o.progress||0)+"% — Statut : "+(o.status||"pending"),"var(--g)");}
+      else showToast("Reference non trouvee","Verifiez votre code.","var(--y)");
     }).catch(function(){
       var local=JSON.parse(localStorage.getItem("f2k_orders")||"[]");
-      var o=local.filter(function(x){ return x.ref===v; })[0];
+      var o=local.filter(function(x){return x.ref===v;})[0];
       if(o) showToast(o.serviceName,"Progression : "+(o.progress||0)+"%","var(--g)");
       else showToast("Reference non trouvee","Verifiez votre code.","var(--y)");
     });
 }
-
 function reShowEmail(ref){
   var orders=JSON.parse(localStorage.getItem("f2k_orders")||"[]");
-  var o=orders.filter(function(x){ return x.ref===ref; })[0];
+  var o=orders.filter(function(x){return x.ref===ref;})[0];
   if(!o) return;
   document.getElementById("em-to").textContent=o.email;
   document.getElementById("em-greet").textContent="Bonjour "+(o.prenom||o.nom||"client")+",";
@@ -1710,57 +1316,33 @@ function reShowEmail(ref){
 }
 function contactWA(ref){
   var orders=JSON.parse(localStorage.getItem("f2k_orders")||"[]");
-  var o=orders.filter(function(x){ return x.ref===ref; })[0];
+  var o=orders.filter(function(x){return x.ref===ref;})[0];
   if(!o) return;
   var msg=encodeURIComponent("Bonjour F2K MULTISERVICE,\nReference : "+o.ref+"\nService : "+o.serviceName+"\nDate : "+o.date);
   window.open("https://wa.me/2290199878742?text="+msg,"_blank");
 }
 function dlDoc(ref){
   var local=JSON.parse(localStorage.getItem("f2k_orders")||"[]");
-  var o=local.filter(function(x){ return x.ref===ref; })[0];
-  if(o&&o.docUrl){
-    var a=document.createElement("a");
-    a.href=o.docUrl;
-    a.download=ref+"_document.pdf";
-    a.target="_blank";
-    a.click();
-    showToast("Telechargement lance","","var(--g)");
-    return;
-  }
-  db.collection("orders").doc(ref).get()
-    .then(function(doc){
-      if(doc.exists&&doc.data().docUrl){
-        var a=document.createElement("a");
-        a.href=doc.data().docUrl;
-        a.download=ref+"_document.pdf";
-        a.target="_blank";
-        a.click();
-        showToast("Telechargement lance","","var(--g)");
-        var local2=JSON.parse(localStorage.getItem("f2k_orders")||"[]");
-        for(var i=0;i<local2.length;i++){
-          if(local2[i].ref===ref){
-            local2[i].docUrl=doc.data().docUrl;
-            local2[i].hasDoc=true;
-            break;
-          }
-        }
-        localStorage.setItem("f2k_orders",JSON.stringify(local2));
-      } else {
-        showToast("Document non disponible","En cours de preparation.","var(--y)");
-      }
-    }).catch(function(){
-      showToast("Erreur","Verifiez votre connexion.","var(--r)");
-    });
+  var o=local.filter(function(x){return x.ref===ref;})[0];
+  if(o&&o.docUrl){var a=document.createElement("a");a.href=o.docUrl;a.download=ref+"_document.pdf";a.target="_blank";a.click();showToast("Telechargement lance","","var(--g)");return;}
+  db.collection("orders").doc(ref).get().then(function(doc){
+    if(doc.exists&&doc.data().docUrl){
+      var a=document.createElement("a");a.href=doc.data().docUrl;a.download=ref+"_document.pdf";a.target="_blank";a.click();
+      showToast("Telechargement lance","","var(--g)");
+      var local2=JSON.parse(localStorage.getItem("f2k_orders")||"[]");
+      for(var i=0;i<local2.length;i++){if(local2[i].ref===ref){local2[i].docUrl=doc.data().docUrl;local2[i].hasDoc=true;break;}}
+      localStorage.setItem("f2k_orders",JSON.stringify(local2));
+    } else showToast("Document non disponible","En cours de preparation.","var(--y)");
+  }).catch(function(){showToast("Erreur","Verifiez votre connexion.","var(--r)");});
 }
 function delOrder(ref){
   var o=JSON.parse(localStorage.getItem("f2k_orders")||"[]");
-  o=o.filter(function(x){ return x.ref!==ref; });
+  o=o.filter(function(x){return x.ref!==ref;});
   localStorage.setItem("f2k_orders",JSON.stringify(o));
   renderOrders();
   showToast("Supprime","","var(--g)");
   }
-                                                                                                             /* ════ ADMIN ════ */
-function openAdmin(){
+    function openAdmin(){
   document.getElementById("admin-panel").style.display="block";
   document.body.style.overflow="hidden";
   loadAdminOrders();
@@ -1769,12 +1351,11 @@ function closeAdmin(){
   document.getElementById("admin-panel").style.display="none";
   document.body.style.overflow="";
 }
-
 function loadAdminOrders(){
   db.collection("orders").orderBy("timestamp","desc").get()
     .then(function(snap){
       allOrders=[];
-      snap.forEach(function(d){ allOrders.push(Object.assign({id:d.id},d.data())); });
+      snap.forEach(function(d){allOrders.push(Object.assign({id:d.id},d.data()));});
       updateAdminStats();
       renderAllAdminLists();
       showToast("Actualise",allOrders.length+" demande(s) chargee(s).","var(--g)");
@@ -1787,34 +1368,31 @@ function loadAdminOrders(){
     });
   loadAdminClients();
 }
-
 function loadAdminClients(){
   db.collection("users").get()
     .then(function(snap){
       var clients=[];
-      snap.forEach(function(d){ clients.push(Object.assign({id:d.id},d.data())); });
+      snap.forEach(function(d){clients.push(Object.assign({id:d.id},d.data()));});
       document.getElementById("asb-clients").textContent=clients.length;
       var html="";
       for(var i=0;i<clients.length;i++){
         var c=clients[i];
-        html+="<div style='background:#fff;border:2px solid var(--bd);border-radius:10px;padding:14px;margin-bottom:8px;'>";
-        html+="<div style='display:flex;align-items:center;gap:10px;'>";
-        html+="<div style='width:36px;height:36px;border-radius:50%;background:var(--g);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;'>"+(c.nom?c.nom.charAt(0).toUpperCase():"U")+"</div>";
-        html+="<div><div style='font-weight:700;font-size:13px;color:var(--ink);'>"+(c.nom||"--")+"</div><div style='font-size:11px;color:var(--mu);'>"+(c.email||"--")+"</div></div>";
-        html+="<div style='margin-left:auto;font-size:11px;color:var(--mu);'>Tel : "+(c.tel||"--")+"</div>";
-        html+="</div></div>";
+        html+="<div style='background:#fff;border:2px solid var(--bd);border-radius:10px;padding:14px;margin-bottom:8px;display:flex;align-items:center;gap:12px;'>";
+        html+="<div style='width:38px;height:38px;border-radius:50%;background:var(--g);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;flex-shrink:0;'>"+(c.nom?c.nom.charAt(0).toUpperCase():"U")+"</div>";
+        html+="<div style='flex:1;'><div style='font-weight:700;font-size:13px;color:var(--ink);'>"+(c.nom||"--")+"</div><div style='font-size:11px;color:var(--mu);'>"+(c.email||"--")+" • "+(c.tel||"--")+"</div><div style='font-size:10px;color:var(--mu);'>NPI : "+(c.npi||"--")+"</div></div>";
+        html+="<a href='mailto:"+(c.email||"")+"' style='border:2px solid var(--bd);border-radius:7px;padding:5px 10px;font-size:11px;font-weight:700;color:var(--mu);text-decoration:none;'>Email</a>";
+        html+="</div>";
       }
       var el=document.getElementById("aclients-list");
       if(el) el.innerHTML=html||"<div style='text-align:center;padding:30px;color:var(--mu);'>Aucun client inscrit.</div>";
     }).catch(function(){});
 }
-
 function updateAdminStats(){
   var total=allOrders.length;
-  var pending=allOrders.filter(function(o){ return o.status==="pending"; }).length;
-  var proc=allOrders.filter(function(o){ return o.status==="processing"; }).length;
-  var ready=allOrders.filter(function(o){ return o.status==="ready"; }).length;
-  var rej=allOrders.filter(function(o){ return o.status==="rejected"; }).length;
+  var pending=allOrders.filter(function(o){return o.status==="pending";}).length;
+  var proc=allOrders.filter(function(o){return o.status==="processing";}).length;
+  var ready=allOrders.filter(function(o){return o.status==="ready";}).length;
+  var rej=allOrders.filter(function(o){return o.status==="rejected";}).length;
   document.getElementById("ast-total").textContent=total;
   document.getElementById("ast-pending").textContent=pending;
   document.getElementById("ast-proc").textContent=proc;
@@ -1825,17 +1403,14 @@ function updateAdminStats(){
   document.getElementById("asb-ready").textContent=ready;
   document.getElementById("asb-rej").textContent=rej;
 }
-
 function renderAllAdminLists(){
-  renderAdminList("adash-recent",allOrders.filter(function(o){ return o.status==="pending"; }).slice(0,5));
+  renderAdminList("adash-recent",allOrders.filter(function(o){return o.status==="pending";}).slice(0,5));
   renderAdminList("aorders-list",allOrders);
-  renderAdminList("apending-list",allOrders.filter(function(o){ return o.status==="pending"; }));
-  renderAdminList("aproc-list",allOrders.filter(function(o){ return o.status==="processing"; }));
-  renderAdminList("aready-list",allOrders.filter(function(o){ return o.status==="ready"; }));
-  renderAdminList("arej-list",allOrders.filter(function(o){ return o.status==="rejected"; }));
-  document.getElementById("apage-orders").querySelector(".apage-sub")?null:null;
+  renderAdminList("apending-list",allOrders.filter(function(o){return o.status==="pending";}));
+  renderAdminList("aproc-list",allOrders.filter(function(o){return o.status==="processing";}));
+  renderAdminList("aready-list",allOrders.filter(function(o){return o.status==="ready";}));
+  renderAdminList("arej-list",allOrders.filter(function(o){return o.status==="rejected"||o.status==="revision";}));
 }
-
 var ST_ADMIN={
   pending:{l:"En attente",c:"asto-p",cls:"st-pending"},
   processing:{l:"En traitement",c:"asto-pr",cls:"st-processing"},
@@ -1843,47 +1418,41 @@ var ST_ADMIN={
   rejected:{l:"Rejete",c:"asto-rej",cls:"st-rejected"},
   revision:{l:"Modifications requises",c:"asto-rev",cls:"st-revision"}
 };
-
 function renderAdminList(containerId,orders){
   var el=document.getElementById(containerId);
   if(!el) return;
-  if(!orders.length){ el.innerHTML="<div style='text-align:center;padding:30px;color:var(--mu);font-size:13px;'>Aucune demande ici.</div>"; return; }
+  if(!orders.length){el.innerHTML="<div style='text-align:center;padding:30px;color:var(--mu);font-size:13px;'>Aucune demande ici.</div>";return;}
   var html="";
   for(var i=0;i<orders.length;i++){
     var o=orders[i];
     var st=ST_ADMIN[o.status]||ST_ADMIN["pending"];
     var filesHtml="";
-    if(o.fileUrls&&o.fileUrls.length){
-      for(var j=0;j<o.fileUrls.length;j++){
-        filesHtml+="<a class='ao-file' href='"+o.fileUrls[j]+"' target='_blank'>Piece "+(j+1)+"</a>";
-      }
-    }
+    if(o.fileUrls&&o.fileUrls.length){for(var j=0;j<o.fileUrls.length;j++){filesHtml+="<a class='ao-file' href='"+o.fileUrls[j]+"' target='_blank'>📎 Piece "+(j+1)+"</a>";}}
     var progOptions="";
     var progVals=[0,25,50,75,100];
     var progLabels=["Recu (0%)","Verifie (25%)","En cours (50%)","Presque fini (75%)","Finalise (100%)"];
-    for(var j=0;j<progVals.length;j++){
-      progOptions+="<option value='"+progVals[j]+"'"+(o.progress===progVals[j]?" selected":"")+">"+progLabels[j]+"</option>";
-    }
+    for(var j=0;j<progVals.length;j++){progOptions+="<option value='"+progVals[j]+"'"+(o.progress===progVals[j]?" selected":"")+">"+progLabels[j]+"</option>";}
     var acts="";
     if(o.status==="pending"){
-      acts+="<button class='aact aact-blue' onclick='adminSetStatus(\""+o.ref+"\",\"processing\",\"\")'>Mettre en traitement</button>";
-      acts+="<button class='aact aact-green' onclick='openAmodal(\"approve\",\""+o.ref+"\")'>Approuver</button>";
-      acts+="<button class='aact aact-yellow' onclick='openAmodal(\"revision\",\""+o.ref+"\")'>Demander modif.</button>";
-      acts+="<button class='aact aact-red' onclick='openAmodal(\"reject\",\""+o.ref+"\")'>Rejeter</button>";
+      acts+="<button class='aact aact-blue' onclick='adminSetStatus(\""+o.ref+"\",\"processing\",\"\")'>🔄 Mettre en traitement</button>";
+      acts+="<button class='aact aact-green' onclick='openAmodal(\"approve\",\""+o.ref+"\")'>✅ Approuver</button>";
+      acts+="<button class='aact aact-yellow' onclick='openAmodal(\"revision\",\""+o.ref+"\")'>✏️ Demander modif.</button>";
+      acts+="<button class='aact aact-red' onclick='openAmodal(\"reject\",\""+o.ref+"\")'>❌ Rejeter</button>";
     }
     if(o.status==="processing"){
-      acts+="<button class='aact aact-dark' onclick='openUpload(\""+o.ref+"\")'>Soumettre document</button>";
-      acts+="<button class='aact aact-green' onclick='openAmodal(\"approve\",\""+o.ref+"\")'>Marquer pret</button>";
-      acts+="<button class='aact aact-yellow' onclick='openAmodal(\"revision\",\""+o.ref+"\")'>Demander modif.</button>";
-      acts+="<button class='aact aact-red' onclick='openAmodal(\"reject\",\""+o.ref+"\")'>Rejeter</button>";
+      acts+="<button class='aact aact-dark' onclick='openUpload(\""+o.ref+"\")'>📤 Soumettre document</button>";
+      acts+="<button class='aact aact-green' onclick='openAmodal(\"approve\",\""+o.ref+"\")'>✅ Marquer pret</button>";
+      acts+="<button class='aact aact-yellow' onclick='openAmodal(\"revision\",\""+o.ref+"\")'>✏️ Demander modif.</button>";
+      acts+="<button class='aact aact-red' onclick='openAmodal(\"reject\",\""+o.ref+"\")'>❌ Rejeter</button>";
     }
     if(o.status==="ready"){
-      acts+="<button class='aact aact-dark' onclick='openUpload(\""+o.ref+"\")'>Mettre a jour document</button>";
+      acts+="<button class='aact aact-dark' onclick='openUpload(\""+o.ref+"\")'>📤 Mettre a jour document</button>";
+      acts+="<button class='aact aact-blue' style='background:var(--g3);border-color:var(--g);color:var(--g);' onclick='window.open(\""+o.docUrl+"\",\"_blank\")'>👁️ Voir document</button>";
     }
     if(o.status==="rejected"||o.status==="revision"){
-      acts+="<button class='aact aact-blue' onclick='adminSetStatus(\""+o.ref+"\",\"processing\",\"\")'>Remettre en traitement</button>";
+      acts+="<button class='aact aact-blue' onclick='adminSetStatus(\""+o.ref+"\",\"processing\",\"\")'>🔄 Remettre en traitement</button>";
     }
-    acts+="<button class='aact aact-wa' onclick='adminContactWA(\""+o.ref+"\")'>WhatsApp</button>";
+    acts+="<button class='aact aact-wa' onclick='adminContactWA(\""+o.ref+"\")'>💬 WhatsApp</button>";
     html+="<div class='aorder "+st.cls+"'>";
     html+="<div class='ao-top'><div><div class='ao-ref'>"+(o.icon||"📋")+" "+o.ref+"</div><div class='ao-svc'>"+o.serviceName+"</div></div><span class='ao-st "+st.c+"'>"+st.l+"</span></div>";
     html+="<div class='ao-info'>";
@@ -1895,219 +1464,60 @@ function renderAdminList(containerId,orders){
     html+="<div><div class='ao-il'>Date</div><div class='ao-iv'>"+(o.date||"--")+" "+(o.time||"")+"</div></div>";
     html+="</div>";
     if(filesHtml) html+="<div style='margin-bottom:10px;'><div class='ao-il' style='margin-bottom:5px;'>Pieces jointes</div><div class='ao-files'>"+filesHtml+"</div></div>";
-    if(o.adminNote) html+="<div style='font-size:11px;background:var(--y3);border-radius:7px;padding:8px 10px;margin-bottom:10px;'>Dernier message : "+o.adminNote+"</div>";
-    html+="<div class='prog-admin'><label style='font-size:10px;font-weight:700;color:var(--mu);text-transform:uppercase;'>Niveau de progression</label><select onchange='adminSetProgress(\""+o.ref+"\",this.value)'>"+progOptions+"</select></div>";
+    if(o.adminNote) html+="<div style='font-size:11px;background:var(--y3);border-radius:7px;padding:8px 10px;margin-bottom:10px;border:1px solid rgba(251,191,0,.3);'>💬 Dernier message admin : "+o.adminNote+"</div>";
+    if(o.hasDoc&&o.docUrl) html+="<div style='font-size:11px;background:var(--g3);border-radius:7px;padding:8px 10px;margin-bottom:10px;border:1px solid var(--g4);'>📥 Document disponible — le client peut telecharger</div>";
+    html+="<div class='prog-admin'><label>Niveau de progression</label><select onchange='adminSetProgress(\""+o.ref+"\",this.value)'>"+progOptions+"</select></div>";
     html+="<div class='ao-actions'>"+acts+"</div>";
     html+="</div>";
   }
   el.innerHTML=html;
-}
-
-
-
-function adminSetProgress(ref,prog){
-  prog=parseInt(prog);
-  db.collection("orders").doc(ref).update({progress:prog}).catch(function(e){ console.error(e); });
-  for(var i=0;i<allOrders.length;i++){
-    if(allOrders[i].ref===ref){ allOrders[i].progress=prog; break; }
   }
-  var local=JSON.parse(localStorage.getItem("f2k_orders")||"[]");
-  for(var i=0;i<local.length;i++){
-    if(local[i].ref===ref){ local[i].progress=prog; break; }
-  }
-  localStorage.setItem("f2k_orders",JSON.stringify(local));
-  showToast("Progression mise a jour",ref+" — "+prog+"%","var(--g)");
-}
-
-function adminSetStatus(ref,status,note){
+    function adminSetStatus(ref,status,note){
   var progressMap={pending:0,processing:50,ready:100,rejected:0,revision:25};
   var prog=progressMap[status]||0;
   var update={status:status,progress:prog};
   if(note) update.adminNote=note;
   db.collection("orders").doc(ref).update(update)
-    .then(function(){ showToast("Statut mis a jour",ref+" => "+status,"var(--g)"); })
-    .catch(function(e){ console.error(e); showToast("Erreur Firebase","Verifie ta connexion.","var(--r)"); });
+    .then(function(){showToast("Statut mis a jour",ref+" => "+status,"var(--g)");})
+    .catch(function(e){console.error(e);showToast("Erreur Firebase","Verifie ta connexion.","var(--r)");});
+  var found=false;
   for(var i=0;i<allOrders.length;i++){
     if(allOrders[i].ref===ref){
-      allOrders[i].status=status;
-      allOrders[i].progress=prog;
+      allOrders[i].status=status;allOrders[i].progress=prog;
       if(note) allOrders[i].adminNote=note;
-      break;
+      found=true;break;
     }
   }
   var local=JSON.parse(localStorage.getItem("f2k_orders")||"[]");
-  var found=false;
+  var localFound=false;
   for(var i=0;i<local.length;i++){
     if(local[i].ref===ref){
-      local[i].status=status;
-      local[i].progress=prog;
+      local[i].status=status;local[i].progress=prog;
       if(note) local[i].adminNote=note;
-      found=true;
-      break;
+      localFound=true;break;
     }
   }
-  if(!found){
-    var o=allOrders.filter(function(x){ return x.ref===ref; })[0];
-    if(o) local.unshift(o);
+  if(!localFound&&found){
+    var o=allOrders.filter(function(x){return x.ref===ref;})[0];
+    if(o) local.unshift(JSON.parse(JSON.stringify(o)));
   }
   localStorage.setItem("f2k_orders",JSON.stringify(local));
   updateAdminStats();
   renderAllAdminLists();
   if(note) sendAdminEmail(ref,status,note);
 }
-
-function openAmodal(type,ref){                                                                                                          function openAmodal(type,ref){                                                                                                          function openAmodal(type,ref){                                                                                                        function openAmodal(type,ref){                                                                                                         var o=allOrders.filter(function(x){ return x.ref===ref; })[0];
-  var titles={approve:"Approuver la demande",reject:"Rejeter la demande",revision:"Demander des modifications"};
-  document.getElementById("amodal-title").textContent=titles[type]||"Action";
-  var body="<p style='font-size:12px;color:var(--mu);margin-bottom:12px;'>Demande <strong>"+ref+"</strong>"+(o?" — "+(o.prenom||"")+" "+(o.nom||""):"")+"</p>";
-  body+="<label>Message pour le client"+(type==="reject"||type==="revision"?" *":"")+"</label>";
-  body+="<textarea id='amodal-note' placeholder='"+(type==="approve"?"Ex: Votre dossier est valide...":type==="reject"?"Expliquez pourquoi la demande est rejetee...":"Expliquez les modifications requises...")+"'></textarea>";
-  body+="<div class='amodal-btns'>";
-  body+="<button style='background:var(--bg);border:2px solid var(--bd);color:var(--mu);border-radius:8px;' onclick='closeAmodal()'>Annuler</button>";
-  if(type==="approve") body+="<button style='background:var(--g);color:#fff;border-radius:8px;' onclick='confirmAmodal(\"approve\",\""+ref+"\")'>Approuver</button>";
-  if(type==="reject") body+="<button style='background:var(--r);color:#fff;border-radius:8px;' onclick='confirmAmodal(\"reject\",\""+ref+"\")'>Confirmer le rejet</button>";
-  if(type==="revision") body+="<button style='background:var(--y);color:var(--ink);border-radius:8px;' onclick='confirmAmodal(\"revision\",\""+ref+"\")'>Envoyer</button>";
-  body+="</div>";
-  document.getElementById("amodal-body").innerHTML=body;
-  document.getElementById("amodal-ov").classList.add("on");
+function adminSetProgress(ref,prog){
+  prog=parseInt(prog);
+  db.collection("orders").doc(ref).update({progress:prog}).catch(function(e){console.error(e);});
+  for(var i=0;i<allOrders.length;i++){if(allOrders[i].ref===ref){allOrders[i].progress=prog;break;}}
+  var local=JSON.parse(localStorage.getItem("f2k_orders")||"[]");
+  for(var i=0;i<local.length;i++){if(local[i].ref===ref){local[i].progress=prog;break;}}
+  localStorage.setItem("f2k_orders",JSON.stringify(local));
+  showToast("Progression mise a jour",ref+" — "+prog+"%","var(--g)");
 }
-
-function confirmAmodal(type,ref){
-  var note=document.getElementById("amodal-note").value.trim();
-  if((type==="reject"||type==="revision")&&!note){ showToast("Message requis","Expliquez votre decision.","var(--y)"); return; }
-  var statusMap={approve:"processing",reject:"rejected",revision:"revision"};
-  adminSetStatus(ref,statusMap[type],note);
-  closeAmodal();
-}
-function closeAmodal(){ document.getElementById("amodal-ov").classList.remove("on"); }
-
-function openUpload(ref){
-  uploadRef=ref;
-  document.getElementById("doc-preview").style.display="none";
-  document.getElementById("doc-file").value="";
-  document.getElementById("doc-msg").value="";
-  document.getElementById("upload-ov").classList.add("on");
-}
-function closeUpload(){ document.getElementById("upload-ov").classList.remove("on"); }
-
-function previewDoc(input){
-  if(input.files[0]){
-    document.getElementById("oc-preview").textContent="Fichier : "+input.files[0].name;
-    document.getElementById("doc-preview").style.display="block";
-  }
-}
-
-function submitDocument(){
-  var file=document.getElementById("doc-file").files[0];
-  var msg=document.getElementById("doc-msg").value.trim();
-  if(!file){ showToast("Fichier requis","Selectionnez un document PDF ou image.","var(--y)"); return; }
-  var btn=document.querySelector("#upload-ov button");
-  btn.textContent="Envoi en cours...";
-  btn.disabled=true;
-  var fd=new FormData();
-  fd.append("file",file);
-  fd.append("upload_preset",CLOUDINARY_PRESET);
-  fetch(CLOUDINARY_URL,{method:"POST",body:fd})
-    .then(function(r){ return r.json(); })
-    .then(function(data){
-      if(!data.secure_url){ throw new Error("Upload echoue"); }
-      var docUrl=data.secure_url;
-      var finalMsg=msg||"Votre document est pret. Telechargez-le depuis votre espace client ou avec votre code de reference.";
-      db.collection("orders").doc(uploadRef).update({
-        status:"ready",progress:100,hasDoc:true,docUrl:docUrl,adminNote:finalMsg
-      }).then(function(){
-        showToast("Document envoye !",uploadRef+" — Client peut telecharger.","var(--g)");
-      }).catch(function(e){ console.error(e); });
-      for(var i=0;i<allOrders.length;i++){
-        if(allOrders[i].ref===uploadRef){
-          allOrders[i].status="ready";
-          allOrders[i].progress=100;
-          allOrders[i].hasDoc=true;
-          allOrders[i].docUrl=docUrl;
-          allOrders[i].adminNote=finalMsg;
-          break;
-        }
-      }
-      var local=JSON.parse(localStorage.getItem("f2k_orders")||"[]");
-      var found=false;
-      for(var i=0;i<local.length;i++){
-        if(local[i].ref===uploadRef){
-          local[i].status="ready";
-          local[i].progress=100;
-          local[i].hasDoc=true;
-          local[i].docUrl=docUrl;
-          local[i].adminNote=finalMsg;
-          found=true;
-          break;
-        }
-      }
-      if(!found){
-        var o=allOrders.filter(function(x){ return x.ref===uploadRef; })[0];
-        if(o){
-          o.status="ready"; o.progress=100;
-          o.hasDoc=true; o.docUrl=docUrl;
-          o.adminNote=finalMsg;
-          local.unshift(o);
-        }
-      }
-      localStorage.setItem("f2k_orders",JSON.stringify(local));
-      updateAdminStats();
-      renderAllAdminLists();
-      closeUpload();
-      btn.textContent="Envoyer le document au client";
-      btn.disabled=false;
-    })
-    .catch(function(e){
-      console.error(e);
-      showToast("Erreur upload","Verifiez votre configuration Cloudinary.","var(--r)");
-      btn.textContent="Envoyer le document au client";
-      btn.disabled=false;
-    });
-             }
-                                                                                                                                                                                                                                                                                                              
-function adminContactWA(ref){
-  var o=allOrders.filter(function(x){ return x.ref===ref; })[0];
-  if(!o) return;
-  var msg=encodeURIComponent("Bonjour "+(o.prenom||"")+" "+(o.nom||"")+",\n\nNous vous contactons concernant votre demande F2K ON LINE :\nReference : "+o.ref+"\nService : "+o.serviceName+"\n\nCordialement,\nF2K MULTISERVICE\n+229 01 58 07 07 08");
-  window.open("https://wa.me/"+(o.tel||"").replace(/\D/g,"")+"?text="+msg,"_blank");
-}
-
-function showAdminPage(p,el){
-  var pages=document.querySelectorAll(".apage");
-  for(var i=0;i<pages.length;i++) pages[i].classList.remove("on");
-  var items=document.querySelectorAll(".asb-item");
-  for(var i=0;i<items.length;i++) items[i].classList.remove("on");
-  var pg=document.getElementById("apage-"+p);
-  if(pg) pg.classList.add("on");
-  if(el) el.classList.add("on");
-}
-
-function setAdminFilter(f,el){
-  adminFilter=f;
-  var btns=document.querySelectorAll(".afbtn");
-  for(var i=0;i<btns.length;i++) btns[i].classList.remove("on");
-  el.classList.add("on");
-  filterAdminOrders();
-}
-
-function filterAdminOrders(){
-  var q=(document.getElementById("asearch-input")||{}).value||"";
-  q=q.toLowerCase();
-  var filtered=allOrders;
-  if(adminFilter!=="all") filtered=filtered.filter(function(o){ return o.status===adminFilter; });
-  if(q) filtered=filtered.filter(function(o){ return ((o.ref||"")+(o.nom||"")+(o.prenom||"")+(o.email||"")+(o.serviceName||"")).toLowerCase().indexOf(q)>-1; });
-  renderAdminList("aorders-list",filtered);
-}
-
- function sendAdminEmail(ref,status,note){
-  var o=allOrders.filter(function(x){ return x.ref===ref; })[0];
+function sendAdminEmail(ref,status,note){
+  var o=allOrders.filter(function(x){return x.ref===ref;})[0];
   if(!o||!o.email) return;
-  var messages={
-    processing:"Votre demande est en cours de traitement.",
-    rejected:"Votre demande a ete rejetee. Raison : "+note,
-    revision:"Des modifications sont requises : "+note,
-    ready:"Votre document est pret ! Telechargez-le depuis votre espace client."
-  };
   emailjs.send(EMAILJS_SERVICE,EMAILJS_TEMPLATE,{
     to_email:o.email,
     to_name:(o.prenom||"")+" "+(o.nom||""),
@@ -2118,17 +1528,140 @@ function filterAdminOrders(){
     date:o.date||"--",
     tel:o.tel||"--",
     reply_to:"f2kmultiservice@gmail.com"
-  }).catch(function(e){ console.error("EmailJS:",e); });
-  }                                                                                                                                                                                                                                                                                                            
+  }).catch(function(e){console.error("EmailJS:",e);});
+}
+function openAmodal(type,ref){
+  var o=allOrders.filter(function(x){return x.ref===ref;})[0];
+  var titles={approve:"Approuver la demande",reject:"Rejeter la demande",revision:"Demander des modifications"};
+  document.getElementById("amodal-title").textContent=titles[type]||"Action";
+  var body="<p style='font-size:12px;color:var(--mu);margin-bottom:12px;'>Demande <strong>"+ref+"</strong>"+(o?" — "+(o.prenom||"")+" "+(o.nom||""):"")+"</p>";
+  body+="<label>Message pour le client"+(type==="reject"||type==="revision"?" *":"")+"</label>";
+  body+="<textarea id='amodal-note' placeholder='"+(type==="approve"?"Ex: Votre dossier est valide et en cours de traitement...":type==="reject"?"Expliquez pourquoi la demande est rejetee...":"Expliquez les modifications requises...")+"'></textarea>";
+  body+="<div class='amodal-btns'>";
+  body+="<button style='background:var(--bg);border:2px solid var(--bd);color:var(--mu);' onclick='closeAmodal()'>Annuler</button>";
+  if(type==="approve") body+="<button style='background:var(--g);color:#fff;' onclick='confirmAmodal(\"approve\",\""+ref+"\")'>✅ Approuver</button>";
+  if(type==="reject") body+="<button style='background:var(--r);color:#fff;' onclick='confirmAmodal(\"reject\",\""+ref+"\")'>❌ Confirmer le rejet</button>";
+  if(type==="revision") body+="<button style='background:var(--y);color:var(--ink);' onclick='confirmAmodal(\"revision\",\""+ref+"\")'>✏️ Envoyer</button>";
+  body+="</div>";
+  document.getElementById("amodal-body").innerHTML=body;
+  document.getElementById("amodal-ov").classList.add("on");
+}
+function confirmAmodal(type,ref){
+  var note=document.getElementById("amodal-note").value.trim();
+  if((type==="reject"||type==="revision")&&!note){showToast("Message requis","Expliquez votre decision.","var(--y)");return;}
+  var statusMap={approve:"processing",reject:"rejected",revision:"revision"};
+  adminSetStatus(ref,statusMap[type],note);
+  closeAmodal();
+}
+function closeAmodal(){document.getElementById("amodal-ov").classList.remove("on");}
+function openUpload(ref){
+  uploadRef=ref;
+  document.getElementById("doc-preview").style.display="none";
+  document.getElementById("doc-file").value="";
+  document.getElementById("doc-msg").value="";
+  document.getElementById("upload-ov").classList.add("on");
+}
+function closeUpload(){document.getElementById("upload-ov").classList.remove("on");}
+function previewDoc(input){
+  if(input.files[0]){
+    document.getElementById("doc-preview").textContent="📄 Fichier selectionne : "+input.files[0].name;
+    document.getElementById("doc-preview").style.display="block";
+  }
+}
+function submitDocument(){
+  var file=document.getElementById("doc-file").files[0];
+  var msg=document.getElementById("doc-msg").value.trim();
+  if(!file){showToast("Fichier requis","Selectionnez un document PDF ou image.","var(--y)");return;}
+  var btn=document.getElementById("upload-submit-btn");
+  btn.textContent="Envoi en cours...";
+  btn.disabled=true;
+  var fd=new FormData();
+  fd.append("file",file);
+  fd.append("upload_preset",CLOUDINARY_PRESET);
+  fetch(CLOUDINARY_URL,{method:"POST",body:fd})
+    .then(function(r){return r.json();})
+    .then(function(data){
+      if(!data.secure_url){throw new Error("Upload echoue — verifiez Cloudinary.");}
+      var docUrl=data.secure_url;
+      var finalMsg=msg||"Votre document est pret ! Telechargez-le depuis votre espace client ou en recherchant avec votre code de reference.";
+      db.collection("orders").doc(uploadRef).update({
+        status:"ready",progress:100,hasDoc:true,docUrl:docUrl,adminNote:finalMsg
+      }).then(function(){
+        showToast("✅ Document envoye !",uploadRef+" — Client peut telecharger.","var(--g)");
+      }).catch(function(e){console.error(e);});
+      var found=false;
+      for(var i=0;i<allOrders.length;i++){
+        if(allOrders[i].ref===uploadRef){
+          allOrders[i].status="ready";allOrders[i].progress=100;
+          allOrders[i].hasDoc=true;allOrders[i].docUrl=docUrl;
+          allOrders[i].adminNote=finalMsg;found=true;break;
+        }
+      }
+      var local=JSON.parse(localStorage.getItem("f2k_orders")||"[]");
+      var localFound=false;
+      for(var i=0;i<local.length;i++){
+        if(local[i].ref===uploadRef){
+          local[i].status="ready";local[i].progress=100;
+          local[i].hasDoc=true;local[i].docUrl=docUrl;
+          local[i].adminNote=finalMsg;localFound=true;break;
+        }
+      }
+      if(!localFound&&found){
+        var o=allOrders.filter(function(x){return x.ref===uploadRef;})[0];
+        if(o) local.unshift(JSON.parse(JSON.stringify(o)));
+      }
+      localStorage.setItem("f2k_orders",JSON.stringify(local));
+      sendAdminEmail(uploadRef,"ready",finalMsg);
+      updateAdminStats();
+      renderAllAdminLists();
+      closeUpload();
+      btn.textContent="📤 Envoyer le document au client";
+      btn.disabled=false;
+    })
+    .catch(function(e){
+      console.error(e);
+      showToast("Erreur upload",e.message||"Verifiez votre configuration Cloudinary.","var(--r)");
+      btn.textContent="📤 Envoyer le document au client";
+      btn.disabled=false;
+    });
+}
+function adminContactWA(ref){
+  var o=allOrders.filter(function(x){return x.ref===ref;})[0];
+  if(!o) return;
+  var msg=encodeURIComponent("Bonjour "+(o.prenom||"")+" "+(o.nom||"")+",\n\nNous vous contactons concernant votre demande F2K ON LINE :\nReference : "+o.ref+"\nService : "+o.serviceName+"\n\nCordialement,\nF2K MULTISERVICE\n+229 01 58 07 07 08");
+  window.open("https://wa.me/"+(o.tel||"").replace(/\D/g,"")+"?text="+msg,"_blank");
+}
+function showAdminPage(p,el){
+  var pages=document.querySelectorAll(".apage");
+  for(var i=0;i<pages.length;i++) pages[i].classList.remove("on");
+  var items=document.querySelectorAll(".asb-item");
+  for(var i=0;i<items.length;i++) items[i].classList.remove("on");
+  var pg=document.getElementById("apage-"+p);
+  if(pg) pg.classList.add("on");
+  if(el) el.classList.add("on");
+  if(p==="orders"||p==="pending"||p==="processing"||p==="ready"||p==="rejected") loadAdminOrders();
+}
+function setAdminFilter(f,el){
+  adminFilter=f;
+  var btns=document.querySelectorAll(".afbtn");
+  for(var i=0;i<btns.length;i++) btns[i].classList.remove("on");
+  el.classList.add("on");
+  filterAdminOrders();
+}
+function filterAdminOrders(){
+  var q=(document.getElementById("asearch-input")||{}).value||"";
+  q=q.toLowerCase();
+  var filtered=allOrders;
+  if(adminFilter!=="all") filtered=filtered.filter(function(o){return o.status===adminFilter;});
+  if(q) filtered=filtered.filter(function(o){return((o.ref||"")+(o.nom||"")+(o.prenom||"")+(o.email||"")+(o.serviceName||"")).toLowerCase().indexOf(q)>-1;});
+  renderAdminList("aorders-list",filtered);
+    }
+    document.getElementById("form-ov").addEventListener("click",function(e){if(e.target===document.getElementById("form-ov")) closeForm();});
+document.getElementById("email-ov").addEventListener("click",function(e){if(e.target===document.getElementById("email-ov")) document.getElementById("email-ov").classList.remove("on");});
+document.getElementById("auth-ov").addEventListener("click",function(e){if(e.target===document.getElementById("auth-ov")) closeAuth();});
+document.getElementById("amodal-ov").addEventListener("click",function(e){if(e.target===document.getElementById("amodal-ov")) closeAmodal();});
+document.getElementById("upload-ov").addEventListener("click",function(e){if(e.target===document.getElementById("upload-ov")) closeUpload();});
 
-/* ════ FERMETURE MODALS ════ */
-document.getElementById("form-ov").addEventListener("click",function(e){ if(e.target===document.getElementById("form-ov")) closeForm(); });
-document.getElementById("email-ov").addEventListener("click",function(e){ if(e.target===document.getElementById("email-ov")) document.getElementById("email-ov").classList.remove("on"); });
-document.getElementById("auth-ov").addEventListener("click",function(e){ if(e.target===document.getElementById("auth-ov")) closeAuth(); });
-document.getElementById("amodal-ov").addEventListener("click",function(e){ if(e.target===document.getElementById("amodal-ov")) closeAmodal(); });
-document.getElementById("upload-ov").addEventListener("click",function(e){ if(e.target===document.getElementById("upload-ov")) closeUpload(); });
-
-/* ════ SCROLL REVEAL ════ */
 var io=new IntersectionObserver(function(entries){
   entries.forEach(function(en){
     if(en.isIntersecting){
@@ -2147,12 +1680,11 @@ for(var i=0;i<els.length;i++){
   io.observe(els[i]);
 }
 
-/* ════ PWA SERVICE WORKER ════ */
 if("serviceWorker" in navigator){
   window.addEventListener("load",function(){
     navigator.serviceWorker.register("/sw.js")
-      .then(function(){ console.log("SW enregistre"); })
-      .catch(function(e){ console.log("SW erreur:",e); });
+      .then(function(){console.log("SW enregistre");})
+      .catch(function(e){console.log("SW erreur:",e);});
   });
 }
 </script>
