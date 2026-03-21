@@ -1325,69 +1325,47 @@ function dlDoc(ref){
   var local=JSON.parse(localStorage.getItem("f2k_orders")||"[]");
   var o=local.filter(function(x){return x.ref===ref;})[0];
 
-  function doDownload(url,name){
-    // Telecharger avec nom original sans quitter le site
-    showToast("⏳ Preparation","Telechargement en cours...","var(--b)");
-    fetch(url)
-      .then(function(r){
-        if(!r.ok) throw new Error("Erreur reseau");
-        return r.blob();
-      })
-      .then(function(blob){
-        var blobUrl=URL.createObjectURL(blob);
-        var a=document.createElement("a");
-        a.href=blobUrl;
-        a.download=name||ref+"_document.pdf";
-        a.style.display="none";
-        document.body.appendChild(a);
-        a.click();
-        setTimeout(function(){
-          document.body.removeChild(a);
-          URL.revokeObjectURL(blobUrl);
-        },2000);
-        showToast("✅ Telechargement lance",name||ref+"_document.pdf","var(--g)");
-      })
-      .catch(function(){
-        // Fallback si CORS bloque : ouvrir dans un iframe cache
-        var iframe=document.createElement("iframe");
-        iframe.style.display="none";
-        iframe.src=url;
-        document.body.appendChild(iframe);
-        setTimeout(function(){document.body.removeChild(iframe);},5000);
-        showToast("📥 Document ouvert","Verifiez votre dossier telechargements","var(--g)");
-      });
+  function doDownload(url, name){
+  // Transformer l'URL Cloudinary pour forcer le telechargement direct
+  var dlUrl = url;
+  if(url.indexOf("cloudinary.com") > -1){
+    // Ajouter fl_attachment pour forcer le telechargement
+    dlUrl = url.replace("/upload/", "/upload/fl_attachment:" + (name||"document").replace(/[^a-zA-Z0-9]/g,"_") + "/");
   }
-
-  if(o&&o.docUrl){
-    doDownload(o.docUrl, o.docName||ref+"_document.pdf");
-    return;
-  }
-
-  showToast("🔄 Recherche","Recuperation du document...","var(--b)");
-  db.collection("orders").doc(ref).get()
-    .then(function(doc){
-      if(doc.exists&&doc.data().docUrl){
-        var url=doc.data().docUrl;
-        var name=doc.data().docName||ref+"_document.pdf";
-        var local2=JSON.parse(localStorage.getItem("f2k_orders")||"[]");
-        for(var i=0;i<local2.length;i++){
-          if(local2[i].ref===ref){
-            local2[i].docUrl=url;
-            local2[i].docName=name;
-            local2[i].hasDoc=true;
-            local2[i].status="ready";
-            break;
-          }
-        }
-        localStorage.setItem("f2k_orders",JSON.stringify(local2));
-        renderOrders();
-        doDownload(url,name);
-      } else {
-        showToast("⏳ Document pas encore pret","L'admin finalise votre dossier.","var(--y)");
-      }
+  
+  showToast("⏳ Preparation","Telechargement en cours...","var(--b)");
+  
+  fetch(dlUrl, {mode:"cors"})
+    .then(function(r){
+      if(!r.ok) throw new Error("Erreur reseau : "+r.status);
+      return r.blob();
     })
-    .catch(function(){
-      showToast("❌ Erreur","Verifiez votre connexion internet.","var(--r)");
+    .then(function(blob){
+      var blobUrl = URL.createObjectURL(blob);
+      var a = document.createElement("a");
+      a.href = blobUrl;
+      a.download = name || ref + "_document.pdf";
+      a.style.display = "none";
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(function(){
+        document.body.removeChild(a);
+        URL.revokeObjectURL(blobUrl);
+      }, 2000);
+      showToast("✅ Telechargement lance", name || "document", "var(--g)");
+    })
+    .catch(function(e){
+      console.error("Download error:", e);
+      // Fallback : ouvrir directement l'URL de telechargement
+      var a = document.createElement("a");
+      a.href = dlUrl;
+      a.download = name || ref + "_document.pdf";
+      a.target = "_blank";
+      a.style.display = "none";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      showToast("📥 Telechargement","Verifiez votre dossier telechargements","var(--g)");
     });
     }
 function delOrder(ref){
