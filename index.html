@@ -157,17 +157,17 @@ nav ul a:hover{color:var(--g);}
 .sb-choice{background:var(--y3);color:#7a5800;}
 .sc-arr{width:22px;height:22px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--mu);background:rgba(0,0,0,.04);transition:all .2s;flex-shrink:0;}
 .sc:hover .sc-arr{background:var(--g);color:#fff;}
-.howgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:36px;position:relative;}
+.howgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:36px;}
 .hstep{text-align:center;padding:0 14px;}
-.hn{width:48px;height:48px;border-radius:50%;margin:0 auto 14px;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:17px;font-weight:900;position:relative;z-index:1;}
+.hn{width:48px;height:48px;border-radius:50%;margin:0 auto 14px;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:17px;font-weight:900;}
 .hn1{background:var(--g3);border:3px solid var(--g);color:var(--g);}
 .hn2{background:var(--y3);border:3px solid var(--y);color:#7a5800;}
 .hn3{background:var(--r3);border:3px solid var(--r);color:var(--r);}
 .hn4{background:var(--g3);border:3px solid var(--g2);color:var(--g);}
 .ht{font-weight:800;font-size:12px;margin-bottom:5px;color:var(--ink);}
 .hp{font-size:11px;color:var(--mu);line-height:1.6;}
-.track{background:linear-gradient(135deg,var(--ink2) 0%,#071610 100%);padding:48px 36px;position:relative;overflow:hidden;}
-.tinner{max-width:560px;margin:0 auto;text-align:center;position:relative;}
+.track{background:linear-gradient(135deg,var(--ink2) 0%,#071610 100%);padding:48px 36px;}
+.tinner{max-width:560px;margin:0 auto;text-align:center;}
 .tinner h2{font-family:'Fraunces',serif;font-size:clamp(20px,3vw,32px);font-weight:900;color:#fff;letter-spacing:-1px;margin-bottom:7px;}
 .tinner p{color:rgba(255,255,255,.42);font-size:13px;margin-bottom:20px;}
 .trow{display:flex;gap:7px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:11px;padding:5px;}
@@ -200,7 +200,7 @@ footer{background:var(--ink);padding:48px 36px 20px;}
 @media(max-width:1024px){.wgrid{grid-template-columns:1fr 1fr;}.fgrid{grid-template-columns:1fr 1fr;gap:22px;}}
 @media(max-width:768px){nav{padding:10px 15px;}nav ul{display:none;}.ham{display:flex;}.hero,.section{padding:52px 16px;}.track{padding:44px 16px;}footer{padding:40px 16px 18px;}.fr2{grid-template-columns:1fr;}.sgrid,.pgrid{grid-template-columns:1fr 1fr;}.howgrid{grid-template-columns:1fr 1fr;gap:18px;}.wgrid{grid-template-columns:1fr;}.fgrid{grid-template-columns:1fr;}.hstats{gap:18px;}.legend{padding:12px 16px;}}
 @media(max-width:440px){.sgrid,.pgrid{grid-template-columns:1fr;}}
-  .npibox{background:linear-gradient(135deg,var(--pu3),#ede9fe);border:2px solid rgba(124,58,237,.2);border-radius:10px;padding:12px 14px;margin-bottom:14px;}
+.npibox{background:linear-gradient(135deg,var(--pu3),#ede9fe);border:2px solid rgba(124,58,237,.2);border-radius:10px;padding:12px 14px;margin-bottom:14px;}
 .npititle{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--pu);margin-bottom:7px;display:flex;align-items:center;gap:5px;}
 .npi-note{font-size:11px;color:#5b21b6;line-height:1.5;margin-bottom:8px;}
 .npitabs{display:flex;gap:5px;margin-bottom:8px;}
@@ -253,7 +253,8 @@ footer{background:var(--ink);padding:48px 36px 20px;}
 .file-drop p span{color:var(--g);}
 .filelist{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px;}
 .fitem{background:var(--g3);border:1px solid var(--g4);border-radius:5px;padding:2px 7px;font-size:10px;font-weight:600;color:var(--g);display:flex;align-items:center;gap:3px;}
-.fitem button{background:none;border:none;cursor:pointer;color:var(--g);font-size:12px;}
+.fitem.pdf{background:var(--r3);border-color:rgba(217,43,43,.2);color:var(--r);}
+.fitem button{background:none;border:none;cursor:pointer;color:inherit;font-size:12px;}
 .pzone{border:2px dashed var(--bd);border-radius:10px;padding:16px;text-align:center;background:var(--bg);}
 .pzone.has-p{border-color:var(--g);background:var(--g3);}
 .pprev{width:100px;height:130px;object-fit:cover;border-radius:7px;margin:0 auto 9px;display:none;box-shadow:0 3px 12px rgba(0,0,0,.14);}
@@ -307,7 +308,7 @@ footer{background:var(--ink);padding:48px 36px 20px;}
 .auth-box{background:#fff;border-radius:18px;width:100%;max-width:420px;overflow:hidden;animation:pi .26s ease;}
 .auth-head{background:linear-gradient(135deg,var(--ink2),#071610);padding:24px;text-align:center;position:relative;}
 .auth-head::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--g) 33%,var(--y) 33% 66%,var(--r) 66%);}
-.auth-lm{display:flex;width:40px;height:40px;border-radius:8px;overflow:hidden;flex-direction:column;margin:0 auto 10px;box-shadow:0 3px 10px rgba(0,154,85,.3);}
+.auth-lm{display:flex;width:40px;height:40px;border-radius:8px;overflow:hidden;flex-direction:column;margin:0 auto 10px;}
 .auth-lm div{flex:1;}
 .auth-lm div:nth-child(1){background:var(--g);}
 .auth-lm div:nth-child(2){background:var(--y);}
@@ -338,9 +339,8 @@ footer{background:var(--ink);padding:48px 36px 20px;}
 .dcl{background:var(--bg);border:2px solid var(--bd);border-radius:8px;padding:6px 13px;font-size:12px;font-weight:700;cursor:pointer;color:var(--mu);transition:all .2s;font-family:'Plus Jakarta Sans',sans-serif;}
 .dcl:hover{border-color:var(--r);color:var(--r);}
 .dbody{max-width:860px;margin:0 auto;padding:28px 20px;}
-.dwelcome{margin-bottom:22px;}
 .dwelcome h2{font-family:'Fraunces',serif;font-size:24px;font-weight:900;color:var(--ink);letter-spacing:-.7px;margin-bottom:4px;}
-.dwelcome p{font-size:13px;color:var(--mu);}
+.dwelcome p{font-size:13px;color:var(--mu);margin-bottom:22px;}
 .ocard{background:#fff;border:2px solid var(--bd);border-radius:12px;padding:16px;margin-bottom:10px;transition:all .2s;}
 .ocard:hover{border-color:var(--g4);box-shadow:0 6px 20px rgba(0,0,0,.06);}
 .otop{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:7px;margin-bottom:10px;}
@@ -409,7 +409,7 @@ footer{background:var(--ink);padding:48px 36px 20px;}
 .asearch input{width:100%;border:2px solid var(--bd);border-radius:8px;padding:10px 14px;font-size:13px;font-family:'Plus Jakarta Sans',sans-serif;outline:none;background:#fff;transition:border-color .2s;}
 .asearch input:focus{border-color:var(--g);}
 .aorder-list{display:flex;flex-direction:column;gap:11px;}
-.aorder{background:#fff;border:2px solid var(--bd);border-radius:12px;padding:16px;transition:all .2s;}
+.aorder{background:#fff;border:2px solid var(--bd);border-radius:12px;padding:16px;transition:all .2s;cursor:pointer;}
 .aorder:hover{box-shadow:0 6px 20px rgba(0,0,0,.06);}
 .aorder.st-pending{border-left:4px solid var(--y);}
 .aorder.st-processing{border-left:4px solid var(--b);}
@@ -431,6 +431,7 @@ footer{background:var(--ink);padding:48px 36px 20px;}
 .ao-iv a{color:var(--b);text-decoration:none;}
 .ao-files{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:10px;}
 .ao-file{background:var(--b3);border:1px solid rgba(37,99,235,.15);border-radius:5px;padding:3px 8px;font-size:10px;font-weight:600;color:var(--b);text-decoration:none;}
+.ao-file.pdf{background:var(--r3);border-color:rgba(217,43,43,.15);color:var(--r);}
 .ao-actions{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px;}
 .aact{border:none;border-radius:7px;padding:6px 12px;font-size:11px;font-weight:700;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;transition:all .2s;}
 .aact-green{background:var(--g);color:#fff;}
@@ -447,22 +448,41 @@ footer{background:var(--ink);padding:48px 36px 20px;}
 .aact-wa:hover{background:var(--g);color:#fff;}
 .prog-admin{margin:10px 0;}
 .prog-admin label{font-size:10px;font-weight:700;color:var(--mu);text-transform:uppercase;display:block;margin-bottom:4px;}
-.prog-admin select{width:100%;border:2px solid var(--bd);border-radius:7px;padding:7px 10px;font-size:12px;font-family:'Plus Jakarta Sans',sans-serif;outline:none;background:var(--bg);cursor:pointer;transition:border-color .2s;}
-.prog-admin select:focus{border-color:var(--g);}
+.prog-admin select{width:100%;border:2px solid var(--bd);border-radius:7px;padding:7px 10px;font-size:12px;font-family:'Plus Jakarta Sans',sans-serif;outline:none;background:var(--bg);cursor:pointer;}
 .amodal-ov{position:fixed;inset:0;background:rgba(0,0,0,.75);backdrop-filter:blur(8px);z-index:4000;display:none;align-items:center;justify-content:center;padding:16px;}
 .amodal-ov.on{display:flex;}
-.amodal{background:#fff;border-radius:15px;width:100%;max-width:460px;padding:26px;position:relative;animation:pi .24s ease;}
+.amodal{background:#fff;border-radius:15px;width:100%;max-width:560px;max-height:92vh;overflow-y:auto;padding:26px;position:relative;animation:pi .24s ease;}
 .amodal h3{font-family:'Fraunces',serif;font-size:19px;font-weight:900;color:var(--ink);margin-bottom:12px;}
 .amodal-cl{position:absolute;top:11px;right:11px;background:var(--bg);border:none;width:26px;height:26px;border-radius:6px;cursor:pointer;font-size:13px;color:var(--mu);}
 .amodal label{display:block;font-size:11px;font-weight:700;color:var(--mu);text-transform:uppercase;margin-bottom:4px;}
-.amodal textarea{width:100%;border:2px solid var(--bd);border-radius:8px;padding:10px;font-size:12px;font-family:'Plus Jakarta Sans',sans-serif;min-height:80px;resize:vertical;outline:none;background:var(--bg);margin-bottom:12px;transition:border-color .2s;}
-.amodal textarea:focus{border-color:var(--g);}
+.amodal textarea,.amodal input,.amodal select{width:100%;border:2px solid var(--bd);border-radius:8px;padding:10px;font-size:12px;font-family:'Plus Jakarta Sans',sans-serif;min-height:40px;outline:none;background:var(--bg);margin-bottom:12px;transition:border-color .2s;}
+.amodal textarea{min-height:80px;resize:vertical;}
+.amodal textarea:focus,.amodal input:focus,.amodal select:focus{border-color:var(--g);}
 .amodal-btns{display:flex;gap:8px;}
 .amodal-btns button{flex:1;border:none;border-radius:8px;padding:11px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:800;cursor:pointer;transition:all .2s;}
 .upload-zone{border:2px dashed var(--bd);border-radius:9px;padding:20px;text-align:center;background:var(--bg);cursor:pointer;position:relative;margin-bottom:12px;transition:all .2s;}
 .upload-zone:hover{border-color:var(--g);background:var(--g3);}
 .upload-zone input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;}
 .upload-preview{font-size:12px;color:var(--g);margin-bottom:10px;display:none;font-weight:600;padding:8px;background:var(--g3);border-radius:7px;}
+.detail-section{background:var(--bg);border-radius:9px;padding:12px 14px;margin-bottom:12px;border:1px solid var(--bd);}
+.detail-section h4{font-size:11px;font-weight:800;color:var(--mu);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--bd);}
+.detail-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;}
+.detail-item .dl{font-size:9px;font-weight:700;color:var(--mu);text-transform:uppercase;margin-bottom:2px;}
+.detail-item .dv{font-size:12px;font-weight:600;color:var(--ink);word-break:break-word;}
+.svc-manage{display:grid;gap:10px;}
+.svc-card{background:#fff;border:2px solid var(--bd);border-radius:10px;padding:14px;display:flex;align-items:center;justify-content:space-between;gap:10px;transition:all .2s;}
+.svc-card:hover{border-color:var(--g4);box-shadow:0 4px 14px rgba(0,0,0,.06);}
+.svc-card-info{flex:1;}
+.svc-card-name{font-weight:700;font-size:13px;color:var(--ink);margin-bottom:2px;}
+.svc-card-meta{font-size:11px;color:var(--mu);}
+.svc-card-price{font-family:'Fraunces',serif;font-size:16px;font-weight:900;color:var(--g);white-space:nowrap;}
+.svc-card-acts{display:flex;gap:5px;}
+.toggle-svc{width:38px;height:20px;border-radius:10px;border:none;cursor:pointer;position:relative;transition:all .3s;}
+.toggle-svc.on{background:var(--g);}
+.toggle-svc.off{background:var(--bd);}
+.toggle-svc::after{content:'';position:absolute;top:2px;width:16px;height:16px;border-radius:50%;background:#fff;transition:all .3s;}
+.toggle-svc.on::after{left:20px;}
+.toggle-svc.off::after{left:2px;}
 @media(max-width:768px){.admin-layout{grid-template-columns:1fr;}.admin-sidebar{display:none;}.astats{grid-template-columns:1fr 1fr;}.admin-main{padding:16px 12px;}}
 </style>
 </head>
@@ -524,61 +544,63 @@ footer{background:var(--ink);padding:48px 36px 20px;}
 <section class="section" id="pricing" style="background:#fff;border-bottom:1px solid var(--bd);">
   <div style="max-width:1280px;margin:0 auto;">
     <div class="ph"><div><span class="sec-label">Tarifs officiels vérifiés</span><h2 class="sec-h">Nos prix transparents</h2><p class="sec-sub">Prix tout inclus — frais F2K compris.</p></div></div>
-    <div class="pct">📄 État civil</div>
-    <div class="pgrid">
-      <div class="pc ce"><div class="pc-ico">👶</div><div class="pc-name">Acte de naissance</div><div class="pc-delay" style="color:var(--g);">⚡ Immédiat</div><div class="pc-pr">2 000 <span>FCFA</span></div><span class="pc-badge b-instant">⚡ En ligne</span></div>
-      <div class="pc ce"><div class="pc-ico">💍</div><div class="pc-name">Acte de mariage</div><div class="pc-delay" style="color:var(--g);">⚡ Immédiat</div><div class="pc-pr">2 000 <span>FCFA</span></div><span class="pc-badge b-instant">⚡ En ligne</span></div>
-      <div class="pc ce"><div class="pc-ico">📜</div><div class="pc-name">Acte de décès</div><div class="pc-delay" style="color:var(--g);">⚡ Immédiat</div><div class="pc-pr">2 000 <span>FCFA</span></div><span class="pc-badge b-instant">⚡ En ligne</span></div>
-      <div class="pc ce"><div class="pc-ico">🤝</div><div class="pc-name">Cert. coutume & célibat</div><div class="pc-delay" style="color:var(--g);">⚡ Immédiat</div><div class="pc-pr">2 000 <span>FCFA</span></div><span class="pc-badge b-instant">⚡ En ligne</span></div>
-      <div class="pc ce"><div class="pc-ico">📑</div><div class="pc-name">Jugement supplétif</div><div class="pc-delay" style="color:var(--y);">🔄 Au choix</div><div class="pc-pr">51 000 <span>FCFA</span></div><span class="pc-badge b-choice">🔄 Au choix</span></div>
-    </div>
-    <div class="pct">🪪 Identité nationale</div>
-    <div class="pgrid">
-      <div class="pc ci"><div class="pc-ico">🪪</div><div class="pc-name">CNIB</div><div class="pc-delay" style="color:var(--r);">📅 21 jours — RDV</div><div class="pc-pr">7 000 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV agence</span></div>
-      <div class="pc ci"><div class="pc-ico">📋</div><div class="pc-name">CIP</div><div class="pc-delay" style="color:var(--g);">⚡ Immédiat</div><div class="pc-pr">2 000 <span>FCFA</span></div><span class="pc-badge b-instant">⚡ En ligne</span></div>
-      <div class="pc ci"><div class="pc-ico">🏛️</div><div class="pc-name">Certificat NPI/FID</div><div class="pc-delay" style="color:var(--g);">⚡ Immédiat</div><div class="pc-pr">1 000 <span>FCFA</span></div><span class="pc-badge b-instant">⚡ En ligne</span></div>
-      <div class="pc ci"><div class="pc-ico">🏠</div><div class="pc-name">Certificat de résidence</div><div class="pc-delay" style="color:var(--g);">⚡ Immédiat</div><div class="pc-pr">3 000 <span>FCFA</span></div><span class="pc-badge b-instant">⚡ En ligne</span></div>
-    </div>
-    <div class="pct">🏛️ Services ANIP</div>
-    <div class="pgrid">
-      <div class="pc ca"><div class="pc-ico">📱</div><div class="pc-name">MAJ téléphone ANIP</div><div class="pc-delay" style="color:var(--g);">⚡ 24–48h</div><div class="pc-pr">1 000 <span>FCFA</span></div><span class="pc-badge b-instant">⚡ En ligne</span></div>
-      <div class="pc ca"><div class="pc-ico">✏️</div><div class="pc-name">MAJ informations ANIP</div><div class="pc-delay" style="color:var(--y);">🔄 2–5 jours</div><div class="pc-pr">1 000 <span>FCFA</span></div><span class="pc-badge b-choice">🔄 Au choix</span></div>
-    </div>
-    <div class="pct">⚖️ Justice & moralité</div>
-    <div class="pgrid">
-      <div class="pc cj"><div class="pc-ico">⚖️</div><div class="pc-name">Casier judiciaire</div><div class="pc-delay" style="color:var(--g);">⚡ Immédiat</div><div class="pc-pr">2 900 <span>FCFA</span></div><span class="pc-badge b-instant">⚡ En ligne</span></div>
-      <div class="pc cj"><div class="pc-ico">🖊️</div><div class="pc-name">Légalisation de signature</div><div class="pc-delay" style="color:var(--r);">📅 RDV obligatoire</div><div class="pc-pr">1 500 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV agence</span></div>
-      <div class="pc cj"><div class="pc-ico">📋</div><div class="pc-name">Copie conforme</div><div class="pc-delay" style="color:var(--g);">⚡ Immédiat</div><div class="pc-pr">1 500 <span>FCFA</span></div><span class="pc-badge b-instant">⚡ En ligne</span></div>
-    </div>
-    <div class="pct">🛂 Voyage & mobilité</div>
-    <div class="pgrid">
-      <div class="pc cv2"><div class="pc-ico">🛂</div><div class="pc-name">Passeport ordinaire</div><div class="pc-delay" style="color:var(--r);">📅 15–21 jours</div><div class="pc-pr">35 000 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV agence</span></div>
-      <div class="pc cv2"><div class="pc-ico">🛂</div><div class="pc-name">Passeport VIP (48h)</div><div class="pc-delay" style="color:var(--r);">📅 48h — RDV</div><div class="pc-pr">135 000 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV agence</span></div>
-      <div class="pc cv2"><div class="pc-ico">✈️</div><div class="pc-name">Laissez-passer</div><div class="pc-delay" style="color:var(--y);">🔄 3–5 jours</div><div class="pc-pr">1 000 <span>FCFA</span></div><span class="pc-badge b-choice">🔄 Au choix</span></div>
-    </div>
-    <div class="pct">🚗 Permis & transport</div>
-    <div class="pgrid">
-      <div class="pc cp"><div class="pc-ico">🚗</div><div class="pc-name">Permis de conduire</div><div class="pc-delay" style="color:var(--r);">📅 10–15 jours</div><div class="pc-pr">28 200 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV agence</span></div>
-      <div class="pc cp"><div class="pc-ico">🚘</div><div class="pc-name">Immatriculation véhicule</div><div class="pc-delay" style="color:var(--r);">📅 7–10 jours</div><div class="pc-pr">5 000 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV agence</span></div>
-      <div class="pc cp"><div class="pc-ico">🔧</div><div class="pc-name">Visite tech — Léger</div><div class="pc-delay" style="color:var(--r);">📅 Véhicule présent</div><div class="pc-pr">17 000 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV agence</span></div>
-      <div class="pc cp"><div class="pc-ico">🚕</div><div class="pc-name">Visite tech — Taxi</div><div class="pc-delay" style="color:var(--r);">📅 Véhicule présent</div><div class="pc-pr">11 000 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV agence</span></div>
-      <div class="pc cp"><div class="pc-ico">🚛</div><div class="pc-name">Visite tech — Poids lourd</div><div class="pc-delay" style="color:var(--r);">📅 Véhicule présent</div><div class="pc-pr">23 000 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV agence</span></div>
-    </div>
-    <div class="pct">🏗️ Foncier</div>
-    <div class="pgrid">
-      <div class="pc cf"><div class="pc-ico">🗺️</div><div class="pc-name">Extrait cadastral</div><div class="pc-delay" style="color:var(--y);">🔄 5–7 jours</div><div class="pc-pr">6 000 <span>FCFA</span></div><span class="pc-badge b-choice">🔄 Au choix</span></div>
-      <div class="pc cf"><div class="pc-ico">📂</div><div class="pc-name">Titre foncier</div><div class="pc-delay" style="color:var(--r);">📅 30–60 jours</div><div class="pc-pr">105 000 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV agence</span></div>
-    </div>
-    <div class="pct">💼 Fiscal</div>
-    <div class="pgrid">
-      <div class="pc cfi"><div class="pc-ico">🧾</div><div class="pc-name">IFU</div><div class="pc-delay" style="color:var(--g);">⚡ Immédiat</div><div class="pc-pr">1 000 <span>FCFA</span></div><span class="pc-badge b-instant">⚡ En ligne</span></div>
-    </div>
-    <div class="pct">📸 Photo & CV</div>
-    <div class="pgrid">
-      <div class="pc cph"><div class="pc-ico">📱</div><div class="pc-name">Photo identité numérique</div><div class="pc-delay" style="color:var(--g);">⚡ Sous 24h</div><div class="pc-pr">1 000 <span>FCFA</span></div><span class="pc-badge b-instant">⚡ En ligne</span></div>
-      <div class="pc cph"><div class="pc-ico">🖨️</div><div class="pc-name">Photo identité (8 ex.)</div><div class="pc-delay" style="color:var(--r);">📅 Retrait agence</div><div class="pc-pr">1 500 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV agence</span></div>
-      <div class="pc cph"><div class="pc-ico">💎</div><div class="pc-name">Photo bijoux & produits</div><div class="pc-delay" style="color:var(--r);">📅 Dépôt agence</div><div class="pc-pr">1 000 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV agence</span></div>
-      <div class="pc cph"><div class="pc-ico">📝</div><div class="pc-name">Rédaction de CV</div><div class="pc-delay" style="color:var(--g);">⚡ 24–48h</div><div class="pc-pr">500 <span>FCFA</span></div><span class="pc-badge b-instant">⚡ En ligne</span></div>
+    <div id="pricing-grid-container">
+      <div class="pct">📄 État civil</div>
+      <div class="pgrid">
+        <div class="pc ce"><div class="pc-ico">👶</div><div class="pc-name">Acte de naissance</div><div class="pc-delay" style="color:var(--g);">⚡ Immédiat</div><div class="pc-pr">2 000 <span>FCFA</span></div><span class="pc-badge b-instant">⚡ En ligne</span></div>
+        <div class="pc ce"><div class="pc-ico">💍</div><div class="pc-name">Acte de mariage</div><div class="pc-delay" style="color:var(--g);">⚡ Immédiat</div><div class="pc-pr">2 000 <span>FCFA</span></div><span class="pc-badge b-instant">⚡ En ligne</span></div>
+        <div class="pc ce"><div class="pc-ico">📜</div><div class="pc-name">Acte de décès</div><div class="pc-delay" style="color:var(--g);">⚡ Immédiat</div><div class="pc-pr">2 000 <span>FCFA</span></div><span class="pc-badge b-instant">⚡ En ligne</span></div>
+        <div class="pc ce"><div class="pc-ico">🤝</div><div class="pc-name">Cert. coutume & célibat</div><div class="pc-delay" style="color:var(--g);">⚡ Immédiat</div><div class="pc-pr">2 000 <span>FCFA</span></div><span class="pc-badge b-instant">⚡ En ligne</span></div>
+        <div class="pc ce"><div class="pc-ico">📑</div><div class="pc-name">Jugement supplétif</div><div class="pc-delay" style="color:var(--y);">🔄 Au choix</div><div class="pc-pr">51 000 <span>FCFA</span></div><span class="pc-badge b-choice">🔄 Au choix</span></div>
+      </div>
+      <div class="pct">🪪 Identité nationale</div>
+      <div class="pgrid">
+        <div class="pc ci"><div class="pc-ico">🪪</div><div class="pc-name">CNIB</div><div class="pc-delay" style="color:var(--r);">📅 21 jours</div><div class="pc-pr">7 000 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV</span></div>
+        <div class="pc ci"><div class="pc-ico">📋</div><div class="pc-name">CIP</div><div class="pc-delay" style="color:var(--g);">⚡ Immédiat</div><div class="pc-pr">2 000 <span>FCFA</span></div><span class="pc-badge b-instant">⚡ En ligne</span></div>
+        <div class="pc ci"><div class="pc-ico">🏛️</div><div class="pc-name">Certificat NPI/FID</div><div class="pc-delay" style="color:var(--g);">⚡ Immédiat</div><div class="pc-pr">1 000 <span>FCFA</span></div><span class="pc-badge b-instant">⚡ En ligne</span></div>
+        <div class="pc ci"><div class="pc-ico">🏠</div><div class="pc-name">Cert. de résidence</div><div class="pc-delay" style="color:var(--g);">⚡ Immédiat</div><div class="pc-pr">3 000 <span>FCFA</span></div><span class="pc-badge b-instant">⚡ En ligne</span></div>
+      </div>
+      <div class="pct">🏛️ Services ANIP</div>
+      <div class="pgrid">
+        <div class="pc ca"><div class="pc-ico">📱</div><div class="pc-name">MAJ téléphone ANIP</div><div class="pc-delay" style="color:var(--g);">⚡ 24–48h</div><div class="pc-pr">1 000 <span>FCFA</span></div><span class="pc-badge b-instant">⚡ En ligne</span></div>
+        <div class="pc ca"><div class="pc-ico">✏️</div><div class="pc-name">MAJ informations ANIP</div><div class="pc-delay" style="color:var(--y);">🔄 Au choix</div><div class="pc-pr">1 000 <span>FCFA</span></div><span class="pc-badge b-choice">🔄 Au choix</span></div>
+      </div>
+      <div class="pct">⚖️ Justice & moralité</div>
+      <div class="pgrid">
+        <div class="pc cj"><div class="pc-ico">⚖️</div><div class="pc-name">Casier judiciaire</div><div class="pc-delay" style="color:var(--g);">⚡ Immédiat</div><div class="pc-pr">2 900 <span>FCFA</span></div><span class="pc-badge b-instant">⚡ En ligne</span></div>
+        <div class="pc cj"><div class="pc-ico">🖊️</div><div class="pc-name">Légalisation de signature</div><div class="pc-delay" style="color:var(--r);">📅 RDV</div><div class="pc-pr">1 500 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV</span></div>
+        <div class="pc cj"><div class="pc-ico">📋</div><div class="pc-name">Copie conforme</div><div class="pc-delay" style="color:var(--g);">⚡ Immédiat</div><div class="pc-pr">1 500 <span>FCFA</span></div><span class="pc-badge b-instant">⚡ En ligne</span></div>
+      </div>
+      <div class="pct">🛂 Voyage & mobilité</div>
+      <div class="pgrid">
+        <div class="pc cv2"><div class="pc-ico">🛂</div><div class="pc-name">Passeport ordinaire</div><div class="pc-delay" style="color:var(--r);">📅 15–21 jours</div><div class="pc-pr">35 000 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV</span></div>
+        <div class="pc cv2"><div class="pc-ico">🛂</div><div class="pc-name">Passeport VIP (48h)</div><div class="pc-delay" style="color:var(--r);">📅 48h</div><div class="pc-pr">135 000 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV</span></div>
+        <div class="pc cv2"><div class="pc-ico">✈️</div><div class="pc-name">Laissez-passer</div><div class="pc-delay" style="color:var(--y);">🔄 3–5 jours</div><div class="pc-pr">1 000 <span>FCFA</span></div><span class="pc-badge b-choice">🔄 Au choix</span></div>
+      </div>
+      <div class="pct">🚗 Permis & transport</div>
+      <div class="pgrid">
+        <div class="pc cp"><div class="pc-ico">🚗</div><div class="pc-name">Permis de conduire</div><div class="pc-delay" style="color:var(--r);">📅 10–15 jours</div><div class="pc-pr">28 200 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV</span></div>
+        <div class="pc cp"><div class="pc-ico">🚘</div><div class="pc-name">Immatriculation véhicule</div><div class="pc-delay" style="color:var(--r);">📅 7–10 jours</div><div class="pc-pr">5 000 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV</span></div>
+        <div class="pc cp"><div class="pc-ico">🔧</div><div class="pc-name">Visite tech — Léger</div><div class="pc-delay" style="color:var(--r);">📅 RDV</div><div class="pc-pr">17 000 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV</span></div>
+        <div class="pc cp"><div class="pc-ico">🚕</div><div class="pc-name">Visite tech — Taxi</div><div class="pc-delay" style="color:var(--r);">📅 RDV</div><div class="pc-pr">11 000 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV</span></div>
+        <div class="pc cp"><div class="pc-ico">🚛</div><div class="pc-name">Visite tech — Poids lourd</div><div class="pc-delay" style="color:var(--r);">📅 RDV</div><div class="pc-pr">23 000 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV</span></div>
+      </div>
+      <div class="pct">🏗️ Foncier</div>
+      <div class="pgrid">
+        <div class="pc cf"><div class="pc-ico">🗺️</div><div class="pc-name">Extrait cadastral</div><div class="pc-delay" style="color:var(--y);">🔄 5–7 jours</div><div class="pc-pr">6 000 <span>FCFA</span></div><span class="pc-badge b-choice">🔄 Au choix</span></div>
+        <div class="pc cf"><div class="pc-ico">📂</div><div class="pc-name">Titre foncier</div><div class="pc-delay" style="color:var(--r);">📅 30–60 jours</div><div class="pc-pr">105 000 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV</span></div>
+      </div>
+      <div class="pct">💼 Fiscal</div>
+      <div class="pgrid">
+        <div class="pc cfi"><div class="pc-ico">🧾</div><div class="pc-name">IFU</div><div class="pc-delay" style="color:var(--g);">⚡ Immédiat</div><div class="pc-pr">1 000 <span>FCFA</span></div><span class="pc-badge b-instant">⚡ En ligne</span></div>
+      </div>
+      <div class="pct">📸 Photo & CV</div>
+      <div class="pgrid">
+        <div class="pc cph"><div class="pc-ico">📱</div><div class="pc-name">Photo identité numérique</div><div class="pc-delay" style="color:var(--g);">⚡ Sous 24h</div><div class="pc-pr">1 000 <span>FCFA</span></div><span class="pc-badge b-instant">⚡ En ligne</span></div>
+        <div class="pc cph"><div class="pc-ico">🖨️</div><div class="pc-name">Photo identité (8 ex.)</div><div class="pc-delay" style="color:var(--r);">📅 RDV</div><div class="pc-pr">1 500 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV</span></div>
+        <div class="pc cph"><div class="pc-ico">💎</div><div class="pc-name">Photo bijoux & produits</div><div class="pc-delay" style="color:var(--r);">📅 RDV</div><div class="pc-pr">1 000 <span>FCFA</span></div><span class="pc-badge b-rdv">📅 RDV</span></div>
+        <div class="pc cph"><div class="pc-ico">📝</div><div class="pc-name">Rédaction de CV</div><div class="pc-delay" style="color:var(--g);">⚡ 24–48h</div><div class="pc-pr">500 <span>FCFA</span></div><span class="pc-badge b-instant">⚡ En ligne</span></div>
+      </div>
     </div>
     <div style="margin-top:18px;background:var(--bg);border:1px solid var(--bd);border-radius:9px;padding:12px 16px;font-size:11px;color:var(--mu);line-height:1.7;"><strong>ℹ️</strong> Prix tout inclus. <strong>💙 Moov Money · 💛 MTN Mobile Money · ❤️ Celtiis Cash</strong> — USSD automatique. <strong>🎁 Réduction 10%</strong> à partir de 3 services.</div>
   </div>
@@ -586,6 +608,7 @@ footer{background:var(--ink);padding:48px 36px 20px;}
   <section class="section" id="catalog" style="background:var(--bg);">
   <div style="max-width:1280px;margin:0 auto;">
     <div style="margin-bottom:24px;"><span class="sec-label">Catalogue complet</span><h2 class="sec-h">Choisissez votre service</h2><p class="sec-sub">Cliquez sur un service pour accéder au formulaire et au paiement.</p></div>
+    <div id="catalog-container">
     <div class="catsec ce2"><div class="cattitle"><div class="catbdg" style="background:var(--g3);">📄</div><span class="catlbl">État civil</span><span class="catcnt">5</span><div class="div"></div></div>
     <div class="sgrid">
       <a class="sc" href="#" onclick="openForm('naissance',event)"><div class="sc-ico">👶</div><div class="sc-name">Acte de naissance</div><p class="sc-desc">Extrait sécurisé via ANIP.</p><div class="sc-foot"><span class="sc-pr">2 000 FCFA</span><span class="sc-badge sb-instant">⚡ Immédiat</span><span class="sc-arr">→</span></div></a>
@@ -642,6 +665,8 @@ footer{background:var(--ink);padding:48px 36px 20px;}
       <a class="sc" href="#" onclick="openForm('photo_bijoux',event)"><div class="sc-ico">💎</div><div class="sc-name">Photo bijoux & produits</div><p class="sc-desc">Dépôt articles — retrait en agence.</p><div class="sc-foot"><span class="sc-pr">1 000 FCFA</span><span class="sc-badge sb-rdv">📅 RDV</span><span class="sc-arr">→</span></div></a>
       <a class="sc" href="#" onclick="openForm('cv',event)"><div class="sc-ico">📝</div><div class="sc-name">Rédaction de CV</div><p class="sc-desc">CV pro livré par email sous 48h.</p><div class="sc-foot"><span class="sc-pr">500 FCFA</span><span class="sc-badge sb-instant">⚡ 48h</span><span class="sc-arr">→</span></div></a>
     </div></div>
+    <div id="extra-services-catalog"></div>
+    </div>
   </div>
 </section>
 <section class="section" id="comment" style="background:#fff;border-top:1px solid var(--bd);">
@@ -666,10 +691,10 @@ footer{background:var(--ink);padding:48px 36px 20px;}
   <div style="max-width:1280px;margin:0 auto;">
     <div style="text-align:center;margin-bottom:8px;"><span class="sec-label">Pourquoi nous</span><h2 class="sec-h">F2K MULTISERVICE</h2></div>
     <div class="wgrid">
-      <div class="wc"><div class="wi">🔒</div><div class="wt">Securise et confidentiel</div><p class="wp">Vos donnees protegees.</p></div>
-      <div class="wc"><div class="wi">⚡</div><div class="wt">Documents ANIP immediats</div><p class="wp">Delivrance instantanee apres validation.</p></div>
+      <div class="wc"><div class="wi">🔒</div><div class="wt">Securise et confidentiel</div><p class="wp">Vos donnees protegees — traitement confidentiel garanti.</p></div>
+      <div class="wc"><div class="wi">⚡</div><div class="wt">Documents ANIP immediats</div><p class="wp">Actes d'etat civil, CIP, NPI, casier judiciaire — delivrance instantanee.</p></div>
       <div class="wc"><div class="wi">🇧🇯</div><div class="wt">100% Beninois</div><p class="wp">Concu par et pour les Beninois.</p></div>
-      <div class="wc"><div class="wi">📧</div><div class="wt">Email automatique</div><p class="wp">Code de reference envoye immediatement.</p></div>
+      <div class="wc"><div class="wi">📧</div><div class="wt">Email automatique</div><p class="wp">Code de reference envoye immediatement apres paiement.</p></div>
       <div class="wc"><div class="wi">💳</div><div class="wt">3 operateurs acceptes</div><p class="wp">Moov Money, MTN Mobile Money et Celtiis Cash.</p></div>
       <div class="wc"><div class="wi">🎁</div><div class="wt">Reduction 10%</div><p class="wp">A partir de 3 services commandes ensemble.</p></div>
     </div>
@@ -693,8 +718,8 @@ footer{background:var(--ink);padding:48px 36px 20px;}
     </div>
   </div>
   <div class="fbot"><span>2025 F2K MULTISERVICE. Tous droits reserves.</span><div><a href="#">Confidentialite</a><a href="#">CGU</a></div></div>
-                                                                     </footer>
-                                                                     <div class="ov" id="form-ov">
+                              </footer>
+                              <div class="ov" id="form-ov">
   <div class="modal" id="form-modal">
     <div class="mhead">
       <button class="mcl" onclick="closeForm()">X</button>
@@ -791,6 +816,7 @@ footer{background:var(--ink);padding:48px 36px 20px;}
         <a class="asb-item" onclick="showAdminPage('ready',this)" href="#">Prets a livrer <span class="asb-cnt" id="asb-ready">0</span></a>
         <a class="asb-item" onclick="showAdminPage('rejected',this)" href="#">Rejetes <span class="asb-cnt" id="asb-rej">0</span></a>
         <a class="asb-item" onclick="showAdminPage('clients',this)" href="#">Clients inscrits <span class="asb-cnt" id="asb-clients">0</span></a>
+        <a class="asb-item" onclick="showAdminPage('services',this)" href="#">Gerer les services</a>
         <div style="border-top:1px solid rgba(255,255,255,.06);margin:10px 0;"></div>
         <a class="asb-item" onclick="closeAdmin()" href="#">Retour au site</a>
       </nav>
@@ -800,6 +826,9 @@ footer{background:var(--ink);padding:48px 36px 20px;}
       <div class="apage on" id="apage-dashboard">
         <div class="apage-title">Tableau de bord</div>
         <div class="apage-sub">Bienvenue sur le panel F2K MULTISERVICE</div>
+        <div style="display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;">
+          <button class="aact aact-green" onclick="loadAdminOrders()">🔄 Actualiser</button>
+        </div>
         <div class="astats">
           <div class="astat"><div class="astat-lbl">Total demandes</div><div class="astat-num" id="ast-total">0</div></div>
           <div class="astat"><div class="astat-lbl">En attente</div><div class="astat-num" id="ast-pending" style="color:var(--y);">0</div></div>
@@ -811,6 +840,7 @@ footer{background:var(--ink);padding:48px 36px 20px;}
       </div>
       <div class="apage" id="apage-orders">
         <div class="apage-title">Toutes les demandes</div>
+        <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap;"><button class="aact aact-green" onclick="loadAdminOrders()">🔄 Actualiser</button></div>
         <div class="asearch"><input type="text" placeholder="Rechercher par reference, nom, email..." id="asearch-input" oninput="filterAdminOrders()"></div>
         <div class="afilters">
           <button class="afbtn on" onclick="setAdminFilter('all',this)">Tous</button>
@@ -827,6 +857,12 @@ footer{background:var(--ink);padding:48px 36px 20px;}
       <div class="apage" id="apage-ready"><div class="apage-title">Prets a livrer</div><div class="aorder-list" id="aready-list"></div></div>
       <div class="apage" id="apage-rejected"><div class="apage-title">Demandes rejetees</div><div class="aorder-list" id="arej-list"></div></div>
       <div class="apage" id="apage-clients"><div class="apage-title">Clients inscrits</div><div id="aclients-list"></div></div>
+      <div class="apage" id="apage-services">
+        <div class="apage-title">Gestion des services</div>
+        <div class="apage-sub">Ajoutez, modifiez ou supprimez des services sans toucher au code.</div>
+        <button class="aact aact-green" onclick="openSvcForm(null)" style="margin-bottom:16px;">+ Ajouter un nouveau service</button>
+        <div id="svc-manage-list" class="svc-manage"></div>
+      </div>
     </div>
   </div>
 </div>
@@ -837,15 +873,65 @@ footer{background:var(--ink);padding:48px 36px 20px;}
     <div id="amodal-body"></div>
   </div>
 </div>
+<div class="amodal-ov" id="detail-ov">
+  <div class="amodal" style="max-width:680px;">
+    <button class="amodal-cl" onclick="closeDetail()">X</button>
+    <h3 id="detail-title">Detail de la demande</h3>
+    <div id="detail-body"></div>
+  </div>
+</div>
+<div class="amodal-ov" id="svc-ov">
+  <div class="amodal">
+    <button class="amodal-cl" onclick="closeSvcForm()">X</button>
+    <h3 id="svc-form-title">Ajouter un service</h3>
+    <div id="svc-form-body">
+      <label>Nom du service *</label>
+      <input type="text" id="svc-nom" placeholder="Ex: Certificat de nationalite">
+      <label>Icone (emoji) *</label>
+      <input type="text" id="svc-ico" placeholder="Ex: 🏛️" maxlength="4">
+      <label>Prix (FCFA) *</label>
+      <input type="number" id="svc-prix" placeholder="Ex: 5000">
+      <label>Delai *</label>
+      <input type="text" id="svc-delai" placeholder="Ex: Immediat ou 5-7 jours (RDV)">
+      <label>Categorie *</label>
+      <select id="svc-cat">
+        <option value="Etat civil">Etat civil</option>
+        <option value="Identite nationale">Identite nationale</option>
+        <option value="Services ANIP">Services ANIP</option>
+        <option value="Justice et moralite">Justice et moralite</option>
+        <option value="Voyage et mobilite">Voyage et mobilite</option>
+        <option value="Permis et transport">Permis et transport</option>
+        <option value="Foncier">Foncier</option>
+        <option value="Fiscal">Fiscal</option>
+        <option value="Photo et CV">Photo et CV</option>
+        <option value="Autre">Autre</option>
+      </select>
+      <label>Type de disponibilite *</label>
+      <select id="svc-type">
+        <option value="instant">⚡ Immediat / En ligne</option>
+        <option value="rdv">📅 RDV obligatoire</option>
+        <option value="choice">🔄 Au choix</option>
+      </select>
+      <label>Description courte</label>
+      <input type="text" id="svc-desc" placeholder="Ex: Document officiel delivre immediatement">
+      <label>Documents requis</label>
+      <input type="text" id="svc-docs" placeholder="Ex: CNI + Acte de naissance">
+      <div class="amodal-btns">
+        <button style="background:var(--bg);border:2px solid var(--bd);color:var(--mu);" onclick="closeSvcForm()">Annuler</button>
+        <button style="background:var(--g);color:#fff;" onclick="saveSvc()">Enregistrer le service</button>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="amodal-ov" id="upload-ov">
   <div class="amodal">
     <button class="amodal-cl" onclick="closeUpload()">X</button>
     <h3>📤 Soumettre le document finalise</h3>
     <p style="font-size:12px;color:var(--mu);margin-bottom:14px;">Le client pourra telecharger ce document depuis son espace ou avec son code de reference.</p>
     <div class="upload-zone">
-      <input type="file" id="doc-file" accept=".pdf,.doc,.docx,image/*" onchange="previewDoc(this)">
+      <input type="file" id="doc-file" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.gif,image/*,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" onchange="previewDoc(this)">
       <p style="font-size:13px;font-weight:700;color:var(--mu);">📁 Cliquez ou glissez le document ici</p>
-      <p style="font-size:11px;color:var(--mu);margin-top:4px;">PDF, Word ou image — max 10 Mo</p>
+      <p style="font-size:11px;color:var(--mu);margin-top:4px;">PDF, Word, image — max 10 Mo</p>
     </div>
     <div class="upload-preview" id="doc-preview"></div>
     <label style="display:block;font-size:11px;font-weight:700;color:var(--mu);text-transform:uppercase;margin-bottom:5px;">Message pour le client (optionnel)</label>
@@ -856,8 +942,8 @@ footer{background:var(--ink);padding:48px 36px 20px;}
 <div class="toast" id="toast">
   <span id="t-ico" style="font-size:18px;">✅</span>
   <div><div class="tmsg" id="t-msg"></div><div class="tsub" id="t-sub"></div></div>
-  </div>
-  <script>
+      </div>
+      <script>
 const firebaseConfig={
   apiKey:"AIzaSyBtngyLs-sbAnfMQD0MhOi2yqB114vi4Jg",
   authDomain:"f2k-on-line.firebaseapp.com",
@@ -886,14 +972,13 @@ var PRICES={naissance:2000,mariage:2000,deces:2000,celibat:2000,jugement:51000,c
 var NAMES={naissance:"Acte de naissance",mariage:"Acte de mariage",deces:"Acte de deces",celibat:"Cert. de coutume et celibat",jugement:"Jugement suppletif",cni:"CNIB",cip:"CIP",npi:"Certificat NPI/FID",residence:"Certificat de residence",anip_tel:"MAJ telephone ANIP",anip_info:"MAJ informations ANIP",casier:"Casier judiciaire (B3)",legalisation:"Legalisation de signature",copie_conf:"Copie conforme",passeport:"Passeport ordinaire",passeport_vip:"Passeport VIP (48h)",laissez:"Laissez-passer",permis:"Permis de conduire",immat:"Immatriculation vehicule",visite_leger:"Visite technique Leger",visite_taxi:"Visite technique Taxi",visite_lourd:"Visite technique Poids lourd",cadastre:"Extrait cadastral",titre_fonc:"Titre foncier",ifu:"IFU",photo_num:"Photo identite numerique",photo_print:"Photo identite 8 exemplaires",photo_bijoux:"Photo bijoux et produits",cv:"Redaction de CV"};
 var ICONS={naissance:"👶",mariage:"💍",deces:"📜",celibat:"🤝",jugement:"📑",cni:"🪪",cip:"📋",npi:"🏛️",residence:"🏠",anip_tel:"📱",anip_info:"✏️",casier:"⚖️",legalisation:"🖊️",copie_conf:"📋",passeport:"🛂",passeport_vip:"🛂",laissez:"✈️",permis:"🚗",immat:"🚘",visite_leger:"🔧",visite_taxi:"🚕",visite_lourd:"🚛",cadastre:"🗺️",titre_fonc:"📂",ifu:"🧾",photo_num:"📱",photo_print:"🖨️",photo_bijoux:"💎",cv:"📝"};
 var DELAIS={naissance:"Immediat",mariage:"Immediat",deces:"Immediat",celibat:"Immediat",jugement:"10-15 jours",cni:"21 jours (RDV)",cip:"Immediat",npi:"Immediat",residence:"Immediat",anip_tel:"24-48h",anip_info:"2-5 jours",casier:"Immediat",legalisation:"RDV agence",copie_conf:"Immediat",passeport:"15-21 jours (RDV)",passeport_vip:"48h (RDV)",laissez:"3-5 jours",permis:"10-15 jours (RDV)",immat:"7-10 jours (RDV)",visite_leger:"RDV agence",visite_taxi:"RDV agence",visite_lourd:"RDV agence",cadastre:"5-7 jours",titre_fonc:"30-60 jours",ifu:"Immediat",photo_num:"Sous 24h",photo_print:"RDV agence",photo_bijoux:"RDV agence",cv:"24-48h"};
-var cart=[];var currentUser=null;var allOrders=[];var adminFilter="all";var uploadRef="";var curKey="";var uploadedFiles=[];var capturedPhoto=null;var camStream=null;
+var cart=[];var currentUser=null;var allOrders=[];var adminFilter="all";var uploadRef="";var curKey="";var uploadedFiles=[];var capturedPhoto=null;var camStream=null;var extraServices=[];var editSvcId=null;
 
 function addToCart(key){if(cart.indexOf(key)===-1) cart.push(key);updateCartBadge();}
 function updateCartBadge(){
   var count=cart.length;var total=0;
   for(var i=0;i<cart.length;i++) total+=PRICES[cart[i]]||0;
-  var discount=count>=3?Math.round(total*0.10):0;
-  var final=total-discount;
+  var discount=count>=3?Math.round(total*0.10):0;var final=total-discount;
   var badge=document.getElementById("cart-badge");
   if(!badge){badge=document.createElement("div");badge.id="cart-badge";badge.style.cssText="position:fixed;bottom:20px;left:20px;z-index:1500;background:var(--ink2);color:#fff;border-radius:14px;padding:12px 18px;font-size:12px;font-weight:700;box-shadow:0 8px 24px rgba(0,0,0,.22);display:none;cursor:pointer;border:2px solid var(--g);font-family:'Plus Jakarta Sans',sans-serif;";badge.onclick=function(){openDash();};document.body.appendChild(badge);}
   if(count>0){badge.style.display="block";badge.innerHTML="🛒 "+count+" service(s) — "+final.toLocaleString("fr-FR")+" FCFA"+(discount>0?" <span style='color:var(--g2);'>(-10%)</span>":"");}
@@ -905,36 +990,35 @@ function selC(id){var h="<select id='"+id+"'><option value=''>-- Commune --</opt
 function selR(id){var h="<select id='"+id+"'><option value=''>-- Mode --</option>";for(var i=0;i<RECEPTIONS.length;i++) h+="<option>"+RECEPTIONS[i]+"</option>";return h+"</select>";}
 function nameF(){return "<div class='fr2'><div class='fg'><label>Nom <span class='req'>*</span></label><input type='text' id='f-nom' placeholder='GBAGUIDI'></div><div class='fg'><label>Prenom(s) <span class='req'>*</span></label><input type='text' id='f-prenom' placeholder='Kouassi'></div></div>";}
 function contactF(){return "<div class='fg'><label>Email <span class='req'>*</span></label><input type='email' id='f-email' placeholder='votre@email.com'></div><div class='fr2'><div class='fg'><label>Telephone <span class='req'>*</span></label><input type='tel' id='f-tel' placeholder='+229 97 00 00 00'></div><div class='fg'><label>Commune <span class='req'>*</span></label>"+selC("f-commune")+"</div></div><div class='fg'><label>Mode de reception <span class='req'>*</span></label>"+selR("f-reception")+"</div>";}
-function fileF(lbl){return "<div class='fg'><label>"+lbl+"</label><div class='file-drop' id='fdrop'><input type='file' multiple accept='image/*,.pdf' onchange='handleFiles(this.files)'><p>📎 Glissez ou <span>parcourez</span> — JPG, PNG, PDF (5Mo max)</p></div><div class='filelist' id='flist'></div></div>";}
+function fileF(lbl){return "<div class='fg'><label>"+lbl+"</label><div class='file-drop' id='fdrop'><input type='file' multiple accept='image/*,.pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document' onchange='handleFiles(this.files)'><p>📎 Glissez ou <span>parcourez</span> — JPG, PNG, <strong>PDF</strong>, Word (10Mo max)</p></div><div class='filelist' id='flist'></div></div>";}
 function npiF(){return "<div class='npibox'><div class='npititle'>🔢 Identification nationale <span style='color:var(--r);font-size:11px;'>* obligatoire</span></div><p class='npi-note'>Renseignez votre NPI ou le numero de formulaire de votre recepisse RAVIP.</p><div class='npitabs'><div class='ntab on' onclick='switchNpi(\"npi\",this)'>J ai mon NPI</div><div class='ntab' onclick='switchNpi(\"ravip\",this)'>J ai seulement le recepisse RAVIP</div></div><div id='npi-npi'><div class='fg'><label>NPI <span class='req'>*</span></label><input type='text' id='f-npi' placeholder='Ex : 00123456789' maxlength='20'></div></div><div id='npi-ravip' style='display:none;'><div class='fg'><label>N recepisse RAVIP <span class='req'>*</span></label><input type='text' id='f-ravip' placeholder='Numero figurant sur votre recepisse'></div></div></div>";}
 function switchNpi(t,el){var tabs=document.querySelectorAll(".ntab");for(var i=0;i<tabs.length;i++) tabs[i].classList.remove("on");el.classList.add("on");document.getElementById("npi-npi").style.display=t==="npi"?"":"none";document.getElementById("npi-ravip").style.display=t==="ravip"?"":"none";}
-function showToast(msg,sub,col){
-  col=col||"var(--g)";
-  var t=document.getElementById("toast");
-  document.getElementById("t-ico").textContent="✅";
-  document.getElementById("t-msg").textContent=msg;
-  document.getElementById("t-sub").textContent=sub||"";
-  t.style.borderLeftColor=col;
-  t.classList.add("on");
-  setTimeout(function(){t.classList.remove("on");},5000);
-}
+function showToast(msg,sub,col){col=col||"var(--g)";var t=document.getElementById("toast");document.getElementById("t-ico").textContent="✅";document.getElementById("t-msg").textContent=msg;document.getElementById("t-sub").textContent=sub||"";t.style.borderLeftColor=col;t.classList.add("on");setTimeout(function(){t.classList.remove("on");},5000);}
 function toggleNav(){var ul=document.getElementById("nav-ul");if(ul.style.display==="flex"){ul.style.display="";return;}ul.style.cssText="display:flex;flex-direction:column;position:fixed;top:62px;left:0;right:0;background:rgba(255,255,255,.98);backdrop-filter:blur(16px);padding:14px;gap:11px;border-bottom:1px solid var(--bd);z-index:299;box-shadow:0 8px 20px rgba(0,0,0,.09);";var links=ul.querySelectorAll("a");for(var i=0;i<links.length;i++){links[i].style.fontSize="14px";links[i].addEventListener("click",function(){ul.style.display="";},{once:true});}}
 var logoClickCount=0;var logoClickTimer=null;
 function logoClick(e){e.preventDefault();logoClickCount++;if(logoClickTimer) clearTimeout(logoClickTimer);logoClickTimer=setTimeout(function(){logoClickCount=0;},1000);if(logoClickCount>=3){logoClickCount=0;clearTimeout(logoClickTimer);openAdmin();}}
-function uploadToCloudinary(file){return new Promise(function(resolve){var fd=new FormData();fd.append("file",file);fd.append("upload_preset",CLOUDINARY_PRESET);fetch(CLOUDINARY_URL,{method:"POST",body:fd}).then(function(r){return r.json();}).then(function(d){resolve(d.secure_url||null);}).catch(function(){resolve(null);});});}
+function uploadToCloudinary(file){
+  return new Promise(function(resolve){
+    var fd=new FormData();
+    fd.append("file",file);
+    fd.append("upload_preset",CLOUDINARY_PRESET);
+    fd.append("resource_type","auto");
+    fetch(CLOUDINARY_URL,{method:"POST",body:fd})
+      .then(function(r){return r.json();})
+      .then(function(d){resolve(d.secure_url||null);})
+      .catch(function(){resolve(null);});
+  });
+}
 function sendConfirmationEmail(params){return emailjs.send(EMAILJS_SERVICE,EMAILJS_TEMPLATE,{to_email:params.email,to_name:params.prenom+" "+params.nom,ref_code:params.ref,service_name:params.serviceName,amount:params.amount,delai:params.delai,date:params.date,tel:params.tel,reply_to:"f2kmultiservice@gmail.com"}).then(function(){return true;}).catch(function(){return false;});}
 function payBox(key){
   var baseAmt=PRICES[key]||0;
   var discount=cart.length>=3?Math.round(baseAmt*0.10):0;
-  var amt=baseAmt-discount;
-  var amtFmt=amt.toLocaleString("fr-FR");
+  var amt=baseAmt-discount;var amtFmt=amt.toLocaleString("fr-FR");
   var html="<div class='paybox'><div class='pay-header'><div class='pay-header-title'>💳 Choisissez votre operateur</div><div class='pay-amount'>"+amtFmt+" <span>FCFA"+(discount>0?" — 🎁 Reduction 10% !":"")+"</span></div></div><div class='pay-ops'>";
-  var ops=["moov","mtn","cel"];
-  var icons={moov:"💙",mtn:"💛",cel:"❤️"};
+  var ops=["moov","mtn","cel"];var icons={moov:"💙",mtn:"💛",cel:"❤️"};
   var steps={moov:"Entrez votre code secret Moov Money",mtn:"Entrez votre code secret MTN",cel:"Entrez votre code secret Celtiis"};
   for(var i=0;i<ops.length;i++){
-    var opKey=ops[i];var op=OPERATORS[opKey];
-    var ussd=op.code(amt);var display=ussd.replace("%23","#");
+    var opKey=ops[i];var op=OPERATORS[opKey];var ussd=op.code(amt);var display=ussd.replace("%23","#");
     html+="<div class='pay-op pay-op-"+opKey+"'><div class='pay-op-head'><span class='op-badge op-"+opKey+"'>"+icons[opKey]+" "+op.badge+"</span><span class='op-ussd op-ussd-"+opKey+"'>"+display+"</span></div>";
     html+="<div class='pay-steps'><strong>Comment payer :</strong><br>1. Cliquez sur le bouton<br>2. Votre telephone ouvre le USSD<br>3. "+steps[opKey]+" et confirmez<br>4. Recevez le SMS de confirmation</div>";
     html+="<a class='pay-btn pay-btn-"+opKey+"' href='tel:"+ussd+"' onclick='onPayClick()'>"+icons[opKey]+" Payer "+amtFmt+" FCFA via "+op.name+"</a></div>";
@@ -944,7 +1028,7 @@ function payBox(key){
 }
 function onPayClick(){setTimeout(function(){var b=document.getElementById("pay-confirm-box");if(b) b.style.display="block";},4000);}
 function togglePaid(cb){var b=document.getElementById("pay-confirm-box");if(b) b.style.display=cb.checked?"block":"none";}
-    function buildForm(key){
+        function buildForm(key){
   var n=npiF();var p=payBox(key);
   var base=n+nameF()+"<div class='fr2'><div class='fg'><label>Date de naissance <span class='req'>*</span></label><input type='date' id='f-ddn'></div><div class='fg'><label>Lieu de naissance <span class='req'>*</span></label><input type='text' id='f-lieu' placeholder='Commune/ville'></div></div>";
   var F={
@@ -961,7 +1045,7 @@ function togglePaid(cb){var b=document.getElementById("pay-confirm-box");if(b) b
     anip_info:function(){return "<div class='ibox ib-pu'>Correction de vos donnees dans la base ANIP.</div>"+n+nameF()+"<div class='fg'><label>Date de naissance <span class='req'>*</span></label><input type='date' id='f-ddn'></div><div class='fg'><label>Information a modifier <span class='req'>*</span></label><select id='f-champ'><option value=''>--</option><option>Nom / Prenom</option><option>Date de naissance</option><option>Adresse</option><option>Etat civil</option><option>Numero de telephone</option></select></div><div class='fg'><label>Description des modifications <span class='req'>*</span></label><textarea id='f-desc' placeholder='Expliquez ce qui doit etre corrige...'></textarea></div><div class='fst'>Coordonnees</div><div class='fg'><label>Email <span class='req'>*</span></label><input type='email' id='f-email'></div><div class='fg'><label>Telephone <span class='req'>*</span></label><input type='tel' id='f-tel'></div><div class='fg'><label>Mode reception <span class='req'>*</span></label>"+selR("f-reception")+"</div>"+fileF("CNI + documents justifiant la modification")+p;},
     casier:function(){return "<div class='ibox ib-ok'>Bulletin N3 delivre immediatement.</div>"+base+"<div class='fg'><label>Motif <span class='req'>*</span></label><select id='f-motif'><option value=''>--</option><option>Emploi public</option><option>Emploi prive</option><option>Concours</option><option>Visa</option><option>Autre</option></select></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI ou Passeport + Acte de naissance")+p;},
     legalisation:function(){return "<div class='ibox ib-rdv'>RDV obligatoire — presence physique requise.</div>"+n+nameF()+"<div class='fg'><label>Type de document <span class='req'>*</span></label><select id='f-dtype'><option value=''>--</option><option>Contrat</option><option>Procuration</option><option>Declaration</option><option>Attestation</option><option>Autre</option></select></div><div class='fg'><label>Usage prevu <span class='req'>*</span></label><input type='text' id='f-usage' placeholder='Ex: vente immobiliere...'></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI + document original a legaliser")+p;},
-    copie_conf:function(){return "<div class='ibox ib-ok'>Document certifie delivre immediatement.</div>"+n+nameF()+"<div class='fr2'><div class='fg'><label>Type de document <span class='req'>*</span></label><select id='f-dtype'><option value=''>--</option><option>Diplome</option><option>Acte etat civil</option><option>Contrat</option><option>Releve de notes</option><option>Autre</option></select></div><div class='fg'><label>Nombre de copies <span class='req'>*</span></label><input type='number' min='1' max='20' value='1' id='f-nb'></div></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("Scan du document original")+p;},
+    copie_conf:function(){return "<div class='ibox ib-ok'>Document certifie delivre immediatement.</div>"+n+nameF()+"<div class='fr2'><div class='fg'><label>Type de document <span class='req'>*</span></label><select id='f-dtype'><option value=''>--</option><option>Diplome</option><option>Acte etat civil</option><option>Contrat</option><option>Releve de notes</option><option>Autre</option></select></div><div class='fg'><label>Nombre de copies <span class='req'>*</span></label><input type='number' min='1' max='20' value='1' id='f-nb'></div></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("Scan du document original (PDF ou image)")+p;},
     passeport:function(){return "<div class='ibox ib-rdv'>RDV obligatoire pour biometrie. Delai 15-21 jours.</div>"+base+"<div class='fr2'><div class='fg'><label>Sexe <span class='req'>*</span></label><select id='f-sexe'><option value=''>--</option><option>Masculin</option><option>Feminin</option></select></div><div class='fg'><label>Type de demande <span class='req'>*</span></label><select id='f-type'><option value=''>--</option><option>Premiere demande</option><option>Renouvellement</option><option>Remplacement</option></select></div></div><div class='fg'><label>N ancien passeport (si renouvellement)</label><input type='text' id='f-oldpass'></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI + Acte naissance + CIP + Casier judiciaire + 2 photos")+p;},
     passeport_vip:function(){return "<div class='ibox ib-rdv'>RDV obligatoire. Delai 48h apres RDV.</div>"+base+"<div class='fr2'><div class='fg'><label>Sexe <span class='req'>*</span></label><select id='f-sexe'><option value=''>--</option><option>Masculin</option><option>Feminin</option></select></div><div class='fg'><label>Date de voyage souhaitee <span class='req'>*</span></label><input type='date' id='f-voyage'></div></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI + Acte naissance + CIP + Casier judiciaire + 2 photos")+p;},
     laissez:function(){return "<div class='ibox ib-warn'>Urgence uniquement — justifiez la raison.</div>"+base+"<div class='fr2'><div class='fg'><label>Raison <span class='req'>*</span></label><select id='f-raison'><option value=''>--</option><option>Perte de passeport</option><option>Vol de passeport</option><option>Expiration urgente</option><option>Autre</option></select></div><div class='fg'><label>Date de voyage <span class='req'>*</span></label><input type='date' id='f-voyage'></div></div><div class='fg'><label>Destination <span class='req'>*</span></label><input type='text' id='f-dest'></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI + Declaration perte/vol + billet avion")+p;},
@@ -970,38 +1054,57 @@ function togglePaid(cb){var b=document.getElementById("pay-confirm-box");if(b) b
     visite_leger:function(){return "<div class='ibox ib-rdv'>RDV obligatoire — vehicule present en agence.</div>"+n+nameF()+"<div class='fr2'><div class='fg'><label>Immatriculation <span class='req'>*</span></label><input type='text' id='f-immat' placeholder='BJ 1234 AB'></div><div class='fg'><label>Marque / Modele <span class='req'>*</span></label><input type='text' id='f-veh'></div></div><div class='fg'><label>Date souhaitee</label><input type='date' id='f-date'></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("Carte grise + Assurance en cours de validite")+p;},
     visite_taxi:function(){return "<div class='ibox ib-rdv'>RDV obligatoire — vehicule taxi present.</div>"+n+nameF()+"<div class='fr2'><div class='fg'><label>Immatriculation <span class='req'>*</span></label><input type='text' id='f-immat' placeholder='BJ 1234 AB'></div><div class='fg'><label>Marque / Modele <span class='req'>*</span></label><input type='text' id='f-veh'></div></div><div class='fg'><label>Date souhaitee</label><input type='date' id='f-date'></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("Carte grise + Assurance + Autorisation taxi")+p;},
     visite_lourd:function(){return "<div class='ibox ib-rdv'>RDV obligatoire — poids lourd present.</div>"+n+nameF()+"<div class='fr2'><div class='fg'><label>Immatriculation <span class='req'>*</span></label><input type='text' id='f-immat'></div><div class='fg'><label>Type de vehicule <span class='req'>*</span></label><select id='f-tveh'><option value=''>--</option><option>Camion</option><option>Semi-remorque</option><option>Bus/Car</option><option>Autre</option></select></div></div><div class='fg'><label>Date souhaitee</label><input type='date' id='f-date'></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("Carte grise + Assurance")+p;},
-    cadastre:function(){return "<div class='ibox ib-warn'>Au choix : en ligne ou deplacement.</div>"+n+nameF()+"<div class='fg'><label>Reference cadastrale (si connue)</label><input type='text' id='f-ref'></div><div class='fg'><label>Localisation precise <span class='req'>*</span></label><input type='text' id='f-loc' placeholder='Quartier, commune...'></div><div class='fr2'><div class='fg'><label>Superficie approx.</label><input type='text' id='f-sup' placeholder='Ex: 400 m2'></div><div class='fg'><label>Motif <span class='req'>*</span></label><select id='f-motif'><option value=''>--</option><option>Transaction immobiliere</option><option>Pret bancaire</option><option>Succession</option><option>Autre</option></select></div></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI + titre de propriete si disponible")+p;},
-    titre_fonc:function(){return "<div class='ibox ib-rdv'>RDV obligatoire — procedure 30-60 jours.</div>"+n+nameF()+"<div class='fg'><label>Type de demande <span class='req'>*</span></label><select id='f-type'><option value=''>--</option><option>Nouveau titre foncier</option><option>Mise a jour titre existant</option><option>Mutation</option></select></div><div class='fg'><label>Localisation <span class='req'>*</span></label><input type='text' id='f-loc'></div><div class='fg'><label>Superficie (m2) <span class='req'>*</span></label><input type='text' id='f-sup'></div><div class='fg'><label>Informations complementaires</label><textarea id='f-info' placeholder='Origine du bien...'></textarea></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI + Acte vente + Plan bornage + Quitus fiscal")+p;},
-    ifu:function(){return "<div class='ibox ib-ok'>IFU delivre immediatement.</div>"+n+nameF()+"<div class='fr2'><div class='fg'><label>Date de naissance <span class='req'>*</span></label><input type='date' id='f-ddn'></div><div class='fg'><label>Type activite <span class='req'>*</span></label><select id='f-act'><option value=''>--</option><option>Commerce</option><option>Prestation de services</option><option>Agriculture/Elevage</option><option>BTP</option><option>Professionnel liberal</option><option>Autre</option></select></div></div><div class='fg'><label>Adresse de l activite <span class='req'>*</span></label><input type='text' id='f-adract'></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI + Acte naissance + Justificatif de domicile")+p;},
+    cadastre:function(){return "<div class='ibox ib-warn'>Au choix : en ligne ou deplacement.</div>"+n+nameF()+"<div class='fg'><label>Reference cadastrale (si connue)</label><input type='text' id='f-ref'></div><div class='fg'><label>Localisation precise <span class='req'>*</span></label><input type='text' id='f-loc' placeholder='Quartier, commune...'></div><div class='fr2'><div class='fg'><label>Superficie approx.</label><input type='text' id='f-sup' placeholder='Ex: 400 m2'></div><div class='fg'><label>Motif <span class='req'>*</span></label><select id='f-motif'><option value=''>--</option><option>Transaction immobiliere</option><option>Pret bancaire</option><option>Succession</option><option>Autre</option></select></div></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI + titre de propriete si disponible (PDF ou image)")+p;},
+    titre_fonc:function(){return "<div class='ibox ib-rdv'>RDV obligatoire — procedure 30-60 jours.</div>"+n+nameF()+"<div class='fg'><label>Type de demande <span class='req'>*</span></label><select id='f-type'><option value=''>--</option><option>Nouveau titre foncier</option><option>Mise a jour titre existant</option><option>Mutation</option></select></div><div class='fg'><label>Localisation <span class='req'>*</span></label><input type='text' id='f-loc'></div><div class='fg'><label>Superficie (m2) <span class='req'>*</span></label><input type='text' id='f-sup'></div><div class='fg'><label>Informations complementaires</label><textarea id='f-info' placeholder='Origine du bien...'></textarea></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI + Acte vente + Plan bornage + Quitus fiscal (PDF accepte)")+p;},
+    ifu:function(){return "<div class='ibox ib-ok'>IFU delivre immediatement.</div>"+n+nameF()+"<div class='fr2'><div class='fg'><label>Date de naissance <span class='req'>*</span></label><input type='date' id='f-ddn'></div><div class='fg'><label>Type activite <span class='req'>*</span></label><select id='f-act'><option value=''>--</option><option>Commerce</option><option>Prestation de services</option><option>Agriculture/Elevage</option><option>BTP</option><option>Professionnel liberal</option><option>Autre</option></select></div></div><div class='fg'><label>Adresse de l activite <span class='req'>*</span></label><input type='text' id='f-adract'></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF("CNI + Acte naissance + Justificatif de domicile (PDF accepte)")+p;},
     photo_num:function(){return "<div class='ibox ib-ok'>Envoyez votre selfie — F2K retouche tout. Livraison sous 24h.</div>"+n+nameF()+"<div class='fg'><label>Usage de la photo <span class='req'>*</span></label><select id='f-usage'><option value=''>--</option><option>CNI biometrique</option><option>Passeport biometrique</option><option>Visa ambassade</option><option>Concours / emploi</option><option>Carte professionnelle</option><option>Autre</option></select></div><div class='fg'><label>Votre photo de face <span class='req'>*</span></label><div class='pzone' id='pzone'><img id='pprev' class='pprev' alt=''><div class='pbtns'><label class='pbtn' style='cursor:pointer;'>📁 Galerie<input type='file' accept='image/*' style='display:none' onchange='loadPhoto(this)'></label><button type='button' class='pbtn' onclick='startCam()'>📷 Camera</button><button type='button' id='snap-btn' class='pbtn' onclick='snapCam()' style='display:none;'>Capturer</button><button type='button' id='stop-btn' class='pbtn' onclick='stopCam()' style='display:none;'>Stop</button></div><video id='cam-video' autoplay playsinline></video><canvas id='cam-canvas'></canvas><p class='phint'>Photo simple de face — F2K s occupe de la retouche pro !</p></div></div><div class='fst'>Coordonnees de livraison</div><div class='fg'><label>Email <span class='req'>*</span></label><input type='email' id='f-email'></div><div class='fg'><label>Telephone WhatsApp <span class='req'>*</span></label><input type='tel' id='f-tel'></div><div class='fg'><label>Mode de reception <span class='req'>*</span></label>"+selR("f-reception")+"</div>"+p;},
     photo_print:function(){return "<div class='ibox ib-rdv'>RDV obligatoire pour retrait des 8 exemplaires.</div>"+n+nameF()+"<div class='fg'><label>Usage des photos <span class='req'>*</span></label><select id='f-usage'><option value=''>--</option><option>CNI biometrique</option><option>Passeport biometrique</option><option>Concours / emploi</option><option>Autre</option></select></div><div class='fg'><label>Votre photo <span class='req'>*</span></label><div class='pzone' id='pzone'><img id='pprev' class='pprev' alt=''><div class='pbtns'><label class='pbtn' style='cursor:pointer;'>📁 Galerie<input type='file' accept='image/*' style='display:none' onchange='loadPhoto(this)'></label><button type='button' class='pbtn' onclick='startCam()'>📷 Camera</button><button type='button' id='snap-btn' class='pbtn' onclick='snapCam()' style='display:none;'>Capturer</button><button type='button' id='stop-btn' class='pbtn' onclick='stopCam()' style='display:none;'>Stop</button></div><video id='cam-video' autoplay playsinline></video><canvas id='cam-canvas'></canvas><p class='phint'>F2K s occupe de la retouche pro.</p></div></div><div class='fst'>Vos coordonnees</div>"+contactF()+p;},
     photo_bijoux:function(){return "<div class='ibox ib-rdv'>Deposez vos articles a notre bureau. RDV pour retrait.</div>"+n+nameF()+"<div class='fr2'><div class='fg'><label>Type articles <span class='req'>*</span></label><select id='f-tart'><option value=''>--</option><option>Bijoux</option><option>Montres</option><option>Maroquinerie</option><option>Vetements</option><option>Cosmetiques</option><option>Autre</option></select></div><div class='fg'><label>Nombre articles <span class='req'>*</span></label><input type='number' min='1' id='f-nb' placeholder='Ex: 5'></div></div><div class='fst'>Coordonnees</div><div class='fg'><label>Email <span class='req'>*</span></label><input type='email' id='f-email'></div><div class='fg'><label>Telephone <span class='req'>*</span></label><input type='tel' id='f-tel'></div><div class='fg'><label>Mode livraison photos <span class='req'>*</span></label>"+selR("f-reception")+"</div>"+fileF("Photos de reference du style souhaite (optionnel)")+p;},
-    cv:function(){return "<div class='ibox ib-ok'>Envoyez vos infos — nos experts redigent votre CV pour 500 FCFA.</div>"+n+nameF()+"<div class='fr2'><div class='fg'><label>Poste(s) recherche(s) <span class='req'>*</span></label><input type='text' id='f-poste' placeholder='Ex: Comptable...'></div><div class='fg'><label>Niveau etudes <span class='req'>*</span></label><select id='f-niv'><option value=''>--</option><option>BEPC/CEP</option><option>BAC</option><option>BTS/DUT</option><option>Licence</option><option>Master/MBA</option><option>Doctorat</option></select></div></div><div class='fg'><label>Formations et diplomes <span class='req'>*</span></label><textarea id='f-form' placeholder='Diplomes, etablissements, annees...'></textarea></div><div class='fg'><label>Experiences professionnelles <span class='req'>*</span></label><textarea id='f-exp' placeholder='Postes, entreprises, durees...'></textarea></div><div class='fg'><label>Competences et langues</label><textarea id='f-comp' placeholder='Competences, logiciels, langues...'></textarea></div><div class='fg'><label>Style de CV <span class='req'>*</span></label><select id='f-style'><option value=''>--</option><option>Classique et sobre</option><option>Moderne et colore</option><option>Creatif</option><option>International/ATS</option></select></div><div class='fst'>Coordonnees de livraison</div><div class='fg'><label>Email <span class='req'>*</span></label><input type='email' id='f-email'></div><div class='fg'><label>Telephone <span class='req'>*</span></label><input type='tel' id='f-tel'></div><div class='fg'><label>Mode de livraison <span class='req'>*</span></label>"+selR("f-reception")+"</div>"+fileF("Ancien CV si disponible")+p;}
+    cv:function(){return "<div class='ibox ib-ok'>Envoyez vos infos — nos experts redigent votre CV pour 500 FCFA.</div>"+n+nameF()+"<div class='fr2'><div class='fg'><label>Poste(s) recherche(s) <span class='req'>*</span></label><input type='text' id='f-poste' placeholder='Ex: Comptable...'></div><div class='fg'><label>Niveau etudes <span class='req'>*</span></label><select id='f-niv'><option value=''>--</option><option>BEPC/CEP</option><option>BAC</option><option>BTS/DUT</option><option>Licence</option><option>Master/MBA</option><option>Doctorat</option></select></div></div><div class='fg'><label>Formations et diplomes <span class='req'>*</span></label><textarea id='f-form' placeholder='Diplomes, etablissements, annees...'></textarea></div><div class='fg'><label>Experiences professionnelles <span class='req'>*</span></label><textarea id='f-exp' placeholder='Postes, entreprises, durees...'></textarea></div><div class='fg'><label>Competences et langues</label><textarea id='f-comp' placeholder='Competences, logiciels, langues...'></textarea></div><div class='fg'><label>Style de CV <span class='req'>*</span></label><select id='f-style'><option value=''>--</option><option>Classique et sobre</option><option>Moderne et colore</option><option>Creatif</option><option>International/ATS</option></select></div><div class='fst'>Coordonnees de livraison</div><div class='fg'><label>Email <span class='req'>*</span></label><input type='email' id='f-email'></div><div class='fg'><label>Telephone <span class='req'>*</span></label><input type='tel' id='f-tel'></div><div class='fg'><label>Mode de livraison <span class='req'>*</span></label>"+selR("f-reception")+"</div>"+fileF("Ancien CV si disponible (PDF accepte)")+p;}
   };
-  return F[key]?F[key]():"<p style='padding:20px;color:var(--mu);'>Formulaire en cours de preparation.</p>";
+  if(F[key]) return F[key]();
+  var svc=extraServices.filter(function(s){return s.id===key;})[0];
+  if(svc){return "<div class='ibox ib-blue'>"+svc.nom+" — "+svc.delai+"</div>"+n+nameF()+"<div class='fr2'><div class='fg'><label>Date de naissance</label><input type='date' id='f-ddn'></div><div class='fg'><label>Lieu de naissance</label><input type='text' id='f-lieu' placeholder='Commune/ville'></div></div><div class='fst'>Vos coordonnees</div>"+contactF()+fileF(svc.docs||"Documents requis")+payBox(key);}
+  return "<p style='padding:20px;color:var(--mu);'>Formulaire en cours de preparation.</p>";
 }
 function openForm(key,e){
   if(e) e.preventDefault();
   curKey=key;uploadedFiles=[];capturedPhoto=null;
   addToCart(key);
-  var baseAmt=PRICES[key]||0;
-  var discount=cart.length>=3?Math.round(baseAmt*0.10):0;
-  var finalAmt=baseAmt-discount;
-  document.getElementById("fm-title").textContent=(ICONS[key]||"")+" "+NAMES[key];
+  var baseAmt=PRICES[key]||0;var discount=cart.length>=3?Math.round(baseAmt*0.10):0;var finalAmt=baseAmt-discount;
+  document.getElementById("fm-title").textContent=(ICONS[key]||"🔷")+" "+(NAMES[key]||key);
   document.getElementById("fm-price").innerHTML=finalAmt.toLocaleString("fr-FR")+" <span>FCFA</span>"+(discount>0?" <span style='font-size:12px;color:var(--g2);'>🎁 -10%</span>":"");
   document.getElementById("fm-body").innerHTML=buildForm(key)+"<button class='msubmit' id='submit-btn' onclick='submitRequest(\""+key+"\")'>📤 Envoyer ma demande</button><p class='mnote'>🔒 Donnees securisees • Email automatique • F2K MULTISERVICE</p>";
   setTimeout(function(){var fd=document.getElementById("fdrop");if(fd){fd.addEventListener("dragover",function(ev){ev.preventDefault();fd.classList.add("drag");});fd.addEventListener("dragleave",function(){fd.classList.remove("drag");});fd.addEventListener("drop",function(ev){ev.preventDefault();fd.classList.remove("drag");handleFiles(ev.dataTransfer.files);});}},100);
   document.getElementById("form-ov").classList.add("on");
 }
 function closeForm(){document.getElementById("form-ov").classList.remove("on");stopCam();}
-function handleFiles(files){for(var i=0;i<files.length;i++){if(files[i].size>5*1024*1024){showToast("Fichier trop lourd",files[i].name,"var(--y)");continue;}uploadedFiles.push(files[i]);}renderFiles();}
-function renderFiles(){var fl=document.getElementById("flist");if(!fl) return;var html="";for(var i=0;i<uploadedFiles.length;i++){html+="<div class='fitem'>📄 "+uploadedFiles[i].name.substring(0,14)+"<button onclick='removeFile("+i+")'>x</button></div>";}fl.innerHTML=html;}
+function handleFiles(files){
+  for(var i=0;i<files.length;i++){
+    if(files[i].size>10*1024*1024){showToast("Fichier trop lourd",files[i].name+" — max 10Mo","var(--y)");continue;}
+    uploadedFiles.push(files[i]);
+  }
+  renderFiles();
+}
+function renderFiles(){
+  var fl=document.getElementById("flist");if(!fl) return;
+  var html="";
+  for(var i=0;i<uploadedFiles.length;i++){
+    var f=uploadedFiles[i];
+    var isPdf=f.type==="application/pdf"||f.name.toLowerCase().endsWith(".pdf");
+    var isDoc=f.name.toLowerCase().endsWith(".doc")||f.name.toLowerCase().endsWith(".docx");
+    var cls=isPdf||isDoc?"fitem pdf":"fitem";
+    var ico=isPdf?"📄":isDoc?"📝":"🖼️";
+    html+="<div class='"+cls+"'>"+ico+" "+f.name.substring(0,16)+"<button onclick='removeFile("+i+")'>x</button></div>";
+  }
+  fl.innerHTML=html;
+}
 function removeFile(i){uploadedFiles.splice(i,1);renderFiles();}
 function startCam(){navigator.mediaDevices.getUserMedia({video:{facingMode:"user"}}).then(function(s){camStream=s;var v=document.getElementById("cam-video");v.srcObject=s;v.style.display="block";var sb=document.getElementById("snap-btn");var stb=document.getElementById("stop-btn");if(sb) sb.style.display="";if(stb) stb.style.display="";}).catch(function(){showToast("Camera indisponible","Chargez une photo depuis la galerie.","var(--y)");});}
 function snapCam(){var v=document.getElementById("cam-video");var c=document.getElementById("cam-canvas");c.width=v.videoWidth;c.height=v.videoHeight;c.getContext("2d").drawImage(v,0,0);capturedPhoto=c.toDataURL("image/jpeg",0.9);var p=document.getElementById("pprev");p.src=capturedPhoto;p.classList.add("show");document.getElementById("pzone").classList.add("has-p");stopCam();showToast("📸","Photo capturee !","");}
 function stopCam(){if(camStream){var tracks=camStream.getTracks();for(var i=0;i<tracks.length;i++) tracks[i].stop();camStream=null;}var v=document.getElementById("cam-video");if(v){v.style.display="none";v.srcObject=null;}var sb=document.getElementById("snap-btn");if(sb) sb.style.display="none";var stb=document.getElementById("stop-btn");if(stb) stb.style.display="none";}
 function loadPhoto(input){var f=input.files[0];if(!f) return;var r=new FileReader();r.onload=function(e){capturedPhoto=e.target.result;var p=document.getElementById("pprev");p.src=capturedPhoto;p.classList.add("show");document.getElementById("pzone").classList.add("has-p");showToast("📸","Photo chargee !","");};r.readAsDataURL(f);}
-    function submitRequest(key){
+        function submitRequest(key){
   var emailEl=document.getElementById("f-email");var telEl=document.getElementById("f-tel");
   var nomEl=document.getElementById("f-nom");var prenomEl=document.getElementById("f-prenom");
   var npiEl=document.getElementById("f-npi");var ravipEl=document.getElementById("f-ravip");
@@ -1021,30 +1124,38 @@ function loadPhoto(input){var f=input.files[0];if(!f) return;var r=new FileReade
   var dateStr=now.toLocaleDateString("fr-FR",{day:"2-digit",month:"long",year:"numeric"});
   var timeStr=now.toLocaleTimeString("fr-FR",{hour:"2-digit",minute:"2-digit"});
   var baseAmt=PRICES[key]||0;var discount=cart.length>=3?Math.round(baseAmt*0.10):0;var finalAmt=baseAmt-discount;
+
+  // Collecter toutes les données du formulaire
+  var formData={};
+  var inputs=document.getElementById("fm-body").querySelectorAll("input,select,textarea");
+  inputs.forEach(function(el){if(el.id&&el.id!=="f-paid"&&el.type!=="file"&&el.type!=="checkbox"){formData[el.id]=el.value;}});
+
   var uploadPromises=[];
   for(var i=0;i<uploadedFiles.length;i++) uploadPromises.push(uploadToCloudinary(uploadedFiles[i]));
   if(capturedPhoto){uploadPromises.push(fetch(capturedPhoto).then(function(r){return r.blob();}).then(function(blob){return uploadToCloudinary(new File([blob],"photo.jpg",{type:"image/jpeg"}));}).catch(function(){return null;}));}
   Promise.all(uploadPromises).then(function(urls){
     var fileUrls=[];for(var i=0;i<urls.length;i++){if(urls[i]) fileUrls.push(urls[i]);}
     var orderData={
-      ref:ref,key:key,serviceName:NAMES[key],icon:ICONS[key],
+      ref:ref,key:key,serviceName:NAMES[key]||key,icon:ICONS[key]||"🔷",
       price:finalAmt,priceOriginal:baseAmt,discountApplied:cart.length>=3,
-      delai:DELAIS[key],nom:nom,prenom:prenom,email:email,tel:tel,npi:npi||ravip,
+      delai:DELAIS[key]||"Variable",nom:nom,prenom:prenom,email:email,tel:tel,npi:npi||ravip,
       date:dateStr,time:timeStr,
       timestamp:firebase.firestore.FieldValue.serverTimestamp(),
       status:"pending",progress:0,fileUrls:fileUrls,hasDoc:false,docUrl:null,docName:null,
-      userId:currentUser?currentUser.uid:null
+      userId:currentUser?currentUser.uid:null,
+      formData:formData
     };
     db.collection("orders").doc(ref).set(orderData).catch(function(e){console.error(e);});
     var local=JSON.parse(localStorage.getItem("f2k_orders")||"[]");
     local.unshift(orderData);localStorage.setItem("f2k_orders",JSON.stringify(local));
-    return sendConfirmationEmail({email:email,nom:nom||"Client",prenom:prenom||"",ref:ref,serviceName:NAMES[key],amount:finalAmt.toLocaleString("fr-FR")+" FCFA"+(discount>0?" (reduction 10%)":""),delai:DELAIS[key],date:dateStr+" a "+timeStr,tel:tel});
+    if(email) localStorage.setItem("f2k_client_email",email);
+    return sendConfirmationEmail({email:email,nom:nom||"Client",prenom:prenom||"",ref:ref,serviceName:NAMES[key]||key,amount:finalAmt.toLocaleString("fr-FR")+" FCFA"+(discount>0?" (reduction 10%)":""),delai:DELAIS[key]||"Variable",date:dateStr+" a "+timeStr,tel:tel});
   }).then(function(emailSent){
     closeForm();cart=cart.filter(function(k){return k!==key;});updateCartBadge();
     document.getElementById("em-to").textContent=email;
     document.getElementById("em-greet").textContent="Bonjour "+(prenom||nom||"cher(e) client(e)")+",";
     document.getElementById("em-ref").textContent=ref;
-    document.getElementById("em-det").innerHTML="Votre demande pour <strong>"+NAMES[key]+"</strong> a ete recue le <strong>"+dateStr+" a "+timeStr+"</strong>.<br><br>Montant paye : <strong>"+finalAmt.toLocaleString("fr-FR")+" FCFA</strong>"+(discount>0?" <span style='color:var(--g);'>🎁 -10%</span>":"")+"<br>Delai estime : <strong>"+DELAIS[key]+"</strong><br>Notre equipe vous contactera au <strong>"+tel+"</strong>.<br><br>"+(emailSent?"Email de confirmation envoye a <strong>"+email+"</strong>.":"Conservez votre numero de reference pour le suivi.");
+    document.getElementById("em-det").innerHTML="Votre demande pour <strong>"+(NAMES[key]||key)+"</strong> a ete recue le <strong>"+dateStr+" a "+timeStr+"</strong>.<br><br>Montant paye : <strong>"+finalAmt.toLocaleString("fr-FR")+" FCFA</strong>"+(discount>0?" <span style='color:var(--g);'>🎁 -10%</span>":"")+"<br>Delai estime : <strong>"+(DELAIS[key]||"Variable")+"</strong><br>Notre equipe vous contactera au <strong>"+tel+"</strong>.<br><br>"+(emailSent?"Email de confirmation envoye a <strong>"+email+"</strong>.":"Conservez votre numero de reference pour le suivi.");
     document.getElementById("email-ov").classList.add("on");
     showToast("✅ Demande enregistree !","Ref : "+ref,"var(--g)");
   }).catch(function(e){
@@ -1098,7 +1209,7 @@ function openDash(){
   renderOrders();document.getElementById("dashboard").style.display="block";document.body.style.overflow="hidden";
 }
 function closeDash(){document.getElementById("dashboard").style.display="none";document.body.style.overflow="";}
-function renderOrders(){
+        function renderOrders(){
   if(currentUser){
     db.collection("orders").where("userId","==",currentUser.uid).orderBy("timestamp","desc").get()
       .then(function(snap){var orders=[];snap.forEach(function(d){orders.push(Object.assign({id:d.id},d.data()));});if(orders.length) renderOrdersList(orders);else renderOrdersList(JSON.parse(localStorage.getItem("f2k_orders")||"[]"));})
@@ -1117,6 +1228,12 @@ function renderOrdersList(orders){
     var prog=o.progress||0;var stepsDone=Math.round(prog/25);
     var stepsHtml="";for(var j=0;j<4;j++){stepsHtml+="<div class='prog-step"+(j<stepsDone?" done":j===stepsDone&&prog>0?" active":"")+"'></div>";}
     var stepNamesHtml="";for(var j=0;j<stepLabels.length;j++){stepNamesHtml+="<span class='"+(j<stepsDone?"done":"")+"'>"+stepLabels[j]+"</span>";}
+
+    // Verification securite
+    var canDownload=false;
+    if(currentUser){if(!o.userId||o.userId===currentUser.uid||o.email===currentUser.email) canDownload=true;}
+    else{var storedEmail=localStorage.getItem("f2k_client_email")||"";if(storedEmail&&o.email&&storedEmail===o.email) canDownload=true;if(!o.userId) canDownload=true;}
+
     html+="<div class='ocard'>";
     html+="<div class='otop'><div class='oref'>"+(o.icon||"📋")+" "+o.ref+"</div><span class='ost "+stc+"'>"+st+"</span></div>";
     html+="<div class='oinfo'><div><div class='oil'>Service</div><div class='oiv'>"+o.serviceName+"</div></div><div><div class='oil'>Date</div><div class='oiv'>"+o.date+" "+(o.time||"")+"</div></div><div><div class='oil'>Tarif</div><div class='oiv'>"+((o.price||0).toLocaleString("fr-FR"))+" FCFA"+(o.discountApplied?" 🎁":"")+"</div></div><div><div class='oil'>Delai</div><div class='oiv'>"+(o.delai||"--")+"</div></div></div>";
@@ -1125,101 +1242,65 @@ function renderOrdersList(orders){
     html+="<div class='oacts'>";
     html+="<button class='oabtn' onclick='reShowEmail(\""+o.ref+"\")'>📧 Email</button>";
     html+="<button class='oabtn' onclick='contactWA(\""+o.ref+"\")'>💬 WhatsApp</button>";
-    if(o.hasDoc&&o.docUrl){
-      html+="<button class='oabtn dl' onclick='dlDoc(\""+o.ref+"\")'>📥 Telecharger le document</button>";
-    } else if(o.status==="ready"){
-      html+="<button class='oabtn' onclick='checkDocFirebase(\""+o.ref+"\")'>🔄 Verifier document</button>";
+    if(canDownload){
+      if(o.hasDoc&&o.docUrl){html+="<button class='oabtn dl' onclick='dlDoc(\""+o.ref+"\",\""+o.email+"\")'>📥 Telecharger le document</button>";}
+      else if(o.status==="ready"){html+="<button class='oabtn' onclick='checkDocFirebase(\""+o.ref+"\")'>🔄 Verifier document</button>";}
+      else{html+="<button class='oabtn' style='opacity:.4;cursor:default;' disabled>📥 Document en preparation</button>";}
     } else {
-      html+="<button class='oabtn' style='opacity:.4;cursor:default;' disabled>📥 Document en preparation</button>";
+      html+="<button class='oabtn' style='opacity:.4;cursor:default;' disabled>🔒 Acces restreint</button>";
     }
     html+="<button class='oabtn' style='color:var(--r);border-color:rgba(217,43,43,.2);' onclick='delOrder(\""+o.ref+"\")'>Supprimer</button>";
     html+="</div></div>";
   }
   list.innerHTML=html;
 }
-function dlDoc(ref){
+function dlDoc(ref,ownerEmail){
   var local=JSON.parse(localStorage.getItem("f2k_orders")||"[]");
   var o=local.filter(function(x){return x.ref===ref;})[0];
-
+  function isOwner(order){
+    if(!order) return false;
+    if(currentUser){if(!order.userId||order.userId===currentUser.uid||order.email===currentUser.email) return true;return false;}
+    var storedEmail=localStorage.getItem("f2k_client_email")||"";
+    if(storedEmail&&order.email&&storedEmail===order.email) return true;
+    if(!order.userId) return true;return false;
+  }
+  if(o&&!isOwner(o)){showToast("🔒 Acces refuse","Ce document ne vous appartient pas.","var(--r)");return;}
   function doDownload(url,name){
     var toast=document.getElementById("toast");
-    document.getElementById("t-ico").textContent="⏳";
-    document.getElementById("t-msg").textContent="Telechargement en cours...";
-    document.getElementById("t-sub").textContent="Veuillez patienter, ne quittez pas la page.";
-    toast.style.borderLeftColor="var(--b)";toast.classList.add("on");
-
-    var xhr=new XMLHttpRequest();
-    xhr.open("GET",url,true);xhr.responseType="blob";
+    document.getElementById("t-ico").textContent="⏳";document.getElementById("t-msg").textContent="Telechargement en cours...";document.getElementById("t-sub").textContent="Veuillez patienter, ne quittez pas la page.";toast.style.borderLeftColor="var(--b)";toast.classList.add("on");
+    var xhr=new XMLHttpRequest();xhr.open("GET",url,true);xhr.responseType="blob";
     xhr.onprogress=function(ev){if(ev.lengthComputable){var pct=Math.round((ev.loaded/ev.total)*100);document.getElementById("t-sub").textContent="Telechargement : "+pct+"%";}};
     xhr.onload=function(){
       if(xhr.status===200){
         var blob=xhr.response;var blobUrl=URL.createObjectURL(blob);
-        var a=document.createElement("a");a.href=blobUrl;a.download=name||ref+"_document.pdf";a.style.display="none";
-        document.body.appendChild(a);a.click();
+        var a=document.createElement("a");a.href=blobUrl;a.download=name||ref+"_document.pdf";a.style.display="none";document.body.appendChild(a);a.click();
         setTimeout(function(){document.body.removeChild(a);URL.revokeObjectURL(blobUrl);},3000);
-        document.getElementById("t-ico").textContent="✅";
-        document.getElementById("t-msg").textContent="Document telecharge avec succes !";
-        document.getElementById("t-sub").textContent=name||ref+"_document.pdf";
-        toast.style.borderLeftColor="var(--g)";
-        setTimeout(function(){toast.classList.remove("on");},5000);
-      } else {
-        document.getElementById("t-ico").textContent="❌";
-        document.getElementById("t-msg").textContent="Erreur de telechargement";
-        document.getElementById("t-sub").textContent="Verifiez votre connexion et reessayez.";
-        toast.style.borderLeftColor="var(--r)";
-        setTimeout(function(){toast.classList.remove("on");},5000);
-      }
+        document.getElementById("t-ico").textContent="✅";document.getElementById("t-msg").textContent="Document telecharge avec succes !";document.getElementById("t-sub").textContent=name||ref+"_document.pdf";toast.style.borderLeftColor="var(--g)";setTimeout(function(){toast.classList.remove("on");},5000);
+      } else {document.getElementById("t-ico").textContent="❌";document.getElementById("t-msg").textContent="Erreur de telechargement";document.getElementById("t-sub").textContent="Verifiez votre connexion et reessayez.";toast.style.borderLeftColor="var(--r)";setTimeout(function(){toast.classList.remove("on");},5000);}
     };
-    xhr.onerror=function(){
-      // Fallback si CORS bloque
-      var a=document.createElement("a");a.href=url;a.download=name||ref+"_document.pdf";a.target="_blank";a.style.display="none";
-      document.body.appendChild(a);a.click();document.body.removeChild(a);
-      document.getElementById("t-ico").textContent="✅";
-      document.getElementById("t-msg").textContent="Document telecharge avec succes !";
-      document.getElementById("t-sub").textContent=name||ref+"_document.pdf";
-      toast.style.borderLeftColor="var(--g)";
-      setTimeout(function(){toast.classList.remove("on");},5000);
-    };
+    xhr.onerror=function(){var a=document.createElement("a");a.href=url;a.download=name||ref+"_document.pdf";a.target="_blank";a.style.display="none";document.body.appendChild(a);a.click();document.body.removeChild(a);document.getElementById("t-ico").textContent="✅";document.getElementById("t-msg").textContent="Document telecharge avec succes !";document.getElementById("t-sub").textContent=name||ref+"_document.pdf";toast.style.borderLeftColor="var(--g)";setTimeout(function(){toast.classList.remove("on");},5000);};
     xhr.send();
   }
-
   if(o&&o.docUrl){doDownload(o.docUrl,o.docName||ref+"_document.pdf");return;}
-
   var toast=document.getElementById("toast");
-  document.getElementById("t-ico").textContent="🔄";
-  document.getElementById("t-msg").textContent="Recherche du document...";
-  document.getElementById("t-sub").textContent="Connexion au serveur...";
-  toast.style.borderLeftColor="var(--b)";toast.classList.add("on");
-
+  document.getElementById("t-ico").textContent="🔄";document.getElementById("t-msg").textContent="Recherche du document...";document.getElementById("t-sub").textContent="Connexion au serveur...";toast.style.borderLeftColor="var(--b)";toast.classList.add("on");
   db.collection("orders").doc(ref).get()
     .then(function(doc){
-      if(doc.exists&&doc.data().docUrl){
-        var url=doc.data().docUrl;var name=doc.data().docName||ref+"_document.pdf";
+      if(!doc.exists){document.getElementById("t-ico").textContent="❌";document.getElementById("t-msg").textContent="Document introuvable";document.getElementById("t-sub").textContent="Verifiez votre reference.";toast.style.borderLeftColor="var(--r)";setTimeout(function(){toast.classList.remove("on");},5000);return;}
+      var data=doc.data();
+      if(currentUser&&data.userId&&data.userId!==currentUser.uid&&data.email!==currentUser.email){document.getElementById("t-ico").textContent="🔒";document.getElementById("t-msg").textContent="Acces refuse";document.getElementById("t-sub").textContent="Ce document ne vous appartient pas.";toast.style.borderLeftColor="var(--r)";setTimeout(function(){toast.classList.remove("on");},5000);return;}
+      if(data.docUrl){
+        var url=data.docUrl;var name=data.docName||ref+"_document.pdf";
         var local2=JSON.parse(localStorage.getItem("f2k_orders")||"[]");
         for(var i=0;i<local2.length;i++){if(local2[i].ref===ref){local2[i].docUrl=url;local2[i].docName=name;local2[i].hasDoc=true;local2[i].status="ready";break;}}
-        localStorage.setItem("f2k_orders",JSON.stringify(local2));renderOrders();
-        doDownload(url,name);
-      } else {
-        document.getElementById("t-ico").textContent="⏳";
-        document.getElementById("t-msg").textContent="Document pas encore pret";
-        document.getElementById("t-sub").textContent="L'admin finalise votre dossier. Reessayez plus tard.";
-        toast.style.borderLeftColor="var(--y)";setTimeout(function(){toast.classList.remove("on");},5000);
-      }
-    }).catch(function(){
-      document.getElementById("t-ico").textContent="❌";
-      document.getElementById("t-msg").textContent="Erreur de connexion";
-      document.getElementById("t-sub").textContent="Verifiez votre connexion internet.";
-      toast.style.borderLeftColor="var(--r)";setTimeout(function(){toast.classList.remove("on");},5000);
-    });
+        localStorage.setItem("f2k_orders",JSON.stringify(local2));renderOrders();doDownload(url,name);
+      } else {document.getElementById("t-ico").textContent="⏳";document.getElementById("t-msg").textContent="Document pas encore pret";document.getElementById("t-sub").textContent="L'admin finalise votre dossier.";toast.style.borderLeftColor="var(--y)";setTimeout(function(){toast.classList.remove("on");},5000);}
+    }).catch(function(){document.getElementById("t-ico").textContent="❌";document.getElementById("t-msg").textContent="Erreur de connexion";document.getElementById("t-sub").textContent="Verifiez votre connexion internet.";toast.style.borderLeftColor="var(--r)";setTimeout(function(){toast.classList.remove("on");},5000);});
 }
 function checkDocFirebase(ref){
   db.collection("orders").doc(ref).get().then(function(doc){
-    if(doc.exists&&doc.data().docUrl){
-      var local=JSON.parse(localStorage.getItem("f2k_orders")||"[]");
-      for(var i=0;i<local.length;i++){if(local[i].ref===ref){local[i].docUrl=doc.data().docUrl;local[i].docName=doc.data().docName||ref+"_document.pdf";local[i].hasDoc=true;local[i].status="ready";break;}}
-      localStorage.setItem("f2k_orders",JSON.stringify(local));renderOrders();
-      showToast("✅ Document disponible !","Cliquez sur Telecharger","var(--g)");
-    } else {showToast("⏳ Pas encore pret","F2K traite votre demande.","var(--y)");}
+    if(doc.exists&&doc.data().docUrl){var local=JSON.parse(localStorage.getItem("f2k_orders")||"[]");for(var i=0;i<local.length;i++){if(local[i].ref===ref){local[i].docUrl=doc.data().docUrl;local[i].docName=doc.data().docName||ref+"_document.pdf";local[i].hasDoc=true;local[i].status="ready";break;}}localStorage.setItem("f2k_orders",JSON.stringify(local));renderOrders();showToast("✅ Document disponible !","Cliquez sur Telecharger","var(--g)");}
+    else{showToast("⏳ Pas encore pret","F2K traite votre demande.","var(--y)");}
   }).catch(function(){showToast("❌ Erreur","Verifiez votre connexion.","var(--r)");});
 }
 function searchByRef(){
@@ -1240,24 +1321,19 @@ function trackIt(){
 function reShowEmail(ref){var orders=JSON.parse(localStorage.getItem("f2k_orders")||"[]");var o=orders.filter(function(x){return x.ref===ref;})[0];if(!o) return;document.getElementById("em-to").textContent=o.email;document.getElementById("em-greet").textContent="Bonjour "+(o.prenom||o.nom||"client")+",";document.getElementById("em-ref").textContent=o.ref;document.getElementById("em-det").innerHTML="Rappel — Demande <strong>"+o.serviceName+"</strong> du <strong>"+o.date+"</strong>.<br><br>Montant : <strong>"+((o.price||0).toLocaleString("fr-FR"))+" FCFA</strong>"+(o.discountApplied?" 🎁":"")+"<br>Contact : <strong>"+o.tel+"</strong>";document.getElementById("email-ov").classList.add("on");}
 function contactWA(ref){var orders=JSON.parse(localStorage.getItem("f2k_orders")||"[]");var o=orders.filter(function(x){return x.ref===ref;})[0];if(!o) return;var msg=encodeURIComponent("Bonjour F2K MULTISERVICE,\nReference : "+o.ref+"\nService : "+o.serviceName+"\nDate : "+o.date);window.open("https://wa.me/2290199878742?text="+msg,"_blank");}
 function delOrder(ref){var o=JSON.parse(localStorage.getItem("f2k_orders")||"[]");o=o.filter(function(x){return x.ref!==ref;});localStorage.setItem("f2k_orders",JSON.stringify(o));renderOrders();showToast("Supprime","","var(--g)");}
-    function openAdmin(){document.getElementById("admin-panel").style.display="block";document.body.style.overflow="hidden";loadAdminOrders();}
+        function openAdmin(){document.getElementById("admin-panel").style.display="block";document.body.style.overflow="hidden";loadAdminOrders();}
 function closeAdmin(){document.getElementById("admin-panel").style.display="none";document.body.style.overflow="";}
 function loadAdminOrders(){
   db.collection("orders").orderBy("timestamp","desc").get()
     .then(function(snap){
-      allOrders=[];
-      snap.forEach(function(d){allOrders.push(Object.assign({id:d.id},d.data()));});
+      allOrders=[];snap.forEach(function(d){allOrders.push(Object.assign({id:d.id},d.data()));});
       var local=JSON.parse(localStorage.getItem("f2k_orders")||"[]");
       for(var i=0;i<local.length;i++){var exists=false;for(var j=0;j<allOrders.length;j++){if(allOrders[j].ref===local[i].ref){exists=true;break;}}if(!exists) allOrders.push(local[i]);}
       updateAdminStats();renderAllAdminLists();
       showToast("✅ Actualise",allOrders.length+" demande(s) chargee(s).","var(--g)");
     })
-    .catch(function(){
-      allOrders=JSON.parse(localStorage.getItem("f2k_orders")||"[]");
-      updateAdminStats();renderAllAdminLists();
-      showToast("⚠️ Mode local","Firebase indisponible.","var(--y)");
-    });
-  loadAdminClients();
+    .catch(function(){allOrders=JSON.parse(localStorage.getItem("f2k_orders")||"[]");updateAdminStats();renderAllAdminLists();showToast("⚠️ Mode local","Firebase indisponible.","var(--y)");});
+  loadAdminClients();loadExtraServices();
 }
 function loadAdminClients(){
   db.collection("users").get().then(function(snap){
@@ -1301,58 +1377,95 @@ function renderAdminList(containerId,orders){
   var html="";
   for(var i=0;i<orders.length;i++){
     var o=orders[i];var st=ST_ADMIN[o.status]||ST_ADMIN["pending"];
-    var filesHtml="";if(o.fileUrls&&o.fileUrls.length){for(var j=0;j<o.fileUrls.length;j++){filesHtml+="<a class='ao-file' href='"+o.fileUrls[j]+"' target='_blank'>📎 Piece "+(j+1)+"</a>";}}
+    var filesHtml="";
+    if(o.fileUrls&&o.fileUrls.length){
+      for(var j=0;j<o.fileUrls.length;j++){
+        var furl=o.fileUrls[j];
+        var isPdf=furl.toLowerCase().indexOf(".pdf")>-1||furl.toLowerCase().indexOf("/raw/")>-1;
+        var cls=isPdf?"ao-file pdf":"ao-file";
+        var ico=isPdf?"📄":"🖼️";
+        filesHtml+="<a class='"+cls+"' href='"+furl+"' target='_blank'>"+ico+" Piece "+(j+1)+"</a>";
+      }
+    }
     var progOptions="";var progVals=[0,25,50,75,100];var progLabels=["Recu (0%)","Verifie (25%)","En cours (50%)","Presque fini (75%)","Finalise (100%)"];
     for(var j=0;j<progVals.length;j++){progOptions+="<option value='"+progVals[j]+"'"+(o.progress===progVals[j]?" selected":"")+">"+progLabels[j]+"</option>";}
     var acts="";
-    // Bouton soumettre document TOUJOURS visible
     acts+="<button class='aact aact-dark' onclick='openUpload(\""+o.ref+"\")'>📤 Soumettre document</button>";
-    if(o.status==="pending"){
-      acts+="<button class='aact aact-blue' onclick='adminSetStatus(\""+o.ref+"\",\"processing\",\"\")'>🔄 Mettre en traitement</button>";
-      acts+="<button class='aact aact-green' onclick='openAmodal(\"approve\",\""+o.ref+"\")'>✅ Approuver</button>";
-      acts+="<button class='aact aact-yellow' onclick='openAmodal(\"revision\",\""+o.ref+"\")'>✏️ Demander modif.</button>";
-      acts+="<button class='aact aact-red' onclick='openAmodal(\"reject\",\""+o.ref+"\")'>❌ Rejeter</button>";
-    }
-    if(o.status==="processing"){
-      acts+="<button class='aact aact-green' onclick='openAmodal(\"approve\",\""+o.ref+"\")'>✅ Marquer pret</button>";
-      acts+="<button class='aact aact-yellow' onclick='openAmodal(\"revision\",\""+o.ref+"\")'>✏️ Demander modif.</button>";
-      acts+="<button class='aact aact-red' onclick='openAmodal(\"reject\",\""+o.ref+"\")'>❌ Rejeter</button>";
-    }
-    if(o.status==="ready"&&o.docUrl){
-      acts+="<button class='aact' style='background:var(--g3);border:2px solid var(--g);color:var(--g);' onclick='window.open(\""+o.docUrl+"\",\"_blank\")'>👁️ Voir document</button>";
-    }
-    if(o.status==="rejected"||o.status==="revision"){
-      acts+="<button class='aact aact-blue' onclick='adminSetStatus(\""+o.ref+"\",\"processing\",\"\")'>🔄 Remettre en traitement</button>";
-    }
+    acts+="<button class='aact' style='background:var(--b3);border:2px solid var(--b);color:var(--b);' onclick='openDetail(\""+o.ref+"\")'>👁️ Voir detail complet</button>";
+    if(o.status==="pending"){acts+="<button class='aact aact-blue' onclick='adminSetStatus(\""+o.ref+"\",\"processing\",\"\")'>🔄 En traitement</button><button class='aact aact-green' onclick='openAmodal(\"approve\",\""+o.ref+"\")'>✅ Approuver</button><button class='aact aact-yellow' onclick='openAmodal(\"revision\",\""+o.ref+"\")'>✏️ Modif.</button><button class='aact aact-red' onclick='openAmodal(\"reject\",\""+o.ref+"\")'>❌ Rejeter</button>";}
+    if(o.status==="processing"){acts+="<button class='aact aact-green' onclick='openAmodal(\"approve\",\""+o.ref+"\")'>✅ Marquer pret</button><button class='aact aact-yellow' onclick='openAmodal(\"revision\",\""+o.ref+"\")'>✏️ Modif.</button><button class='aact aact-red' onclick='openAmodal(\"reject\",\""+o.ref+"\")'>❌ Rejeter</button>";}
+    if(o.status==="ready"&&o.docUrl){acts+="<button class='aact' style='background:var(--g3);border:2px solid var(--g);color:var(--g);' onclick='window.open(\""+o.docUrl+"\",\"_blank\")'>👁️ Voir doc</button>";}
+    if(o.status==="rejected"||o.status==="revision"){acts+="<button class='aact aact-blue' onclick='adminSetStatus(\""+o.ref+"\",\"processing\",\"\")'>🔄 Remettre</button>";}
     acts+="<button class='aact aact-wa' onclick='adminContactWA(\""+o.ref+"\")'>💬 WhatsApp</button>";
     html+="<div class='aorder "+st.cls+"'>";
     html+="<div class='ao-top'><div><div class='ao-ref'>"+(o.icon||"📋")+" "+o.ref+"</div><div class='ao-svc'>"+o.serviceName+"</div></div><span class='ao-st "+st.c+"'>"+st.l+"</span></div>";
     html+="<div class='ao-info'><div><div class='ao-il'>Client</div><div class='ao-iv'>"+(o.prenom||"")+" "+(o.nom||"")+"</div></div><div><div class='ao-il'>Email</div><div class='ao-iv'><a href='mailto:"+(o.email||"")+"'>"+(o.email||"--")+"</a></div></div><div><div class='ao-il'>Telephone</div><div class='ao-iv'>"+(o.tel||"--")+"</div></div><div><div class='ao-il'>NPI/RAVIP</div><div class='ao-iv'>"+(o.npi||"--")+"</div></div><div><div class='ao-il'>Montant</div><div class='ao-iv'>"+((o.price||0).toLocaleString("fr-FR"))+" FCFA"+(o.discountApplied?" 🎁":"")+"</div></div><div><div class='ao-il'>Date</div><div class='ao-iv'>"+(o.date||"--")+" "+(o.time||"")+"</div></div></div>";
     if(filesHtml) html+="<div style='margin-bottom:10px;'><div class='ao-il' style='margin-bottom:5px;'>Pieces jointes</div><div class='ao-files'>"+filesHtml+"</div></div>";
     if(o.adminNote) html+="<div style='font-size:11px;background:var(--y3);border-radius:7px;padding:8px 10px;margin-bottom:10px;border:1px solid rgba(251,191,0,.3);'>💬 "+o.adminNote+"</div>";
-    if(o.hasDoc&&o.docUrl) html+="<div style='font-size:11px;background:var(--g3);border-radius:7px;padding:8px 10px;margin-bottom:10px;border:1px solid var(--g4);'>📥 Document disponible — le client peut telecharger : <strong>"+(o.docName||"document")+"</strong></div>";
+    if(o.hasDoc&&o.docUrl) html+="<div style='font-size:11px;background:var(--g3);border-radius:7px;padding:8px 10px;margin-bottom:10px;border:1px solid var(--g4);'>📥 Document disponible : <strong>"+(o.docName||"document")+"</strong></div>";
     html+="<div class='prog-admin'><label>Niveau de progression</label><select onchange='adminSetProgress(\""+o.ref+"\",this.value)'>"+progOptions+"</select></div>";
     html+="<div class='ao-actions'>"+acts+"</div></div>";
   }
   el.innerHTML=html;
+  }
+        function openDetail(ref){
+  var o=allOrders.filter(function(x){return x.ref===ref;})[0];
+  if(!o){showToast("Demande introuvable","","var(--r)");return;}
+  document.getElementById("detail-title").textContent=(o.icon||"📋")+" "+o.ref+" — "+o.serviceName;
+  var st=ST_ADMIN[o.status]||ST_ADMIN["pending"];
+  var html="";
+  html+="<div style='display:inline-block;padding:4px 12px;border-radius:20px;font-size:12px;font-weight:700;margin-bottom:14px;' class='ao-st "+st.c+"'>"+st.l+"</div>";
+  html+="<div class='detail-section'><h4>Informations client</h4><div class='detail-grid'>";
+  html+="<div class='detail-item'><div class='dl'>Nom complet</div><div class='dv'>"+(o.prenom||"")+" "+(o.nom||"--")+"</div></div>";
+  html+="<div class='detail-item'><div class='dl'>Email</div><div class='dv'><a href='mailto:"+(o.email||"")+"' style='color:var(--b);'>"+(o.email||"--")+"</a></div></div>";
+  html+="<div class='detail-item'><div class='dl'>Telephone</div><div class='dv'>"+(o.tel||"--")+"</div></div>";
+  html+="<div class='detail-item'><div class='dl'>NPI / RAVIP</div><div class='dv'>"+(o.npi||"--")+"</div></div>";
+  html+="<div class='detail-item'><div class='dl'>Date de demande</div><div class='dv'>"+(o.date||"--")+" a "+(o.time||"--")+"</div></div>";
+  html+="<div class='detail-item'><div class='dl'>Montant paye</div><div class='dv'>"+((o.price||0).toLocaleString("fr-FR"))+" FCFA"+(o.discountApplied?" (reduction 10%)":"")+"</div></div>";
+  html+="</div></div>";
+  if(o.formData&&Object.keys(o.formData).length>0){
+    html+="<div class='detail-section'><h4>Donnees du formulaire</h4><div class='detail-grid'>";
+    var labels={"f-nom":"Nom","f-prenom":"Prenom","f-ddn":"Date de naissance","f-lieu":"Lieu de naissance","f-email":"Email","f-tel":"Telephone","f-commune":"Commune","f-reception":"Mode de reception","f-npi":"NPI","f-ravip":"Recepisse RAVIP","f-pere":"Nom du pere","f-mere":"Nom de la mere","f-lien":"Lien de parente","f-conjoint":"Nom du conjoint","f-dm":"Date du mariage","f-mairie":"Mairie du mariage","f-dnom":"Nom defunt","f-dprenom":"Prenom defunt","f-ddeces":"Date du deces","f-ldeces":"Lieu du deces","f-motif":"Motif","f-raison":"Raison","f-sexe":"Sexe","f-prof":"Profession","f-type":"Type de demande","f-oldpass":"N ancien passeport","f-voyage":"Date de voyage","f-dest":"Destination","f-cat":"Categorie permis","f-marque":"Marque vehicule","f-modele":"Modele vehicule","f-annee":"Annee vehicule","f-chassis":"N chassis","f-immat":"Immatriculation","f-veh":"Marque/Modele","f-tveh":"Type vehicule","f-date":"Date souhaitee","f-ref":"Reference cadastrale","f-loc":"Localisation","f-sup":"Superficie","f-adr":"Adresse","f-cres":"Commune","f-statut":"Statut","f-otel":"Ancien numero","f-ntel":"Nouveau numero","f-champ":"Champ a modifier","f-desc":"Description modifications","f-dtype":"Type document","f-nb":"Nombre","f-usage":"Usage","f-poste":"Poste recherche","f-niv":"Niveau etudes","f-form":"Formations","f-exp":"Experiences","f-comp":"Competences","f-style":"Style CV","f-info":"Informations complementaires","f-adract":"Adresse activite","f-act":"Type activite","f-tart":"Type articles","f-lien":"Lien","f-prof":"Profession"};
+    for(var k in o.formData){
+      if(o.formData[k]&&o.formData[k]!==""){
+        var lbl=labels[k]||k.replace("f-","").replace(/-/g," ");
+        html+="<div class='detail-item'><div class='dl'>"+lbl+"</div><div class='dv'>"+o.formData[k]+"</div></div>";
+      }
     }
-    function adminSetStatus(ref,status,note){
+    html+="</div></div>";
+  }
+  if(o.fileUrls&&o.fileUrls.length>0){
+    html+="<div class='detail-section'><h4>Pieces jointes ("+(o.fileUrls.length)+")</h4><div style='display:flex;flex-wrap:wrap;gap:8px;'>";
+    for(var j=0;j<o.fileUrls.length;j++){
+      var furl=o.fileUrls[j];
+      var isPdf=furl.toLowerCase().indexOf(".pdf")>-1||furl.toLowerCase().indexOf("/raw/")>-1;
+      var ico=isPdf?"📄":"🖼️";
+      html+="<a href='"+furl+"' target='_blank' style='background:"+(isPdf?"var(--r3)":"var(--b3)")+";"+"border:1px solid "+(isPdf?"rgba(217,43,43,.2)":"rgba(37,99,235,.15)")+";"+"border-radius:7px;padding:6px 12px;font-size:11px;font-weight:600;color:"+(isPdf?"var(--r)":"var(--b)")+";"+"text-decoration:none;display:inline-flex;align-items:center;gap:4px;'>"+ico+" Piece "+(j+1)+"</a>";
+    }
+    html+="</div></div>";
+  }
+  if(o.adminNote){html+="<div class='detail-section'><h4>Dernier message admin</h4><p style='font-size:12px;color:#7a5800;'>"+o.adminNote+"</p></div>";}
+  html+="<div class='detail-section'><h4>Actions rapides</h4><div style='display:flex;gap:8px;flex-wrap:wrap;'>";
+  html+="<button class='aact aact-dark' onclick='closeDetail();openUpload(\""+o.ref+"\")'>📤 Soumettre document</button>";
+  if(o.status==="pending"){html+="<button class='aact aact-blue' onclick='closeDetail();adminSetStatus(\""+o.ref+"\",\"processing\",\"\")'>🔄 Mettre en traitement</button>";}
+  if(o.status==="pending"||o.status==="processing"){html+="<button class='aact aact-green' onclick='closeDetail();openAmodal(\"approve\",\""+o.ref+"\")'>✅ Approuver</button><button class='aact aact-yellow' onclick='closeDetail();openAmodal(\"revision\",\""+o.ref+"\")'>✏️ Demander modif.</button><button class='aact aact-red' onclick='closeDetail();openAmodal(\"reject\",\""+o.ref+"\")'>❌ Rejeter</button>";}
+  html+="<button class='aact aact-wa' onclick='adminContactWA(\""+o.ref+"\")'>💬 WhatsApp</button>";
+  html+="</div></div>";
+  document.getElementById("detail-body").innerHTML=html;
+  document.getElementById("detail-ov").classList.add("on");
+}
+function closeDetail(){document.getElementById("detail-ov").classList.remove("on");}
+function adminSetStatus(ref,status,note){
   var progressMap={pending:0,processing:50,ready:100,rejected:0,revision:25};
-  var prog=progressMap[status]||0;
-  var update={status:status,progress:prog};
-  if(note) update.adminNote=note;
-  db.collection("orders").doc(ref).update(update)
-    .then(function(){showToast("✅ Statut mis a jour",ref+" => "+status,"var(--g)");})
-    .catch(function(e){console.error(e);showToast("⚠️ Erreur Firebase","Donnees sauvegardees localement.","var(--y)");});
+  var prog=progressMap[status]||0;var update={status:status,progress:prog};if(note) update.adminNote=note;
+  db.collection("orders").doc(ref).update(update).then(function(){showToast("✅ Statut mis a jour",ref+" => "+status,"var(--g)");}).catch(function(e){console.error(e);showToast("⚠️ Erreur Firebase","Donnees sauvegardees localement.","var(--y)");});
   var foundInAll=false;
   for(var i=0;i<allOrders.length;i++){if(allOrders[i].ref===ref){allOrders[i].status=status;allOrders[i].progress=prog;if(note) allOrders[i].adminNote=note;foundInAll=true;break;}}
-  var local=JSON.parse(localStorage.getItem("f2k_orders")||"[]");
-  var foundInLocal=false;
+  var local=JSON.parse(localStorage.getItem("f2k_orders")||"[]");var foundInLocal=false;
   for(var i=0;i<local.length;i++){if(local[i].ref===ref){local[i].status=status;local[i].progress=prog;if(note) local[i].adminNote=note;foundInLocal=true;break;}}
   if(!foundInLocal&&foundInAll){var o=allOrders.filter(function(x){return x.ref===ref;})[0];if(o) local.unshift(JSON.parse(JSON.stringify(o)));}
   localStorage.setItem("f2k_orders",JSON.stringify(local));
-  updateAdminStats();renderAllAdminLists();
-  if(note) sendAdminEmail(ref,status,note);
+  updateAdminStats();renderAllAdminLists();if(note) sendAdminEmail(ref,status,note);
 }
 function adminSetProgress(ref,prog){
   prog=parseInt(prog);
@@ -1365,8 +1478,7 @@ function adminSetProgress(ref,prog){
   showToast("📊 Progression mise a jour",ref+" — "+prog+"%","var(--g)");
 }
 function sendAdminEmail(ref,status,note){
-  var o=allOrders.filter(function(x){return x.ref===ref;})[0];
-  if(!o||!o.email) return;
+  var o=allOrders.filter(function(x){return x.ref===ref;})[0];if(!o||!o.email) return;
   emailjs.send(EMAILJS_SERVICE,EMAILJS_TEMPLATE,{to_email:o.email,to_name:(o.prenom||"")+" "+(o.nom||""),ref_code:o.ref,service_name:o.serviceName,amount:((o.price||0).toLocaleString("fr-FR"))+" FCFA",delai:o.delai||"--",date:o.date||"--",tel:o.tel||"--",reply_to:"f2kmultiservice@gmail.com"}).catch(function(e){console.error("EmailJS:",e);});
 }
 function openAmodal(type,ref){
@@ -1381,8 +1493,7 @@ function openAmodal(type,ref){
   if(type==="reject") body+="<button style='background:var(--r);color:#fff;' onclick='confirmAmodal(\"reject\",\""+ref+"\")'>❌ Confirmer le rejet</button>";
   if(type==="revision") body+="<button style='background:var(--y);color:var(--ink);' onclick='confirmAmodal(\"revision\",\""+ref+"\")'>✏️ Envoyer</button>";
   body+="</div>";
-  document.getElementById("amodal-body").innerHTML=body;
-  document.getElementById("amodal-ov").classList.add("on");
+  document.getElementById("amodal-body").innerHTML=body;document.getElementById("amodal-ov").classList.add("on");
 }
 function confirmAmodal(type,ref){
   var note=document.getElementById("amodal-note").value.trim();
@@ -1393,53 +1504,176 @@ function confirmAmodal(type,ref){
 function closeAmodal(){document.getElementById("amodal-ov").classList.remove("on");}
 function openUpload(ref){uploadRef=ref;document.getElementById("doc-preview").style.display="none";document.getElementById("doc-file").value="";document.getElementById("doc-msg").value="";document.getElementById("upload-ov").classList.add("on");}
 function closeUpload(){document.getElementById("upload-ov").classList.remove("on");}
-function previewDoc(input){if(input.files[0]){document.getElementById("doc-preview").textContent="📄 Fichier selectionne : "+input.files[0].name;document.getElementById("doc-preview").style.display="block";}}
+function previewDoc(input){
+  if(input.files[0]){
+    var f=input.files[0];
+    var isPdf=f.type==="application/pdf"||f.name.toLowerCase().endsWith(".pdf");
+    var isDoc=f.name.toLowerCase().endsWith(".doc")||f.name.toLowerCase().endsWith(".docx");
+    var ico=isPdf?"📄":isDoc?"📝":"🖼️";
+    document.getElementById("doc-preview").textContent=ico+" Fichier selectionne : "+f.name+" ("+Math.round(f.size/1024)+" Ko)";
+    document.getElementById("doc-preview").style.display="block";
+  }
+}
 function submitDocument(){
-  var file=document.getElementById("doc-file").files[0];
-  var msg=document.getElementById("doc-msg").value.trim();
-  if(!file){showToast("📎 Fichier requis","Selectionnez un document PDF ou image.","var(--y)");return;}
+  var file=document.getElementById("doc-file").files[0];var msg=document.getElementById("doc-msg").value.trim();
+  if(!file){showToast("📎 Fichier requis","Selectionnez un document.","var(--y)");return;}
   var originalName=file.name;
   var btn=document.getElementById("upload-submit-btn");
   btn.textContent="⏳ Envoi en cours...";btn.disabled=true;
-  var fd=new FormData();fd.append("file",file);fd.append("upload_preset",CLOUDINARY_PRESET);
+  var fd=new FormData();fd.append("file",file);fd.append("upload_preset",CLOUDINARY_PRESET);fd.append("resource_type","auto");
   fetch(CLOUDINARY_URL,{method:"POST",body:fd})
     .then(function(r){return r.json();})
     .then(function(data){
       if(!data.secure_url){throw new Error("Upload echoue — verifiez que le preset f2k_stream est en mode Non signe.");}
       var docUrl=data.secure_url;
-      var finalMsg=msg||"Votre document est pret ! Telechargez-le depuis votre espace client ou en recherchant avec votre code de reference.";
-      db.collection("orders").doc(uploadRef).update({status:"ready",progress:100,hasDoc:true,docUrl:docUrl,docName:originalName,adminNote:finalMsg})
-        .then(function(){showToast("✅ Document envoye !",uploadRef+" — Client peut telecharger.","var(--g)");}).catch(function(e){console.error(e);});
+      var finalMsg=msg||"Votre document est pret ! Telechargez-le depuis votre espace client.";
+      db.collection("orders").doc(uploadRef).update({status:"ready",progress:100,hasDoc:true,docUrl:docUrl,docName:originalName,adminNote:finalMsg}).then(function(){showToast("✅ Document envoye !",uploadRef+" — Client peut telecharger.","var(--g)");}).catch(function(e){console.error(e);});
       var foundInAll=false;
       for(var i=0;i<allOrders.length;i++){if(allOrders[i].ref===uploadRef){allOrders[i].status="ready";allOrders[i].progress=100;allOrders[i].hasDoc=true;allOrders[i].docUrl=docUrl;allOrders[i].docName=originalName;allOrders[i].adminNote=finalMsg;foundInAll=true;break;}}
       var local=JSON.parse(localStorage.getItem("f2k_orders")||"[]");var foundInLocal=false;
       for(var i=0;i<local.length;i++){if(local[i].ref===uploadRef){local[i].status="ready";local[i].progress=100;local[i].hasDoc=true;local[i].docUrl=docUrl;local[i].docName=originalName;local[i].adminNote=finalMsg;foundInLocal=true;break;}}
       if(!foundInLocal&&foundInAll){var ord=allOrders.filter(function(x){return x.ref===uploadRef;})[0];if(ord) local.unshift(JSON.parse(JSON.stringify(ord)));}
       localStorage.setItem("f2k_orders",JSON.stringify(local));
-      sendAdminEmail(uploadRef,"ready",finalMsg);
-      updateAdminStats();renderAllAdminLists();closeUpload();
+      sendAdminEmail(uploadRef,"ready",finalMsg);updateAdminStats();renderAllAdminLists();closeUpload();
       btn.textContent="📤 Envoyer le document au client";btn.disabled=false;
     })
-    .catch(function(e){
-      console.error(e);showToast("❌ Erreur upload",e.message,"var(--r)");
-      btn.textContent="📤 Envoyer le document au client";btn.disabled=false;
-    });
+    .catch(function(e){console.error(e);showToast("❌ Erreur upload",e.message,"var(--r)");btn.textContent="📤 Envoyer le document au client";btn.disabled=false;});
 }
 function adminContactWA(ref){var o=allOrders.filter(function(x){return x.ref===ref;})[0];if(!o) return;var msg=encodeURIComponent("Bonjour "+(o.prenom||"")+" "+(o.nom||"")+",\n\nNous vous contactons concernant votre demande F2K ON LINE :\nReference : "+o.ref+"\nService : "+o.serviceName+"\n\nCordialement,\nF2K MULTISERVICE\n+229 01 58 07 07 08");window.open("https://wa.me/"+(o.tel||"").replace(/\D/g,"")+"?text="+msg,"_blank");}
-function showAdminPage(p,el){var pages=document.querySelectorAll(".apage");for(var i=0;i<pages.length;i++) pages[i].classList.remove("on");var items=document.querySelectorAll(".asb-item");for(var i=0;i<items.length;i++) items[i].classList.remove("on");var pg=document.getElementById("apage-"+p);if(pg) pg.classList.add("on");if(el) el.classList.add("on");if(p!=="dashboard"&&p!=="clients") loadAdminOrders();}
+function showAdminPage(p,el){
+  var pages=document.querySelectorAll(".apage");for(var i=0;i<pages.length;i++) pages[i].classList.remove("on");
+  var items=document.querySelectorAll(".asb-item");for(var i=0;i<items.length;i++) items[i].classList.remove("on");
+  var pg=document.getElementById("apage-"+p);if(pg) pg.classList.add("on");if(el) el.classList.add("on");
+  if(p==="services") loadExtraServices();
+  else if(p!=="dashboard"&&p!=="clients") loadAdminOrders();
+}
 function setAdminFilter(f,el){adminFilter=f;var btns=document.querySelectorAll(".afbtn");for(var i=0;i<btns.length;i++) btns[i].classList.remove("on");el.classList.add("on");filterAdminOrders();}
-function filterAdminOrders(){var q=(document.getElementById("asearch-input")||{}).value||"";q=q.toLowerCase();var filtered=allOrders;if(adminFilter!=="all") filtered=filtered.filter(function(o){return o.status===adminFilter;});if(q) filtered=filtered.filter(function(o){return((o.ref||"")+(o.nom||"")+(o.prenom||"")+(o.email||"")+(o.serviceName||"")).toLowerCase().indexOf(q)>-1;});renderAdminList("aorders-list",filtered);}
-    document.getElementById("form-ov").addEventListener("click",function(e){if(e.target===document.getElementById("form-ov")) closeForm();});
+function filterAdminOrders(){
+  var q=(document.getElementById("asearch-input")||{}).value||"";q=q.toLowerCase();
+  var filtered=allOrders;if(adminFilter!=="all") filtered=filtered.filter(function(o){return o.status===adminFilter;});
+  if(q) filtered=filtered.filter(function(o){return((o.ref||"")+(o.nom||"")+(o.prenom||"")+(o.email||"")+(o.serviceName||"")).toLowerCase().indexOf(q)>-1;});
+  renderAdminList("aorders-list",filtered);
+}
+function loadExtraServices(){
+  db.collection("services").orderBy("createdAt","asc").get()
+    .then(function(snap){
+      extraServices=[];snap.forEach(function(d){extraServices.push(Object.assign({id:d.id},d.data()));});
+      renderSvcList();renderExtraCatalog();
+    })
+    .catch(function(){
+      extraServices=JSON.parse(localStorage.getItem("f2k_extra_services")||"[]");
+      renderSvcList();renderExtraCatalog();
+    });
+}
+function renderSvcList(){
+  var el=document.getElementById("svc-manage-list");if(!el) return;
+  if(!extraServices.length){el.innerHTML="<div style='text-align:center;padding:30px;color:var(--mu);font-size:13px;background:#fff;border-radius:10px;border:2px dashed var(--bd);'>Aucun service ajoute. Cliquez sur le bouton ci-dessus pour en ajouter un.</div>";return;}
+  var html="";
+  for(var i=0;i<extraServices.length;i++){
+    var s=extraServices[i];
+    var typeBadge=s.type==="instant"?"<span style='background:var(--g3);color:var(--g);padding:2px 7px;border-radius:10px;font-size:9px;font-weight:700;'>⚡ Immediat</span>":s.type==="rdv"?"<span style='background:var(--r3);color:var(--r);padding:2px 7px;border-radius:10px;font-size:9px;font-weight:700;'>📅 RDV</span>":"<span style='background:var(--y3);color:#7a5800;padding:2px 7px;border-radius:10px;font-size:9px;font-weight:700;'>🔄 Au choix</span>";
+    html+="<div class='svc-card"+(s.active===false?" svc-disabled":"")+"' style='"+(s.active===false?"opacity:.5;":"")+"'>";
+    html+="<div style='font-size:24px;flex-shrink:0;'>"+(s.ico||"🔷")+"</div>";
+    html+="<div class='svc-card-info'><div class='svc-card-name'>"+(s.nom||"Service")+"</div><div class='svc-card-meta'>"+(s.categorie||"")+" • "+(s.delai||"--")+" "+typeBadge+"</div></div>";
+    html+="<div class='svc-card-price'>"+(parseInt(s.prix)||0).toLocaleString("fr-FR")+" FCFA</div>";
+    html+="<div class='svc-card-acts'>";
+    html+="<button class='toggle-svc "+(s.active!==false?"on":"off")+"' title='"+(s.active!==false?"Desactiver":"Activer")+"' onclick='toggleSvc(\""+s.id+"\","+(s.active!==false?"false":"true")+")' style='margin-right:4px;'></button>";
+    html+="<button class='aact aact-blue' onclick='openSvcForm(\""+s.id+"\")' style='padding:5px 9px;font-size:11px;'>✏️</button>";
+    html+="<button class='aact aact-red' onclick='deleteSvc(\""+s.id+"\")' style='padding:5px 9px;font-size:11px;'>🗑️</button>";
+    html+="</div></div>";
+  }
+  el.innerHTML=html;
+}
+function renderExtraCatalog(){
+  var el=document.getElementById("extra-services-catalog");if(!el) return;
+  var active=extraServices.filter(function(s){return s.active!==false;});
+  if(!active.length){el.innerHTML="";return;}
+  var bycat={};
+  for(var i=0;i<active.length;i++){var c=active[i].categorie||"Autres";if(!bycat[c]) bycat[c]=[];bycat[c].push(active[i]);}
+  var html="";
+  for(var cat in bycat){
+    html+="<div class='catsec' style='margin-top:24px;'><div class='cattitle'><div class='catbdg' style='background:var(--g3);'>⭐</div><span class='catlbl'>"+cat+"</span><span class='catcnt'>"+bycat[cat].length+"</span><div class='div'></div></div><div class='sgrid'>";
+    for(var j=0;j<bycat[cat].length;j++){
+      var s=bycat[cat][j];
+      var badge=s.type==="instant"?"<span class='sc-badge sb-instant'>⚡ Immediat</span>":s.type==="rdv"?"<span class='sc-badge sb-rdv'>📅 RDV</span>":"<span class='sc-badge sb-choice'>🔄 Au choix</span>";
+      html+="<a class='sc' href='#' onclick='openExtraForm(\""+s.id+"\",event)'>";
+      html+="<div class='sc-ico' style='background:var(--g3);'>"+(s.ico||"🔷")+"</div>";
+      html+="<div class='sc-name'>"+(s.nom||"Service")+"</div>";
+      html+="<p class='sc-desc'>"+(s.desc||s.categorie||"Service F2K MULTISERVICE")+"</p>";
+      html+="<div class='sc-foot'><span class='sc-pr'>"+(parseInt(s.prix)||0).toLocaleString("fr-FR")+" FCFA</span>"+badge+"<span class='sc-arr'>→</span></div></a>";
+    }
+    html+="</div></div>";
+  }
+  el.innerHTML=html;
+}
+function openExtraForm(id,e){
+  if(e) e.preventDefault();
+  var s=extraServices.filter(function(x){return x.id===id;})[0];if(!s) return;
+  PRICES[id]=parseInt(s.prix)||0;NAMES[id]=s.nom||"Service";ICONS[id]=s.ico||"🔷";DELAIS[id]=s.delai||"Variable";
+  openForm(id,e);
+}
+function openSvcForm(id){
+  editSvcId=id;
+  document.getElementById("svc-form-title").textContent=id?"Modifier le service":"Ajouter un nouveau service";
+  if(id){
+    var s=extraServices.filter(function(x){return x.id===id;})[0];
+    if(s){document.getElementById("svc-nom").value=s.nom||"";document.getElementById("svc-ico").value=s.ico||"";document.getElementById("svc-prix").value=s.prix||"";document.getElementById("svc-delai").value=s.delai||"";document.getElementById("svc-cat").value=s.categorie||"Autre";document.getElementById("svc-type").value=s.type||"instant";document.getElementById("svc-desc").value=s.desc||"";document.getElementById("svc-docs").value=s.docs||"";}
+  } else {document.getElementById("svc-nom").value="";document.getElementById("svc-ico").value="";document.getElementById("svc-prix").value="";document.getElementById("svc-delai").value="";document.getElementById("svc-cat").value="Etat civil";document.getElementById("svc-type").value="instant";document.getElementById("svc-desc").value="";document.getElementById("svc-docs").value="";}
+  document.getElementById("svc-ov").classList.add("on");
+}
+function closeSvcForm(){document.getElementById("svc-ov").classList.remove("on");}
+function saveSvc(){
+  var nom=document.getElementById("svc-nom").value.trim();var ico=document.getElementById("svc-ico").value.trim();var prix=document.getElementById("svc-prix").value.trim();var delai=document.getElementById("svc-delai").value.trim();var cat=document.getElementById("svc-cat").value;var type=document.getElementById("svc-type").value;var desc=document.getElementById("svc-desc").value.trim();var docs=document.getElementById("svc-docs").value.trim();
+  if(!nom||!prix||!delai){showToast("Champs requis","Nom, prix et delai sont obligatoires.","var(--y)");return;}
+  var data={nom:nom,ico:ico||"🔷",prix:parseInt(prix),delai:delai,categorie:cat,type:type,desc:desc,docs:docs,active:true};
+  if(editSvcId){
+    db.collection("services").doc(editSvcId).update(data)
+      .then(function(){
+        for(var i=0;i<extraServices.length;i++){if(extraServices[i].id===editSvcId){Object.assign(extraServices[i],data);break;}}
+        var local=JSON.parse(localStorage.getItem("f2k_extra_services")||"[]");for(var i=0;i<local.length;i++){if(local[i].id===editSvcId){Object.assign(local[i],data);break;}}localStorage.setItem("f2k_extra_services",JSON.stringify(local));
+        renderSvcList();renderExtraCatalog();closeSvcForm();showToast("✅ Service modifie !",nom,"var(--g)");
+      }).catch(function(e){console.error(e);showToast("❌ Erreur","Modification echouee.","var(--r)");});
+  } else {
+    data.createdAt=firebase.firestore.FieldValue.serverTimestamp();
+    db.collection("services").add(data)
+      .then(function(ref){
+        data.id=ref.id;extraServices.push(data);
+        var local=JSON.parse(localStorage.getItem("f2k_extra_services")||"[]");local.push(data);localStorage.setItem("f2k_extra_services",JSON.stringify(local));
+        renderSvcList();renderExtraCatalog();closeSvcForm();showToast("✅ Service ajoute !",nom,"var(--g)");
+      }).catch(function(e){console.error(e);showToast("❌ Erreur","Ajout echoue.","var(--r)");});
+  }
+}
+function deleteSvc(id){
+  if(!confirm("Supprimer ce service ? Cette action est irreversible.")) return;
+  db.collection("services").doc(id).delete()
+    .then(function(){
+      extraServices=extraServices.filter(function(s){return s.id!==id;});
+      var local=JSON.parse(localStorage.getItem("f2k_extra_services")||"[]");local=local.filter(function(s){return s.id!==id;});localStorage.setItem("f2k_extra_services",JSON.stringify(local));
+      renderSvcList();renderExtraCatalog();showToast("🗑️ Service supprime !","","var(--g)");
+    }).catch(function(e){console.error(e);showToast("❌ Erreur","Suppression echouee.","var(--r)");});
+}
+function toggleSvc(id,active){
+  active=(active==="true"||active===true);
+  db.collection("services").doc(id).update({active:active})
+    .then(function(){
+      for(var i=0;i<extraServices.length;i++){if(extraServices[i].id===id){extraServices[i].active=active;break;}}
+      var local=JSON.parse(localStorage.getItem("f2k_extra_services")||"[]");for(var i=0;i<local.length;i++){if(local[i].id===id){local[i].active=active;break;}}localStorage.setItem("f2k_extra_services",JSON.stringify(local));
+      renderSvcList();renderExtraCatalog();showToast(active?"✅ Service active":"⏸️ Service desactive","","var(--g)");
+    }).catch(function(e){console.error(e);showToast("❌ Erreur","Mise a jour echouee.","var(--r)");});
+  }
+        document.getElementById("form-ov").addEventListener("click",function(e){if(e.target===document.getElementById("form-ov")) closeForm();});
 document.getElementById("email-ov").addEventListener("click",function(e){if(e.target===document.getElementById("email-ov")) document.getElementById("email-ov").classList.remove("on");});
 document.getElementById("auth-ov").addEventListener("click",function(e){if(e.target===document.getElementById("auth-ov")) closeAuth();});
 document.getElementById("amodal-ov").addEventListener("click",function(e){if(e.target===document.getElementById("amodal-ov")) closeAmodal();});
 document.getElementById("upload-ov").addEventListener("click",function(e){if(e.target===document.getElementById("upload-ov")) closeUpload();});
-
+document.getElementById("detail-ov").addEventListener("click",function(e){if(e.target===document.getElementById("detail-ov")) closeDetail();});
+document.getElementById("svc-ov").addEventListener("click",function(e){if(e.target===document.getElementById("svc-ov")) closeSvcForm();});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"){closeForm();closeAuth();closeAmodal();closeUpload();closeDetail();closeSvcForm();document.getElementById("email-ov").classList.remove("on");}});
 var io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.style.transition="opacity .4s ease,transform .4s ease";en.target.style.opacity="1";en.target.style.transform="translateY(0)";io.unobserve(en.target);}});},{threshold:.08});
 var els=document.querySelectorAll(".sc,.pc,.wc,.hstep");
 for(var i=0;i<els.length;i++){els[i].style.opacity="0";els[i].style.transform="translateY(16px)";els[i].style.transitionDelay=(i%6)*45+"ms";io.observe(els[i]);}
-
-if("serviceWorker" in navigator){
+loadExtraServices();
+        if("serviceWorker" in navigator){
   window.addEventListener("load",function(){
     navigator.serviceWorker.register("/sw.js").then(function(){console.log("SW enregistre");}).catch(function(e){console.log("SW erreur:",e);});
   });
